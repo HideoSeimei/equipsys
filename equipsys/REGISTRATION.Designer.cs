@@ -47,6 +47,8 @@
             textBox2 = new TextBox();
             groupBox2 = new GroupBox();
             label6 = new Label();
+            textBox6 = new TextBox();
+            label2 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -103,6 +105,7 @@
             button1.TabIndex = 42;
             button1.Text = "Register";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox5
             // 
@@ -185,6 +188,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBox6);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
@@ -193,7 +198,7 @@
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(544, 164);
+            groupBox1.Size = new Size(713, 164);
             groupBox1.TabIndex = 46;
             groupBox1.TabStop = false;
             // 
@@ -255,6 +260,25 @@
             label6.TabIndex = 26;
             label6.Text = "Password";
             // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(529, 68);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(178, 23);
+            textBox6.TabIndex = 22;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(529, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 23;
+            label2.Text = "Student ID";
+            // 
             // REGISTRATION
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -306,5 +330,7 @@
         private TextBox textBox2;
         private GroupBox groupBox2;
         private Label label6;
+        private TextBox textBox6;
+        private Label label2;
     }
 }

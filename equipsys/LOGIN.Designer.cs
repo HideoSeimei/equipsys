@@ -35,11 +35,11 @@
             button1 = new Button();
             panel2 = new Panel();
             pictureBox6 = new PictureBox();
-            textBox2 = new TextBox();
+            passwordbox = new TextBox();
             pictureBox4 = new PictureBox();
             panel1 = new Panel();
             pictureBox3 = new PictureBox();
-            textBox1 = new TextBox();
+            usernamebox = new TextBox();
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -48,6 +48,7 @@
             label5 = new Label();
             label6 = new Label();
             pictureBox5 = new PictureBox();
+            accountChecker = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -112,13 +113,14 @@
             button1.TabIndex = 15;
             button1.Text = "Log in";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.WhiteSmoke;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(pictureBox6);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(passwordbox);
             panel2.Controls.Add(pictureBox4);
             panel2.Location = new Point(558, 238);
             panel2.Margin = new Padding(3, 2, 3, 2);
@@ -137,19 +139,19 @@
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
             // 
-            // textBox2
+            // passwordbox
             // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.DimGray;
-            textBox2.Location = new Point(52, 13);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.PlaceholderText = " Password";
-            textBox2.Size = new Size(221, 19);
-            textBox2.TabIndex = 1;
+            passwordbox.BackColor = Color.WhiteSmoke;
+            passwordbox.BorderStyle = BorderStyle.None;
+            passwordbox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordbox.ForeColor = Color.DimGray;
+            passwordbox.Location = new Point(52, 13);
+            passwordbox.Margin = new Padding(3, 2, 3, 2);
+            passwordbox.Name = "passwordbox";
+            passwordbox.PasswordChar = '*';
+            passwordbox.PlaceholderText = " Password";
+            passwordbox.Size = new Size(221, 19);
+            passwordbox.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -167,7 +169,7 @@
             panel1.BackColor = Color.WhiteSmoke;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(usernamebox);
             panel1.Location = new Point(558, 184);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
@@ -185,18 +187,18 @@
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // usernamebox
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.DimGray;
-            textBox1.Location = new Point(52, 13);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = " Username";
-            textBox1.Size = new Size(221, 19);
-            textBox1.TabIndex = 1;
+            usernamebox.BackColor = Color.WhiteSmoke;
+            usernamebox.BorderStyle = BorderStyle.None;
+            usernamebox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            usernamebox.ForeColor = Color.DimGray;
+            usernamebox.Location = new Point(52, 13);
+            usernamebox.Margin = new Padding(3, 2, 3, 2);
+            usernamebox.Name = "usernamebox";
+            usernamebox.PlaceholderText = " Username";
+            usernamebox.Size = new Size(221, 19);
+            usernamebox.TabIndex = 1;
             // 
             // label1
             // 
@@ -300,12 +302,26 @@
             pictureBox5.TabIndex = 28;
             pictureBox5.TabStop = false;
             // 
-            // Form1
+            // accountChecker
+            // 
+            accountChecker.AutoSize = true;
+            accountChecker.BackColor = Color.Transparent;
+            accountChecker.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            accountChecker.ForeColor = Color.Crimson;
+            accountChecker.Location = new Point(612, 296);
+            accountChecker.Name = "accountChecker";
+            accountChecker.Size = new Size(15, 22);
+            accountChecker.TabIndex = 29;
+            accountChecker.Text = " ";
+            accountChecker.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // LOGIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
+            Controls.Add(accountChecker);
             Controls.Add(pictureBox5);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -321,7 +337,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
+            Name = "LOGIN";
             Text = "Form1";
             Load += Form1_Load;
             panel2.ResumeLayout(false);
@@ -345,11 +361,11 @@
         private Button button2;
         private Button button1;
         private Panel panel2;
-        private TextBox textBox2;
+        private TextBox passwordbox;
         private PictureBox pictureBox4;
         private Panel panel1;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
+        private TextBox usernamebox;
         private Label label1;
         private Label label3;
         private Label label4;
@@ -359,5 +375,6 @@
         private Label label6;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private Label accountChecker;
     }
 }
