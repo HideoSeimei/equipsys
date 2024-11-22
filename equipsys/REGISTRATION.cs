@@ -16,5 +16,12 @@ namespace equipsys
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LOGIN login = new LOGIN();
+            login.Show();
+            this.Hide();
+        }
     }
 }

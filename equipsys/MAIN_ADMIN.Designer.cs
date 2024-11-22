@@ -48,16 +48,17 @@
             // 
             vScrollBar1.AllowDrop = true;
             vScrollBar1.Cursor = Cursors.NoMoveVert;
-            vScrollBar1.Location = new Point(956, 104);
+            vScrollBar1.Location = new Point(836, 78);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 452);
+            vScrollBar1.Size = new Size(21, 339);
             vScrollBar1.TabIndex = 18;
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(204, 102);
+            flowLayoutPanel1.Location = new Point(178, 76);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(749, 454);
+            flowLayoutPanel1.Size = new Size(655, 340);
             flowLayoutPanel1.TabIndex = 17;
             // 
             // label1
@@ -66,26 +67,28 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(199, 35);
+            label1.Location = new Point(174, 26);
             label1.Name = "label1";
-            label1.Size = new Size(163, 32);
+            label1.Size = new Size(127, 26);
             label1.TabIndex = 16;
             label1.Text = "Equipment";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(725, 35);
+            textBox1.Location = new Point(634, 26);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(228, 27);
+            textBox1.Size = new Size(200, 23);
             textBox1.TabIndex = 15;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(681, 32);
+            pictureBox4.Location = new Point(596, 24);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(38, 37);
+            pictureBox4.Size = new Size(33, 28);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
@@ -96,9 +99,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(35, 460);
+            label2.Location = new Point(31, 345);
             label2.Name = "label2";
-            label2.Size = new Size(62, 17);
+            label2.Size = new Size(50, 14);
             label2.TabIndex = 13;
             label2.Text = "Log out";
             // 
@@ -106,9 +109,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(41, 182);
+            pictureBox2.Location = new Point(36, 136);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 43);
+            pictureBox2.Size = new Size(37, 32);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
@@ -117,9 +121,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(41, 96);
+            pictureBox1.Location = new Point(36, 72);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 43);
+            pictureBox1.Size = new Size(37, 32);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -128,19 +133,20 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(41, 269);
+            pictureBox3.Location = new Point(36, 202);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(42, 43);
+            pictureBox3.Size = new Size(37, 32);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
             // 
             // MAIN_ADMIN
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1012, 588);
+            ClientSize = new Size(886, 441);
             Controls.Add(vScrollBar1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
@@ -150,6 +156,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MAIN_ADMIN";
             Text = "MAIN_ADMIN";
             Load += MAIN_ADMIN_Load;
