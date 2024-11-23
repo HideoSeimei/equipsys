@@ -36,6 +36,8 @@ namespace equipsys
             //for opening the items form
             ITEMS items = new ITEMS() { TopLevel = false, TopMost = true };
             items.FormBorderStyle = FormBorderStyle.None;
+            items.Size = mainPanel.ClientSize;
+            items.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(items);
             items.Show();
@@ -56,6 +58,8 @@ namespace equipsys
             //for opening the records form
             RECORD record = new RECORD() { TopLevel = false, TopMost = true };
             record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(record);
             record.Show();
@@ -69,6 +73,11 @@ namespace equipsys
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

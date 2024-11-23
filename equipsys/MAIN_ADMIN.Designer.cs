@@ -55,9 +55,9 @@
             // 
             vScrollBar1.AllowDrop = true;
             vScrollBar1.Cursor = Cursors.NoMoveVert;
-            vScrollBar1.Location = new Point(955, 104);
+            vScrollBar1.Location = new Point(836, 78);
             vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 436);
+            vScrollBar1.Size = new Size(21, 327);
             vScrollBar1.TabIndex = 18;
             // 
             // label1
@@ -66,26 +66,28 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(199, 35);
+            label1.Location = new Point(174, 26);
             label1.Name = "label1";
-            label1.Size = new Size(163, 32);
+            label1.Size = new Size(127, 26);
             label1.TabIndex = 16;
             label1.Text = "Equipment";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(725, 35);
+            textBox1.Location = new Point(634, 26);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(228, 27);
+            textBox1.Size = new Size(200, 23);
             textBox1.TabIndex = 15;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(681, 32);
+            pictureBox4.Location = new Point(596, 24);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(38, 37);
+            pictureBox4.Size = new Size(33, 28);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
@@ -96,9 +98,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(38, 478);
+            label2.Location = new Point(33, 358);
             label2.Name = "label2";
-            label2.Size = new Size(62, 17);
+            label2.Size = new Size(50, 14);
             label2.TabIndex = 13;
             label2.Text = "Log out";
             label2.Click += label2_Click;
@@ -107,9 +109,10 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(41, 188);
+            pictureBox2.Location = new Point(36, 141);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 43);
+            pictureBox2.Size = new Size(37, 32);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
@@ -118,9 +121,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(41, 103);
+            pictureBox1.Location = new Point(36, 77);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 43);
+            pictureBox1.Size = new Size(37, 32);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -130,9 +134,10 @@
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(41, 273);
+            pictureBox3.Location = new Point(36, 205);
+            pictureBox3.Margin = new Padding(3, 2, 3, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(42, 43);
+            pictureBox3.Size = new Size(37, 32);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
@@ -144,9 +149,9 @@
             profileName.BackColor = Color.Transparent;
             profileName.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             profileName.ForeColor = SystemColors.ActiveCaptionText;
-            profileName.Location = new Point(89, 359);
+            profileName.Location = new Point(78, 269);
             profileName.Name = "profileName";
-            profileName.Size = new Size(137, 32);
+            profileName.Size = new Size(108, 26);
             profileName.TabIndex = 19;
             profileName.Text = "PROFILE";
             profileName.Click += label3_Click;
@@ -154,19 +159,18 @@
             // mainPanel
             // 
             mainPanel.CustomizableEdges = customizableEdges1;
-            mainPanel.Location = new Point(199, 96);
-            mainPanel.Margin = new Padding(3, 4, 3, 4);
+            mainPanel.Location = new Point(174, 72);
             mainPanel.Name = "mainPanel";
             mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            mainPanel.Size = new Size(753, 444);
+            mainPanel.Size = new Size(659, 333);
             mainPanel.TabIndex = 20;
+            mainPanel.Paint += mainPanel_Paint;
             // 
             // items
             // 
-            items.Location = new Point(89, 273);
-            items.Margin = new Padding(3, 4, 3, 4);
+            items.Location = new Point(78, 205);
             items.Name = "items";
-            items.Size = new Size(86, 31);
+            items.Size = new Size(75, 23);
             items.TabIndex = 21;
             items.Text = "ITEMS";
             items.UseVisualStyleBackColor = true;
@@ -174,10 +178,9 @@
             // 
             // record
             // 
-            record.Location = new Point(89, 200);
-            record.Margin = new Padding(3, 4, 3, 4);
+            record.Location = new Point(78, 150);
             record.Name = "record";
-            record.Size = new Size(86, 31);
+            record.Size = new Size(75, 23);
             record.TabIndex = 22;
             record.Text = "RECORD";
             record.UseVisualStyleBackColor = true;
@@ -187,19 +190,20 @@
             // 
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(41, 359);
+            pictureBox5.Location = new Point(36, 269);
+            pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 43);
+            pictureBox5.Size = new Size(37, 32);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 31;
             pictureBox5.TabStop = false;
             // 
             // MAIN_ADMIN
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1013, 588);
+            ClientSize = new Size(886, 441);
             Controls.Add(profileName);
             Controls.Add(record);
             Controls.Add(pictureBox5);
@@ -213,6 +217,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MAIN_ADMIN";
             Text = "MAIN_ADMIN";
             Load += MAIN_ADMIN_Load;
