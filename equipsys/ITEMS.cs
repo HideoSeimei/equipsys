@@ -21,14 +21,21 @@ namespace equipsys
             //flowLayoutPanel1.Controls.Add(item);
             //flowLayoutPanel1.Controls.Add(item);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            //flowLayoutPanel1.WrapContents = false;
+            flowLayoutPanel1.Width = 300;
 
+            //for (int i = 0; i < 11; i++)
+            //{
+            //    int yOffset = 0;
+            //    ItemUserControl item = new ItemUserControl();
+            //    item.Location = new Point(10, yOffset);  // Set unique location for each item
+            //    flowLayoutPanel1.Controls.Add(item);
+            //    yOffset += item.Height + 50;  // Adjust for next item
+            //}
             for (int i = 0; i < 11; i++)
             {
-                int yOffset = 0;
                 ItemUserControl item = new ItemUserControl();
-                item.Location = new Point(10, yOffset);  // Set unique location for each item
                 flowLayoutPanel1.Controls.Add(item);
-                yOffset += item.Height + 50;  // Adjust for next item
             }
         }
 

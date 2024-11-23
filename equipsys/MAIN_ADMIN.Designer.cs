@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN_ADMIN));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            vScrollBar1 = new VScrollBar();
             label1 = new Label();
             textBox1 = new TextBox();
             pictureBox4 = new PictureBox();
@@ -50,15 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.AllowDrop = true;
-            vScrollBar1.Cursor = Cursors.NoMoveVert;
-            vScrollBar1.Location = new Point(836, 78);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 327);
-            vScrollBar1.TabIndex = 18;
             // 
             // label1
             // 
@@ -209,7 +199,6 @@
             Controls.Add(pictureBox5);
             Controls.Add(mainPanel);
             Controls.Add(items);
-            Controls.Add(vScrollBar1);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox4);
@@ -231,8 +220,6 @@
         }
 
         #endregion
-
-        private VScrollBar vScrollBar1;
         private Label label1;
         private TextBox textBox1;
         private PictureBox pictureBox4;

@@ -35,7 +35,7 @@
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.FlowDirection = FlowDirection.BottomUp;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(886, 441);
