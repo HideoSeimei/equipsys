@@ -62,11 +62,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             label2.ForeColor = Color.Brown;
-            label2.Location = new Point(593, 298);
+            label2.Location = new Point(568, 286);
             label2.Name = "label2";
-            label2.Size = new Size(0, 20);
+            label2.Size = new Size(0, 16);
             label2.TabIndex = 20;
             // 
             // linkLabel1
@@ -138,6 +138,7 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // passwordbox
             // 
@@ -148,10 +149,10 @@
             passwordbox.Location = new Point(52, 13);
             passwordbox.Margin = new Padding(3, 2, 3, 2);
             passwordbox.Name = "passwordbox";
-            passwordbox.PasswordChar = '*';
             passwordbox.PlaceholderText = " Password";
             passwordbox.Size = new Size(221, 19);
             passwordbox.TabIndex = 1;
+            passwordbox.UseSystemPasswordChar = true;
             // 
             // pictureBox4
             // 
@@ -306,11 +307,11 @@
             // 
             accountChecker.AutoSize = true;
             accountChecker.BackColor = Color.Transparent;
-            accountChecker.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            accountChecker.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             accountChecker.ForeColor = Color.Crimson;
-            accountChecker.Location = new Point(612, 296);
+            accountChecker.Location = new Point(587, 284);
             accountChecker.Name = "accountChecker";
-            accountChecker.Size = new Size(15, 22);
+            accountChecker.Size = new Size(10, 16);
             accountChecker.TabIndex = 29;
             accountChecker.Text = " ";
             accountChecker.TextAlign = ContentAlignment.TopCenter;

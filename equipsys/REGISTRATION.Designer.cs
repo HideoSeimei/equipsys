@@ -33,22 +33,22 @@
             label7 = new Label();
             button2 = new Button();
             button1 = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
+            passwordReg = new TextBox();
+            courseReg = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
+            usernameReg = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            firstnameReg = new TextBox();
             label9 = new Label();
             label10 = new Label();
             groupBox1 = new GroupBox();
-            comboBox1 = new ComboBox();
+            label2 = new Label();
+            studentidReg = new TextBox();
+            yearReg = new ComboBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            lastnameReg = new TextBox();
             groupBox2 = new GroupBox();
             label6 = new Label();
-            textBox6 = new TextBox();
-            label2 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -107,21 +107,21 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // textBox5
+            // passwordReg
             // 
-            textBox5.Location = new Point(358, 312);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(178, 23);
-            textBox5.TabIndex = 41;
+            passwordReg.Location = new Point(358, 312);
+            passwordReg.Margin = new Padding(3, 2, 3, 2);
+            passwordReg.Name = "passwordReg";
+            passwordReg.Size = new Size(178, 23);
+            passwordReg.TabIndex = 41;
             // 
-            // textBox4
+            // courseReg
             // 
-            textBox4.Location = new Point(66, 198);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(218, 23);
-            textBox4.TabIndex = 40;
+            courseReg.Location = new Point(66, 198);
+            courseReg.Margin = new Padding(3, 2, 3, 2);
+            courseReg.Name = "courseReg";
+            courseReg.Size = new Size(218, 23);
+            courseReg.TabIndex = 40;
             // 
             // label5
             // 
@@ -134,13 +134,13 @@
             label5.TabIndex = 39;
             label5.Text = "Course/Program";
             // 
-            // textBox3
+            // usernameReg
             // 
-            textBox3.Location = new Point(66, 312);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(218, 23);
-            textBox3.TabIndex = 38;
+            usernameReg.Location = new Point(66, 312);
+            usernameReg.Margin = new Padding(3, 2, 3, 2);
+            usernameReg.Name = "usernameReg";
+            usernameReg.Size = new Size(218, 23);
+            usernameReg.TabIndex = 38;
             // 
             // label1
             // 
@@ -153,13 +153,13 @@
             label1.TabIndex = 37;
             label1.Text = "Username";
             // 
-            // textBox1
+            // firstnameReg
             // 
-            textBox1.Location = new Point(66, 137);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(218, 23);
-            textBox1.TabIndex = 36;
+            firstnameReg.Location = new Point(66, 137);
+            firstnameReg.Margin = new Padding(3, 2, 3, 2);
+            firstnameReg.Name = "firstnameReg";
+            firstnameReg.Size = new Size(218, 23);
+            firstnameReg.TabIndex = 36;
             // 
             // label9
             // 
@@ -189,10 +189,10 @@
             // 
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(studentidReg);
+            groupBox1.Controls.Add(yearReg);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(lastnameReg);
             groupBox1.ForeColor = SystemColors.ControlText;
             groupBox1.Location = new Point(45, 70);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
@@ -202,23 +202,42 @@
             groupBox1.TabIndex = 46;
             groupBox1.TabStop = false;
             // 
-            // comboBox1
+            // label2
             // 
-            comboBox1.AllowDrop = true;
-            comboBox1.BackColor = Color.White;
-            comboBox1.DropDownHeight = 75;
-            comboBox1.DropDownWidth = 75;
-            comboBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.ForeColor = SystemColors.ControlText;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.IntegralHeight = false;
-            comboBox1.Items.AddRange(new object[] { "1st Year", "2nd Year", "3rd Year", "4th Year" });
-            comboBox1.Location = new Point(313, 128);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(92, 23);
-            comboBox1.TabIndex = 18;
-            comboBox1.Text = " Year";
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(529, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 23;
+            label2.Text = "Student ID";
+            // 
+            // studentidReg
+            // 
+            studentidReg.Location = new Point(529, 68);
+            studentidReg.Margin = new Padding(3, 2, 3, 2);
+            studentidReg.Name = "studentidReg";
+            studentidReg.Size = new Size(178, 23);
+            studentidReg.TabIndex = 22;
+            studentidReg.TextChanged += textBox6_TextChanged;
+            // 
+            // yearReg
+            // 
+            yearReg.AllowDrop = true;
+            yearReg.BackColor = Color.White;
+            yearReg.DropDownHeight = 75;
+            yearReg.DropDownWidth = 75;
+            yearReg.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            yearReg.ForeColor = SystemColors.ControlText;
+            yearReg.FormattingEnabled = true;
+            yearReg.IntegralHeight = false;
+            yearReg.Items.AddRange(new object[] { "1st Year", "2nd Year", "3rd Year", "4th Year" });
+            yearReg.Location = new Point(313, 128);
+            yearReg.Margin = new Padding(3, 2, 3, 2);
+            yearReg.Name = "yearReg";
+            yearReg.Size = new Size(92, 23);
+            yearReg.TabIndex = 18;
+            yearReg.Text = " Year";
             // 
             // label3
             // 
@@ -230,13 +249,13 @@
             label3.TabIndex = 20;
             label3.Text = "Last Name";
             // 
-            // textBox2
+            // lastnameReg
             // 
-            textBox2.Location = new Point(313, 68);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(178, 23);
-            textBox2.TabIndex = 21;
+            lastnameReg.Location = new Point(313, 68);
+            lastnameReg.Margin = new Padding(3, 2, 3, 2);
+            lastnameReg.Name = "lastnameReg";
+            lastnameReg.Size = new Size(178, 23);
+            lastnameReg.TabIndex = 21;
             // 
             // groupBox2
             // 
@@ -260,25 +279,6 @@
             label6.TabIndex = 26;
             label6.Text = "Password";
             // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(529, 68);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(178, 23);
-            textBox6.TabIndex = 22;
-            textBox6.TextChanged += textBox6_TextChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(529, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 15);
-            label2.TabIndex = 23;
-            label2.Text = "Student ID";
-            // 
             // REGISTRATION
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -289,12 +289,12 @@
             Controls.Add(label7);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(passwordReg);
+            Controls.Add(courseReg);
             Controls.Add(label5);
-            Controls.Add(textBox3);
+            Controls.Add(usernameReg);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(firstnameReg);
             Controls.Add(label9);
             Controls.Add(label10);
             Controls.Add(groupBox1);
@@ -316,21 +316,21 @@
         private Label label7;
         private Button button2;
         private Button button1;
-        private TextBox textBox5;
-        private TextBox textBox4;
+        private TextBox passwordReg;
+        private TextBox courseReg;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox usernameReg;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox firstnameReg;
         private Label label9;
         private Label label10;
         private GroupBox groupBox1;
-        private ComboBox comboBox1;
+        private ComboBox yearReg;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox lastnameReg;
         private GroupBox groupBox2;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox studentidReg;
         private Label label2;
     }
 }

@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN_ADMIN));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             vScrollBar1 = new VScrollBar();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             textBox1 = new TextBox();
             pictureBox4 = new PictureBox();
@@ -38,6 +39,10 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
+            profileName = new Label();
+            mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            items = new Button();
+            record = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -52,14 +57,6 @@
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(21, 339);
             vScrollBar1.TabIndex = 18;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(178, 76);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(655, 340);
-            flowLayoutPanel1.TabIndex = 17;
             // 
             // label1
             // 
@@ -99,11 +96,12 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(31, 345);
+            label2.Location = new Point(36, 403);
             label2.Name = "label2";
             label2.Size = new Size(50, 14);
             label2.TabIndex = 13;
             label2.Text = "Log out";
+            label2.Click += label2_Click;
             // 
             // pictureBox2
             // 
@@ -141,14 +139,59 @@
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
             // 
+            // profileName
+            // 
+            profileName.AutoSize = true;
+            profileName.BackColor = Color.Transparent;
+            profileName.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            profileName.ForeColor = Color.AliceBlue;
+            profileName.Location = new Point(12, 366);
+            profileName.Name = "profileName";
+            profileName.Size = new Size(108, 26);
+            profileName.TabIndex = 19;
+            profileName.Text = "PROFILE";
+            profileName.Click += label3_Click;
+            // 
+            // mainPanel
+            // 
+            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.Location = new Point(188, 72);
+            mainPanel.Name = "mainPanel";
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.Size = new Size(645, 357);
+            mainPanel.TabIndex = 20;
+            // 
+            // items
+            // 
+            items.Location = new Point(25, 288);
+            items.Name = "items";
+            items.Size = new Size(75, 23);
+            items.TabIndex = 21;
+            items.Text = "ITEMS";
+            items.UseVisualStyleBackColor = true;
+            items.Click += items_Click;
+            // 
+            // record
+            // 
+            record.Location = new Point(25, 317);
+            record.Name = "record";
+            record.Size = new Size(75, 23);
+            record.TabIndex = 22;
+            record.Text = "RECORD";
+            record.UseVisualStyleBackColor = true;
+            record.Click += record_Click;
+            // 
             // MAIN_ADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
+            Controls.Add(record);
+            Controls.Add(items);
+            Controls.Add(mainPanel);
+            Controls.Add(profileName);
             Controls.Add(vScrollBar1);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox4);
@@ -171,7 +214,6 @@
         #endregion
 
         private VScrollBar vScrollBar1;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
         private TextBox textBox1;
         private PictureBox pictureBox4;
@@ -179,5 +221,9 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
+        private Label profileName;
+        private Guna.UI2.WinForms.Guna2Panel mainPanel;
+        private Button items;
+        private Button record;
     }
 }
