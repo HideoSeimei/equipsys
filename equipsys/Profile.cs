@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class RECORD : Form
+    public partial class Profile: Form
     {
-        public RECORD()
+        public Profile()
         {
             InitializeComponent();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
