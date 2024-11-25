@@ -32,7 +32,7 @@ namespace equipsys
 
         private void button1_Click(object sender, EventArgs e)// REGISTER BUTTON
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            SqlConnection conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Trust Server Certificate=True");
             conn.Open();
             string query = "insert into Accounts(username,password,role,firstname,lastname,course,year,student_id) values(@username,@password,'user',@firstname,@lastname,@course,@year,@student_id)"; // query for inserting the registration data to the database
             SqlCommand cmd = new SqlCommand(query, conn);// the command 
@@ -46,6 +46,10 @@ namespace equipsys
             cmd.ExecuteNonQuery(); // line for executing the command(query) to the database
             MessageBox.Show("Registered Succesfully");
             conn.Close();
+
+            LOGIN login = new LOGIN();
+            login.Show();
+            this.Hide();    
 
         }
 

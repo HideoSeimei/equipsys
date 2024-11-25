@@ -33,12 +33,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox5 = new PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            vScrollBar1 = new VScrollBar();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
             groupBox2 = new GroupBox();
             label6 = new Label();
             label8 = new Label();
@@ -56,20 +50,25 @@
             label9 = new Label();
             label10 = new Label();
             firstnameReg = new TextBox();
+            vScrollBar1 = new VScrollBar();
+            label1 = new Label();
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.Cursor = Cursors.Hand;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(42, 358);
+            pictureBox5.Location = new Point(42, 270);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 43);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -88,72 +87,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(753, 446);
             guna2Panel1.TabIndex = 31;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.AllowDrop = true;
-            vScrollBar1.Cursor = Cursors.NoMoveVert;
-            vScrollBar1.Location = new Point(956, 111);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 438);
-            vScrollBar1.TabIndex = 30;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(200, 42);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 32);
-            label1.TabIndex = 29;
-            label1.Text = "Profile";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(36, 467);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 17);
-            label2.TabIndex = 26;
-            label2.Text = "Log out";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(42, 276);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(42, 43);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 25;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(42, 188);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 43);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 24;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 103);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 43);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 23;
-            pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -347,6 +280,65 @@
             firstnameReg.Size = new Size(215, 27);
             firstnameReg.TabIndex = 36;
             // 
+            // vScrollBar1
+            // 
+            vScrollBar1.AllowDrop = true;
+            vScrollBar1.Cursor = Cursors.NoMoveVert;
+            vScrollBar1.Location = new Point(956, 111);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(21, 438);
+            vScrollBar1.TabIndex = 30;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.ForestGreen;
+            label1.Location = new Point(200, 42);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 32);
+            label1.TabIndex = 29;
+            label1.Text = "Profile";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Cursor = Cursors.Hand;
+            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(36, 467);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 17);
+            label2.TabIndex = 26;
+            label2.Text = "Log out";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(42, 188);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(42, 43);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 24;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(42, 103);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(42, 43);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // Profile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -358,7 +350,6 @@
             Controls.Add(vScrollBar1);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Profile";
@@ -366,13 +357,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,7 +374,6 @@
         private VScrollBar vScrollBar1;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private GroupBox groupBox2;

@@ -84,6 +84,7 @@
             linkLabel1.TabIndex = 19;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
+            linkLabel1.Visible = false;
             // 
             // button2
             // 

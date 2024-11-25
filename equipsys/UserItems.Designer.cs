@@ -1,6 +1,6 @@
 ﻿namespace equipsys
 {
-    partial class ITEMS
+    partial class UserItems
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            UserItemsPanel = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // UserItemsPanel
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1013, 588);
-            flowLayoutPanel1.TabIndex = 0;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            UserItemsPanel.AutoScroll = true;
+            UserItemsPanel.Dock = DockStyle.Fill;
+            UserItemsPanel.Location = new Point(0, 0);
+            UserItemsPanel.Name = "UserItemsPanel";
+            UserItemsPanel.Size = new Size(800, 450);
+            UserItemsPanel.TabIndex = 0;
+            UserItemsPanel.Paint += flowLayoutPanel1_Paint;
             // 
-            // ITEMS
+            // UserItems
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1013, 588);
-            Controls.Add(flowLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "ITEMS";
-            Text = "Form1";
+            ClientSize = new Size(800, 450);
+            Controls.Add(UserItemsPanel);
+            Name = "UserItems";
+            Text = "UserItems";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel UserItemsPanel;
     }
 }

@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class Profile : Form
+    public partial class EDIT_ITEMS : Form
     {
-        public Profile()
+        public EDIT_ITEMS()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
-            mainAdmin.Show();
-            this.Hide();
+            
+            this.Close();
         }
     }
 }

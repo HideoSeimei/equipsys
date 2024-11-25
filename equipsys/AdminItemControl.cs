@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class ItemUserControl : UserControl
+    public partial class AdminItemControl : UserControl
     {
-        public ItemUserControl()
+        public AdminItemControl()
         {
             InitializeComponent();
         }
@@ -30,6 +30,25 @@ namespace equipsys
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ItemUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EDIT_ITEMS editItems = new EDIT_ITEMS();
+            MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
+            editItems.Show();
+            mainAdmin.Hide();
         }
     }
 }
