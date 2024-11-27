@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using EBSystemLIBRARY.Models;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace equipsys
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                string imagePath = openFileDialog.FileName;
                 pictureBox4.Image = new Bitmap(openFileDialog.FileName);
             }
         }
@@ -34,17 +36,11 @@ namespace equipsys
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Trust Server Certificate=True");
-            SqlCommand cmd = new SqlCommand("Insert into ItemStockList (ItemName, Description, Stock, ImagePath) Values(@Item_Name, @D_escription, @S_tock, @Image_Path)", conn);
-            cmd.Parameters.AddWithValue("Item_Name", textBox1.Text);
-            cmd.Parameters.AddWithValue("D_escription", textBox2.Text);
-            cmd.Parameters.AddWithValue("S_tock", textBox3.Text);
-            cmd.Parameters.AddWithValue("Image_Path", openFileDialog1.FileName);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            MessageBox.Show("Saved Successfully");
+            ItemModel itemmodel = new ItemModel();
 
+            int stockint = Int32.Parse(textBox3.Text);
+            string name = textBox1.Text;
+            itemmodel.Additem(name, textBox2.Text, stockint);
             // used to return to MAIN_ADMIN form
 
             MAIN_ADMIN mainadminform = new MAIN_ADMIN();
@@ -60,6 +56,16 @@ namespace equipsys
         }
 
         private void ADD_ITEMS_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

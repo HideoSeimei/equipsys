@@ -13,6 +13,25 @@ namespace EBSystemLIBRARY.Models
         public string ItemDescription { get; set; }
         public int ItemStock { get; set; }
         public string ImagePath { get; set; }
+        
+        //CONSTRUCTOR
+
+        public ItemModel(string name,string description,int stock,string imagepath)
+        {
+            ItemName = name;
+            ItemDescription = description;
+            ItemStock = stock;
+            ImagePath = imagepath;
+
+
+        }
+
+
+        //METHODS
+        public bool Additem()
+
+
+
 
     }
 }
