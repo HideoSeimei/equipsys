@@ -306,7 +306,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
         private Button button1;
         private Button button3;
         private Button button2;
@@ -318,5 +317,6 @@
         public TextBox textBox1;
         public Label label5;
         public Label label4;
+        public PictureBox pictureBox4;
     }
 }
