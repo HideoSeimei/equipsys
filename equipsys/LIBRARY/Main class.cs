@@ -37,6 +37,7 @@ namespace EBSystemLIBRARY.Models
         {
             try
             {
+
                 ADD_ITEMS additem = new ADD_ITEMS();
                 SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
                 conn.Open();
