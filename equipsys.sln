@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "equipsys", "equipsys\equipsys.csproj", "{A253EF79-CEF2-4A9C-B5EB-23FA1414D9FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBSystemLIBRARY", "EBSystemLIBRARY\EBSystemLIBRARY.csproj", "{7560CBC6-99A6-47B7-901E-3529CAEB2DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EBSystemLIBRARY", "EBSystemLIBRARY\EBSystemLIBRARY.csproj", "{7560CBC6-99A6-47B7-901E-3529CAEB2DDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C08B9F1-2108-4CF2-8017-59ADBEDE7F6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
