@@ -1,6 +1,6 @@
 ﻿namespace equipsys
 {
-    partial class ITEMS
+    partial class ItemForm
     {
         /// <summary>
         /// Required designer variable.

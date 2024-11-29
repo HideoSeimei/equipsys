@@ -19,7 +19,7 @@ namespace equipsys
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
+            AdminMainForm mainAdmin = new AdminMainForm();
             mainAdmin.Show();
             this.Hide();
         }

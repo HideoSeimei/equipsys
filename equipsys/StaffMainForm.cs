@@ -53,7 +53,7 @@ namespace equipsys
 
         private void label2_Click(object sender, EventArgs e)
         {
-            LOGIN login = new LOGIN();
+            LoginForm login = new LoginForm();
             login.Show();
             this.Hide();
         }

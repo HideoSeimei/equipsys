@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class RECORD : Form
+    public partial class BorrowingForm : Form
     {
-        public RECORD()
+        public BorrowingForm()
         {
             InitializeComponent();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void BORROWING_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        private void yearReg_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

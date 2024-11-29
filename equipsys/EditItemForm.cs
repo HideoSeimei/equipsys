@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class EDIT_ITEMS : Form
+    public partial class EditItemForm : Form
     {
-        public EDIT_ITEMS()
+        public EditItemForm()
         {
             InitializeComponent();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
+            AdminMainForm mainAdmin = new AdminMainForm();
             
             this.Close();
         }
