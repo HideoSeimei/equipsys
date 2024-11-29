@@ -48,7 +48,7 @@ namespace EBSystemLIBRARY.Models
                 else
                 {
                     // for transferring the selected image locally
-                    string imageFolder = @".\Images";
+                    string imageFolder = @"C:\Users\itiw\source\repos\equipsys\EquipmentBorrowingSystem\equipsys\Images";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
                     File.Copy(image, finalImagePath, true);
