@@ -15,9 +15,26 @@ namespace equipsys
         public AdminItemControl()
         {
             InitializeComponent();
-            
+
         }
-        
+
+        public void SetItemData(int itemId, string itemName, string description, int stocks, string imagePath)
+        {
+            // Set the controls with the values from your data
+            ItemIdlbl.Text = $"ID: {itemId}";
+            Namelbl.Text = itemName;
+            Descriptionlbl.Text = description;
+            Stocklbl.Text = $"Stocks: {stocks}";
+
+
+            // Load the image into the PictureBox if imagePath is valid
+            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+            {
+                imageBox.Image = Image.FromFile(imagePath);
+            }
+
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -54,6 +71,11 @@ namespace equipsys
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)// DELETE BUTTON
         {
 
         }
