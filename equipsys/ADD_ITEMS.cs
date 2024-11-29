@@ -46,8 +46,8 @@ namespace equipsys
            
             ItemModel itemmodel = new ItemModel();
             itemmodel.Additem(textBox1.Text, textBox2.Text, Int32.Parse(textBox3.Text),_imagePath);// method for adding item to the database
+            
             // used to return to MAIN_ADMIN form
-
             MAIN_ADMIN mainadminform = new MAIN_ADMIN();
             mainadminform.Show();
             this.Hide();
