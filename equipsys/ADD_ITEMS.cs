@@ -33,7 +33,7 @@ namespace equipsys
                 _imagePath = imagePath;
                 
             }
-            MessageBox.Show(_imagePath);
+            //MessageBox.Show(_imagePath); // for testing
         }
 
         private void label5_Click(object sender, EventArgs e)

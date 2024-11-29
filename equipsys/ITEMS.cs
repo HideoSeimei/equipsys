@@ -16,10 +16,6 @@ namespace equipsys
         public ITEMS()
         {
             InitializeComponent();
-            //ItemUserControl item = new ItemUserControl();
-            //flowLayoutPanel1.Controls.Add(item);
-            //flowLayoutPanel1.Controls.Add(item);
-            //flowLayoutPanel1.Controls.Add(item);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Width = 300;
@@ -32,11 +28,7 @@ namespace equipsys
                 flowLayoutPanel1.Controls.Add(item);
                 yOffset += item.Height + 50;  // Adjust for next item
             }
-            //for (int i = 0; i < 11; i++)
-            //{
-            //    ItemUserControl item = new ItemUserControl();
-            //    flowLayoutPanel1.Controls.Add(item);
-            //}
+          
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

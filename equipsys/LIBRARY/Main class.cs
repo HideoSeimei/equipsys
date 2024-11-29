@@ -39,16 +39,20 @@ namespace EBSystemLIBRARY.Models
             try
             {
                 ADD_ITEMS additem = new ADD_ITEMS();
-                // for transferring the selected image locally
-                //string imageFolder = @"C:\Users\itiw\source\repos\equipsys\EquipmentBorrowingSystem\equipsys\Images";
-                //File.Copy(image, imageFolder, true);
-                //string imageFileName = Path.GetFileName(image);
-                //string finalImagePath = Path.Combine(imageFolder, imageFileName);
-                //
 
-                if (image == null)
+                string finalImagePath = image;
+                if (image == null) // if the image is null it will become the "default image" in the folder
                 {
-                    image = @".\default_image.png";
+                    finalImagePath = @".\Images\default_image.png";
+                }
+                else
+                {
+                    // for transferring the selected image locally
+                    string imageFolder = @".\Images";
+                    string imageFileName = Path.GetFileName(image);
+                    finalImagePath = Path.Combine(imageFolder, imageFileName);
+                    File.Copy(image, finalImagePath, true);
+                    //
                 }
 
 
@@ -58,13 +62,13 @@ namespace EBSystemLIBRARY.Models
                 cmd.Parameters.AddWithValue("Item_Name", name);
                 cmd.Parameters.AddWithValue("Description", description);
                 cmd.Parameters.AddWithValue("Stock", stock);
-                cmd.Parameters.AddWithValue("Image", image);
+                cmd.Parameters.AddWithValue("Image", finalImagePath);
               
                 int rowsAffected = cmd.ExecuteNonQuery();
-                //MessageBox.Show($"Item Name: {itemName}, Description: {description}, Stock: {stock}");
+                
 
 
-                if (rowsAffected > 0)
+                if (rowsAffected > 0) // will check if theres a changes happened inside the database
                 {
                     MessageBox.Show("Item added succesfuly");
                     return true;

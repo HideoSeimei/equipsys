@@ -15,7 +15,9 @@ namespace equipsys
         public AdminItemControl()
         {
             InitializeComponent();
+            
         }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -49,6 +51,11 @@ namespace equipsys
             MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
             editItems.Show();
             mainAdmin.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
