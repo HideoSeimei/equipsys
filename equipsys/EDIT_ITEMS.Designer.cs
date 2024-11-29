@@ -32,7 +32,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
-            pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             button3 = new Button();
             button2 = new Button();
@@ -49,29 +48,18 @@
             pictureBox5 = new PictureBox();
             textBox1 = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(47, 276);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(42, 43);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 50;
-            pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -256,6 +244,18 @@
             guna2Panel1.Size = new Size(753, 446);
             guna2Panel1.TabIndex = 53;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(47, 276);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(42, 43);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 50;
+            pictureBox3.TabStop = false;
+            // 
             // EDIT_ITEMS
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -271,13 +271,13 @@
             Controls.Add(guna2Panel1);
             Name = "EDIT_ITEMS";
             Text = "EDIT_ITEMS";
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,7 +285,6 @@
         #endregion
 
         private OpenFileDialog openFileDialog1;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Button button3;
         private Button button2;
@@ -302,5 +301,6 @@
         private PictureBox pictureBox5;
         private TextBox textBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private PictureBox pictureBox3;
     }
 }

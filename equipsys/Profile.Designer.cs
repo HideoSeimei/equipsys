@@ -50,7 +50,6 @@
             label9 = new Label();
             label10 = new Label();
             firstnameReg = new TextBox();
-            vScrollBar1 = new VScrollBar();
             label1 = new Label();
             label2 = new Label();
             pictureBox2 = new PictureBox();
@@ -280,15 +279,6 @@
             firstnameReg.Size = new Size(215, 27);
             firstnameReg.TabIndex = 36;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.AllowDrop = true;
-            vScrollBar1.Cursor = Cursors.NoMoveVert;
-            vScrollBar1.Location = new Point(956, 111);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 438);
-            vScrollBar1.TabIndex = 30;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -347,7 +337,6 @@
             ClientSize = new Size(1013, 588);
             Controls.Add(pictureBox5);
             Controls.Add(guna2Panel1);
-            Controls.Add(vScrollBar1);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(pictureBox2);
@@ -371,7 +360,6 @@
 
         private PictureBox pictureBox5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private VScrollBar vScrollBar1;
         private Label label1;
         private Label label2;
         private PictureBox pictureBox2;

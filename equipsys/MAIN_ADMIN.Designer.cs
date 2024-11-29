@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN_ADMIN));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             textBox1 = new TextBox();
             pictureBox4 = new PictureBox();
@@ -147,11 +147,11 @@
             // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges3;
+            mainPanel.CustomizableEdges = customizableEdges1;
             mainPanel.Location = new Point(199, 96);
             mainPanel.Margin = new Padding(3, 4, 3, 4);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             mainPanel.Size = new Size(753, 444);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
