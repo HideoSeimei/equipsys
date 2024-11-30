@@ -35,7 +35,8 @@
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
-            label4 = new Label();
+            Descriptionlbl = new Label();
+            ItemIdlbl = new Label();
             ((System.ComponentModel.ISupportInitialize)imageBox).BeginInit();
             SuspendLayout();
             // 
@@ -118,24 +119,37 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // label4
+            // Descriptionlbl
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.DimGray;
-            label4.Location = new Point(494, 22);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 20);
-            label4.TabIndex = 8;
-            label4.Text = "DESCRIPTION";
+            Descriptionlbl.AutoSize = true;
+            Descriptionlbl.BackColor = Color.Transparent;
+            Descriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            Descriptionlbl.ForeColor = Color.DimGray;
+            Descriptionlbl.Location = new Point(494, 22);
+            Descriptionlbl.Name = "Descriptionlbl";
+            Descriptionlbl.Size = new Size(100, 20);
+            Descriptionlbl.TabIndex = 8;
+            Descriptionlbl.Text = "DESCRIPTION";
+            // 
+            // ItemIdlbl
+            // 
+            ItemIdlbl.AutoSize = true;
+            ItemIdlbl.BackColor = Color.Transparent;
+            ItemIdlbl.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemIdlbl.ForeColor = Color.DimGray;
+            ItemIdlbl.Location = new Point(244, 137);
+            ItemIdlbl.Name = "ItemIdlbl";
+            ItemIdlbl.Size = new Size(18, 13);
+            ItemIdlbl.TabIndex = 9;
+            ItemIdlbl.Text = "ID";
             // 
             // AdminItemControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            Controls.Add(label4);
+            Controls.Add(ItemIdlbl);
+            Controls.Add(Descriptionlbl);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -158,6 +172,7 @@
         private Label label1;
         private Button button1;
         private Button button2;
-        private Label label4;
+        private Label Descriptionlbl;
+        private Label ItemIdlbl;
     }
 }

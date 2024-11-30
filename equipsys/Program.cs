@@ -11,11 +11,11 @@ namespace equipsys
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-<<<<<<< Updated upstream
+
             Application.Run(new LOGIN());
-=======
-            Application.Run(new LoginForm());
->>>>>>> Stashed changes
+
+           // Application.Run(new LoginForm());
+
         }
     }
 }

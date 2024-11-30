@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBSystemLIBRARY.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,16 +20,10 @@ namespace equipsys
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Width = 300;
+            ItemLoader itemLoader = new ItemLoader(flowLayoutPanel1);
+            itemLoader.LoadItemsToFlowLayoutPanel();
 
-            for (int i = 0; i < 11; i++)
-            {
-                int yOffset = 0;
-                AdminItemControl item = new AdminItemControl();
-                item.Location = new Point(10, yOffset);  // Set unique location for each item
-                flowLayoutPanel1.Controls.Add(item);
-                yOffset += item.Height + 50;  // Adjust for next item
-            }
-          
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

@@ -34,7 +34,7 @@ namespace EBSystemLIBRARY.Models
 
 
         //METHODS
-        public bool Additem(string name, string description, int stock,string image)
+        public bool Additem(string name, string description, int stock, string image)
         {
             try
             {
@@ -63,9 +63,9 @@ namespace EBSystemLIBRARY.Models
                 cmd.Parameters.AddWithValue("Description", description);
                 cmd.Parameters.AddWithValue("Stock", stock);
                 cmd.Parameters.AddWithValue("Image", finalImagePath);
-              
+
                 int rowsAffected = cmd.ExecuteNonQuery();
-                
+
 
 
                 if (rowsAffected > 0) // will check if theres a changes happened inside the database
@@ -78,13 +78,13 @@ namespace EBSystemLIBRARY.Models
                     MessageBox.Show("Failed to add the item.");
                     return false;
                 }
-                
-                
+
+
 
             }
             catch (Exception ex)/// just incase theres an error 
             {
-                
+
                 MessageBox.Show($"{ex}");
 
             }
@@ -94,5 +94,70 @@ namespace EBSystemLIBRARY.Models
 
 
 
+    }
+    public class ItemLoader
+    {
+        private readonly FlowLayoutPanel _flowLayoutPanel;
+
+        public ItemLoader(FlowLayoutPanel flowLayoutPanel)
+        {
+            _flowLayoutPanel = flowLayoutPanel;
+        }
+
+        // Method to load items from the database
+        public List<ItemModel> GetItemsFromDatabase()
+        {
+            var items = new List<ItemModel>();
+
+            using (var connection = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT item_Id, ItemName, Description, Stock, ImagePath FROM Items", connection);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        items.Add(new ItemModel
+                        {
+                            ID = reader.GetInt32(0),
+                            ItemName = reader.GetString(1),
+                            ItemDescription = reader.GetString(2),
+                            ItemStock = reader.GetInt32(3),
+                            ImagePath = reader.GetString(4)
+                        });
+                    }
+                }
+            }
+
+            return items;
+        }
+
+        // Method to load items into the FlowLayoutPanel by creating and adding ItemUserControl instances
+        public void LoadItemsToFlowLayoutPanel()
+        {
+            List<ItemModel> items = GetItemsFromDatabase();
+
+            // Clear existing controls in FlowLayoutPanel
+            _flowLayoutPanel.Controls.Clear();
+
+            foreach (var item in items)
+            {
+                var AdminitemControl = new AdminItemControl();
+                AdminitemControl.SetItemData(item.ID, item.ItemName, item.ItemDescription, item.ItemStock, item.ImagePath);
+
+                // Add the new UserControl to the FlowLayoutPanel
+                _flowLayoutPanel.Controls.Add(AdminitemControl);
+            }
+        }
+        // Method for deleting Items
+        public void DeleteItem()
+        {
+            using (var conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                string query = "deleter from Items where item_id = @Id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+            }
+        }
     }
 }
