@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace equipsys
 {
-    public partial class LOGIN_IN_AS : Form
+    public partial class HistoryLogForm : Form
     {
-        public LOGIN_IN_AS()
+        public HistoryLogForm()
         {
             InitializeComponent();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

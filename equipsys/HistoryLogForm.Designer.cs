@@ -1,6 +1,6 @@
 ﻿namespace equipsys
 {
-    partial class RECORD
+    partial class HistoryLogForm
     {
         /// <summary>
         /// Required designer variable.

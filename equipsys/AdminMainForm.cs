@@ -13,13 +13,13 @@ namespace equipsys
     // TODO - add function to retrieve items from database, make sure it refreshes every new item or everytime the page loads or home is clicked.
 {
 
-    public partial class MAIN_ADMIN : Form
+    public partial class AdminMainForm : Form
     {
 
-        public MAIN_ADMIN()
+        public AdminMainForm()
         {
             InitializeComponent();
-            ITEMS items = new ITEMS() { TopLevel = false, TopMost = true };
+            ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
             items.FormBorderStyle = FormBorderStyle.None;
             items.Size = mainPanel.ClientSize;
             items.Dock = DockStyle.Fill;
@@ -42,7 +42,7 @@ namespace equipsys
         private void items_Click(object sender, EventArgs e)// ITEMS BUTTON
         {
             //for opening the items form
-            ITEMS items = new ITEMS() { TopLevel = false, TopMost = true };
+            ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
             items.FormBorderStyle = FormBorderStyle.None;
             items.Size = mainPanel.ClientSize;
             items.Dock = DockStyle.Fill;
@@ -54,7 +54,7 @@ namespace equipsys
         private void label2_Click(object sender, EventArgs e)
         {
             // for loging out (will send you back to login form)
-            LOGIN login = new LOGIN();
+            LoginForm login = new LoginForm();
             login.Show();
             this.Hide();
             //
@@ -64,7 +64,7 @@ namespace equipsys
         private void record_Click(object sender, EventArgs e)
         {
             //for opening the records form
-            RECORD record = new RECORD() { TopLevel = false, TopMost = true };
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
             record.FormBorderStyle = FormBorderStyle.None;
             record.Size = mainPanel.ClientSize;
             record.Dock = DockStyle.Fill;
@@ -77,7 +77,7 @@ namespace equipsys
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ITEMS items = new ITEMS() { TopLevel = false, TopMost = true };
+            ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
             items.FormBorderStyle = FormBorderStyle.None;
             items.Size = mainPanel.ClientSize;
             items.Dock = DockStyle.Fill;
@@ -89,7 +89,7 @@ namespace equipsys
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //for opening the items form
-            ADD_ITEMS additem = new ADD_ITEMS();
+            AddItemForm additem = new AddItemForm();
             additem.Show();
             this.Hide();
         }
@@ -102,7 +102,7 @@ namespace equipsys
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //for opening the records form
-            RECORD record = new RECORD() { TopLevel = false, TopMost = true };
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
             record.FormBorderStyle = FormBorderStyle.None;
             record.Size = mainPanel.ClientSize;
             record.Dock = DockStyle.Fill;

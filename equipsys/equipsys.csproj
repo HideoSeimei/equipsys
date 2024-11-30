@@ -14,13 +14,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="UserItemControl.cs">
+    <Compile Update="UserControls\UserItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EBSystemLIBRARY\EBSystemLIBRARY.csproj" />
   </ItemGroup>
 
 </Project>

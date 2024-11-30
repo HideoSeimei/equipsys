@@ -1,9 +1,9 @@
 using Microsoft.Data.SqlClient;
 namespace equipsys
 {
-    public partial class LOGIN : Form
+    public partial class LoginForm : Form
     {
-        public LOGIN()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace equipsys
 
         private void button2_Click(object sender, EventArgs e)// SIGN UP BUTTON
         {
-            REGISTRATION registration = new REGISTRATION();
+            RegistrationForm registration = new RegistrationForm();
             registration.Show();
             this.Hide();
         }
@@ -56,7 +56,7 @@ namespace equipsys
             }
             else if (result == "admin")
             {
-                MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
+                AdminMainForm mainAdmin = new AdminMainForm();
                 mainAdmin.Show();
                 this.Hide();
             }

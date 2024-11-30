@@ -45,8 +45,8 @@ namespace equipsys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EDIT_ITEMS editItems = new EDIT_ITEMS();
-            MAIN_ADMIN mainAdmin = new MAIN_ADMIN();
+            EditItemForm editItems = new EditItemForm();
+            AdminMainForm mainAdmin = new AdminMainForm();
             editItems.Show();
             mainAdmin.Hide();
         }

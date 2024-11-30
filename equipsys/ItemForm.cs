@@ -12,9 +12,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace equipsys
 {
-    public partial class ITEMS : Form
+    public partial class ItemForm : Form
     {
-        public ITEMS()
+        public ItemForm()
         {
             InitializeComponent();
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
