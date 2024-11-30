@@ -48,6 +48,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(UserItemsPanel);
             Name = "UserItems";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UserItems";
             ResumeLayout(false);
         }

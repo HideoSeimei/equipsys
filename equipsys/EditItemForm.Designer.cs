@@ -256,7 +256,7 @@
             pictureBox3.TabIndex = 50;
             pictureBox3.TabStop = false;
             // 
-            // EDIT_ITEMS
+            // EditItemForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -269,7 +269,8 @@
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
             Controls.Add(guna2Panel1);
-            Name = "EDIT_ITEMS";
+            Name = "EditItemForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EDIT_ITEMS";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

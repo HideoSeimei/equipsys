@@ -45,11 +45,10 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.ForestGreen;
             dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(886, 441);
+            dataGridView1.Size = new Size(1013, 588);
             dataGridView1.TabIndex = 32;
             // 
             // Column1
@@ -87,13 +86,15 @@
             Column3.Name = "Column3";
             Column3.Width = 125;
             // 
-            // RECORD
+            // HistoryLogForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(886, 441);
+            ClientSize = new Size(1013, 588);
             Controls.Add(dataGridView1);
-            Name = "RECORD";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "HistoryLogForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HISTORY";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

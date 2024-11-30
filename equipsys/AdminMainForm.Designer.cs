@@ -169,7 +169,7 @@
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
-            // MAIN_ADMIN
+            // AdminMainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -186,7 +186,8 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             ForeColor = Color.DimGray;
-            Name = "MAIN_ADMIN";
+            Name = "AdminMainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MAIN_ADMIN";
             Load += MAIN_ADMIN_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
