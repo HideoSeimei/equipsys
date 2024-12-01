@@ -19,7 +19,7 @@ namespace equipsys
             InitializeComponent();
         }
 
-        private void ReturnButton_Click(object sender, EventArgs e)
+        private void ReturnButton_Click(object sender, EventArgs e, LoginForm loginForm)
         {
             LoginForm login_form = new LoginForm();
             login_form.Show();
@@ -30,7 +30,7 @@ namespace equipsys
         {// If ValidateAccount() == true, then create the account and save to database.
             if (ValidateAccount())
             {
-                AccountModel newAccountModel = new AccountModel(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
+                AccountModel newAccountModel = new(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
                 newAccountModel.SaveAccount(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
 
                 // Resets textboxes to null values.
@@ -74,6 +74,11 @@ namespace equipsys
                 return false;
 
             return true;
+        }
+
+        private void ReturnButton_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

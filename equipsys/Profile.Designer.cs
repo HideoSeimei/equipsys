@@ -342,6 +342,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Profile";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile";
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             guna2Panel1.ResumeLayout(false);

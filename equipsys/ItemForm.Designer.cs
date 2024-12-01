@@ -43,14 +43,15 @@
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // ITEMS
+            // ItemForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1013, 588);
             Controls.Add(flowLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "ITEMS";
+            Name = "ItemForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
         }

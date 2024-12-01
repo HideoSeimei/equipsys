@@ -154,6 +154,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "MAIN";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MAIN";
             Load += MAIN_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
