@@ -1,27 +1,11 @@
 ﻿
+using Microsoft.Data.SqlClient;
+using System.Data.SqlTypes;
+
 namespace EBSystemLIBRARY.Models
 {
     public class AccountModel
     {
-        private string text1;
-        private string text2;
-        private string text3;
-        private string text4;
-        private string text5;
-        private string text6;
-        private string text7;
-
-        public AccountModel(string text1, string text2, string text3, string text4, string text5, string text6, string text7)
-        {
-            this.text1 = text1;
-            this.text2 = text2;
-            this.text3 = text3;
-            this.text4 = text4;
-            this.text5 = text5;
-            this.text6 = text6;
-            this.text7 = text7;
-        }
-
         public string Username { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
@@ -30,9 +14,59 @@ namespace EBSystemLIBRARY.Models
         public string Year { get; set; }
         public string StudentID { get; set; }
 
-        public void SaveAccount(string text1, string text2, string text3, string text4, string text5, string text6, string text7)
+        // CONSTRUCTORS
+        public AccountModel(string username, string password, string firstname, string lastname, string course, string year, string studentid)
         {
-            throw new NotImplementedException();
+            Username = username;
+            Password = password;
+            FirstName = firstname;
+            LastName = lastname;
+            Course = course;
+            Year = year;
+            StudentID = studentid;
+        }
+
+        // METHODS
+
+        /// <summary>
+        /// Saves information of new object into table Accounts
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="course"></param>
+        /// <param name="year"></param>
+        /// <param name="studentid"></param>
+        /// <returns></returns>
+        public bool SaveAccount(string username, string password, string firstname, string lastname, string course, string year, string studentid)
+        {
+            // TODO - change connection string to your local computer name
+            SqlConnection sql = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            string saveAccountQuery = "INSERT INTO Accounts (username, password, role, firstname, lastname, course, year, student_id) VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @STUDENTID)";
+            sql.Open();
+            SqlCommand cmd = new SqlCommand(saveAccountQuery, sql);
+            cmd.Parameters.AddWithValue("@USERNAME", username);
+            cmd.Parameters.AddWithValue("@PASSWORD", password);
+            cmd.Parameters.AddWithValue("@FIRSTNAME", firstname);
+            cmd.Parameters.AddWithValue("@LASTNAME", lastname);
+            cmd.Parameters.AddWithValue("@COURSE", course);
+            cmd.Parameters.AddWithValue("@YEAR", year);
+            cmd.Parameters.AddWithValue("@STUDENTID", studentid);
+
+            int rowsAffected = cmd.ExecuteNonQuery();
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show("Account registered successfully");
+                sql.Close();
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Failed to register account");
+                sql.Close();
+                return false;
+            }
         }
     }
 }

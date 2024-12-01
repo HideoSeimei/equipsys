@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,7 +60,7 @@ namespace EBSystemLIBRARY.Models
 
                 // TODO - CHANGE SqlConnection's CONSTRUCTOR TO YOUR DATA SOURCE AND DB
                 // Opens a sql connection and execute an insert query to table Items
-                SqlConnection sql = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+                SqlConnection sql = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
                 string saveItemQuery = "INSERT INTO Items (ItemName, Description, Stock, ImagePath) VALUES(@ITEMNAME, @ITEMDESCRIPTION, @ITEMSTOCK, @ITEMIMAGEPATH)";
                 sql.Open();
                 SqlCommand cmd = new SqlCommand(saveItemQuery, sql);

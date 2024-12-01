@@ -49,13 +49,13 @@ namespace equipsys
             }
             else
             {
-                MessageBox.Show("There are errors detected in your entry, try again.");
+                MessageBox.Show("Invalid Entries Detected, Try again.");
             }
         }
 
         private bool ValidateAccount()
         {// Validates RegistrationForm and checks for invalid values.
-            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length > 30 || UsernameBox.Text.Length < 3)
+            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length <= 30 || UsernameBox.Text.Length >= 3)
             {
                 MessageBox.Show("Username Must be 3-30 characters long");
                 return false;
@@ -66,19 +66,31 @@ namespace equipsys
                 return false;
             if (LNameBox.Text.Length == 0)
                 return false;
-            if (CourseBox.Text.Length == 0)
+            if (CourseBox.Text.Length == 0) // TODO - make sure its a valid course
                 return false;
-            if (YearBox.Text.Length == 0)
+            if (YearBox.SelectedItem == null)
+            {
+                MessageBox.Show("Select a valid year level.");
                 return false;
+            }
             if (StudentIDBox.Text.Length == 0)
                 return false;
 
             return true;
         }
 
-        private void ReturnButton_Click_1(object sender, EventArgs e)
+        private void YearBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if ((string) YearBox.SelectedItem == "1st Year")
+                YearBox.Text = "1st Year";
+            if ((string) YearBox.SelectedItem == "2nd Year")
+                YearBox.Text = "2nd Year";
+            if ((string) YearBox.SelectedItem == "3rd Year")
+                YearBox.Text = "3rd Year";
+            if ((string) YearBox.SelectedItem == "4th Year")
+                YearBox.Text = "4th Year";
+            else
+                YearBox.Text = "";
         }
     }
 }
