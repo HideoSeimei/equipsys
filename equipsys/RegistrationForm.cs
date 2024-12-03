@@ -55,7 +55,7 @@ namespace equipsys
 
         private bool ValidateAccount()
         {// Validates RegistrationForm and checks for invalid values.
-            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length <= 30 || UsernameBox.Text.Length >= 3)
+            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length < 30 || UsernameBox.Text.Length > 3)
             {
                 MessageBox.Show("Username Must be 3-30 characters long");
                 return false;

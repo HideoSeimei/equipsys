@@ -61,6 +61,7 @@
             label10 = new Label();
             firstnameReg = new TextBox();
             pictureBox5 = new PictureBox();
+            textBox3 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -132,6 +133,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(textBox3);
             guna2Panel1.Controls.Add(label8);
             guna2Panel1.Controls.Add(comboBox4);
             guna2Panel1.Controls.Add(comboBox3);
@@ -422,6 +424,13 @@
             pictureBox5.TabIndex = 38;
             pictureBox5.TabStop = false;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(80, 238);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(83, 27);
+            textBox3.TabIndex = 59;
+            // 
             // BorrowingForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -482,5 +491,6 @@
         private TextBox textBox2;
         private Label label11;
         private TextBox textBox1;
+        private TextBox textBox3;
     }
 }
