@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EBSystemLIBRARY.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,12 +78,13 @@ namespace equipsys
 
         private void button2_Click(object sender, EventArgs e)// DELETE BUTTON
         {
-
+            ItemModel itemmodel = new ItemModel();
+            //itemmodel.DeleteItem(ItemIdlbl.Text);
         }
 
         private void Descriptionlbl_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

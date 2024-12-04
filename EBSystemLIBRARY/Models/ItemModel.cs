@@ -91,5 +91,17 @@ namespace EBSystemLIBRARY.Models
             }
             return false;
         }
+        // Method for deleting Items
+        public void DeleteItem(string id)
+        {
+            using (var conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                string query = "delete from Items where item_id = @Id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Id", id);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
