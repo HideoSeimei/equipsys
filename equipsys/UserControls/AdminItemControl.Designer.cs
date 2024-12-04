@@ -121,13 +121,14 @@
             // 
             // Descriptionlbl
             // 
-            Descriptionlbl.AutoSize = true;
             Descriptionlbl.BackColor = Color.Transparent;
             Descriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Descriptionlbl.ForeColor = Color.DimGray;
-            Descriptionlbl.Location = new Point(494, 22);
+            Descriptionlbl.Location = new Point(435, 22);
+            Descriptionlbl.MaximumSize = new Size(300, 0);
+            Descriptionlbl.MinimumSize = new Size(100, 100);
             Descriptionlbl.Name = "Descriptionlbl";
-            Descriptionlbl.Size = new Size(100, 20);
+            Descriptionlbl.Size = new Size(148, 100);
             Descriptionlbl.TabIndex = 8;
             Descriptionlbl.Text = "DESCRIPTION";
             // 

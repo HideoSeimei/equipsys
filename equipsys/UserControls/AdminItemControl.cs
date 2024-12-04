@@ -79,5 +79,10 @@ namespace equipsys
         {
 
         }
+
+        private void Descriptionlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

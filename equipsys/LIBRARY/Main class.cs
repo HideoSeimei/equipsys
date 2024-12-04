@@ -38,10 +38,10 @@ namespace EBSystemLIBRARY.Models
         {
             try
             {
-                ADD_ITEMS additem = new ADD_ITEMS();
+                //ADD_ITEMS additem = new ADD_ITEMS();
 
                 string finalImagePath = image;
-                if (image == null) // if the image is null it will become the "default image" in the folder
+                if (string.IsNullOrEmpty(image)) // if the image is null it will become the "default image" in the folder
                 {
                     finalImagePath = @".\Images\default_image.png";
                 }
@@ -51,7 +51,14 @@ namespace EBSystemLIBRARY.Models
                     string imageFolder = @"C:\Users\itiw\source\repos\equipsys\EquipmentBorrowingSystem\equipsys\Images";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
-                    File.Copy(image, finalImagePath, true);
+                    if (File.Exists(image))
+                    {
+                        image = Path.Combine(imageFolder, imageFileName);
+                    }
+                    else
+                    {
+                        File.Copy(image, finalImagePath, true);
+                    }
                     //
                 }
 

@@ -17,7 +17,10 @@ namespace equipsys
     public partial class AddItemForm : Form
     {
         private string selectedImagePath = "";
-
+        public AddItemForm()
+        {
+            InitializeComponent();
+        }
         private void AddImageButton_Click(object sender, EventArgs e)
         {
             // Opens File Explorer for image selection
@@ -28,7 +31,7 @@ namespace equipsys
             {
                 // obtains the selected image path for this item
                 pictureBox4.Image = new Bitmap(openFileDialog.FileName);
-                selectedImagePath = openFileDialog.FileName;              
+                selectedImagePath = openFileDialog.FileName;
             }
         }
 
@@ -37,8 +40,8 @@ namespace equipsys
             if (ValidateItem())
             {
                 // Creates new item object and saves information to database
-                ItemModel newItemModel = new ItemModel(ItemNameBox.Text, ItemStockBox.Text, ItemDescriptionBox.Text, selectedImagePath);
-                newItemModel.SaveItem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
+                ItemModel newItemModel = new ItemModel();
+                newItemModel.Additem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
 
                 // Resets textboxes to null values.
                 ItemNameBox.Text = "";
@@ -78,13 +81,18 @@ namespace equipsys
             // Validates Itemstock is not <= 0
             if (stockNumber < 1)
                 return false;
-            
+
             // Replaces null description with a placeholder value
             if (ItemDescriptionBox.Text.Length == 0)
                 ItemDescriptionBox.Text = "No Description Provided";
 
             // returns true if passed all validation
             return true;
+        }
+
+        private void AddItemForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
