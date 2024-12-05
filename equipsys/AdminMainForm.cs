@@ -89,8 +89,8 @@ namespace equipsys
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //for opening the items form
-            AddItemForm additem = new AddItemForm();
-            additem.Show();
+            AddItemForm add_item_form = new AddItemForm();
+            add_item_form.Show();
             this.Hide();
         }
 
@@ -114,8 +114,8 @@ namespace equipsys
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Profile profile = new Profile();
-            profile.Show();
+            Profile profile_form = new Profile();
+            profile_form.Show();
             this.Hide();
         }
     }

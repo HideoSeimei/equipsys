@@ -21,6 +21,7 @@ namespace equipsys
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.Width = 300;
 
+<<<<<<< HEAD
             //for (int i = 0; i < 11; i++)
             //{
             //    int yOffset = 0;
@@ -37,6 +38,19 @@ namespace equipsys
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
             
+=======
+            // TODO - implementation for displaying items into panel
+            // foreach (itemmodel model in list<itemmodel>)
+            // display each item and adjust the page down
+            for (int i = 0; i < 11; i++)
+            {
+                int yOffset = 0;
+                AdminItemControl item = new AdminItemControl();
+                item.Location = new Point(10, yOffset);  // Set unique location for each item
+                flowLayoutPanel1.Controls.Add(item);
+                yOffset += item.Height + 50;  // Adjust for next item
+            }
+>>>>>>> itemvalidation_upgraded
         }
     }
 }

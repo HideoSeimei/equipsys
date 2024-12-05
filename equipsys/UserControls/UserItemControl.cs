@@ -35,6 +35,7 @@ namespace equipsys
         private void ItemUserControl_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void label2_Click_1(object sender, EventArgs e)

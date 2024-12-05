@@ -81,7 +81,7 @@
             ReturnButton.TabIndex = 43;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = false;
-            ReturnButton.Click += ReturnButton_Click_1;
+            ReturnButton.Click += RegisterButton_Click;
             // 
             // RegisterButton
             // 
@@ -196,6 +196,7 @@
             YearBox.Size = new Size(105, 28);
             YearBox.TabIndex = 18;
             YearBox.Text = " Year";
+            YearBox.SelectedIndexChanged += YearBox_SelectedIndexChanged;
             // 
             // StudentIDBox
             // 

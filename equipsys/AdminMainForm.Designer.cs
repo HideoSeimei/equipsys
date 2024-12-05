@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             textBox1 = new TextBox();
             pictureBox4 = new PictureBox();
@@ -136,22 +136,23 @@
             // 
             profileName.AutoSize = true;
             profileName.BackColor = Color.Transparent;
-            profileName.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            profileName.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profileName.ForeColor = Color.WhiteSmoke;
-            profileName.Location = new Point(432, 32);
+            profileName.Location = new Point(7, 428);
             profileName.Name = "profileName";
-            profileName.Size = new Size(137, 32);
+            profileName.Size = new Size(124, 34);
             profileName.TabIndex = 19;
-            profileName.Text = "PROFILE";
+            profileName.Text = "Welcome {Role}\r\n{Name}";
+            profileName.TextAlign = ContentAlignment.MiddleCenter;
             profileName.Click += label3_Click;
             // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.CustomizableEdges = customizableEdges3;
             mainPanel.Location = new Point(199, 96);
             mainPanel.Margin = new Padding(3, 4, 3, 4);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             mainPanel.Size = new Size(753, 444);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
