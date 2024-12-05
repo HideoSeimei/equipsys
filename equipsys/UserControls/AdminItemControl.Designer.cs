@@ -43,9 +43,10 @@
             // imageBox
             // 
             imageBox.Image = (Image)resources.GetObject("imageBox.Image");
-            imageBox.Location = new Point(39, 10);
+            imageBox.Location = new Point(45, 13);
+            imageBox.Margin = new Padding(3, 4, 3, 4);
             imageBox.Name = "imageBox";
-            imageBox.Size = new Size(199, 147);
+            imageBox.Size = new Size(227, 196);
             imageBox.SizeMode = PictureBoxSizeMode.StretchImage;
             imageBox.TabIndex = 0;
             imageBox.TabStop = false;
@@ -57,9 +58,9 @@
             Namelbl.BackColor = Color.Transparent;
             Namelbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Namelbl.ForeColor = Color.DimGray;
-            Namelbl.Location = new Point(259, 22);
+            Namelbl.Location = new Point(296, 29);
             Namelbl.Name = "Namelbl";
-            Namelbl.Size = new Size(51, 20);
+            Namelbl.Size = new Size(62, 25);
             Namelbl.TabIndex = 3;
             Namelbl.Text = "NAME";
             Namelbl.Click += label3_Click;
@@ -70,9 +71,9 @@
             Stocklbl.BackColor = Color.Transparent;
             Stocklbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Stocklbl.ForeColor = Color.DimGray;
-            Stocklbl.Location = new Point(259, 57);
+            Stocklbl.Location = new Point(296, 76);
             Stocklbl.Name = "Stocklbl";
-            Stocklbl.Size = new Size(53, 20);
+            Stocklbl.Size = new Size(65, 25);
             Stocklbl.TabIndex = 4;
             Stocklbl.Text = "STOCK";
             Stocklbl.Click += label2_Click_1;
@@ -83,9 +84,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(259, 89);
+            label1.Location = new Point(296, 119);
             label1.Name = "label1";
-            label1.Size = new Size(97, 20);
+            label1.Size = new Size(118, 25);
             label1.TabIndex = 5;
             label1.Text = "AVAILABILITY";
             // 
@@ -95,10 +96,9 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(400, 135);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(457, 180);
             button1.Name = "button1";
-            button1.Size = new Size(82, 22);
+            button1.Size = new Size(94, 29);
             button1.TabIndex = 6;
             button1.Text = "EDIT";
             button1.UseVisualStyleBackColor = false;
@@ -110,10 +110,9 @@
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(518, 135);
-            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Location = new Point(592, 180);
             button2.Name = "button2";
-            button2.Size = new Size(82, 22);
+            button2.Size = new Size(94, 29);
             button2.TabIndex = 7;
             button2.Text = "DELETE";
             button2.UseVisualStyleBackColor = false;
@@ -124,13 +123,14 @@
             Descriptionlbl.BackColor = Color.Transparent;
             Descriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Descriptionlbl.ForeColor = Color.DimGray;
-            Descriptionlbl.Location = new Point(435, 22);
-            Descriptionlbl.MaximumSize = new Size(300, 0);
-            Descriptionlbl.MinimumSize = new Size(100, 100);
+            Descriptionlbl.Location = new Point(497, 29);
+            Descriptionlbl.MaximumSize = new Size(343, 0);
+            Descriptionlbl.MinimumSize = new Size(114, 133);
             Descriptionlbl.Name = "Descriptionlbl";
-            Descriptionlbl.Size = new Size(148, 100);
+            Descriptionlbl.Size = new Size(169, 133);
             Descriptionlbl.TabIndex = 8;
             Descriptionlbl.Text = "DESCRIPTION";
+            Descriptionlbl.Click += Descriptionlbl_Click_1;
             // 
             // ItemIdlbl
             // 
@@ -138,15 +138,15 @@
             ItemIdlbl.BackColor = Color.Transparent;
             ItemIdlbl.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             ItemIdlbl.ForeColor = Color.DimGray;
-            ItemIdlbl.Location = new Point(244, 144);
+            ItemIdlbl.Location = new Point(279, 192);
             ItemIdlbl.Name = "ItemIdlbl";
-            ItemIdlbl.Size = new Size(46, 13);
+            ItemIdlbl.Size = new Size(58, 19);
             ItemIdlbl.TabIndex = 9;
             ItemIdlbl.Text = "ITEM ID";
             // 
             // AdminItemControl
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             Controls.Add(ItemIdlbl);
@@ -157,8 +157,9 @@
             Controls.Add(Stocklbl);
             Controls.Add(Namelbl);
             Controls.Add(imageBox);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AdminItemControl";
-            Size = new Size(627, 172);
+            Size = new Size(717, 229);
             Load += ItemUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)imageBox).EndInit();
             ResumeLayout(false);

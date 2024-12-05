@@ -31,7 +31,7 @@ namespace equipsys
             string password = passwordbox.Text.Trim();
 
 
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            SqlConnection conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             conn.Open();
             string query = "Select role from accounts where username = @username and password = @password"; // sql query for identifying the role of the account
             string query2 = "Select account_id from accounts where username = @username and password = @password";//sql query to get the user account id

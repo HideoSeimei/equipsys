@@ -48,7 +48,7 @@ namespace EBSystemLIBRARY.Models
                 else
                 {
                     // for transferring the selected image locally
-                    string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\";
+                    string imageFolder = @"C:\Users\Lawrence\source\repos\equipsys\equipsys\Images\";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
                     if (File.Exists(finalImagePath))
@@ -64,7 +64,7 @@ namespace EBSystemLIBRARY.Models
                 }
 
 
-                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+                SqlConnection conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("Insert into Items (ItemName, Description, Stock, ImagePath) Values(@Item_Name , @Description, @Stock, @Image)", conn);
                 cmd.Parameters.AddWithValue("Item_Name", name);
@@ -117,7 +117,7 @@ namespace EBSystemLIBRARY.Models
         {
             var items = new List<ItemModel>();
 
-            using (var connection = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            using (var connection = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
             {
                 connection.Open();
                 var command = new SqlCommand("SELECT item_Id, ItemName, Description, Stock, ImagePath FROM Items", connection);
@@ -161,7 +161,7 @@ namespace EBSystemLIBRARY.Models
         // Method for deleting Items
         public void DeleteItem(string id)
         {
-            using (var conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            using (var conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
             {
                 string query = "delete from Items where item_id = @Id";
                 SqlCommand cmd = new SqlCommand(query,conn);
