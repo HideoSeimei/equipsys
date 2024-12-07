@@ -80,5 +80,39 @@ namespace equipsys.Data_Access
                 _flowLayoutPanel.Controls.Add(adminItemControl);
             }
         }
+
+        public void ULoadItemsToFlowLayoutPanel()
+        {
+            List<ItemModel> items = RetrieveItems();
+
+            // Clear existing controls in FlowLayoutPanel
+            _flowLayoutPanel.Controls.Clear();
+
+            foreach (var item in items)
+            {
+                var UserItemControl = new UserItemControl();
+                UserItemControl.SetItemData(item.ID, item.ItemName, item.ItemDescription, item.ItemStock, item.ImagePath);
+
+                // Add the new UserControl to the FlowLayoutPanel
+                _flowLayoutPanel.Controls.Add(UserItemControl);
+            }
+        }
+        //overloading for loadintitems
+        public void ULoadItemsToFlowLayoutPanel(FlowLayoutPanel flp)
+        {
+            List<ItemModel> items = RetrieveItems();
+
+            // Clear existing controls in FlowLayoutPanel
+            _flowLayoutPanel.Controls.Clear();
+
+            foreach (var item in items)
+            {
+                var UserItemControl = new UserItemControl();
+                UserItemControl.SetItemData(item.ID, item.ItemName, item.ItemDescription, item.ItemStock, item.ImagePath);
+
+                // Add the new UserControl to the FlowLayoutPanel
+                _flowLayoutPanel.Controls.Add(UserItemControl);
+            }
+        }
     }
 }

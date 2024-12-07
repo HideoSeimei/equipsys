@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             search = new TextBox();
             pictureBox4 = new PictureBox();
@@ -40,6 +40,7 @@
             pictureBox3 = new PictureBox();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             AccountsButton = new PictureBox();
+            profileName = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -139,10 +140,10 @@
             // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges3;
+            mainPanel.CustomizableEdges = customizableEdges1;
             mainPanel.Location = new Point(174, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             mainPanel.Size = new Size(659, 333);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
@@ -160,12 +161,22 @@
             AccountsButton.TabIndex = 31;
             AccountsButton.TabStop = false;
             // 
+            // profileName
+            // 
+            profileName.AutoSize = true;
+            profileName.Location = new Point(25, 323);
+            profileName.Name = "profileName";
+            profileName.Size = new Size(41, 15);
+            profileName.TabIndex = 32;
+            profileName.Text = "Profile";
+            // 
             // AdminMainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
+            Controls.Add(profileName);
             Controls.Add(AccountsButton);
             Controls.Add(mainPanel);
             Controls.Add(label1);
@@ -200,5 +211,6 @@
         private PictureBox AccountsButton;
         public TextBox search;
         public Guna.UI2.WinForms.Guna2Panel mainPanel;
+        private Label profileName;
     }
 }

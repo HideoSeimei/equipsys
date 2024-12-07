@@ -19,11 +19,7 @@ namespace equipsys
             InitializeComponent();
         }
 
-<<<<<<< HEAD:equipsys/RegistrationForm.cs
-        private void ReturnButton_Click(object sender, EventArgs e, LoginForm loginForm)// This doesnt work idk why
-=======
         private void ReturnButton_Click(object sender, EventArgs e)
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.cs
         {
             LoginForm login_form = new LoginForm();
             login_form.Show();

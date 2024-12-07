@@ -1,6 +1,6 @@
 ﻿namespace equipsys
 {
-    partial class EditItemForm
+    partial class EditItemForm : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
+
             button3 = new Button();
             button2 = new Button();
             NewImagePath = new PictureBox();
             button1 = new Button();
             StockBox = new TextBox();
             DescriptionBox = new TextBox();
-=======
             pictureBox2 = new PictureBox();
             ReturnButton = new Button();
             SaveButton = new Button();
@@ -48,18 +47,14 @@
             ItemStockBox = new TextBox();
             label2 = new Label();
             ItemDescriptionBox = new TextBox();
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
             ItemBox = new TextBox();
-=======
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
             ItemNameBox = new TextBox();
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -69,9 +64,10 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
             // button3
-=======
+
+
+            //
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
@@ -86,7 +82,6 @@
             pictureBox2.TabStop = false;
             // 
             // ReturnButton
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
             // 
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -148,9 +143,6 @@
             ItemStockBox.Size = new Size(86, 23);
             ItemStockBox.TabIndex = 5;
             // 
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
-            // DescriptionBox
-=======
             // label2
             // 
             label2.AutoSize = true;
@@ -165,7 +157,6 @@
             label2.Text = "Log out";
             // 
             // ItemDescriptionBox
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
             // 
             ItemDescriptionBox.Location = new Point(285, 114);
             ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
@@ -218,9 +209,7 @@
             label1.TabIndex = 52;
             label1.Text = "Edit";
             // 
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
             // ItemBox
-=======
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
@@ -248,7 +237,6 @@
             pictureBox5.TabStop = false;
             // 
             // ItemNameBox
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
             // 
             ItemNameBox.Location = new Point(285, 64);
             ItemNameBox.Margin = new Padding(3, 2, 3, 2);
@@ -302,14 +290,11 @@
         private PictureBox pictureBox1;
         private TextBox textBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-<<<<<<< HEAD:equipsys/EditItemForm.Designer.cs
         public Button button3;
         public Button button2;
-=======
         private PictureBox pictureBox3;
         public Button ReturnButton;
         public Button SaveButton;
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/EditItemForm.Designer.cs
         public PictureBox NewImagePath;
         public Button BrowseImageButton;
         public TextBox ItemStockBox;
@@ -317,6 +302,13 @@
         public Label label5;
         public Label label4;
         public Label label3;
+        public Label label2;
         public TextBox ItemNameBox;
+        public PictureBox pictureBox5;
+        public PictureBox pictureBox2;
+        public Button button1;
+        public TextBox StockBox;
+        public TextBox DescriptionBox;
+        public TextBox ItemBox;
     }
 }

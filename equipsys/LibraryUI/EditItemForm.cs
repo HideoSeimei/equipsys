@@ -42,7 +42,7 @@ namespace equipsys
             ItemNameBox.Text = ItemName;
             ItemDescriptionBox.Text = ItemDescription;
             ItemStockBox.Text = ItemStock.ToString();
-            NewImagePath.Image = new Bitmap(NewSelectedImage); // TODO -  handle this error when image is empty
+            NewImagePath.Image = new Bitmap(NewSelectedImage); // TODO -  handle this error when image is emptyorat default image
             MessageBox.Show(ItemName);
         }
 

@@ -45,15 +45,14 @@ namespace equipsys
             sql.Open();
             string query = "Select role from accounts where username = @username and password = @password"; // sql query for identifying the role of the account
             string query2 = "Select account_id from accounts where username = @username and password = @password";//sql query to get the user account id
-<<<<<<< HEAD:equipsys/LoginForm.cs
             string query3 = "Select username from Accounts where username = @username and password = @password";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            SqlCommand cmd2 = new SqlCommand(query2, conn);
-            SqlCommand cmd3 = new SqlCommand(query3, conn);
-=======
             SqlCommand cmd = new SqlCommand(query, sql);
             SqlCommand cmd2 = new SqlCommand(query2, sql);
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/LoginForm.cs
+            SqlCommand cmd3 = new SqlCommand(query3, sql);
+
+            /*SqlCommand cmd = new SqlCommand(query, sql);
+            SqlCommand cmd2 = new SqlCommand(query2, sql);
+            */
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
             cmd2.Parameters.AddWithValue("@username", username);

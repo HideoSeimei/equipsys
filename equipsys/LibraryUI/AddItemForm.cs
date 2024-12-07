@@ -23,7 +23,7 @@ namespace equipsys
         private void AddImageButton_Click(object sender, EventArgs e)
         {
             // Opens File Explorer for image selection
-            selectedImagePath = "";
+            selectedImagePath = @".\Images\default_image.png";
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)

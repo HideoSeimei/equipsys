@@ -56,11 +56,6 @@ namespace equipsys
             profileName.Text = $"Welcome ADMIN";
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void items_Click(object sender, EventArgs e)// ITEMS BUTTON
         {
             //for opening the items form
@@ -135,21 +130,20 @@ namespace equipsys
             //
         }
 
-<<<<<<< HEAD:equipsys/AdminMainForm.cs
+
         private void pictureBox5_Click(object sender, EventArgs e)// REGISTER BUTTON
         {
-        
+
             //OPEN THE REGISTRATION FORM
             RegistrationForm registration = new RegistrationForm();
             registration.Show();
-=======
+        }
+
         private void AccountsButton_Click(object sender, EventArgs e)
         {
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.Show();
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/AdminMainForm.cs
             this.Hide();
-            //
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)// SEARCH BOX

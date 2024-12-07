@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserItemControl));
-<<<<<<< HEAD
             UimageBox = new PictureBox();
             UNamelbl = new Label();
             UStocklbl = new Label();
@@ -39,7 +38,6 @@
             UItemIDlbl = new Label();
             Return = new Button();
             ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
-=======
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
@@ -48,12 +46,10 @@
             ReturnButton = new Button();
             BorrowingButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             SuspendLayout();
             // 
             // UimageBox
             // 
-<<<<<<< HEAD
             UimageBox.Image = (Image)resources.GetObject("UimageBox.Image");
             UimageBox.Location = new Point(39, 10);
             UimageBox.Name = "UimageBox";
@@ -61,7 +57,7 @@
             UimageBox.SizeMode = PictureBoxSizeMode.StretchImage;
             UimageBox.TabIndex = 0;
             UimageBox.TabStop = false;
-=======
+
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(39, 10);
             pictureBox1.Name = "pictureBox1";
@@ -69,11 +65,9 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             // 
             // UNamelbl
             // 
-<<<<<<< HEAD
             UNamelbl.AutoSize = true;
             UNamelbl.BackColor = Color.Transparent;
             UNamelbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -83,8 +77,7 @@
             UNamelbl.Size = new Size(51, 20);
             UNamelbl.TabIndex = 3;
             UNamelbl.Text = "NAME";
-            UNamelbl.Click += label3_Click;
-=======
+
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -94,11 +87,9 @@
             label3.Size = new Size(51, 20);
             label3.TabIndex = 3;
             label3.Text = "NAME";
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             // 
             // UStocklbl
             // 
-<<<<<<< HEAD
             UStocklbl.AutoSize = true;
             UStocklbl.BackColor = Color.Transparent;
             UStocklbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -108,8 +99,9 @@
             UStocklbl.Size = new Size(53, 20);
             UStocklbl.TabIndex = 4;
             UStocklbl.Text = "STOCK";
-            UStocklbl.Click += label2_Click_1;
-=======
+            //
+            // label2
+            //
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -119,11 +111,9 @@
             label2.Size = new Size(53, 20);
             label2.TabIndex = 4;
             label2.Text = "STOCK";
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             // 
             // UAvailability
             // 
-<<<<<<< HEAD
             UAvailability.AutoSize = true;
             UAvailability.BackColor = Color.Transparent;
             UAvailability.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -133,7 +123,6 @@
             UAvailability.Size = new Size(97, 20);
             UAvailability.TabIndex = 5;
             UAvailability.Text = "AVAILABILITY";
-=======
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -143,11 +132,9 @@
             label1.Size = new Size(97, 20);
             label1.TabIndex = 5;
             label1.Text = "AVAILABILITY";
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             // 
             // UDescriptionlbl
             // 
-<<<<<<< HEAD
             UDescriptionlbl.AutoSize = true;
             UDescriptionlbl.BackColor = Color.Transparent;
             UDescriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -197,7 +184,6 @@
             Return.Text = "RETURN";
             Return.UseVisualStyleBackColor = false;
             Return.Click += Return_Click;
-=======
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -235,14 +221,12 @@
             BorrowingButton.Text = "BORROW";
             BorrowingButton.UseVisualStyleBackColor = false;
             BorrowingButton.Click += BorrowingButton_Click;
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             // 
             // UserItemControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-<<<<<<< HEAD
             Controls.Add(Return);
             Controls.Add(UItemIDlbl);
             Controls.Add(Borrow);
@@ -253,9 +237,7 @@
             Controls.Add(UimageBox);
             Name = "UserItemControl";
             Size = new Size(627, 172);
-            Load += ItemUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)UimageBox).EndInit();
-=======
             Controls.Add(BorrowingButton);
             Controls.Add(ReturnButton);
             Controls.Add(label4);
@@ -266,14 +248,12 @@
             Name = "UserItemControl";
             Size = new Size(627, 172);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-<<<<<<< HEAD
         public PictureBox UimageBox;
         public Label UNamelbl;
         public Label UStocklbl;
@@ -282,7 +262,6 @@
         public Button Borrow;
         public Label UItemIDlbl;
         public Button Return;
-=======
         private PictureBox pictureBox1;
         private Label label3;
         private Label label2;
@@ -290,6 +269,5 @@
         private Label label4;
         private Button ReturnButton;
         private Button BorrowingButton;
->>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c
     }
 }
