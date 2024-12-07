@@ -69,16 +69,41 @@
             label7.TabIndex = 44;
             label7.Text = "Personal Information";
             // 
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
+=======
+            // ReturnButton
+            // 
+            ReturnButton.BackColor = Color.Transparent;
+            ReturnButton.Cursor = Cursors.Hand;
+            ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ReturnButton.ForeColor = Color.ForestGreen;
+            ReturnButton.Location = new Point(130, 375);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
+            ReturnButton.Name = "ReturnButton";
+            ReturnButton.Size = new Size(131, 36);
+            ReturnButton.TabIndex = 43;
+            ReturnButton.Text = "Back";
+            ReturnButton.UseVisualStyleBackColor = false;
+            ReturnButton.Click += ReturnButton_Click;
+            // 
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             // RegisterButton
             // 
             RegisterButton.BackColor = Color.ForestGreen;
             RegisterButton.Cursor = Cursors.Hand;
             RegisterButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             RegisterButton.ForeColor = Color.White;
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
             RegisterButton.Location = new Point(313, 389);
             RegisterButton.Margin = new Padding(3, 2, 3, 2);
             RegisterButton.Name = "RegisterButton";
             RegisterButton.Size = new Size(105, 22);
+=======
+            RegisterButton.Location = new Point(313, 375);
+            RegisterButton.Margin = new Padding(3, 2, 3, 2);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(131, 36);
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             RegisterButton.TabIndex = 42;
             RegisterButton.Text = "Register";
             RegisterButton.UseVisualStyleBackColor = false;
@@ -295,7 +320,11 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
             label4.Location = new Point(685, 356);
+=======
+            label4.Location = new Point(714, 356);
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             label4.Name = "label4";
             label4.Size = new Size(154, 48);
             label4.TabIndex = 49;
@@ -306,7 +335,11 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
             pictureBox1.Location = new Point(688, 70);
+=======
+            pictureBox1.Location = new Point(718, 59);
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(145, 122);
@@ -320,7 +353,11 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
             label11.Location = new Point(688, 212);
+=======
+            label11.Location = new Point(716, 183);
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             label11.Name = "label11";
             label11.Size = new Size(151, 24);
             label11.TabIndex = 51;
@@ -349,7 +386,10 @@
             BackColor = Color.WhiteSmoke;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
+<<<<<<< HEAD:equipsys/RegistrationForm.Designer.cs
             Controls.Add(button1);
+=======
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/RegistrationForm.Designer.cs
             Controls.Add(label11);
             Controls.Add(pictureBox1);
             Controls.Add(label4);

@@ -1,5 +1,4 @@
-﻿using EBSystemLIBRARY.Models;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using EBSystemLIBRARY;
+using equipsys.Models;
 
 namespace equipsys
 {
@@ -41,7 +40,7 @@ namespace equipsys
             {
                 // Creates new item object and saves information to database
                 ItemModel newItemModel = new ItemModel();
-                newItemModel.Additem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
+                newItemModel.AddItem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
 
                 // Resets textboxes to null values.
                 ItemNameBox.Text = "";
@@ -50,8 +49,8 @@ namespace equipsys
                 selectedImagePath = "";
 
                 // close form after adding a new item
-                AdminMainForm admin_main_form = new AdminMainForm();
-                admin_main_form.Show();
+                AdminMainForm adminMainForm = new AdminMainForm();
+                adminMainForm.Show();
                 this.Hide();
             }
             else

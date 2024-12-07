@@ -135,12 +135,19 @@ namespace equipsys
             //
         }
 
+<<<<<<< HEAD:equipsys/AdminMainForm.cs
         private void pictureBox5_Click(object sender, EventArgs e)// REGISTER BUTTON
         {
         
             //OPEN THE REGISTRATION FORM
             RegistrationForm registration = new RegistrationForm();
             registration.Show();
+=======
+        private void AccountsButton_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/AdminMainForm.cs
             this.Hide();
             //
         }

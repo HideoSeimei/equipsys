@@ -1,5 +1,4 @@
-﻿using EBSystemLIBRARY.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using equipsys.Data_Access;
 
 namespace equipsys
 {
@@ -18,7 +18,7 @@ namespace equipsys
         public void ReloadFlowLayoutPanel()
         {
             ItemLoader itemLoader = new ItemLoader(flowLayoutPanel1);
-            itemLoader.LoadItemsToFlowLayoutPanel(); // Reload items into the FlowLayoutPanel
+            itemLoader.LoadToPanel(); // Reload items into the FlowLayoutPanel
         }
 
         public ItemForm()
@@ -37,7 +37,7 @@ namespace equipsys
             //    yOffset += item.Height + 50;  // Adjust for next item
             //}
             ItemLoader itemloader = new ItemLoader(flowLayoutPanel1);
-            itemloader.LoadItemsToFlowLayoutPanel();
+            itemloader.LoadToPanel();
 
         }
 

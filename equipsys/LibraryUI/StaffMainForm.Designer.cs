@@ -163,7 +163,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
+<<<<<<< HEAD:equipsys/StaffMainForm.Designer.cs
             Controls.Add(UserProfileName);
+=======
+>>>>>>> 1daeb0249e797aa50fc4235f8904033dfac45c6c:equipsys/LibraryUI/StaffMainForm.Designer.cs
             Controls.Add(pictureBox5);
             Controls.Add(UserFormPanel);
             Controls.Add(label1);
@@ -189,7 +192,6 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
         private Label label2;
         private PictureBox pictureBox4;
         private TextBox textBox1;

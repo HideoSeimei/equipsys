@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             search = new TextBox();
             pictureBox4 = new PictureBox();
@@ -38,14 +38,13 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
-            profileName = new Label();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox5 = new PictureBox();
+            AccountsButton = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AccountsButton).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -138,43 +137,28 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // profileName
-            // 
-            profileName.AutoSize = true;
-            profileName.BackColor = Color.Transparent;
-            profileName.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            profileName.ForeColor = Color.WhiteSmoke;
-            profileName.Location = new Point(6, 321);
-            profileName.Name = "profileName";
-            profileName.Size = new Size(99, 28);
-            profileName.TabIndex = 19;
-            profileName.Text = "Welcome {Role}\r\n{Name}";
-            profileName.TextAlign = ContentAlignment.MiddleCenter;
-            profileName.Click += label3_Click;
-            // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.CustomizableEdges = customizableEdges3;
             mainPanel.Location = new Point(174, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             mainPanel.Size = new Size(659, 333);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
             // 
-            // pictureBox5
+            // AccountsButton
             // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(36, 269);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(37, 32);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 31;
-            pictureBox5.TabStop = false;
-            pictureBox5.Click += pictureBox5_Click;
+            AccountsButton.BackColor = Color.Transparent;
+            AccountsButton.Cursor = Cursors.Hand;
+            AccountsButton.Image = (Image)resources.GetObject("AccountsButton.Image");
+            AccountsButton.Location = new Point(36, 270);
+            AccountsButton.Margin = new Padding(3, 2, 3, 2);
+            AccountsButton.Name = "AccountsButton";
+            AccountsButton.Size = new Size(37, 32);
+            AccountsButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            AccountsButton.TabIndex = 31;
+            AccountsButton.TabStop = false;
             // 
             // AdminMainForm
             // 
@@ -182,8 +166,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
-            Controls.Add(profileName);
-            Controls.Add(pictureBox5);
+            Controls.Add(AccountsButton);
             Controls.Add(mainPanel);
             Controls.Add(label1);
             Controls.Add(search);
@@ -202,7 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AccountsButton).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -214,8 +197,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
-        private Label profileName;
-        private PictureBox pictureBox5;
+        private PictureBox AccountsButton;
         public TextBox search;
         public Guna.UI2.WinForms.Guna2Panel mainPanel;
     }
