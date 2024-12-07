@@ -37,27 +37,26 @@
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1013, 588);
+            flowLayoutPanel1.Size = new Size(886, 441);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint_1;
             // 
             // ItemForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1013, 588);
+            ClientSize = new Size(886, 441);
             Controls.Add(flowLayoutPanel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += ItemForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel flowLayoutPanel1;
     }
 }
