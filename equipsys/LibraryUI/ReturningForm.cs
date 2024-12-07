@@ -16,5 +16,10 @@ namespace equipsys.LibraryUI
         {
             InitializeComponent();
         }
+
+        private void ReturningForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

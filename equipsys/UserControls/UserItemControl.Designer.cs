@@ -34,10 +34,7 @@
             UStocklbl = new Label();
             UAvailability = new Label();
             UDescriptionlbl = new Label();
-            Borrow = new Button();
             UItemIDlbl = new Label();
-            Return = new Button();
-            ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
             pictureBox1 = new PictureBox();
             label3 = new Label();
             label2 = new Label();
@@ -45,6 +42,7 @@
             label4 = new Label();
             ReturnButton = new Button();
             BorrowingButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -57,14 +55,6 @@
             UimageBox.SizeMode = PictureBoxSizeMode.StretchImage;
             UimageBox.TabIndex = 0;
             UimageBox.TabStop = false;
-
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(39, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(199, 147);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // UNamelbl
             // 
@@ -77,16 +67,6 @@
             UNamelbl.Size = new Size(51, 20);
             UNamelbl.TabIndex = 3;
             UNamelbl.Text = "NAME";
-
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(259, 22);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 20);
-            label3.TabIndex = 3;
-            label3.Text = "NAME";
             // 
             // UStocklbl
             // 
@@ -99,18 +79,6 @@
             UStocklbl.Size = new Size(53, 20);
             UStocklbl.TabIndex = 4;
             UStocklbl.Text = "STOCK";
-            //
-            // label2
-            //
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(259, 57);
-            label2.Name = "label2";
-            label2.Size = new Size(53, 20);
-            label2.TabIndex = 4;
-            label2.Text = "STOCK";
             // 
             // UAvailability
             // 
@@ -123,15 +91,6 @@
             UAvailability.Size = new Size(97, 20);
             UAvailability.TabIndex = 5;
             UAvailability.Text = "AVAILABILITY";
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(259, 89);
-            label1.Name = "label1";
-            label1.Size = new Size(97, 20);
-            label1.TabIndex = 5;
-            label1.Text = "AVAILABILITY";
             // 
             // UDescriptionlbl
             // 
@@ -145,20 +104,6 @@
             UDescriptionlbl.TabIndex = 8;
             UDescriptionlbl.Text = "DESCRIPTION";
             // 
-            // Borrow
-            // 
-            Borrow.BackColor = Color.SteelBlue;
-            Borrow.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Borrow.ForeColor = Color.White;
-            Borrow.Location = new Point(482, 127);
-            Borrow.Margin = new Padding(3, 2, 3, 2);
-            Borrow.Name = "Borrow";
-            Borrow.Size = new Size(118, 30);
-            Borrow.TabIndex = 9;
-            Borrow.Text = "BORROW";
-            Borrow.UseVisualStyleBackColor = false;
-            Borrow.Click += Borrow_Click;
-            // 
             // UItemIDlbl
             // 
             UItemIDlbl.AutoSize = true;
@@ -171,19 +116,53 @@
             UItemIDlbl.TabIndex = 10;
             UItemIDlbl.Text = "ID";
             // 
-            // Return
+            // pictureBox1
             // 
-            Return.BackColor = Color.MediumAquamarine;
-            Return.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Return.ForeColor = Color.White;
-            Return.Location = new Point(342, 128);
-            Return.Margin = new Padding(3, 2, 3, 2);
-            Return.Name = "Return";
-            Return.Size = new Size(118, 30);
-            Return.TabIndex = 11;
-            Return.Text = "RETURN";
-            Return.UseVisualStyleBackColor = false;
-            Return.Click += Return_Click;
+            pictureBox1.Location = new Point(39, 10);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(199, 147);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.DimGray;
+            label3.Location = new Point(259, 22);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 20);
+            label3.TabIndex = 3;
+            label3.Text = "NAME";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.DimGray;
+            label2.Location = new Point(259, 57);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 20);
+            label2.TabIndex = 4;
+            label2.Text = "STOCK";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.DimGray;
+            label1.Location = new Point(259, 89);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 20);
+            label1.TabIndex = 5;
+            label1.Text = "AVAILABILITY";
+            // 
+            // label4
+            // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -227,17 +206,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            Controls.Add(Return);
             Controls.Add(UItemIDlbl);
-            Controls.Add(Borrow);
             Controls.Add(UDescriptionlbl);
             Controls.Add(UAvailability);
             Controls.Add(UStocklbl);
             Controls.Add(UNamelbl);
             Controls.Add(UimageBox);
-            Name = "UserItemControl";
-            Size = new Size(627, 172);
-            ((System.ComponentModel.ISupportInitialize)UimageBox).EndInit();
             Controls.Add(BorrowingButton);
             Controls.Add(ReturnButton);
             Controls.Add(label4);
@@ -247,6 +221,7 @@
             Controls.Add(pictureBox1);
             Name = "UserItemControl";
             Size = new Size(627, 172);
+            ((System.ComponentModel.ISupportInitialize)UimageBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -259,9 +234,7 @@
         public Label UStocklbl;
         public Label UAvailability;
         public Label UDescriptionlbl;
-        public Button Borrow;
         public Label UItemIDlbl;
-        public Button Return;
         private PictureBox pictureBox1;
         private Label label3;
         private Label label2;
