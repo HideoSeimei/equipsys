@@ -49,8 +49,8 @@ namespace equipsys
             {
                 NewImagePath.Image = new Bitmap(NewSelectedImage);
             }
-            
-            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)// SAVE BUTTON
@@ -58,7 +58,7 @@ namespace equipsys
             using (SqlConnection con = new SqlConnection())
             {
                 ItemModel itemmodel = new ItemModel();
-                itemmodel.EditItem(ItemID, ItemBox.Text, DescriptionBox.Text, Int32.Parse(StockBox.Text),NewSelectedImage);
+                itemmodel.EditItem(ItemID, ItemBox.Text, DescriptionBox.Text, Int32.Parse(StockBox.Text), NewSelectedImage);
                 ItemForm itemform = new ItemForm();
                 ItemLoader itemLoader = new ItemLoader(itemform.flowLayoutPanel1);
                 itemLoader.LoadItemsToFlowLayoutPanel();
@@ -79,6 +79,11 @@ namespace equipsys
                 NewImagePath.Image = new Bitmap(openFileDialog.FileName);
                 NewSelectedImage = openFileDialog.FileName;
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

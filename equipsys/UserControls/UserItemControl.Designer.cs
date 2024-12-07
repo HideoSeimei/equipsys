@@ -34,8 +34,9 @@
             UStocklbl = new Label();
             UAvailability = new Label();
             UDescriptionlbl = new Label();
-            button1 = new Button();
+            Borrow = new Button();
             UItemIDlbl = new Label();
+            Return = new Button();
             ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
             SuspendLayout();
             // 
@@ -99,18 +100,19 @@
             UDescriptionlbl.TabIndex = 8;
             UDescriptionlbl.Text = "DESCRIPTION";
             // 
-            // button1
+            // Borrow
             // 
-            button1.BackColor = Color.SteelBlue;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(482, 127);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 30);
-            button1.TabIndex = 9;
-            button1.Text = "BORROW";
-            button1.UseVisualStyleBackColor = false;
+            Borrow.BackColor = Color.SteelBlue;
+            Borrow.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Borrow.ForeColor = Color.White;
+            Borrow.Location = new Point(482, 127);
+            Borrow.Margin = new Padding(3, 2, 3, 2);
+            Borrow.Name = "Borrow";
+            Borrow.Size = new Size(118, 30);
+            Borrow.TabIndex = 9;
+            Borrow.Text = "BORROW";
+            Borrow.UseVisualStyleBackColor = false;
+            Borrow.Click += Borrow_Click;
             // 
             // UItemIDlbl
             // 
@@ -124,13 +126,28 @@
             UItemIDlbl.TabIndex = 10;
             UItemIDlbl.Text = "ID";
             // 
+            // Return
+            // 
+            Return.BackColor = Color.MediumAquamarine;
+            Return.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Return.ForeColor = Color.White;
+            Return.Location = new Point(342, 128);
+            Return.Margin = new Padding(3, 2, 3, 2);
+            Return.Name = "Return";
+            Return.Size = new Size(118, 30);
+            Return.TabIndex = 11;
+            Return.Text = "RETURN";
+            Return.UseVisualStyleBackColor = false;
+            Return.Click += Return_Click;
+            // 
             // UserItemControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
+            Controls.Add(Return);
             Controls.Add(UItemIDlbl);
-            Controls.Add(button1);
+            Controls.Add(Borrow);
             Controls.Add(UDescriptionlbl);
             Controls.Add(UAvailability);
             Controls.Add(UStocklbl);
@@ -151,7 +168,8 @@
         public Label UStocklbl;
         public Label UAvailability;
         public Label UDescriptionlbl;
-        public Button button1;
+        public Button Borrow;
         public Label UItemIDlbl;
+        public Button Return;
     }
 }

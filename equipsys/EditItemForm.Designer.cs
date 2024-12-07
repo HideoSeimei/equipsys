@@ -32,47 +32,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
-            pictureBox2 = new PictureBox();
             button3 = new Button();
             button2 = new Button();
             NewImagePath = new PictureBox();
             button1 = new Button();
             StockBox = new TextBox();
-            label2 = new Label();
             DescriptionBox = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox5 = new PictureBox();
             ItemBox = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox3 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Cursor = Cursors.Hand;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(41, 141);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(37, 32);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 49;
-            pictureBox2.TabStop = false;
             // 
             // button3
             // 
@@ -136,19 +114,6 @@
             StockBox.Size = new Size(86, 23);
             StockBox.TabIndex = 5;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(37, 350);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 14);
-            label2.TabIndex = 51;
-            label2.Text = "Log out";
-            // 
             // DescriptionBox
             // 
             DescriptionBox.Location = new Point(285, 114);
@@ -202,32 +167,6 @@
             label1.TabIndex = 52;
             label1.Text = "Edit";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(41, 77);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 32);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 48;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(41, 268);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(37, 32);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 54;
-            pictureBox5.TabStop = false;
-            // 
             // ItemBox
             // 
             ItemBox.Location = new Point(285, 64);
@@ -255,44 +194,22 @@
             guna2Panel1.Size = new Size(659, 334);
             guna2Panel1.TabIndex = 53;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(41, 207);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(37, 32);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 50;
-            pictureBox3.TabStop = false;
-            // 
             // EditItemForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            Controls.Add(pictureBox5);
             Controls.Add(guna2Panel1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "EditItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EDIT_ITEMS";
             Load += EditItemForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,14 +217,10 @@
         #endregion
 
         private OpenFileDialog openFileDialog1;
-        private PictureBox pictureBox2;
-        private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox5;
         private TextBox textBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private PictureBox pictureBox3;
         public Button button3;
         public Button button2;
         public PictureBox NewImagePath;

@@ -78,5 +78,15 @@ namespace equipsys
             editItems.Show();
             mainAdmin.Hide();
         }
+
+        private void Return_Click(object sender, EventArgs e)// RETURN BUTTON
+        {
+
+        }
+
+        private void Borrow_Click(object sender, EventArgs e)//BORROW BUTTON
+        {
+
+        }
     }
 }

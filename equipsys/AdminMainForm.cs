@@ -53,7 +53,7 @@ namespace equipsys
         {
             //for setting the Profile Name
             
-            profileName.Text = $"Welcome Admin";
+            profileName.Text = $"Welcome ADMIN";
         }
 
         private void label3_Click(object sender, EventArgs e)
