@@ -14,13 +14,20 @@ namespace EBSystemLIBRARY.Models
 {
     public class ItemModel
     {
+
         public int ID { get; set; }
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
         public int ItemStock { get; set; }
         public string ImagePath { get; set; }
+        private readonly ItemLoader _itemLoader;
 
         //CONSTRUCTOR
+        
+        public ItemModel(ItemLoader itemLoader)
+        {
+            _itemLoader = itemLoader;
+        }
 
         public ItemModel()
         {
@@ -48,7 +55,7 @@ namespace EBSystemLIBRARY.Models
                 else
                 {
                     // for transferring the selected image locally
-                    string imageFolder = @"C:\Users\Lawrence\source\repos\equipsys\equipsys\Images\";
+                    string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
                     if (File.Exists(finalImagePath))
@@ -58,13 +65,13 @@ namespace EBSystemLIBRARY.Models
                     else
                     {
                         File.Copy(image, finalImagePath, true);
-                        MessageBox.Show("copied!");
+                        
                     }
                     //
                 }
 
 
-                SqlConnection conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("Insert into Items (ItemName, Description, Stock, ImagePath) Values(@Item_Name , @Description, @Stock, @Image)", conn);
                 cmd.Parameters.AddWithValue("Item_Name", name);
@@ -97,6 +104,64 @@ namespace EBSystemLIBRARY.Models
 
             }
             return false;
+
+        }
+        public void Delete(int id)// Method for deleting items in the database
+        {
+            using (var conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                MessageBox.Show($"Attempting to delete item with ID: {id}");
+                string query = "delete from Items where item_id = @Id";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Id",id);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("DeletedSuccefully");
+             
+                
+
+            }
+        }
+        public void EditItem(int id,string ItemName,string Description,int Stock,string NewImage)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                string query = "update Items set ItemName = @itemName,Description = @description,Stock = @stock,ImagePath = @imagePath where item_id = @id";
+                SqlCommand cmd = new SqlCommand(query,con);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@itemName",ItemName);
+                cmd.Parameters.AddWithValue("@description",Description);
+                cmd.Parameters.AddWithValue("@stock", Stock);
+                cmd.Parameters.AddWithValue("@imagePath",NewImage);
+                con.Open();
+                MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {Description}, Stock: {Stock}");
+                //for transfering the new image to the local storage
+                string finalImagePath = "";
+                string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\";
+                string imageFileName = Path.GetFileName(NewImage);
+                finalImagePath = Path.Combine(imageFolder, imageFileName);
+                if (File.Exists(finalImagePath))
+                {
+                    finalImagePath = Path.Combine(imageFolder, imageFileName);
+                }
+                else
+                {
+                    File.Copy(NewImage, finalImagePath, true);
+                    MessageBox.Show("Copied");
+
+                }
+                cmd.ExecuteNonQuery(); // for updating the database
+                ItemForm itemform = new ItemForm();
+                itemform.ReloadFlowLayoutPanel();
+                itemform.Show();
+                
+
+
+
+
+
+
+            }
         }
 
 
@@ -107,17 +172,21 @@ namespace EBSystemLIBRARY.Models
     {
         private readonly FlowLayoutPanel _flowLayoutPanel;
 
+        //CONSTRUCTOR
         public ItemLoader(FlowLayoutPanel flowLayoutPanel)
         {
             _flowLayoutPanel = flowLayoutPanel;
         }
+        public ItemLoader()
+        {
 
+        }
         // Method to load items from the database
         public List<ItemModel> GetItemsFromDatabase()
         {
             var items = new List<ItemModel>();
 
-            using (var connection = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            using (var connection = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
             {
                 connection.Open();
                 var command = new SqlCommand("SELECT item_Id, ItemName, Description, Stock, ImagePath FROM Items", connection);
@@ -158,16 +227,24 @@ namespace EBSystemLIBRARY.Models
                 _flowLayoutPanel.Controls.Add(AdminitemControl);
             }
         }
-        // Method for deleting Items
-        public void DeleteItem(string id)
+        //overloading for loadintitems
+        public void LoadItemsToFlowLayoutPanel(FlowLayoutPanel flp)
         {
-            using (var conn = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            List<ItemModel> items = GetItemsFromDatabase();
+
+            // Clear existing controls in FlowLayoutPanel
+            _flowLayoutPanel.Controls.Clear();
+
+            foreach (var item in items)
             {
-                string query = "delete from Items where item_id = @Id";
-                SqlCommand cmd = new SqlCommand(query,conn);
-                cmd.Parameters.AddWithValue("@Id",id);
-                cmd.ExecuteNonQuery();
+                var AdminitemControl = new AdminItemControl();
+                AdminitemControl.SetItemData(item.ID, item.ItemName, item.ItemDescription, item.ItemStock, item.ImagePath);
+
+                // Add the new UserControl to the FlowLayoutPanel
+                _flowLayoutPanel.Controls.Add(AdminitemControl);
             }
         }
+
+
     }
 }

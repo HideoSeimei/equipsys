@@ -92,7 +92,7 @@ namespace EBSystemLIBRARY.Models
             return false;
         }
         // Method for deleting Items
-        public void DeleteItem(string id)
+        public void Delete(string id)
         {
             using (var conn = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
             {

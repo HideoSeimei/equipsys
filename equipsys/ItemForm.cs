@@ -14,6 +14,13 @@ namespace equipsys
 {
     public partial class ItemForm : Form
     {
+        public FlowLayoutPanel FlowLayoutPanel => flowLayoutPanel1;// so i can access the flowlayoutpanel to other forms
+        public void ReloadFlowLayoutPanel()
+        {
+            ItemLoader itemLoader = new ItemLoader(flowLayoutPanel1);
+            itemLoader.LoadItemsToFlowLayoutPanel(); // Reload items into the FlowLayoutPanel
+        }
+
         public ItemForm()
         {
             InitializeComponent();
@@ -37,11 +44,16 @@ namespace equipsys
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
-            
+
 
         }
 
         private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ItemForm_Load(object sender, EventArgs e)
         {
 
         }
