@@ -14,6 +14,8 @@ namespace equipsys
     public partial class BorrowingForm : Form
     {
         SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
+        public string ItemName { get; set; }
+        public string ImagePath { get; set; }
         public BorrowingForm()
         {
             InitializeComponent();
@@ -21,6 +23,8 @@ namespace equipsys
 
         private void BORROWING_Load(object sender, EventArgs e)
         {
+          
+            BorrowingItemName.Text = ItemName;
 
         }
 
@@ -37,6 +41,24 @@ namespace equipsys
         private void button2_Click(object sender, EventArgs e)
         {
             sql.Open();
+            SqlCommand cmd = sql.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            //change table name
+            cmd.CommandText = "insert into history values ('" + firstnameReg.Text + "', '" + lastnameReg.Text + "', '" + studentidReg.Text + "', '" + yearReg.Text + "','" + comboBox1.Text + "','" + textBox1.Text + "','" + textBox2.Text + "', '" + BorrowingItemName.Text + "', '" + comboBox2.Text + "', '" + textBox3.Text + "', '" + comboBox3.Text + "', '" + comboBox4 + "', 'Ongoing')";
+            cmd.ExecuteNonQuery();
+            sql.Close();
+            MessageBox.Show("Record Inserted Successfully");
+
+            MAIN mainForm = new MAIN();
+            mainForm.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MAIN mainForm = new MAIN();
+            mainForm.Show();
+            this.Close();
         }
     }
 }

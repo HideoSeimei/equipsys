@@ -46,7 +46,7 @@
             label6 = new Label();
             comboBox2 = new ComboBox();
             label5 = new Label();
-            label3 = new Label();
+            BorrowingItemName = new Label();
             pictureBox3 = new PictureBox();
             groupBox1 = new GroupBox();
             label12 = new Label();
@@ -144,7 +144,7 @@
             guna2Panel1.Controls.Add(label6);
             guna2Panel1.Controls.Add(comboBox2);
             guna2Panel1.Controls.Add(label5);
-            guna2Panel1.Controls.Add(label3);
+            guna2Panel1.Controls.Add(BorrowingItemName);
             guna2Panel1.Controls.Add(pictureBox3);
             guna2Panel1.Controls.Add(groupBox1);
             guna2Panel1.CustomizableEdges = customizableEdges1;
@@ -207,6 +207,7 @@
             button3.TabIndex = 55;
             button3.Text = "Back";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -214,7 +215,7 @@
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(535, 304);
+            button2.Location = new Point(535, 305);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(109, 22);
@@ -258,17 +259,17 @@
             label5.TabIndex = 51;
             label5.Text = "TIME";
             // 
-            // label3
+            // BorrowingItemName
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.ForestGreen;
-            label3.Location = new Point(16, 150);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 15);
-            label3.TabIndex = 49;
-            label3.Text = "ITEM NAME";
+            BorrowingItemName.AutoSize = true;
+            BorrowingItemName.BackColor = Color.Transparent;
+            BorrowingItemName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            BorrowingItemName.ForeColor = Color.ForestGreen;
+            BorrowingItemName.Location = new Point(16, 150);
+            BorrowingItemName.Name = "BorrowingItemName";
+            BorrowingItemName.Size = new Size(72, 15);
+            BorrowingItemName.TabIndex = 49;
+            BorrowingItemName.Text = "ITEM NAME";
             // 
             // pictureBox3
             // 
@@ -506,7 +507,7 @@
         private ComboBox comboBox4;
         private ComboBox comboBox3;
         private Label label8;
-        private Label label3;
+        private Label BorrowingItemName;
         private Label label12;
         private TextBox textBox2;
         private Label label11;

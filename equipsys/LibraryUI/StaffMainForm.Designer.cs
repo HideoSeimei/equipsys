@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label2 = new Label();
             pictureBox4 = new PictureBox();
             textBox1 = new TextBox();
             label1 = new Label();
-            UserFormPanel = new Guna.UI2.WinForms.Guna2Panel();
+            mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox5 = new PictureBox();
             UserProfileName = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -122,14 +122,14 @@
             label1.TabIndex = 7;
             label1.Text = "Equipment";
             // 
-            // UserFormPanel
+            // mainPanel
             // 
-            UserFormPanel.CustomizableEdges = customizableEdges1;
-            UserFormPanel.Location = new Point(174, 72);
-            UserFormPanel.Name = "UserFormPanel";
-            UserFormPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            UserFormPanel.Size = new Size(659, 334);
-            UserFormPanel.TabIndex = 21;
+            mainPanel.CustomizableEdges = customizableEdges3;
+            mainPanel.Location = new Point(174, 72);
+            mainPanel.Name = "mainPanel";
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            mainPanel.Size = new Size(659, 334);
+            mainPanel.TabIndex = 21;
             // 
             // pictureBox5
             // 
@@ -165,7 +165,7 @@
             ClientSize = new Size(886, 441);
             Controls.Add(UserProfileName);
             Controls.Add(pictureBox5);
-            Controls.Add(UserFormPanel);
+            Controls.Add(mainPanel);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(pictureBox4);
@@ -193,7 +193,7 @@
         private PictureBox pictureBox4;
         private TextBox textBox1;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Panel UserFormPanel;
+        private Guna.UI2.WinForms.Guna2Panel mainPanel;
         private PictureBox pictureBox5;
         private Label UserProfileName;
     }

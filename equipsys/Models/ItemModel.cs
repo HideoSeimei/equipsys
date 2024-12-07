@@ -104,7 +104,7 @@ namespace equipsys.Models
                 cmd.Parameters.AddWithValue("@IMAGEPATH", newImage);
                 sql.Open();
 
-                MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {description}, Stock: {stock}");
+                //MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {description}, Stock: {stock}");
 
                 string finalImagePath = "";
                 string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local 

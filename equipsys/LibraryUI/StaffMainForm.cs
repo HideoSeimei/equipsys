@@ -17,10 +17,10 @@ namespace equipsys
             InitializeComponent();
             UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
             useritems.FormBorderStyle = FormBorderStyle.None;
-            useritems.Size = UserFormPanel.ClientSize;
+            useritems.Size = mainPanel.ClientSize;
             useritems.Dock = DockStyle.Fill;
-            UserFormPanel.Controls.Clear();
-            UserFormPanel.Controls.Add(useritems);
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(useritems);
             useritems.Show();
 
         }
@@ -29,10 +29,10 @@ namespace equipsys
         {
             UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
             useritems.FormBorderStyle = FormBorderStyle.None;
-            useritems.Size = UserFormPanel.ClientSize;
+            useritems.Size = mainPanel.ClientSize;
             useritems.Dock = DockStyle.Fill;
-            UserFormPanel.Controls.Clear();
-            UserFormPanel.Controls.Add(useritems);
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(useritems);
             useritems.Show();
         }
 
@@ -43,7 +43,15 @@ namespace equipsys
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            //for opening the records form
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
+            record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(record);
+            record.Show();
+            //
         }
 
         private void MAIN_Load(object sender, EventArgs e)

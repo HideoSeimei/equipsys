@@ -50,6 +50,7 @@
             SaveItemButton.TabIndex = 16;
             SaveItemButton.Text = "Save as Returned";
             SaveItemButton.UseVisualStyleBackColor = false;
+            SaveItemButton.Click += SaveItemButton_Click;
             // 
             // ItemStockBox
             // 
@@ -69,7 +70,7 @@
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(111, 50);
+            ItemNameBox.Location = new Point(113, 50);
             ItemNameBox.Margin = new Padding(3, 2, 3, 2);
             ItemNameBox.Name = "ItemNameBox";
             ItemNameBox.Size = new Size(324, 23);

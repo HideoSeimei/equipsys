@@ -55,6 +55,7 @@ namespace equipsys
         private void BorrowingButton_Click(object sender, EventArgs e)
         {
             BorrowingForm borrowingForm = new BorrowingForm();
+            borrowingForm.ItemName = UNamelbl.Text;
             borrowingForm.Show();
             this.Hide();
         }
