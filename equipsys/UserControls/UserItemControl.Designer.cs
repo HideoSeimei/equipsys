@@ -36,7 +36,6 @@
             UDescriptionlbl = new Label();
             Borrow = new Button();
             UItemIDlbl = new Label();
-            Return = new Button();
             ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
             SuspendLayout();
             // 
@@ -126,26 +125,11 @@
             UItemIDlbl.TabIndex = 10;
             UItemIDlbl.Text = "ID";
             // 
-            // Return
-            // 
-            Return.BackColor = Color.MediumAquamarine;
-            Return.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Return.ForeColor = Color.White;
-            Return.Location = new Point(342, 128);
-            Return.Margin = new Padding(3, 2, 3, 2);
-            Return.Name = "Return";
-            Return.Size = new Size(118, 30);
-            Return.TabIndex = 11;
-            Return.Text = "RETURN";
-            Return.UseVisualStyleBackColor = false;
-            Return.Click += Return_Click;
-            // 
             // UserItemControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            Controls.Add(Return);
             Controls.Add(UItemIDlbl);
             Controls.Add(Borrow);
             Controls.Add(UDescriptionlbl);
@@ -170,6 +154,5 @@
         public Label UDescriptionlbl;
         public Button Borrow;
         public Label UItemIDlbl;
-        public Button Return;
     }
 }
