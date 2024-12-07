@@ -19,7 +19,7 @@ namespace equipsys
             InitializeComponent();
         }
 
-        private void ReturnButton_Click(object sender, EventArgs e, LoginForm loginForm)
+        private void ReturnButton_Click(object sender, EventArgs e, LoginForm loginForm)// This doesnt work idk why
         {
             LoginForm login_form = new LoginForm();
             login_form.Show();
@@ -55,7 +55,7 @@ namespace equipsys
 
         private bool ValidateAccount()
         {// Validates RegistrationForm and checks for invalid values.
-            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length < 30 || UsernameBox.Text.Length > 3)
+            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length >= 30 || UsernameBox.Text.Length <= 3)
             {
                 MessageBox.Show("Username Must be 3-30 characters long");
                 return false;
@@ -81,16 +81,23 @@ namespace equipsys
 
         private void YearBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((string) YearBox.SelectedItem == "1st Year")
+            if ((string)YearBox.SelectedItem == "1st Year")
                 YearBox.Text = "1st Year";
-            if ((string) YearBox.SelectedItem == "2nd Year")
+            if ((string)YearBox.SelectedItem == "2nd Year")
                 YearBox.Text = "2nd Year";
-            if ((string) YearBox.SelectedItem == "3rd Year")
+            if ((string)YearBox.SelectedItem == "3rd Year")
                 YearBox.Text = "3rd Year";
-            if ((string) YearBox.SelectedItem == "4th Year")
+            if ((string)YearBox.SelectedItem == "4th Year")
                 YearBox.Text = "4th Year";
             else
                 YearBox.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e) // New BACK BUTTON
+        {
+            AdminMainForm adminForm = new AdminMainForm();
+            adminForm.Show();
+            this.Hide();
         }
     }
 }

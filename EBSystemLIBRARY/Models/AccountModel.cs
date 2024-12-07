@@ -42,7 +42,7 @@ namespace EBSystemLIBRARY.Models
         public bool SaveAccount(string username, string password, string firstname, string lastname, string course, string year, string studentid)
         {
             // TODO - change connection string to your local computer name
-            SqlConnection sql = new SqlConnection("Data Source=ACERRYZEN;Initial Catalog=equipmentsys;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            SqlConnection sql = new SqlConnection("Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             string saveAccountQuery = "INSERT INTO Accounts (username, password, role, firstname, lastname, course, year, student_id) VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @STUDENTID)";
             sql.Open();
             SqlCommand cmd = new SqlCommand(saveAccountQuery, sql);

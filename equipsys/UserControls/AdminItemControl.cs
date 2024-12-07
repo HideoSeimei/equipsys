@@ -82,7 +82,7 @@ namespace equipsys
             EditItemForm editItemForm = new EditItemForm();
 
             // Pass the data from the UserControl to the EditItemForm
-            editItemForm.ItemID = int.Parse(ItemIdlbl.Text); // Assuming ItemIdlbl is a Label with ItemID
+            editItemForm.ItemID = int.Parse(ItemIdlbl.Text); 
             editItemForm.ItemName = Namelbl.Text;
             editItemForm.ItemDescription = Descriptionlbl.Text;
             editItemForm.ItemStock = int.Parse(Stocklbl.Text.Replace("Stocks: ", "")); // Parse the stock value

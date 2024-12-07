@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace equipsys
         public Panel MainPanel => mainPanel; // Make mainPanel accessible
         public string searchBox;
         private System.Windows.Forms.Timer timer;
+        public int AccountId;
+        public string AccountName;
 
         public AdminMainForm()
         {
@@ -37,6 +40,7 @@ namespace equipsys
             timer.Interval = 1000; // 1 second
             timer.Tick += Timer_Tick;
             timer.Start();
+            //
 
         }
         private void Timer_Tick(object sender, EventArgs e)
@@ -47,7 +51,9 @@ namespace equipsys
         }
         private void MAIN_ADMIN_Load(object sender, EventArgs e)
         {
-
+            //for setting the Profile Name
+            
+            profileName.Text = $"Welcome Admin";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -129,11 +135,14 @@ namespace equipsys
             //
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)// REGISTER BUTTON
         {
-            Profile profile_form = new Profile();
-            profile_form.Show();
+        
+            //OPEN THE REGISTRATION FORM
+            RegistrationForm registration = new RegistrationForm();
+            registration.Show();
             this.Hide();
+            //
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)// SEARCH BOX

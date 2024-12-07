@@ -41,7 +41,15 @@ namespace equipsys
             ItemBox.Text = ItemName;
             DescriptionBox.Text = ItemDescription;
             StockBox.Text = ItemStock.ToString();
-            NewImagePath.Image = new Bitmap(NewSelectedImage);
+            if (string.IsNullOrEmpty(NewSelectedImage))
+            {
+                NewImagePath.Image = new Bitmap(@"C:\Users\itiw\source\repos\equipsys\equipsys\Images\default image.png");
+            }
+            else
+            {
+                NewImagePath.Image = new Bitmap(NewSelectedImage);
+            }
+            
             
         }
 
