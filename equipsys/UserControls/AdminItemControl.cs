@@ -36,7 +36,7 @@ namespace equipsys
             }
             else
             {
-                Availability.BackColor = Color.Red;
+                Availability.BackColor = Color.Pink;
             }
 
 
@@ -87,7 +87,6 @@ namespace equipsys
             editItemForm.ItemDescription = Descriptionlbl.Text;
             editItemForm.ItemStock = int.Parse(Stocklbl.Text.Replace("Stocks: ", "")); // Parse the stock value
             editItemForm.NewSelectedImage = imageBox.ImageLocation;
-            MessageBox.Show(imageBox.ImageLocation);
             // Show the EditItemForm
             editItemForm.Show();
             AdminMainForm admin = new AdminMainForm();

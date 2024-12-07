@@ -134,7 +134,6 @@ namespace EBSystemLIBRARY.Models
                 cmd.Parameters.AddWithValue("@stock", Stock);
                 cmd.Parameters.AddWithValue("@imagePath",NewImage);
                 con.Open();
-                MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {Description}, Stock: {Stock}");
                 //for transfering the new image to the local storage
                 string finalImagePath = "";
                 string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\";
@@ -153,7 +152,7 @@ namespace EBSystemLIBRARY.Models
                 cmd.ExecuteNonQuery(); // for updating the database
                 ItemForm itemform = new ItemForm();
                 itemform.ReloadFlowLayoutPanel();
-                itemform.Show();
+
                 
 
 

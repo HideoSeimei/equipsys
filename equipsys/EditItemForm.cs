@@ -42,7 +42,7 @@ namespace equipsys
             DescriptionBox.Text = ItemDescription;
             StockBox.Text = ItemStock.ToString();
             NewImagePath.Image = new Bitmap(NewSelectedImage);
-            MessageBox.Show(ItemName);
+            
         }
 
         private void button2_Click(object sender, EventArgs e)// SAVE BUTTON

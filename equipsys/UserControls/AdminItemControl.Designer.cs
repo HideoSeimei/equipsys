@@ -80,7 +80,7 @@
             // Availability
             // 
             Availability.AutoSize = true;
-            Availability.BackColor = Color.LightGreen;
+            Availability.BackColor = Color.Transparent;
             Availability.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Availability.ForeColor = Color.DimGray;
             Availability.Location = new Point(259, 89);
