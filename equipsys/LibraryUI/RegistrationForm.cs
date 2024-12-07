@@ -1,5 +1,4 @@
-﻿using EBSystemLIBRARY.Models;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using equipsys.Models;
 
 namespace equipsys
 {
@@ -19,7 +19,7 @@ namespace equipsys
             InitializeComponent();
         }
 
-        private void ReturnButton_Click(object sender, EventArgs e, LoginForm loginForm)
+        private void ReturnButton_Click(object sender, EventArgs e)
         {
             LoginForm login_form = new LoginForm();
             login_form.Show();
@@ -31,7 +31,7 @@ namespace equipsys
             if (ValidateAccount())
             {
                 AccountModel newAccountModel = new(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
-                newAccountModel.SaveAccount(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
+                newAccountModel.AddAccount(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
 
                 // Resets textboxes to null values.
                 UsernameBox.Text = "";
@@ -48,14 +48,12 @@ namespace equipsys
                 this.Hide();
             }
             else
-            {
                 MessageBox.Show("Invalid Entries Detected, Try again.");
-            }
         }
 
         private bool ValidateAccount()
         {// Validates RegistrationForm and checks for invalid values.
-            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length < 30 || UsernameBox.Text.Length > 3)
+            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length >= 30 || UsernameBox.Text.Length <= 3)
             {
                 MessageBox.Show("Username Must be 3-30 characters long");
                 return false;
@@ -73,7 +71,7 @@ namespace equipsys
                 MessageBox.Show("Select a valid year level.");
                 return false;
             }
-            if (StudentIDBox.Text.Length == 0)
+            if (StudentIDBox.Text.Length == 0) // TODO - make sure it is a valid student id
                 return false;
 
             return true;

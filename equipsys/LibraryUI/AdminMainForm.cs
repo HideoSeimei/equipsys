@@ -129,10 +129,10 @@ namespace equipsys
             //
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void AccountsButton_Click(object sender, EventArgs e)
         {
-            Profile profile_form = new Profile();
-            profile_form.Show();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
             this.Hide();
         }
 

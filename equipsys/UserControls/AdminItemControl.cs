@@ -1,5 +1,4 @@
-﻿using EBSystemLIBRARY.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using equipsys.Models;
 
 namespace equipsys
 {
@@ -103,7 +103,7 @@ namespace equipsys
         {
             ItemModel itemmodel = new ItemModel();
             
-            itemmodel.Delete(Int32.Parse(ItemIdlbl.Text));
+            itemmodel.DeleteItem(Int32.Parse(ItemIdlbl.Text));
             this.Hide();// this is used to hide the deleted usercontrol(adminitemcontrol)
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using equipsys.LibraryUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,39 +18,18 @@ namespace equipsys
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void ReturningButton_Click(object sender, EventArgs e)
         {
-
+            ReturningForm returningForm = new ReturningForm();
+            returningForm.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void BorrowingButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ItemUserControl_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            EditItemForm editItems = new EditItemForm();
-            AdminMainForm mainAdmin = new AdminMainForm();
-            editItems.Show();
-            mainAdmin.Hide();
+            BorrowingForm borrowingForm = new BorrowingForm();
+            borrowingForm.Show();
+            this.Hide();
         }
     }
 }

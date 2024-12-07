@@ -33,20 +33,20 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
             pictureBox2 = new PictureBox();
-            button3 = new Button();
-            button2 = new Button();
+            ReturnButton = new Button();
+            SaveButton = new Button();
             NewImagePath = new PictureBox();
-            button1 = new Button();
-            StockBox = new TextBox();
+            BrowseImageButton = new Button();
+            ItemStockBox = new TextBox();
             label2 = new Label();
-            DescriptionBox = new TextBox();
+            ItemDescriptionBox = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
-            ItemBox = new TextBox();
+            ItemNameBox = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -74,34 +74,34 @@
             pictureBox2.TabIndex = 49;
             pictureBox2.TabStop = false;
             // 
-            // button3
+            // ReturnButton
             // 
-            button3.Cursor = Cursors.Hand;
-            button3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.ForestGreen;
-            button3.Location = new Point(380, 284);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(109, 22);
-            button3.TabIndex = 9;
-            button3.Text = "Back";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            ReturnButton.Cursor = Cursors.Hand;
+            ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnButton.ForeColor = Color.ForestGreen;
+            ReturnButton.Location = new Point(380, 284);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
+            ReturnButton.Name = "ReturnButton";
+            ReturnButton.Size = new Size(109, 22);
+            ReturnButton.TabIndex = 9;
+            ReturnButton.Text = "Back";
+            ReturnButton.UseVisualStyleBackColor = true;
+            ReturnButton.Click += ReturnButton_Click;
             // 
-            // button2
+            // SaveButton
             // 
-            button2.BackColor = Color.ForestGreen;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(500, 284);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(109, 22);
-            button2.TabIndex = 8;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            SaveButton.BackColor = Color.ForestGreen;
+            SaveButton.Cursor = Cursors.Hand;
+            SaveButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveButton.ForeColor = Color.White;
+            SaveButton.Location = new Point(500, 284);
+            SaveButton.Margin = new Padding(3, 2, 3, 2);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(109, 22);
+            SaveButton.TabIndex = 8;
+            SaveButton.Text = "Save";
+            SaveButton.UseVisualStyleBackColor = false;
+            SaveButton.Click += SaveButton_Click;
             // 
             // NewImagePath
             // 
@@ -114,27 +114,27 @@
             NewImagePath.TabIndex = 7;
             NewImagePath.TabStop = false;
             // 
-            // button1
+            // BrowseImageButton
             // 
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.ForestGreen;
-            button1.Location = new Point(95, 211);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(109, 22);
-            button1.TabIndex = 6;
-            button1.Text = "Browse";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            BrowseImageButton.Cursor = Cursors.Hand;
+            BrowseImageButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BrowseImageButton.ForeColor = Color.ForestGreen;
+            BrowseImageButton.Location = new Point(95, 211);
+            BrowseImageButton.Margin = new Padding(3, 2, 3, 2);
+            BrowseImageButton.Name = "BrowseImageButton";
+            BrowseImageButton.Size = new Size(109, 22);
+            BrowseImageButton.TabIndex = 6;
+            BrowseImageButton.Text = "Browse";
+            BrowseImageButton.UseVisualStyleBackColor = true;
+            BrowseImageButton.Click += BrowseImageButton_Click;
             // 
-            // StockBox
+            // ItemStockBox
             // 
-            StockBox.Location = new Point(285, 174);
-            StockBox.Margin = new Padding(3, 2, 3, 2);
-            StockBox.Name = "StockBox";
-            StockBox.Size = new Size(86, 23);
-            StockBox.TabIndex = 5;
+            ItemStockBox.Location = new Point(285, 174);
+            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
+            ItemStockBox.Name = "ItemStockBox";
+            ItemStockBox.Size = new Size(86, 23);
+            ItemStockBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -149,13 +149,13 @@
             label2.TabIndex = 51;
             label2.Text = "Log out";
             // 
-            // DescriptionBox
+            // ItemDescriptionBox
             // 
-            DescriptionBox.Location = new Point(285, 114);
-            DescriptionBox.Margin = new Padding(3, 2, 3, 2);
-            DescriptionBox.Name = "DescriptionBox";
-            DescriptionBox.Size = new Size(324, 23);
-            DescriptionBox.TabIndex = 4;
+            ItemDescriptionBox.Location = new Point(285, 114);
+            ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionBox.Name = "ItemDescriptionBox";
+            ItemDescriptionBox.Size = new Size(324, 23);
+            ItemDescriptionBox.TabIndex = 4;
             // 
             // label5
             // 
@@ -228,23 +228,23 @@
             pictureBox5.TabIndex = 54;
             pictureBox5.TabStop = false;
             // 
-            // ItemBox
+            // ItemNameBox
             // 
-            ItemBox.Location = new Point(285, 64);
-            ItemBox.Margin = new Padding(3, 2, 3, 2);
-            ItemBox.Name = "ItemBox";
-            ItemBox.Size = new Size(324, 23);
-            ItemBox.TabIndex = 3;
+            ItemNameBox.Location = new Point(285, 64);
+            ItemNameBox.Margin = new Padding(3, 2, 3, 2);
+            ItemNameBox.Name = "ItemNameBox";
+            ItemNameBox.Size = new Size(324, 23);
+            ItemNameBox.TabIndex = 3;
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(button3);
-            guna2Panel1.Controls.Add(button2);
+            guna2Panel1.Controls.Add(ReturnButton);
+            guna2Panel1.Controls.Add(SaveButton);
             guna2Panel1.Controls.Add(NewImagePath);
-            guna2Panel1.Controls.Add(button1);
-            guna2Panel1.Controls.Add(StockBox);
-            guna2Panel1.Controls.Add(DescriptionBox);
-            guna2Panel1.Controls.Add(ItemBox);
+            guna2Panel1.Controls.Add(BrowseImageButton);
+            guna2Panel1.Controls.Add(ItemStockBox);
+            guna2Panel1.Controls.Add(ItemDescriptionBox);
+            guna2Panel1.Controls.Add(ItemNameBox);
             guna2Panel1.Controls.Add(label5);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
@@ -308,15 +308,15 @@
         private TextBox textBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private PictureBox pictureBox3;
-        public Button button3;
-        public Button button2;
+        public Button ReturnButton;
+        public Button SaveButton;
         public PictureBox NewImagePath;
-        public Button button1;
-        public TextBox StockBox;
-        public TextBox DescriptionBox;
+        public Button BrowseImageButton;
+        public TextBox ItemStockBox;
+        public TextBox ItemDescriptionBox;
         public Label label5;
         public Label label4;
         public Label label3;
-        public TextBox ItemBox;
+        public TextBox ItemNameBox;
     }
 }

@@ -95,10 +95,10 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(400, 135);
+            button1.Location = new Point(370, 135);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(82, 22);
+            button1.Size = new Size(118, 30);
             button1.TabIndex = 6;
             button1.Text = "EDIT";
             button1.UseVisualStyleBackColor = false;
@@ -110,10 +110,10 @@
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(518, 135);
+            button2.Location = new Point(494, 135);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(82, 22);
+            button2.Size = new Size(118, 30);
             button2.TabIndex = 7;
             button2.Text = "DELETE";
             button2.UseVisualStyleBackColor = false;

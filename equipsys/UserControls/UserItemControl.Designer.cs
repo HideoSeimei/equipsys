@@ -34,17 +34,17 @@
             label2 = new Label();
             label1 = new Label();
             label4 = new Label();
-            button1 = new Button();
+            ReturnButton = new Button();
+            BorrowingButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(45, 13);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(39, 10);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(227, 196);
+            pictureBox1.Size = new Size(199, 147);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -55,12 +55,11 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(296, 29);
+            label3.Location = new Point(259, 22);
             label3.Name = "label3";
-            label3.Size = new Size(62, 25);
+            label3.Size = new Size(51, 20);
             label3.TabIndex = 3;
             label3.Text = "NAME";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -68,12 +67,11 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(296, 76);
+            label2.Location = new Point(259, 57);
             label2.Name = "label2";
-            label2.Size = new Size(65, 25);
+            label2.Size = new Size(53, 20);
             label2.TabIndex = 4;
             label2.Text = "STOCK";
-            label2.Click += label2_Click_1;
             // 
             // label1
             // 
@@ -81,9 +79,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(296, 119);
+            label1.Location = new Point(259, 89);
             label1.Name = "label1";
-            label1.Size = new Size(118, 25);
+            label1.Size = new Size(97, 20);
             label1.TabIndex = 5;
             label1.Text = "AVAILABILITY";
             // 
@@ -93,39 +91,54 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.DimGray;
-            label4.Location = new Point(564, 29);
+            label4.Location = new Point(435, 22);
             label4.Name = "label4";
-            label4.Size = new Size(122, 25);
+            label4.Size = new Size(100, 20);
             label4.TabIndex = 8;
             label4.Text = "DESCRIPTION";
             // 
-            // button1
+            // ReturnButton
             // 
-            button1.BackColor = Color.SteelBlue;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(551, 169);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 40);
-            button1.TabIndex = 9;
-            button1.Text = "BORROW";
-            button1.UseVisualStyleBackColor = false;
+            ReturnButton.BackColor = Color.DarkGoldenrod;
+            ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnButton.ForeColor = Color.White;
+            ReturnButton.Location = new Point(494, 135);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
+            ReturnButton.Name = "ReturnButton";
+            ReturnButton.Size = new Size(118, 30);
+            ReturnButton.TabIndex = 9;
+            ReturnButton.Text = "RETURN";
+            ReturnButton.UseVisualStyleBackColor = false;
+            ReturnButton.Click += ReturningButton_Click;
+            // 
+            // BorrowingButton
+            // 
+            BorrowingButton.BackColor = Color.SteelBlue;
+            BorrowingButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BorrowingButton.ForeColor = Color.White;
+            BorrowingButton.Location = new Point(370, 135);
+            BorrowingButton.Margin = new Padding(3, 2, 3, 2);
+            BorrowingButton.Name = "BorrowingButton";
+            BorrowingButton.Size = new Size(118, 30);
+            BorrowingButton.TabIndex = 10;
+            BorrowingButton.Text = "BORROW";
+            BorrowingButton.UseVisualStyleBackColor = false;
+            BorrowingButton.Click += BorrowingButton_Click;
             // 
             // UserItemControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            Controls.Add(button1);
+            Controls.Add(BorrowingButton);
+            Controls.Add(ReturnButton);
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UserItemControl";
-            Size = new Size(717, 229);
-            Load += ItemUserControl_Load;
+            Size = new Size(627, 172);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -138,6 +151,7 @@
         private Label label2;
         private Label label1;
         private Label label4;
-        private Button button1;
+        private Button ReturnButton;
+        private Button BorrowingButton;
     }
 }
