@@ -60,5 +60,19 @@ namespace equipsys
             mainForm.Show();
             this.Close();
         }
+
+        private bool ValidateForm()
+        {
+            if (firstnameReg.Text.Length == 0)
+                return false;
+            if (lastnameReg.Text.Length == 0)
+                return false;
+            if (studentidReg.Text.Length == 0)
+                return false;
+            if (textBox1.Text.Length == 0)
+                return false;
+
+            return true;
+        }
     }
 }

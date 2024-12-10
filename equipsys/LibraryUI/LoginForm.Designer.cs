@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             label2 = new Label();
             linkLabel1 = new LinkLabel();
-            button2 = new Button();
             button1 = new Button();
             panel2 = new Panel();
             pictureBox6 = new PictureBox();
@@ -84,21 +83,6 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
             linkLabel1.Visible = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.White;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.ForestGreen;
-            button2.Location = new Point(570, 322);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(282, 29);
-            button2.TabIndex = 18;
-            button2.Text = "Sign Up";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -323,7 +307,6 @@
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(linkLabel1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -350,7 +333,6 @@
 
         private Label label2;
         private LinkLabel linkLabel1;
-        private Button button2;
         private Button button1;
         private Panel panel2;
         private TextBox passwordbox;
