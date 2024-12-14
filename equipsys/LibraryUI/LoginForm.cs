@@ -3,7 +3,7 @@ namespace equipsys
 {
     public partial class LoginForm : Form
     {
-        public string Role;
+        
         public LoginForm()
         {
             InitializeComponent();
@@ -11,16 +11,7 @@ namespace equipsys
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // changes the label depending on the role
-            if (Role == "admin")
-            {
-                RoleLbl.Text = "LOGIN AS ADMIN";
-            }
-            else
-            {
-                RoleLbl.Text = "LOGIN AS STAFF";
-            }
-            //
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -73,11 +64,9 @@ namespace equipsys
                 this.Hide();
 
             }
-            else if (result == "admin")
+            else if (result == "admin")// validation if they enter admin account
             {
-                AdminMainForm mainAdmin = new AdminMainForm();
-                mainAdmin.Show();
-                this.Hide();
+                accountChecker.Text = "Enter User account";
             }
             else
             {

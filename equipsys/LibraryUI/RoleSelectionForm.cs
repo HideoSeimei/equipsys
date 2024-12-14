@@ -22,7 +22,6 @@ namespace equipsys
         {
 
             LoginForm loginForm = new LoginForm();
-            loginForm.Role = "staff";
             loginForm.Show();
             this.Hide();
 
@@ -30,9 +29,8 @@ namespace equipsys
 
         private void button2_Click(object sender, EventArgs e)//ADMIN
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Role = "admin";
-            loginForm.Show();
+            LoginFormAdmin loginFormAdmin = new LoginFormAdmin();
+            loginFormAdmin.Show();
             this.Hide();
         }
     }

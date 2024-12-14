@@ -273,9 +273,9 @@
             RoleLbl.ForeColor = Color.ForestGreen;
             RoleLbl.Location = new Point(626, 110);
             RoleLbl.Name = "RoleLbl";
-            RoleLbl.Size = new Size(54, 18);
+            RoleLbl.Size = new Size(114, 18);
             RoleLbl.TabIndex = 32;
-            RoleLbl.Text = "ROLE";
+            RoleLbl.Text = "Login as staff";
             RoleLbl.TextAlign = ContentAlignment.TopCenter;
             // 
             // pictureBox5
