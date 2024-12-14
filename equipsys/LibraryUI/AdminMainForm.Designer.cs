@@ -160,15 +160,19 @@
             AccountsButton.SizeMode = PictureBoxSizeMode.StretchImage;
             AccountsButton.TabIndex = 31;
             AccountsButton.TabStop = false;
+            AccountsButton.Click += AccountsButton_Click_1;
             // 
             // profileName
             // 
             profileName.AutoSize = true;
+            profileName.BackColor = Color.Transparent;
+            profileName.ForeColor = Color.White;
             profileName.Location = new Point(25, 323);
             profileName.Name = "profileName";
             profileName.Size = new Size(41, 15);
             profileName.TabIndex = 32;
             profileName.Text = "Profile";
+            profileName.Click += profileName_Click;
             // 
             // AdminMainForm
             // 
