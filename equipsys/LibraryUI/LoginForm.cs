@@ -33,16 +33,12 @@ namespace equipsys
 
             SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
             sql.Open();
-            string query = "Select role from accounts where username = @username and password = @password"; // sql query for identifying the role of the account
-            string query2 = "Select account_id from accounts where username = @username and password = @password";//sql query to get the user account id
-            SqlCommand cmd = new SqlCommand(query, sql);
-            SqlCommand cmd2 = new SqlCommand(query2, sql);
+            string loginQuery = "Select Role, Account_id from accounts where username = @username and password = @password"; // sql query for identifying the role of the account
+            SqlCommand cmd = new SqlCommand(loginQuery, sql);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
-            cmd2.Parameters.AddWithValue("@username", username);
-            cmd2.Parameters.AddWithValue("@password", password);
-            string result = (string)cmd.ExecuteScalar(); // variable for the role
-            object userId = cmd2.ExecuteScalar();// variable for the userid 
+            string result = (string)cmd.ExecuteScalar();// variable for the userid
+            // TODO - make sure userID is returned as well
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))// CHECKS IF THERES A VALUE INSIDE THE USERNAME OR PASSWORD TEXTBOX
             {
                 accountChecker.Text = "Enter username and password";//INPUTS THIS IF THE USER AND PASSWORD TEXTBOX ARE EMPTY
@@ -56,40 +52,23 @@ namespace equipsys
             }
             else if (result == "admin")
             {
-                AdminMainForm mainAdmin = new AdminMainForm();
-                mainAdmin.Show();
+                AdminMainForm mainAdminForm = new AdminMainForm();
+                mainAdminForm.Show();
                 this.Hide();
             }
             else
             {
                 accountChecker.Text = "Invalid account";
             }
-
-
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            // reveal password toggle
-            if (passwordbox.UseSystemPasswordChar == true) // if password is hidden
-            {
+            // password reveal toggle
+            if (passwordbox.UseSystemPasswordChar == true)
                 passwordbox.UseSystemPasswordChar = false;
-            }
-            else // if password is not hidden
-            {
+            else 
                 passwordbox.UseSystemPasswordChar = true;
-            }
-            //
-        }
-
-        private void usernamebox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

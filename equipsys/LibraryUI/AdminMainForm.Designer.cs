@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             search = new TextBox();
             pictureBox4 = new PictureBox();
-            label2 = new Label();
+            LogOutLabel = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -81,19 +81,19 @@
             pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
             // 
-            // label2
+            // LogOutLabel
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(33, 358);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 14);
-            label2.TabIndex = 13;
-            label2.Text = "Log out";
-            label2.Click += label2_Click;
+            LogOutLabel.AutoSize = true;
+            LogOutLabel.BackColor = Color.Transparent;
+            LogOutLabel.Cursor = Cursors.Hand;
+            LogOutLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LogOutLabel.ForeColor = Color.White;
+            LogOutLabel.Location = new Point(40, 418);
+            LogOutLabel.Name = "LogOutLabel";
+            LogOutLabel.Size = new Size(50, 14);
+            LogOutLabel.TabIndex = 13;
+            LogOutLabel.Text = "Log out";
+            LogOutLabel.Click += label2_Click;
             // 
             // pictureBox2
             // 
@@ -139,13 +139,12 @@
             // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges3;
+            mainPanel.CustomizableEdges = customizableEdges1;
             mainPanel.Location = new Point(174, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             mainPanel.Size = new Size(659, 333);
             mainPanel.TabIndex = 20;
-            mainPanel.Paint += mainPanel_Paint;
             // 
             // AccountsButton
             // 
@@ -159,6 +158,7 @@
             AccountsButton.SizeMode = PictureBoxSizeMode.StretchImage;
             AccountsButton.TabIndex = 31;
             AccountsButton.TabStop = false;
+            AccountsButton.Click += AccountsButton_Click;
             // 
             // AdminMainForm
             // 
@@ -171,7 +171,7 @@
             Controls.Add(label1);
             Controls.Add(search);
             Controls.Add(pictureBox4);
-            Controls.Add(label2);
+            Controls.Add(LogOutLabel);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -180,7 +180,7 @@
             Name = "AdminMainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MAIN_ADMIN";
-            Load += MAIN_ADMIN_Load;
+            Load += AdminMainForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -193,7 +193,7 @@
         #endregion
         private Label label1;
         private PictureBox pictureBox4;
-        private Label label2;
+        private Label LogOutLabel;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;

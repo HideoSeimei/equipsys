@@ -21,74 +21,105 @@ namespace equipsys
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            LoginForm login_form = new LoginForm();
-            login_form.Show();
+            AdminMainForm adminMainForm = new();
+            adminMainForm.Show();
             this.Hide();
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
-        {// If ValidateAccount() == true, then create the account and save to database.
-            if (ValidateAccount())
+        {
+            if (ValidateForm())
             {
-                AccountModel newAccountModel = new(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
-                newAccountModel.AddAccount(UsernameBox.Text, PasswordBox.Text, FNameBox.Text, LNameBox.Text, CourseBox.Text, YearBox.Text, StudentIDBox.Text);
+                AccountModel newAccountModel = new AccountModel(UsernameTextBox.Text, PasswordTextBox.Text, FirstNameTextBox.Text, LastNameTextBox.Text, CourseComboBox.Text, YearComboBox.Text, SectionComboBox.Text, StudentIDTextBox.Text);
+                newAccountModel.SaveAccount();
 
-                // Resets textboxes to null values.
-                UsernameBox.Text = "";
-                PasswordBox.Text = "";
-                FNameBox.Text = "";
-                LNameBox.Text = "";
-                CourseBox.Text = "";
-                YearBox.Text = "";
-                StudentIDBox.Text = "";
+                FirstNameTextBox.Text = "";
+                LastNameTextBox.Text = "";
+                CourseComboBox.Text = "Course";
+                CourseComboBox.SelectedIndex = -1;
+                YearComboBox.Text = "Yr";
+                YearComboBox.SelectedIndex = -1;
+                SectionComboBox.Text = "Sec";
+                SectionComboBox.SelectedIndex = -1;
+                UsernameTextBox.Text = "";
+                PasswordTextBox.Text = "";
 
-                // closes form after saving
-                LoginForm login = new LoginForm();
-                login.Show();
+                AdminMainForm adminMainForm = new();
+                adminMainForm.Show();
                 this.Hide();
             }
             else
-                MessageBox.Show("Invalid Entries Detected, Try again.");
+            {
+                MessageBox.Show("There are invalid field(s) detected in the form, try again.");
+            }
         }
 
-        private bool ValidateAccount()
-        {// Validates RegistrationForm and checks for invalid values.
-            if (UsernameBox.Text.Length == 0 || UsernameBox.Text.Length >= 30 || UsernameBox.Text.Length <= 3)
-            {
-                MessageBox.Show("Username Must be 3-30 characters long");
+        private bool ValidateForm()
+        {
+            foreach (char c in FirstNameTextBox.Text)
+                if (!char.IsLetter(c))
+                    return false;
+
+            foreach (char c in LastNameTextBox.Text)
+                if (!char.IsLetter(c))
+                    return false;
+
+            if (CourseComboBox.Text == "Course")
                 return false;
-            }
-            if (PasswordBox.Text.Length == 0)
+
+            if (YearComboBox.Text == "Yr")
                 return false;
-            if (FNameBox.Text.Length == 0)
+
+            if (SectionComboBox.Text == "Sec")
                 return false;
-            if (LNameBox.Text.Length == 0)
+
+            if (StudentIDTextBox.Text.Length != 10 || !StudentIDTextBox.Text.StartsWith("2"))
                 return false;
-            if (CourseBox.Text.Length == 0) // TODO - make sure its a valid course
-                return false;
-            if (YearBox.SelectedItem == null)
-            {
-                MessageBox.Show("Select a valid year level.");
-                return false;
-            }
-            if (StudentIDBox.Text.Length == 0) // TODO - make sure it is a valid student id
-                return false;
+            foreach (char c in StudentIDTextBox.Text.Substring(0, 8))
+                if (!char.IsDigit(c) || (!StudentIDTextBox.Text.EndsWith("-N") && !StudentIDTextBox.Text.EndsWith("-S")))
+                    return false;
+
+            foreach (char c in UsernameTextBox.Text)
+                if (!char.IsLetterOrDigit(c) || (UsernameTextBox.Text.Length < 3 || UsernameTextBox.Text.Length > 30))
+                    return false;
 
             return true;
         }
-
-        private void YearBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void CourseComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((string) YearBox.SelectedItem == "1st Year")
-                YearBox.Text = "1st Year";
-            if ((string) YearBox.SelectedItem == "2nd Year")
-                YearBox.Text = "2nd Year";
-            if ((string) YearBox.SelectedItem == "3rd Year")
-                YearBox.Text = "3rd Year";
-            if ((string) YearBox.SelectedItem == "4th Year")
-                YearBox.Text = "4th Year";
-            else
-                YearBox.Text = "";
+            if (CourseComboBox.SelectedIndex == 0)
+                CourseComboBox.Text = "BSCS";
+            if (CourseComboBox.SelectedIndex == 1)
+                CourseComboBox.Text = "BSEMC";
+            if (CourseComboBox.SelectedIndex == 2)
+                CourseComboBox.Text = "BSIS";
+            if (CourseComboBox.SelectedIndex == 3)
+                CourseComboBox.Text = "BSIT";
+
+        }
+
+        private void YearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (YearComboBox.SelectedIndex == 0)
+                YearComboBox.Text = "1";
+            if (YearComboBox.SelectedIndex == 1)
+                YearComboBox.Text = "2";
+            if (YearComboBox.SelectedIndex == 2)
+                YearComboBox.Text = "3";
+            if (YearComboBox.SelectedIndex == 3)
+                YearComboBox.Text = "4";
+
+        }
+
+        private void SectionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (SectionComboBox.SelectedIndex == 0)
+                SectionComboBox.Text = "A";
+            if (SectionComboBox.SelectedIndex == 1)
+                SectionComboBox.Text = "B";
         }
     }
 }
+// else
+// MessageBox.Show("Invalid Entries Detected, Try again.");

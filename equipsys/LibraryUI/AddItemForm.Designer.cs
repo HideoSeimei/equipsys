@@ -28,66 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemForm));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            ReturnButton = new Button();
+            BackButton = new Button();
             SaveItemButton = new Button();
-            pictureBox4 = new PictureBox();
+            ImagePictureBox = new PictureBox();
             AddImageButton = new Button();
-            ItemStockBox = new TextBox();
-            ItemDescriptionBox = new TextBox();
-            ItemNameBox = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label1 = new Label();
-            label2 = new Label();
+            ItemStockTextBox = new TextBox();
+            ItemDescriptionTextBox = new TextBox();
+            ItemNameTextBox = new TextBox();
+            ItemStockLabel = new Label();
+            ItemDescriptionLabel = new Label();
+            ItemNameLabel = new Label();
+            AddItemLabel = new Label();
+            LogOutLabel = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
             openFileDialog1 = new OpenFileDialog();
-            pictureBox3 = new PictureBox();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ImagePictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(ReturnButton);
+            guna2Panel1.Controls.Add(BackButton);
             guna2Panel1.Controls.Add(SaveItemButton);
-            guna2Panel1.Controls.Add(pictureBox4);
+            guna2Panel1.Controls.Add(ImagePictureBox);
             guna2Panel1.Controls.Add(AddImageButton);
-            guna2Panel1.Controls.Add(ItemStockBox);
-            guna2Panel1.Controls.Add(ItemDescriptionBox);
-            guna2Panel1.Controls.Add(ItemNameBox);
-            guna2Panel1.Controls.Add(label5);
-            guna2Panel1.Controls.Add(label4);
-            guna2Panel1.Controls.Add(label3);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.Controls.Add(ItemStockTextBox);
+            guna2Panel1.Controls.Add(ItemDescriptionTextBox);
+            guna2Panel1.Controls.Add(ItemNameTextBox);
+            guna2Panel1.Controls.Add(ItemStockLabel);
+            guna2Panel1.Controls.Add(ItemDescriptionLabel);
+            guna2Panel1.Controls.Add(ItemNameLabel);
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new Point(186, 76);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(659, 334);
             guna2Panel1.TabIndex = 46;
             // 
-            // ReturnButton
+            // BackButton
             // 
-            ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnButton.ForeColor = Color.ForestGreen;
-            ReturnButton.Location = new Point(380, 284);
-            ReturnButton.Margin = new Padding(3, 2, 3, 2);
-            ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(109, 22);
-            ReturnButton.TabIndex = 9;
-            ReturnButton.Text = "Back";
-            ReturnButton.UseVisualStyleBackColor = true;
-            ReturnButton.Click += ReturnButton_Click;
+            BackButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.ForeColor = Color.ForestGreen;
+            BackButton.Location = new Point(380, 284);
+            BackButton.Margin = new Padding(3, 2, 3, 2);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(109, 22);
+            BackButton.TabIndex = 9;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
             // SaveItemButton
             // 
@@ -104,16 +102,16 @@
             SaveItemButton.UseVisualStyleBackColor = false;
             SaveItemButton.Click += SaveButton_Click;
             // 
-            // pictureBox4
+            // ImagePictureBox
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(48, 36);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(208, 158);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
+            ImagePictureBox.Image = (Image)resources.GetObject("ImagePictureBox.Image");
+            ImagePictureBox.Location = new Point(48, 36);
+            ImagePictureBox.Margin = new Padding(3, 2, 3, 2);
+            ImagePictureBox.Name = "ImagePictureBox";
+            ImagePictureBox.Size = new Size(208, 158);
+            ImagePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            ImagePictureBox.TabIndex = 7;
+            ImagePictureBox.TabStop = false;
             // 
             // AddImageButton
             // 
@@ -129,87 +127,88 @@
             AddImageButton.UseVisualStyleBackColor = true;
             AddImageButton.Click += AddImageButton_Click;
             // 
-            // ItemStockBox
+            // ItemStockTextBox
             // 
-            ItemStockBox.Location = new Point(285, 174);
-            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
-            ItemStockBox.Name = "ItemStockBox";
-            ItemStockBox.Size = new Size(86, 23);
-            ItemStockBox.TabIndex = 5;
+            ItemStockTextBox.Location = new Point(285, 99);
+            ItemStockTextBox.Margin = new Padding(3, 2, 3, 2);
+            ItemStockTextBox.Name = "ItemStockTextBox";
+            ItemStockTextBox.Size = new Size(50, 23);
+            ItemStockTextBox.TabIndex = 5;
             // 
-            // ItemDescriptionBox
+            // ItemDescriptionTextBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 114);
-            ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
-            ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(324, 23);
-            ItemDescriptionBox.TabIndex = 4;
+            ItemDescriptionTextBox.Location = new Point(285, 142);
+            ItemDescriptionTextBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionTextBox.Multiline = true;
+            ItemDescriptionTextBox.Name = "ItemDescriptionTextBox";
+            ItemDescriptionTextBox.Size = new Size(324, 138);
+            ItemDescriptionTextBox.TabIndex = 4;
             // 
-            // ItemNameBox
+            // ItemNameTextBox
             // 
-            ItemNameBox.Location = new Point(285, 64);
-            ItemNameBox.Margin = new Padding(3, 2, 3, 2);
-            ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(324, 23);
-            ItemNameBox.TabIndex = 3;
+            ItemNameTextBox.Location = new Point(285, 55);
+            ItemNameTextBox.Margin = new Padding(3, 2, 3, 2);
+            ItemNameTextBox.Name = "ItemNameTextBox";
+            ItemNameTextBox.Size = new Size(324, 23);
+            ItemNameTextBox.TabIndex = 3;
             // 
-            // label5
+            // ItemStockLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.ForestGreen;
-            label5.Location = new Point(285, 146);
-            label5.Name = "label5";
-            label5.Size = new Size(50, 17);
-            label5.TabIndex = 2;
-            label5.Text = "Stock";
+            ItemStockLabel.AutoSize = true;
+            ItemStockLabel.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemStockLabel.ForeColor = Color.ForestGreen;
+            ItemStockLabel.Location = new Point(285, 80);
+            ItemStockLabel.Name = "ItemStockLabel";
+            ItemStockLabel.Size = new Size(50, 17);
+            ItemStockLabel.TabIndex = 2;
+            ItemStockLabel.Text = "Stock";
             // 
-            // label4
+            // ItemDescriptionLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.ForestGreen;
-            label4.Location = new Point(285, 89);
-            label4.Name = "label4";
-            label4.Size = new Size(92, 17);
-            label4.TabIndex = 1;
-            label4.Text = "Description";
+            ItemDescriptionLabel.AutoSize = true;
+            ItemDescriptionLabel.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemDescriptionLabel.ForeColor = Color.ForestGreen;
+            ItemDescriptionLabel.Location = new Point(285, 124);
+            ItemDescriptionLabel.Name = "ItemDescriptionLabel";
+            ItemDescriptionLabel.Size = new Size(92, 17);
+            ItemDescriptionLabel.TabIndex = 1;
+            ItemDescriptionLabel.Text = "Description";
             // 
-            // label3
+            // ItemNameLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.ForestGreen;
-            label3.Location = new Point(285, 37);
-            label3.Name = "label3";
-            label3.Size = new Size(40, 17);
-            label3.TabIndex = 0;
-            label3.Text = "Item";
+            ItemNameLabel.AutoSize = true;
+            ItemNameLabel.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemNameLabel.ForeColor = Color.ForestGreen;
+            ItemNameLabel.Location = new Point(285, 36);
+            ItemNameLabel.Name = "ItemNameLabel";
+            ItemNameLabel.Size = new Size(86, 17);
+            ItemNameLabel.TabIndex = 0;
+            ItemNameLabel.Text = "Item Name";
             // 
-            // label1
+            // AddItemLabel
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(186, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(108, 26);
-            label1.TabIndex = 45;
-            label1.Text = "Add item";
+            AddItemLabel.AutoSize = true;
+            AddItemLabel.BackColor = Color.Transparent;
+            AddItemLabel.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            AddItemLabel.ForeColor = Color.ForestGreen;
+            AddItemLabel.Location = new Point(186, 31);
+            AddItemLabel.Name = "AddItemLabel";
+            AddItemLabel.Size = new Size(108, 26);
+            AddItemLabel.TabIndex = 45;
+            AddItemLabel.Text = "Add item";
             // 
-            // label2
+            // LogOutLabel
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(32, 350);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 14);
-            label2.TabIndex = 44;
-            label2.Text = "Log out";
+            LogOutLabel.AutoSize = true;
+            LogOutLabel.BackColor = Color.Transparent;
+            LogOutLabel.Cursor = Cursors.Hand;
+            LogOutLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LogOutLabel.ForeColor = Color.White;
+            LogOutLabel.Location = new Point(40, 418);
+            LogOutLabel.Name = "LogOutLabel";
+            LogOutLabel.Size = new Size(50, 14);
+            LogOutLabel.TabIndex = 44;
+            LogOutLabel.Text = "Log out";
             // 
             // pictureBox2
             // 
@@ -254,19 +253,6 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(36, 207);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(37, 32);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 43;
-            pictureBox3.TabStop = false;
-            // 
             // AddItemForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -274,9 +260,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(886, 441);
             Controls.Add(guna2Panel1);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(pictureBox3);
+            Controls.Add(AddItemLabel);
+            Controls.Add(LogOutLabel);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
@@ -284,14 +269,12 @@
             Name = "AddItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ADD_ITEMS";
-            Load += AddItemForm_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ImagePictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -299,22 +282,21 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Label label1;
-        private Label label2;
+        private Label AddItemLabel;
+        private Label LogOutLabel;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;
         private Button AddImageButton;
-        private Button ReturnButton;
+        private Button BackButton;
         private Button SaveItemButton;
         private OpenFileDialog openFileDialog1;
-        private PictureBox pictureBox3;
-        public Label label3;
-        public TextBox ItemStockBox;
-        public TextBox ItemDescriptionBox;
-        public TextBox ItemNameBox;
-        public Label label5;
-        public Label label4;
-        public PictureBox pictureBox4;
+        public Label ItemNameLabel;
+        public TextBox ItemStockTextBox;
+        public TextBox ItemDescriptionTextBox;
+        public TextBox ItemNameTextBox;
+        public Label ItemStockLabel;
+        public Label ItemDescriptionLabel;
+        public PictureBox ImagePictureBox;
     }
 }

@@ -29,7 +29,7 @@ namespace equipsys
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // obtains the selected image path for this item
-                pictureBox4.Image = new Bitmap(openFileDialog.FileName);
+                ImagePictureBox.Image = new Bitmap(openFileDialog.FileName);
                 selectedImagePath = openFileDialog.FileName;
             }
         }
@@ -40,12 +40,12 @@ namespace equipsys
             {
                 // Creates new item object and saves information to database
                 ItemModel newItemModel = new ItemModel();
-                newItemModel.AddItem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
+                newItemModel.AddItem(ItemNameTextBox.Text, ItemDescriptionTextBox.Text, Int32.Parse(ItemStockTextBox.Text), selectedImagePath);
 
                 // Resets textboxes to null values.
-                ItemNameBox.Text = "";
-                ItemDescriptionBox.Text = "";
-                ItemStockBox.Text = "0";
+                ItemNameTextBox.Text = "";
+                ItemDescriptionTextBox.Text = "";
+                ItemStockTextBox.Text = "0";
                 selectedImagePath = "";
 
                 // close form after adding a new item
@@ -59,7 +59,7 @@ namespace equipsys
             }
         }
 
-        private void ReturnButton_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             AdminMainForm mainadminform = new AdminMainForm();
             mainadminform.Show();
@@ -69,11 +69,11 @@ namespace equipsys
         private bool ValidateItem()
         {
             // Validates ItemName
-            if (ItemNameBox.Text.Length == 0)
+            if (ItemNameTextBox.Text.Length == 0)
                 return false;
 
             int stockNumber = 0;
-            bool stockNumberValidNumber = int.TryParse(ItemStockBox.Text, out stockNumber);
+            bool stockNumberValidNumber = int.TryParse(ItemStockTextBox.Text, out stockNumber);
             // Validates ItemStock is int
             if (stockNumberValidNumber == false)
                 return false;
@@ -82,16 +82,11 @@ namespace equipsys
                 return false;
 
             // Replaces null description with a placeholder value
-            if (ItemDescriptionBox.Text.Length == 0)
-                ItemDescriptionBox.Text = "No Description Provided";
+            if (ItemDescriptionTextBox.Text.Length == 0)
+                ItemDescriptionTextBox.Text = "No Description Provided";
 
             // returns true if passed all validation
             return true;
-        }
-
-        private void AddItemForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

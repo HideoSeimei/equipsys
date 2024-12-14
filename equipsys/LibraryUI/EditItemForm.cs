@@ -95,5 +95,10 @@ namespace equipsys
                 NewSelectedImage = openFileDialog.FileName;
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

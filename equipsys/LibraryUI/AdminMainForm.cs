@@ -45,15 +45,6 @@ namespace equipsys
             ItemForm itemform = new ItemForm();
             itemform.ReloadFlowLayoutPanel();
         }
-        private void MAIN_ADMIN_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void items_Click(object sender, EventArgs e)// ITEMS BUTTON
         {
@@ -73,8 +64,6 @@ namespace equipsys
             LoginForm login = new LoginForm();
             login.Show();
             this.Hide();
-            //
-
         }
 
         private void record_Click(object sender, EventArgs e)
@@ -87,8 +76,6 @@ namespace equipsys
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(record);
             record.Show();
-            //
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -109,11 +96,6 @@ namespace equipsys
             AddItemForm add_item_form = new AddItemForm();
             add_item_form.Show();
             this.Hide();
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -140,6 +122,11 @@ namespace equipsys
         {
             searchBox = search.Text.Trim();
             MessageBox.Show(searchBox);
+        }
+
+        private void AdminMainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

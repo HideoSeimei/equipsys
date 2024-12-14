@@ -28,469 +28,436 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowingForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            label7 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowingForm));
+            FormLabel = new Label();
+            LogOutLabel = new Label();
+            BorrowerInformationLabel = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            label8 = new Label();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
-            button3 = new Button();
-            button2 = new Button();
-            label6 = new Label();
-            comboBox2 = new ComboBox();
-            label5 = new Label();
-            label3 = new Label();
-            pictureBox3 = new PictureBox();
-            groupBox1 = new GroupBox();
-            label12 = new Label();
-            textBox2 = new TextBox();
-            label11 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            label4 = new Label();
-            studentidReg = new TextBox();
-            lastnameReg = new TextBox();
-            label9 = new Label();
-            yearReg = new ComboBox();
-            label10 = new Label();
-            firstnameReg = new TextBox();
-            pictureBox5 = new PictureBox();
-            textBox3 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ItemDescriptionLabel = new Label();
+            ItemStockLabel = new Label();
+            BackButton = new Button();
+            BorrowButton = new Button();
+            ItemNameLabel = new Label();
+            ItemPictureBox = new PictureBox();
+            BorrowerInformationGroupBox = new GroupBox();
+            BorrowedStockLabel = new Label();
+            SectionComboBox = new ComboBox();
+            CYSLabel = new Label();
+            EmailLabel = new Label();
+            ItemStockComboBox = new ComboBox();
+            EmailTextBox = new TextBox();
+            ContactNumberLabel = new Label();
+            ContactNumberTextBox = new TextBox();
+            CourseComboBox = new ComboBox();
+            StudentIDLabel = new Label();
+            StudentIDTextBox = new TextBox();
+            LastNameTextBox = new TextBox();
+            LastNameLabel = new Label();
+            YearComboBox = new ComboBox();
+            FirstNameLabel = new Label();
+            FirstNameTextBox = new TextBox();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ItemPictureBox).BeginInit();
+            BorrowerInformationGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // FormLabel
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(212, 41);
-            label1.Name = "label1";
-            label1.Size = new Size(226, 32);
-            label1.TabIndex = 36;
-            label1.Text = "Borrowing Item";
+            FormLabel.AutoSize = true;
+            FormLabel.BackColor = Color.Transparent;
+            FormLabel.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            FormLabel.ForeColor = Color.ForestGreen;
+            FormLabel.Location = new Point(186, 31);
+            FormLabel.Name = "FormLabel";
+            FormLabel.Size = new Size(178, 26);
+            FormLabel.TabIndex = 36;
+            FormLabel.Text = "Borrowing Item";
             // 
-            // label2
+            // LogOutLabel
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(35, 467);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 17);
-            label2.TabIndex = 35;
-            label2.Text = "Log out";
+            LogOutLabel.AutoSize = true;
+            LogOutLabel.BackColor = Color.Transparent;
+            LogOutLabel.Cursor = Cursors.Hand;
+            LogOutLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LogOutLabel.ForeColor = Color.White;
+            LogOutLabel.Location = new Point(40, 418);
+            LogOutLabel.Name = "LogOutLabel";
+            LogOutLabel.Size = new Size(50, 14);
+            LogOutLabel.TabIndex = 35;
+            LogOutLabel.Text = "Log out";
             // 
-            // pictureBox2
+            // BorrowerInformationLabel
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Cursor = Cursors.Hand;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(41, 188);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(42, 43);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 34;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(41, 103);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(42, 43);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 33;
-            pictureBox1.TabStop = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.ForestGreen;
-            label7.Location = new Point(27, 31);
-            label7.Name = "label7";
-            label7.Size = new Size(174, 20);
-            label7.TabIndex = 48;
-            label7.Text = "Borrower's Information";
+            BorrowerInformationLabel.AutoSize = true;
+            BorrowerInformationLabel.BackColor = Color.Transparent;
+            BorrowerInformationLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            BorrowerInformationLabel.ForeColor = Color.ForestGreen;
+            BorrowerInformationLabel.Location = new Point(0, 0);
+            BorrowerInformationLabel.Name = "BorrowerInformationLabel";
+            BorrowerInformationLabel.Size = new Size(139, 15);
+            BorrowerInformationLabel.TabIndex = 48;
+            BorrowerInformationLabel.Text = "Borrower's Information";
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(textBox3);
-            guna2Panel1.Controls.Add(label8);
-            guna2Panel1.Controls.Add(comboBox4);
-            guna2Panel1.Controls.Add(comboBox3);
-            guna2Panel1.Controls.Add(button3);
-            guna2Panel1.Controls.Add(button2);
-            guna2Panel1.Controls.Add(label6);
-            guna2Panel1.Controls.Add(comboBox2);
-            guna2Panel1.Controls.Add(label5);
-            guna2Panel1.Controls.Add(label3);
-            guna2Panel1.Controls.Add(pictureBox3);
-            guna2Panel1.Controls.Add(groupBox1);
+            guna2Panel1.Controls.Add(ItemDescriptionLabel);
+            guna2Panel1.Controls.Add(ItemStockLabel);
+            guna2Panel1.Controls.Add(BackButton);
+            guna2Panel1.Controls.Add(BorrowButton);
+            guna2Panel1.Controls.Add(ItemNameLabel);
+            guna2Panel1.Controls.Add(ItemPictureBox);
+            guna2Panel1.Controls.Add(BorrowerInformationGroupBox);
             guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Location = new Point(212, 102);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel1.Location = new Point(186, 76);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(753, 446);
+            guna2Panel1.Size = new Size(659, 334);
             guna2Panel1.TabIndex = 37;
-            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
-            // label8
+            // ItemDescriptionLabel
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.ForestGreen;
-            label8.Location = new Point(20, 241);
-            label8.Name = "label8";
-            label8.Size = new Size(54, 20);
-            label8.TabIndex = 58;
-            label8.Text = "PRICE:";
+            ItemDescriptionLabel.AutoSize = true;
+            ItemDescriptionLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ItemDescriptionLabel.ForeColor = Color.ForestGreen;
+            ItemDescriptionLabel.Location = new Point(16, 196);
+            ItemDescriptionLabel.Name = "ItemDescriptionLabel";
+            ItemDescriptionLabel.Size = new Size(85, 15);
+            ItemDescriptionLabel.TabIndex = 58;
+            ItemDescriptionLabel.Text = "Description: {}";
             // 
-            // comboBox4
+            // ItemStockLabel
             // 
-            comboBox4.ForeColor = Color.ForestGreen;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(158, 283);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(52, 28);
-            comboBox4.TabIndex = 57;
+            ItemStockLabel.AutoSize = true;
+            ItemStockLabel.BackColor = Color.Transparent;
+            ItemStockLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ItemStockLabel.ForeColor = Color.ForestGreen;
+            ItemStockLabel.Location = new Point(16, 181);
+            ItemStockLabel.Name = "ItemStockLabel";
+            ItemStockLabel.Size = new Size(53, 15);
+            ItemStockLabel.TabIndex = 56;
+            ItemStockLabel.Text = "Stock: {}";
             // 
-            // comboBox3
+            // BackButton
             // 
-            comboBox3.ForeColor = Color.ForestGreen;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(71, 283);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(52, 28);
-            comboBox3.TabIndex = 56;
+            BackButton.Cursor = Cursors.Hand;
+            BackButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BackButton.ForeColor = Color.ForestGreen;
+            BackButton.Location = new Point(415, 304);
+            BackButton.Margin = new Padding(3, 2, 3, 2);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(109, 22);
+            BackButton.TabIndex = 9;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = true;
+            BackButton.Click += BackButton_Click;
             // 
-            // button3
+            // BorrowButton
             // 
-            button3.Cursor = Cursors.Hand;
-            button3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.ForestGreen;
-            button3.Location = new Point(474, 405);
-            button3.Name = "button3";
-            button3.Size = new Size(125, 29);
-            button3.TabIndex = 55;
-            button3.Text = "Back";
-            button3.UseVisualStyleBackColor = true;
+            BorrowButton.BackColor = Color.ForestGreen;
+            BorrowButton.Cursor = Cursors.Hand;
+            BorrowButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BorrowButton.ForeColor = Color.White;
+            BorrowButton.Location = new Point(535, 304);
+            BorrowButton.Margin = new Padding(3, 2, 3, 2);
+            BorrowButton.Name = "BorrowButton";
+            BorrowButton.Size = new Size(109, 22);
+            BorrowButton.TabIndex = 10;
+            BorrowButton.Text = "Borrow";
+            BorrowButton.UseVisualStyleBackColor = false;
+            BorrowButton.Click += BorrowButton_Click;
             // 
-            // button2
+            // ItemNameLabel
             // 
-            button2.BackColor = Color.ForestGreen;
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(611, 405);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 29);
-            button2.TabIndex = 54;
-            button2.Text = "Borrow";
-            button2.UseVisualStyleBackColor = false;
+            ItemNameLabel.AutoSize = true;
+            ItemNameLabel.BackColor = Color.Transparent;
+            ItemNameLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ItemNameLabel.ForeColor = Color.ForestGreen;
+            ItemNameLabel.Location = new Point(16, 166);
+            ItemNameLabel.Name = "ItemNameLabel";
+            ItemNameLabel.Size = new Size(84, 15);
+            ItemNameLabel.TabIndex = 49;
+            ItemNameLabel.Text = "Item Name: {}";
             // 
-            // label6
+            // ItemPictureBox
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.ForestGreen;
-            label6.Location = new Point(129, 286);
-            label6.Name = "label6";
-            label6.Size = new Size(23, 20);
-            label6.TabIndex = 49;
-            label6.Text = "to";
+            ItemPictureBox.Image = (Image)resources.GetObject("ItemPictureBox.Image");
+            ItemPictureBox.Location = new Point(15, 9);
+            ItemPictureBox.Margin = new Padding(3, 2, 3, 2);
+            ItemPictureBox.Name = "ItemPictureBox";
+            ItemPictureBox.Size = new Size(169, 149);
+            ItemPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            ItemPictureBox.TabIndex = 50;
+            ItemPictureBox.TabStop = false;
             // 
-            // comboBox2
+            // BorrowerInformationGroupBox
             // 
-            comboBox2.ForeColor = Color.ForestGreen;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(20, 336);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(103, 28);
-            comboBox2.TabIndex = 52;
-            comboBox2.Text = " Stocks";
+            BorrowerInformationGroupBox.BackColor = Color.WhiteSmoke;
+            BorrowerInformationGroupBox.Controls.Add(BorrowedStockLabel);
+            BorrowerInformationGroupBox.Controls.Add(SectionComboBox);
+            BorrowerInformationGroupBox.Controls.Add(CYSLabel);
+            BorrowerInformationGroupBox.Controls.Add(EmailLabel);
+            BorrowerInformationGroupBox.Controls.Add(ItemStockComboBox);
+            BorrowerInformationGroupBox.Controls.Add(EmailTextBox);
+            BorrowerInformationGroupBox.Controls.Add(ContactNumberLabel);
+            BorrowerInformationGroupBox.Controls.Add(ContactNumberTextBox);
+            BorrowerInformationGroupBox.Controls.Add(BorrowerInformationLabel);
+            BorrowerInformationGroupBox.Controls.Add(CourseComboBox);
+            BorrowerInformationGroupBox.Controls.Add(StudentIDLabel);
+            BorrowerInformationGroupBox.Controls.Add(StudentIDTextBox);
+            BorrowerInformationGroupBox.Controls.Add(LastNameTextBox);
+            BorrowerInformationGroupBox.Controls.Add(LastNameLabel);
+            BorrowerInformationGroupBox.Controls.Add(YearComboBox);
+            BorrowerInformationGroupBox.Controls.Add(FirstNameLabel);
+            BorrowerInformationGroupBox.Controls.Add(FirstNameTextBox);
+            BorrowerInformationGroupBox.ForeColor = SystemColors.ControlText;
+            BorrowerInformationGroupBox.Location = new Point(202, 9);
+            BorrowerInformationGroupBox.Margin = new Padding(3, 2, 3, 2);
+            BorrowerInformationGroupBox.Name = "BorrowerInformationGroupBox";
+            BorrowerInformationGroupBox.Padding = new Padding(3, 2, 3, 2);
+            BorrowerInformationGroupBox.Size = new Size(442, 283);
+            BorrowerInformationGroupBox.TabIndex = 49;
+            BorrowerInformationGroupBox.TabStop = false;
             // 
-            // label5
+            // BorrowedStockLabel
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.ForestGreen;
-            label5.Location = new Point(20, 286);
-            label5.Name = "label5";
-            label5.Size = new Size(45, 20);
-            label5.TabIndex = 51;
-            label5.Text = "TIME";
+            BorrowedStockLabel.AutoSize = true;
+            BorrowedStockLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BorrowedStockLabel.ForeColor = Color.ForestGreen;
+            BorrowedStockLabel.Location = new Point(6, 234);
+            BorrowedStockLabel.Name = "BorrowedStockLabel";
+            BorrowedStockLabel.Size = new Size(63, 15);
+            BorrowedStockLabel.TabIndex = 54;
+            BorrowedStockLabel.Text = "To Borrow:";
             // 
-            // label3
+            // SectionComboBox
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.ForestGreen;
-            label3.Location = new Point(18, 200);
-            label3.Name = "label3";
-            label3.Size = new Size(94, 20);
-            label3.TabIndex = 49;
-            label3.Text = "ITEM NAME";
+            SectionComboBox.AllowDrop = true;
+            SectionComboBox.BackColor = Color.White;
+            SectionComboBox.DropDownHeight = 75;
+            SectionComboBox.DropDownWidth = 75;
+            SectionComboBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SectionComboBox.ForeColor = Color.DimGray;
+            SectionComboBox.FormattingEnabled = true;
+            SectionComboBox.IntegralHeight = false;
+            SectionComboBox.Items.AddRange(new object[] { "A", "B" });
+            SectionComboBox.Location = new Point(126, 120);
+            SectionComboBox.Margin = new Padding(3, 2, 3, 2);
+            SectionComboBox.Name = "SectionComboBox";
+            SectionComboBox.Size = new Size(41, 23);
+            SectionComboBox.TabIndex = 4;
+            SectionComboBox.Text = "Sec";
+            SectionComboBox.SelectedIndexChanged += SectionComboBox_SelectedIndexChanged;
             // 
-            // pictureBox3
+            // CYSLabel
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(17, 12);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(193, 162);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 50;
-            pictureBox3.TabStop = false;
+            CYSLabel.AutoSize = true;
+            CYSLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            CYSLabel.ForeColor = Color.ForestGreen;
+            CYSLabel.Location = new Point(6, 103);
+            CYSLabel.Name = "CYSLabel";
+            CYSLabel.Size = new Size(82, 15);
+            CYSLabel.TabIndex = 53;
+            CYSLabel.Text = "Course/Yr/Sec";
             // 
-            // groupBox1
+            // EmailLabel
             // 
-            groupBox1.BackColor = Color.WhiteSmoke;
-            groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(studentidReg);
-            groupBox1.Controls.Add(lastnameReg);
-            groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(yearReg);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(firstnameReg);
-            groupBox1.ForeColor = SystemColors.ControlText;
-            groupBox1.Location = new Point(231, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(505, 377);
-            groupBox1.TabIndex = 49;
-            groupBox1.TabStop = false;
+            EmailLabel.AutoSize = true;
+            EmailLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            EmailLabel.ForeColor = Color.ForestGreen;
+            EmailLabel.Location = new Point(213, 172);
+            EmailLabel.Name = "EmailLabel";
+            EmailLabel.Size = new Size(36, 15);
+            EmailLabel.TabIndex = 52;
+            EmailLabel.Text = "Email";
             // 
-            // label12
+            // ItemStockComboBox
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.ForeColor = Color.ForestGreen;
-            label12.Location = new Point(273, 279);
-            label12.Name = "label12";
-            label12.Size = new Size(46, 20);
-            label12.TabIndex = 52;
-            label12.Text = "Email";
+            ItemStockComboBox.ForeColor = Color.ForestGreen;
+            ItemStockComboBox.FormattingEnabled = true;
+            ItemStockComboBox.Location = new Point(6, 251);
+            ItemStockComboBox.Margin = new Padding(3, 2, 3, 2);
+            ItemStockComboBox.Name = "ItemStockComboBox";
+            ItemStockComboBox.Size = new Size(64, 23);
+            ItemStockComboBox.TabIndex = 8;
+            ItemStockComboBox.Text = "1";
             // 
-            // textBox2
+            // EmailTextBox
             // 
-            textBox2.ForeColor = Color.DimGray;
-            textBox2.Location = new Point(273, 316);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(215, 27);
-            textBox2.TabIndex = 51;
+            EmailTextBox.ForeColor = Color.DimGray;
+            EmailTextBox.Location = new Point(212, 189);
+            EmailTextBox.Margin = new Padding(3, 2, 3, 2);
+            EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.Size = new Size(162, 23);
+            EmailTextBox.TabIndex = 7;
             // 
-            // label11
+            // ContactNumberLabel
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.ForeColor = Color.ForestGreen;
-            label11.Location = new Point(27, 279);
-            label11.Name = "label11";
-            label11.Size = new Size(118, 20);
-            label11.TabIndex = 50;
-            label11.Text = "Contact Number";
+            ContactNumberLabel.AutoSize = true;
+            ContactNumberLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ContactNumberLabel.ForeColor = Color.ForestGreen;
+            ContactNumberLabel.Location = new Point(6, 172);
+            ContactNumberLabel.Name = "ContactNumberLabel";
+            ContactNumberLabel.Size = new Size(96, 15);
+            ContactNumberLabel.TabIndex = 50;
+            ContactNumberLabel.Text = "Contact Number";
             // 
-            // textBox1
+            // ContactNumberTextBox
             // 
-            textBox1.ForeColor = Color.DimGray;
-            textBox1.Location = new Point(27, 316);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(215, 27);
-            textBox1.TabIndex = 49;
+            ContactNumberTextBox.ForeColor = Color.DimGray;
+            ContactNumberTextBox.Location = new Point(6, 189);
+            ContactNumberTextBox.Margin = new Padding(3, 2, 3, 2);
+            ContactNumberTextBox.Name = "ContactNumberTextBox";
+            ContactNumberTextBox.Size = new Size(161, 23);
+            ContactNumberTextBox.TabIndex = 6;
             // 
-            // comboBox1
+            // CourseComboBox
             // 
-            comboBox1.ForeColor = Color.ForestGreen;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(27, 227);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(215, 28);
-            comboBox1.TabIndex = 39;
-            comboBox1.Text = " Course/Program";
+            CourseComboBox.DisplayMember = "Course";
+            CourseComboBox.ForeColor = Color.DimGray;
+            CourseComboBox.FormattingEnabled = true;
+            CourseComboBox.Items.AddRange(new object[] { "BSCS", "BSEMC", "BSIS", "BSIT" });
+            CourseComboBox.Location = new Point(6, 120);
+            CourseComboBox.Margin = new Padding(3, 2, 3, 2);
+            CourseComboBox.Name = "CourseComboBox";
+            CourseComboBox.Size = new Size(64, 23);
+            CourseComboBox.TabIndex = 2;
+            CourseComboBox.Text = "Course";
+            CourseComboBox.ValueMember = "Course";
+            CourseComboBox.SelectedIndexChanged += CourseComboBox_SelectedIndexChanged;
             // 
-            // label4
+            // StudentIDLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.ForestGreen;
-            label4.Location = new Point(27, 136);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 20);
-            label4.TabIndex = 23;
-            label4.Text = "Student ID";
+            StudentIDLabel.AutoSize = true;
+            StudentIDLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            StudentIDLabel.ForeColor = Color.ForestGreen;
+            StudentIDLabel.Location = new Point(213, 103);
+            StudentIDLabel.Name = "StudentIDLabel";
+            StudentIDLabel.Size = new Size(62, 15);
+            StudentIDLabel.TabIndex = 23;
+            StudentIDLabel.Text = "Student ID";
             // 
-            // studentidReg
+            // StudentIDTextBox
             // 
-            studentidReg.ForeColor = Color.DimGray;
-            studentidReg.Location = new Point(27, 173);
-            studentidReg.Name = "studentidReg";
-            studentidReg.Size = new Size(215, 27);
-            studentidReg.TabIndex = 22;
+            StudentIDTextBox.ForeColor = Color.DimGray;
+            StudentIDTextBox.Location = new Point(213, 120);
+            StudentIDTextBox.Margin = new Padding(3, 2, 3, 2);
+            StudentIDTextBox.Name = "StudentIDTextBox";
+            StudentIDTextBox.Size = new Size(161, 23);
+            StudentIDTextBox.TabIndex = 5;
+            StudentIDTextBox.TextChanged += StudentIDTextBox_TextChanged;
             // 
-            // lastnameReg
+            // LastNameTextBox
             // 
-            lastnameReg.ForeColor = Color.DimGray;
-            lastnameReg.Location = new Point(285, 99);
-            lastnameReg.Name = "lastnameReg";
-            lastnameReg.Size = new Size(203, 27);
-            lastnameReg.TabIndex = 21;
+            LastNameTextBox.ForeColor = Color.DimGray;
+            LastNameTextBox.Location = new Point(213, 45);
+            LastNameTextBox.Margin = new Padding(3, 2, 3, 2);
+            LastNameTextBox.Name = "LastNameTextBox";
+            LastNameTextBox.Size = new Size(161, 23);
+            LastNameTextBox.TabIndex = 1;
             // 
-            // label9
+            // LastNameLabel
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.ForestGreen;
-            label9.Location = new Point(285, 67);
-            label9.Name = "label9";
-            label9.Size = new Size(79, 20);
-            label9.TabIndex = 20;
-            label9.Text = "Last Name";
+            LastNameLabel.AutoSize = true;
+            LastNameLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LastNameLabel.ForeColor = Color.ForestGreen;
+            LastNameLabel.Location = new Point(213, 28);
+            LastNameLabel.Name = "LastNameLabel";
+            LastNameLabel.Size = new Size(63, 15);
+            LastNameLabel.TabIndex = 20;
+            LastNameLabel.Text = "Last Name";
             // 
-            // yearReg
+            // YearComboBox
             // 
-            yearReg.AllowDrop = true;
-            yearReg.BackColor = Color.White;
-            yearReg.DropDownHeight = 75;
-            yearReg.DropDownWidth = 75;
-            yearReg.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            yearReg.ForeColor = Color.ForestGreen;
-            yearReg.FormattingEnabled = true;
-            yearReg.IntegralHeight = false;
-            yearReg.Items.AddRange(new object[] { "1st Year", "2nd Year", "3rd Year", "4th Year" });
-            yearReg.Location = new Point(285, 173);
-            yearReg.Name = "yearReg";
-            yearReg.Size = new Size(105, 28);
-            yearReg.TabIndex = 18;
-            yearReg.Text = " Year";
-            yearReg.SelectedIndexChanged += yearReg_SelectedIndexChanged;
+            YearComboBox.AllowDrop = true;
+            YearComboBox.BackColor = Color.White;
+            YearComboBox.DropDownHeight = 75;
+            YearComboBox.DropDownWidth = 75;
+            YearComboBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            YearComboBox.ForeColor = Color.DimGray;
+            YearComboBox.FormattingEnabled = true;
+            YearComboBox.IntegralHeight = false;
+            YearComboBox.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            YearComboBox.Location = new Point(76, 120);
+            YearComboBox.Margin = new Padding(3, 2, 3, 2);
+            YearComboBox.Name = "YearComboBox";
+            YearComboBox.Size = new Size(44, 23);
+            YearComboBox.TabIndex = 3;
+            YearComboBox.Text = "Yr";
+            YearComboBox.SelectedIndexChanged += YearComboBox_SelectedIndexChanged;
             // 
-            // label10
+            // FirstNameLabel
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.ForestGreen;
-            label10.Location = new Point(27, 67);
-            label10.Name = "label10";
-            label10.Size = new Size(80, 20);
-            label10.TabIndex = 35;
-            label10.Text = "First Name";
+            FirstNameLabel.AutoSize = true;
+            FirstNameLabel.BackColor = Color.Transparent;
+            FirstNameLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FirstNameLabel.ForeColor = Color.ForestGreen;
+            FirstNameLabel.Location = new Point(6, 28);
+            FirstNameLabel.Name = "FirstNameLabel";
+            FirstNameLabel.Size = new Size(64, 15);
+            FirstNameLabel.TabIndex = 35;
+            FirstNameLabel.Text = "First Name";
             // 
-            // firstnameReg
+            // FirstNameTextBox
             // 
-            firstnameReg.ForeColor = Color.DimGray;
-            firstnameReg.Location = new Point(27, 99);
-            firstnameReg.Name = "firstnameReg";
-            firstnameReg.Size = new Size(215, 27);
-            firstnameReg.TabIndex = 36;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(41, 270);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(42, 43);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 38;
-            pictureBox5.TabStop = false;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(80, 238);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(83, 27);
-            textBox3.TabIndex = 59;
+            FirstNameTextBox.ForeColor = Color.DimGray;
+            FirstNameTextBox.Location = new Point(6, 45);
+            FirstNameTextBox.Margin = new Padding(3, 2, 3, 2);
+            FirstNameTextBox.Name = "FirstNameTextBox";
+            FirstNameTextBox.Size = new Size(161, 23);
+            FirstNameTextBox.TabIndex = 0;
             // 
             // BorrowingForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1013, 588);
-            Controls.Add(label1);
-            Controls.Add(label2);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(886, 441);
+            Controls.Add(FormLabel);
+            Controls.Add(LogOutLabel);
             Controls.Add(guna2Panel1);
-            Controls.Add(pictureBox5);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "BorrowingForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "BORROWING";
-            Load += BORROWING_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "Borrower's Sheet";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ItemPictureBox).EndInit();
+            BorrowerInformationGroupBox.ResumeLayout(false);
+            BorrowerInformationGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
-        private Label label7;
+        private Label FormLabel;
+        private Label LogOutLabel;
+        private Label BorrowerInformationLabel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private PictureBox pictureBox5;
-        private GroupBox groupBox1;
-        private ComboBox comboBox1;
-        private Label label4;
-        private ComboBox yearReg;
-        private TextBox studentidReg;
-        private TextBox lastnameReg;
-        private Label label9;
-        private Label label10;
-        private PictureBox pictureBox3;
-        private Label label5;
-        private Label label6;
-        private ComboBox comboBox2;
-        private TextBox firstnameReg;
-        private Button button3;
-        private Button button2;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
-        private Label label8;
-        private Label label3;
-        private Label label12;
-        private TextBox textBox2;
-        private Label label11;
-        private TextBox textBox1;
-        private TextBox textBox3;
+        private GroupBox BorrowerInformationGroupBox;
+        private ComboBox CourseComboBox;
+        private Label StudentIDLabel;
+        private ComboBox YearComboBox;
+        private TextBox StudentIDTextBox;
+        private TextBox LastNameTextBox;
+        private Label LastNameLabel;
+        private Label FirstNameLabel;
+        private PictureBox ItemPictureBox;
+        private ComboBox ItemStockComboBox;
+        private TextBox FirstNameTextBox;
+        private Button BackButton;
+        private Button BorrowButton;
+        private Label ItemNameLabel;
+        private Label EmailLabel;
+        private TextBox EmailTextBox;
+        private Label ContactNumberLabel;
+        private TextBox ContactNumberTextBox;
+        private ComboBox SectionComboBox;
+        private Label CYSLabel;
+        private Label ItemStockLabel;
+        private Label ItemDescriptionLabel;
+        private Label BorrowedStockLabel;
     }
 }

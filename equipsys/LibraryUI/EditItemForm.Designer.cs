@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditItemForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
             pictureBox2 = new PictureBox();
             ReturnButton = new Button();
@@ -38,7 +38,7 @@
             NewImagePath = new PictureBox();
             BrowseImageButton = new Button();
             ItemStockBox = new TextBox();
-            label2 = new Label();
+            LogOutLabel = new Label();
             ItemDescriptionBox = new TextBox();
             label5 = new Label();
             label4 = new Label();
@@ -130,31 +130,32 @@
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(285, 174);
+            ItemStockBox.Location = new Point(285, 108);
             ItemStockBox.Margin = new Padding(3, 2, 3, 2);
             ItemStockBox.Name = "ItemStockBox";
-            ItemStockBox.Size = new Size(86, 23);
+            ItemStockBox.Size = new Size(50, 23);
             ItemStockBox.TabIndex = 5;
             // 
-            // label2
+            // LogOutLabel
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(37, 350);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 14);
-            label2.TabIndex = 51;
-            label2.Text = "Log out";
+            LogOutLabel.AutoSize = true;
+            LogOutLabel.BackColor = Color.Transparent;
+            LogOutLabel.Cursor = Cursors.Hand;
+            LogOutLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LogOutLabel.ForeColor = Color.White;
+            LogOutLabel.Location = new Point(40, 418);
+            LogOutLabel.Name = "LogOutLabel";
+            LogOutLabel.Size = new Size(50, 14);
+            LogOutLabel.TabIndex = 51;
+            LogOutLabel.Text = "Log out";
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 114);
+            ItemDescriptionBox.Location = new Point(285, 152);
             ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(324, 23);
+            ItemDescriptionBox.Size = new Size(324, 128);
             ItemDescriptionBox.TabIndex = 4;
             // 
             // label5
@@ -162,7 +163,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.ForestGreen;
-            label5.Location = new Point(285, 146);
+            label5.Location = new Point(285, 89);
             label5.Name = "label5";
             label5.Size = new Size(50, 17);
             label5.TabIndex = 2;
@@ -173,11 +174,12 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.ForestGreen;
-            label4.Location = new Point(285, 89);
+            label4.Location = new Point(285, 133);
             label4.Name = "label4";
             label4.Size = new Size(92, 17);
             label4.TabIndex = 1;
             label4.Text = "Description";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -248,10 +250,10 @@
             guna2Panel1.Controls.Add(label5);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.CustomizableEdges = customizableEdges5;
             guna2Panel1.Location = new Point(191, 76);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Panel1.Size = new Size(659, 334);
             guna2Panel1.TabIndex = 53;
             // 
@@ -276,7 +278,7 @@
             ClientSize = new Size(886, 441);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(label2);
+            Controls.Add(LogOutLabel);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox5);
@@ -301,7 +303,7 @@
 
         private OpenFileDialog openFileDialog1;
         private PictureBox pictureBox2;
-        private Label label2;
+        private Label LogOutLabel;
         private Label label1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox5;

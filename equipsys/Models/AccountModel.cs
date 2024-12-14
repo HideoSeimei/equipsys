@@ -11,10 +11,11 @@ namespace equipsys.Models
         public string LastName { get; set; }
         public string Course { get; set; }
         public string Year { get; set; }
+        public string Section { get; set; }
         public string StudentID { get; set; }
 
         // CONSTRUCTORS
-        public AccountModel(string username, string password, string firstname, string lastname, string course, string year, string studentid)
+        public AccountModel(string username, string password, string firstname, string lastname, string course, string year, string section, string studentid)
         {
             Username = username;
             Password = password;
@@ -22,6 +23,7 @@ namespace equipsys.Models
             LastName = lastname;
             Course = course;
             Year = year;
+            Section = section;
             StudentID = studentid;
         }
 
@@ -30,27 +32,30 @@ namespace equipsys.Models
         /// <summary>
         /// Saves information of new object into table Accounts
         /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <param name="firstname"></param>
-        /// <param name="lastname"></param>
-        /// <param name="course"></param>
-        /// <param name="year"></param>
-        /// <param name="studentid"></param>
+        /// <param name="Username"></param>
+        /// <param name="Password"></param>
+        /// <param name="Firstname"></param>
+        /// <param name="Lastname"></param>
+        /// <param name="Course"></param>
+        /// <param name="Year"></param>
+        /// <param name="Section"></param>
+        /// <param name="Studentid"></param>
         /// <returns></returns>
-        public bool AddAccount(string username, string password, string firstname, string lastname, string course, string year, string studentid)
+        public bool SaveAccount()
         {
             SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
-            string saveAccountQuery = "INSERT INTO Accounts (username, password, role, firstname, lastname, course, year, student_id) VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @STUDENTID)";
+            string saveAccountQuery = "INSERT INTO Accounts (Username, Password, Role, FirstName, LastName, Course, Year, Section, Student_ID) " +
+                "VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @SECTION, @STUDENTID)";
             sql.Open();
             SqlCommand cmd = new SqlCommand(saveAccountQuery, sql);
-            cmd.Parameters.AddWithValue("@USERNAME", username);
-            cmd.Parameters.AddWithValue("@PASSWORD", password);
-            cmd.Parameters.AddWithValue("@FIRSTNAME", firstname);
-            cmd.Parameters.AddWithValue("@LASTNAME", lastname);
-            cmd.Parameters.AddWithValue("@COURSE", course);
-            cmd.Parameters.AddWithValue("@YEAR", year);
-            cmd.Parameters.AddWithValue("@STUDENTID", studentid);
+            cmd.Parameters.AddWithValue("@USERNAME", Username);
+            cmd.Parameters.AddWithValue("@PASSWORD", Password);
+            cmd.Parameters.AddWithValue("@FIRSTNAME", FirstName);
+            cmd.Parameters.AddWithValue("@LASTNAME", LastName);
+            cmd.Parameters.AddWithValue("@COURSE", Course);
+            cmd.Parameters.AddWithValue("@YEAR", Year);
+            cmd.Parameters.AddWithValue("@SECTION", Section);
+            cmd.Parameters.AddWithValue("@STUDENTID", StudentID);
 
             int rowsAffected = cmd.ExecuteNonQuery();
             if (rowsAffected > 0)
