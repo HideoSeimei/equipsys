@@ -23,5 +23,15 @@ namespace equipsys
             mainAdmin.Show();
             this.Hide();
         }
+
+        private void courseReg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,6 @@
             studentidReg = new TextBox();
             lastnameReg = new TextBox();
             label5 = new Label();
-            courseReg = new TextBox();
             label9 = new Label();
             label10 = new Label();
             firstnameReg = new TextBox();
@@ -54,6 +53,7 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             guna2Panel1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -168,12 +168,12 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.WhiteSmoke;
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(yearReg);
             groupBox1.Controls.Add(studentidReg);
             groupBox1.Controls.Add(lastnameReg);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(courseReg);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label10);
             groupBox1.Controls.Add(firstnameReg);
@@ -183,6 +183,7 @@
             groupBox1.Size = new Size(641, 219);
             groupBox1.TabIndex = 49;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // label4
             // 
@@ -239,14 +240,6 @@
             label5.Size = new Size(117, 20);
             label5.TabIndex = 39;
             label5.Text = "Course/Program";
-            // 
-            // courseReg
-            // 
-            courseReg.ForeColor = Color.DimGray;
-            courseReg.Location = new Point(34, 170);
-            courseReg.Name = "courseReg";
-            courseReg.Size = new Size(215, 27);
-            courseReg.TabIndex = 40;
             // 
             // label9
             // 
@@ -329,6 +322,15 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Computer Science", "Information Technology ", "Information System", "Entertainment and Multimedia Computing" });
+            comboBox1.Location = new Point(38, 170);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(199, 28);
+            comboBox1.TabIndex = 40;
+            // 
             // Profile
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -378,9 +380,9 @@
         private TextBox studentidReg;
         private TextBox lastnameReg;
         private Label label5;
-        private TextBox courseReg;
         private Label label9;
         private Label label10;
         private TextBox firstnameReg;
+        private ComboBox comboBox1;
     }
 }
