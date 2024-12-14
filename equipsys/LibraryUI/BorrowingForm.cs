@@ -1,11 +1,15 @@
 ﻿using equipsys.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -41,8 +45,6 @@ namespace equipsys
                 adminMainForm.Show();
                 this.Hide();
             }
-            else
-                MessageBox.Show("There are invalid field(s) detected in the sheet, try again.");
         }
 
         // Returns the form to UserMainForm
@@ -88,48 +90,56 @@ namespace equipsys
                 SectionComboBox.Text = "B";
         }
 
+        private void StudentIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            StudentIDTextBox.Text.ToUpper();
+            StudentIDTextBox.Text.Trim();
+        }
+
         /// <summary>
         /// Validates the Borrower's Information. 
         /// </summary>
         /// <returns></returns>
         private bool ValidateForm()
         {
-            foreach (char c in FirstNameTextBox.Text)
-                if (!char.IsLetter(c) || FirstNameTextBox.Text.Length == 0)
-                    return false;
+            // Helper Methods for Validation
+        
+            bool IsValidName(string name) =>
+                !string.IsNullOrWhiteSpace(name) && (name.All(char.IsLetter) || name.Contains(" "));
 
-            foreach (char c in LastNameTextBox.Text)
-                if (!char.IsLetter(c) || LastNameTextBox.Text.Length == 0)
-                    return false;
+            bool IsValidStudentID(string id) =>
+                id.Length == 10 &&
+                id.StartsWith("2") &&
+                (id.EndsWith("-N") || id.EndsWith("-S")) &&
+                id.Substring(1, 7).All(char.IsDigit);
 
-            if (CourseComboBox.Text == "Course")
+            bool IsValidContactNumber(string number) =>
+                number.Length == 10 && number.All(char.IsDigit);
+
+            bool IsValidEmail(string email) =>
+                !string.IsNullOrWhiteSpace(email) &&
+                Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+
+            // Validation Process
+
+            if (!IsValidName(FirstNameTextBox.Text) || !IsValidName(LastNameTextBox.Text))
+                return false;
+               
+            if (CourseComboBox.SelectedIndex < 0 || YearComboBox.SelectedIndex < 0 || SectionComboBox.SelectedIndex < 0)
                 return false;
 
-            if (YearComboBox.Text == "Yr")
+            if (!IsValidStudentID(StudentIDTextBox.Text))
+                return false;
+                
+            if (!IsValidContactNumber(ContactNumberTextBox.Text))
                 return false;
 
-            if (SectionComboBox.Text == "Sec")
-                return false;
-
-            if (StudentIDTextBox.Text.Length != 10 || !StudentIDTextBox.Text.StartsWith("2"))
-                return false;
-            foreach (char c in StudentIDTextBox.Text.Substring(0, 8))
-                if (!char.IsDigit(c) || (!StudentIDTextBox.Text.EndsWith("-N") && !StudentIDTextBox.Text.EndsWith("-S")))
-                    return false;
-
-            foreach (char c in ContactNumberTextBox.Text)
-                if (!char.IsDigit(c) || ContactNumberTextBox.Text.Length != 10)
-                    return false;
-
-            if (EmailTextBox.Text.Length == 0 || !EmailTextBox.Text.Contains("@") || !EmailTextBox.Text.EndsWith(".com"))
+            if (!IsValidEmail(EmailTextBox.Text))
                 return false;
 
             return true;
         }
 
-        private void StudentIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-            StudentIDTextBox.Text.ToUpper();
-        }
+        
     }
 }

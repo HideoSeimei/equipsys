@@ -44,7 +44,7 @@ namespace equipsys.Models
         public bool SaveAccount()
         {
             SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
-            string saveAccountQuery = "INSERT INTO Accounts (Username, Password, Role, FirstName, LastName, Course, Year, Section, Student_ID) " +
+            string saveAccountQuery = "INSERT INTO Accounts (Username, Password, Role, FirstName, LastName, Course, Year, Section, StudentID) " +
                 "VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @SECTION, @STUDENTID)";
             sql.Open();
             SqlCommand cmd = new SqlCommand(saveAccountQuery, sql);
