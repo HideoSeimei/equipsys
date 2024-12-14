@@ -254,7 +254,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.ForestGreen;
-            label12.Location = new Point(277, 188);
+            label12.Location = new Point(277, 179);
             label12.Name = "label12";
             label12.Size = new Size(46, 20);
             label12.TabIndex = 52;
@@ -263,7 +263,7 @@
             // textBox2
             // 
             textBox2.ForeColor = Color.DimGray;
-            textBox2.Location = new Point(277, 222);
+            textBox2.Location = new Point(277, 208);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(215, 27);
             textBox2.TabIndex = 51;
@@ -273,7 +273,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.ForestGreen;
-            label11.Location = new Point(27, 188);
+            label11.Location = new Point(27, 179);
             label11.Name = "label11";
             label11.Size = new Size(118, 20);
             label11.TabIndex = 50;
@@ -282,7 +282,7 @@
             // textBox1
             // 
             textBox1.ForeColor = Color.DimGray;
-            textBox1.Location = new Point(27, 222);
+            textBox1.Location = new Point(27, 205);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(215, 27);
             textBox1.TabIndex = 49;
@@ -402,7 +402,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(27, 274);
+            label13.Location = new Point(30, 255);
             label13.Name = "label13";
             label13.Size = new Size(80, 20);
             label13.TabIndex = 56;
@@ -412,7 +412,7 @@
             // 
             comboBox7.FormattingEnabled = true;
             comboBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox7.Location = new Point(27, 297);
+            comboBox7.Location = new Point(36, 287);
             comboBox7.Name = "comboBox7";
             comboBox7.Size = new Size(71, 28);
             comboBox7.TabIndex = 57;
