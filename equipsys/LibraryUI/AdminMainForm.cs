@@ -52,7 +52,7 @@ namespace equipsys
         private void MAIN_ADMIN_Load(object sender, EventArgs e)
         {
             //for setting the Profile Name
-            
+
             profileName.Text = $"Welcome ADMIN";
         }
 
@@ -150,6 +150,16 @@ namespace equipsys
         {
             searchBox = search.Text.Trim();
             MessageBox.Show(searchBox);
+        }
+
+        private void AccountsButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
