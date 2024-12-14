@@ -325,7 +325,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Computer Science", "Information Technology ", "Information System", "Entertainment and Multimedia Computing" });
+            comboBox1.Items.AddRange(new object[] { "BSCS", "BSIT", "BSIS", "BSEMC" });
             comboBox1.Location = new Point(38, 170);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(199, 28);
