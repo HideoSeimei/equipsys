@@ -273,11 +273,12 @@
             // UsernameTextBox
             // 
             UsernameTextBox.ForeColor = Color.DimGray;
-            UsernameTextBox.Location = new Point(33, 74);
+            UsernameTextBox.Location = new Point(34, 74);
             UsernameTextBox.Margin = new Padding(3, 2, 3, 2);
             UsernameTextBox.Name = "UsernameTextBox";
             UsernameTextBox.Size = new Size(174, 23);
             UsernameTextBox.TabIndex = 6;
+            UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
             // 
             // UsernameLabel
             // 

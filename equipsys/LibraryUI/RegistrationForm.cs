@@ -56,33 +56,38 @@ namespace equipsys
 
         private bool ValidateForm()
         {
-            foreach (char c in FirstNameTextBox.Text)
-                if (!char.IsLetter(c))
-                    return false;
+            bool IsValidName(string name) =>
+                !string.IsNullOrWhiteSpace(name) && (name.All(char.IsLetter) || name.Contains(" "));
 
-            foreach (char c in LastNameTextBox.Text)
-                if (!char.IsLetter(c))
-                    return false;
+            bool IsValidStudentID(string id) =>
+                id.Length == 10 &&
+                id.StartsWith("2") &&
+                (id.EndsWith("-N") || id.EndsWith("-S")) &&
+                id.Substring(1, 7).All(char.IsDigit);
 
-            if (CourseComboBox.Text == "Course")
+            bool IsValidUsername(string username) =>
+                (username.Length >= 3 && username.Length <= 30) &&
+                username.All(char.IsLetterOrDigit);
+            // add a way to detect for dupe entries.
+
+            bool IsValidPassword(string password) =>
+                password.Length >= 6;
+
+            if (!IsValidName(FirstNameTextBox.Text) || !IsValidName(LastNameTextBox.Text))
                 return false;
 
-            if (YearComboBox.Text == "Yr")
+            if (CourseComboBox.SelectedIndex < 0 || YearComboBox.SelectedIndex < 0 || SectionComboBox.SelectedIndex < 0)
                 return false;
 
-            if (SectionComboBox.Text == "Sec")
+            if (!IsValidStudentID(StudentIDTextBox.Text))
                 return false;
 
-            if (StudentIDTextBox.Text.Length != 10 || !StudentIDTextBox.Text.StartsWith("2"))
+            if (!IsValidUsername(UsernameTextBox.Text))
                 return false;
-            foreach (char c in StudentIDTextBox.Text.Substring(0, 8))
-                if (!char.IsDigit(c) || (!StudentIDTextBox.Text.EndsWith("-N") && !StudentIDTextBox.Text.EndsWith("-S")))
-                    return false;
 
-            foreach (char c in UsernameTextBox.Text)
-                if (!char.IsLetterOrDigit(c) || (UsernameTextBox.Text.Length < 3 || UsernameTextBox.Text.Length > 30))
-                    return false;
-
+            if (!IsValidPassword(PasswordTextBox.Text)) 
+                return false;
+            
             return true;
         }
         private void CourseComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,6 +123,11 @@ namespace equipsys
                 SectionComboBox.Text = "A";
             if (SectionComboBox.SelectedIndex == 1)
                 SectionComboBox.Text = "B";
+        }
+
+        private void UsernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
