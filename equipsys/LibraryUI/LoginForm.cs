@@ -3,7 +3,7 @@ namespace equipsys
 {
     public partial class LoginForm : Form
     {
-        
+
         public LoginForm()
         {
             InitializeComponent();
@@ -11,7 +11,7 @@ namespace equipsys
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -101,6 +101,11 @@ namespace equipsys
         }
 
         private void RoleLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

@@ -97,5 +97,15 @@ namespace equipsys
             adminForm.Show();
             this.Hide();
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

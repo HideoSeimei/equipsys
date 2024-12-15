@@ -33,15 +33,18 @@
             ItemNameBox = new TextBox();
             label4 = new Label();
             label3 = new Label();
+            label1 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // SaveItemButton
             // 
-            SaveItemButton.BackColor = Color.ForestGreen;
+            SaveItemButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveItemButton.Cursor = Cursors.Hand;
             SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(231, 290);
+            SaveItemButton.Location = new Point(193, 255);
             SaveItemButton.Name = "SaveItemButton";
             SaveItemButton.Size = new Size(159, 35);
             SaveItemButton.TabIndex = 16;
@@ -51,28 +54,28 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(129, 242);
+            ItemDescriptionBox.Location = new Point(109, 193);
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(370, 27);
+            ItemDescriptionBox.Size = new Size(293, 27);
             ItemDescriptionBox.TabIndex = 14;
             ItemDescriptionBox.TextChanged += ItemDescriptionBox_TextChanged;
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(129, 130);
+            ItemNameBox.Location = new Point(109, 114);
             ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(370, 27);
+            ItemNameBox.Size = new Size(293, 27);
             ItemNameBox.TabIndex = 13;
             ItemNameBox.TextChanged += ItemNameBox_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.ForestGreen;
-            label4.Location = new Point(127, 193);
+            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(32, 33, 35);
+            label4.Location = new Point(109, 157);
             label4.Name = "label4";
-            label4.Size = new Size(146, 21);
+            label4.Size = new Size(134, 25);
             label4.TabIndex = 11;
             label4.Text = "Transaction ID:";
             label4.Click += label4_Click;
@@ -80,31 +83,53 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.ForestGreen;
-            label3.Location = new Point(129, 86);
+            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(32, 33, 35);
+            label3.Location = new Point(109, 80);
             label3.Name = "label3";
-            label3.Size = new Size(108, 21);
+            label3.Size = new Size(105, 25);
             label3.TabIndex = 10;
             label3.Text = "Student ID:";
             label3.Click += label3_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(32, 33, 35);
+            label1.Location = new Point(187, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 23);
+            label1.TabIndex = 17;
+            label1.Text = "Returning Form";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(SaveItemButton);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(ItemDescriptionBox);
+            panel1.Controls.Add(ItemNameBox);
+            panel1.Controls.Add(label4);
+            panel1.Location = new Point(36, 37);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(546, 324);
+            panel1.TabIndex = 18;
             // 
             // ReturningForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(613, 387);
-            Controls.Add(SaveItemButton);
-            Controls.Add(ItemDescriptionBox);
-            Controls.Add(ItemNameBox);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(panel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ReturningForm";
             Text = "ReturnForm";
             Load += ReturningForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -113,5 +138,7 @@
         public TextBox ItemNameBox;
         public Label label4;
         public Label label3;
+        public Label label1;
+        private Panel panel1;
     }
 }

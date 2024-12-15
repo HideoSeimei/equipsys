@@ -45,7 +45,7 @@
             // 
             // SaveItemButton
             // 
-            SaveItemButton.BackColor = Color.ForestGreen;
+            SaveItemButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveItemButton.Cursor = Cursors.Hand;
             SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
@@ -59,8 +59,9 @@
             // 
             // ReturnButton
             // 
+            ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnButton.ForeColor = Color.ForestGreen;
+            ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
             ReturnButton.Location = new Point(454, 348);
             ReturnButton.Name = "ReturnButton";
             ReturnButton.Size = new Size(125, 29);
@@ -71,7 +72,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.LightGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(14, 16);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);

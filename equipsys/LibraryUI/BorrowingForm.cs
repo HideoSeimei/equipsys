@@ -19,10 +19,10 @@ namespace equipsys
         public string ItemName { get; set; }
         public string ImagePath { get; set; }
         public string Description { get; set; }
-        public string Stock {  get; set; }
-        public string BorrowingImageDisplay {  get; set; }
+        public string Stock { get; set; }
+        public string BorrowingImageDisplay { get; set; }
 
-        string randomID = GenerateRandomID(4); 
+        string randomID = GenerateRandomID(4);
 
         DateTime TimeNow = DateTime.Now;
 
@@ -34,7 +34,7 @@ namespace equipsys
 
         private void BORROWING_Load(object sender, EventArgs e)
         {
-          
+
             BorrowingItemName.Text = ItemName;
             BorrowingDescription.Text = Description;
             BorrowingStock.Text = Stock;
@@ -60,12 +60,12 @@ namespace equipsys
             cmd.CommandType = System.Data.CommandType.Text;
             cmd2.CommandType = System.Data.CommandType.Text;
             //change table name
-            cmd.CommandText = "insert into BorrowerHistory values ('" + firstnameReg.Text + "', '" + lastnameReg.Text + "', '" + courseBox.Text + "', '" + yearBox.Text + "','" + SectionBox.Text + "','" + studentidReg.Text + "','" + contactBox.Text + "', '" + EmailBox.Text + "', '" + BorrowingItemName.Text + "', '" + Int32.Parse(comboBox7.Text) + "', '"+ TimeNow +"', '" + EndTime.Text + "','"+ randomID +"', 'Ongoing')";
-            cmd2.CommandText = "UPDATE Items set Stock = (Stock - " + Int32.Parse(comboBox7.Text) + ") WHERE ItemName = '"+ BorrowingItemName.Text +"'";
+            cmd.CommandText = "insert into BorrowerHistory values ('" + firstnameReg.Text + "', '" + lastnameReg.Text + "', '" + courseBox.Text + "', '" + yearBox.Text + "','" + SectionBox.Text + "','" + studentidReg.Text + "','" + contactBox.Text + "', '" + EmailBox.Text + "', '" + BorrowingItemName.Text + "', '" + Int32.Parse(comboBox7.Text) + "', '" + TimeNow + "', '" + EndTime.Text + "','" + randomID + "', 'Ongoing')";
+            cmd2.CommandText = "UPDATE Items set Stock = (Stock - " + Int32.Parse(comboBox7.Text) + ") WHERE ItemName = '" + BorrowingItemName.Text + "'";
             cmd.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
             sql.Close();
-            MessageBox.Show("Record Inserted Successfully \n Your Transaction ID is: " + randomID );
+            MessageBox.Show("Record Inserted Successfully \n Your Transaction ID is: " + randomID);
 
             MAIN mainForm = new MAIN();
             mainForm.Show();
@@ -183,6 +183,11 @@ namespace equipsys
                 return false;
 
             return true;
+        }
+
+        private void BorrowingImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

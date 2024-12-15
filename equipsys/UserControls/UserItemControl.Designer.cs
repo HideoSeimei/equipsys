@@ -48,7 +48,7 @@
             // UimageBox
             // 
             UimageBox.Image = (Image)resources.GetObject("UimageBox.Image");
-            UimageBox.Location = new Point(45, 13);
+            UimageBox.Location = new Point(32, 13);
             UimageBox.Margin = new Padding(3, 4, 3, 4);
             UimageBox.Name = "UimageBox";
             UimageBox.Size = new Size(227, 196);
@@ -98,7 +98,7 @@
             UItemIDlbl.BackColor = Color.Transparent;
             UItemIDlbl.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             UItemIDlbl.ForeColor = Color.DimGray;
-            UItemIDlbl.Location = new Point(279, 183);
+            UItemIDlbl.Location = new Point(296, 190);
             UItemIDlbl.Name = "UItemIDlbl";
             UItemIDlbl.Size = new Size(23, 19);
             UItemIDlbl.TabIndex = 10;
@@ -106,7 +106,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(45, 13);
+            pictureBox1.Location = new Point(32, 13);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(227, 196);
@@ -155,11 +155,11 @@
             UDescriptionlbl.BackColor = Color.Transparent;
             UDescriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             UDescriptionlbl.ForeColor = Color.DimGray;
-            UDescriptionlbl.Location = new Point(497, 29);
+            UDescriptionlbl.Location = new Point(480, 29);
             UDescriptionlbl.MaximumSize = new Size(343, 0);
             UDescriptionlbl.MinimumSize = new Size(114, 133);
             UDescriptionlbl.Name = "UDescriptionlbl";
-            UDescriptionlbl.Size = new Size(114, 133);
+            UDescriptionlbl.Size = new Size(220, 133);
             UDescriptionlbl.TabIndex = 8;
             UDescriptionlbl.Text = "DESCRIPTION";
             // 
@@ -168,9 +168,9 @@
             ReturnButton.BackColor = Color.DarkGoldenrod;
             ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.White;
-            ReturnButton.Location = new Point(565, 180);
+            ReturnButton.Location = new Point(600, 169);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(135, 40);
+            ReturnButton.Size = new Size(109, 40);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "RETURN";
             ReturnButton.UseVisualStyleBackColor = false;
@@ -181,9 +181,9 @@
             BorrowingButton.BackColor = Color.SteelBlue;
             BorrowingButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             BorrowingButton.ForeColor = Color.White;
-            BorrowingButton.Location = new Point(423, 180);
+            BorrowingButton.Location = new Point(468, 169);
             BorrowingButton.Name = "BorrowingButton";
-            BorrowingButton.Size = new Size(135, 40);
+            BorrowingButton.Size = new Size(115, 40);
             BorrowingButton.TabIndex = 10;
             BorrowingButton.Text = "BORROW";
             BorrowingButton.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.LightGray;
             Controls.Add(UItemIDlbl);
             Controls.Add(UAvailability);
             Controls.Add(UStocklbl);
@@ -208,7 +208,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserItemControl";
-            Size = new Size(717, 229);
+            Size = new Size(724, 229);
             Load += UserItemControl_Load;
             ((System.ComponentModel.ISupportInitialize)UimageBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

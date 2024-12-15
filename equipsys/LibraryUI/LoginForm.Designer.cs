@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             linkLabel1 = new LinkLabel();
             button1 = new Button();
@@ -47,6 +49,8 @@
             label3 = new Label();
             RoleLbl = new Label();
             pictureBox5 = new PictureBox();
+            panel3 = new Panel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -55,6 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -62,9 +67,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             label2.ForeColor = Color.Brown;
-            label2.Location = new Point(578, 246);
+            label2.Location = new Point(661, 328);
             label2.Name = "label2";
-            label2.Size = new Size(0, 16);
+            label2.Size = new Size(0, 20);
             label2.TabIndex = 20;
             // 
             // linkLabel1
@@ -73,12 +78,12 @@
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.Cursor = Cursors.Hand;
-            linkLabel1.DisabledLinkColor = Color.ForestGreen;
-            linkLabel1.ForeColor = Color.ForestGreen;
-            linkLabel1.LinkColor = Color.ForestGreen;
-            linkLabel1.Location = new Point(743, 254);
+            linkLabel1.DisabledLinkColor = Color.FromArgb(32, 33, 35);
+            linkLabel1.ForeColor = Color.FromArgb(32, 33, 35);
+            linkLabel1.LinkColor = Color.FromArgb(32, 33, 35);
+            linkLabel1.Location = new Point(849, 343);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(100, 15);
+            linkLabel1.Size = new Size(125, 20);
             linkLabel1.TabIndex = 19;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Forgot Password?";
@@ -86,15 +91,13 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.ForestGreen;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackColor = Color.FromArgb(32, 33, 35);
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(570, 283);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(651, 382);
             button1.Name = "button1";
-            button1.Size = new Size(283, 34);
+            button1.Size = new Size(323, 45);
             button1.TabIndex = 15;
             button1.Text = "Log in";
             button1.UseVisualStyleBackColor = false;
@@ -107,20 +110,18 @@
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(passwordbox);
             panel2.Controls.Add(pictureBox4);
-            panel2.Location = new Point(569, 196);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(650, 261);
             panel2.Name = "panel2";
-            panel2.Size = new Size(283, 44);
+            panel2.Size = new Size(323, 58);
             panel2.TabIndex = 17;
             // 
             // pictureBox6
             // 
             pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(249, 11);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
+            pictureBox6.Location = new Point(285, 15);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(22, 16);
+            pictureBox6.Size = new Size(25, 21);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
@@ -132,21 +133,19 @@
             passwordbox.BorderStyle = BorderStyle.None;
             passwordbox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             passwordbox.ForeColor = Color.DimGray;
-            passwordbox.Location = new Point(56, 10);
-            passwordbox.Margin = new Padding(3, 2, 3, 2);
+            passwordbox.Location = new Point(64, 13);
             passwordbox.Name = "passwordbox";
             passwordbox.PlaceholderText = " Password";
-            passwordbox.Size = new Size(221, 19);
+            passwordbox.Size = new Size(253, 23);
             passwordbox.TabIndex = 1;
             passwordbox.UseSystemPasswordChar = true;
             // 
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(8, 7);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Location = new Point(-1, -1);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(39, 31);
+            pictureBox4.Size = new Size(59, 58);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
@@ -157,22 +156,21 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(usernamebox);
-            panel1.Location = new Point(569, 142);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(650, 189);
             panel1.Name = "panel1";
-            panel1.Size = new Size(283, 44);
+            panel1.Size = new Size(323, 58);
             panel1.TabIndex = 16;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(6, 7);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
+            pictureBox3.Location = new Point(-1, -1);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 31);
+            pictureBox3.Size = new Size(59, 58);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // usernamebox
             // 
@@ -180,11 +178,10 @@
             usernamebox.BorderStyle = BorderStyle.None;
             usernamebox.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             usernamebox.ForeColor = Color.DimGray;
-            usernamebox.Location = new Point(56, 13);
-            usernamebox.Margin = new Padding(3, 2, 3, 2);
+            usernamebox.Location = new Point(64, 17);
             usernamebox.Name = "usernamebox";
             usernamebox.PlaceholderText = " Username";
-            usernamebox.Size = new Size(221, 19);
+            usernamebox.Size = new Size(253, 23);
             usernamebox.TabIndex = 1;
             usernamebox.TextChanged += usernamebox_TextChanged;
             // 
@@ -193,10 +190,10 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.ForestGreen;
-            label1.Location = new Point(560, 64);
+            label1.ForeColor = Color.FromArgb(32, 33, 35);
+            label1.Location = new Point(640, 85);
             label1.Name = "label1";
-            label1.Size = new Size(265, 28);
+            label1.Size = new Size(340, 34);
             label1.TabIndex = 21;
             label1.Text = "Login to Your Account";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -205,10 +202,9 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(273, 359);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(308, 487);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(39, 29);
+            pictureBox1.Size = new Size(45, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
@@ -217,10 +213,9 @@
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(220, 359);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(247, 487);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(36, 29);
+            pictureBox2.Size = new Size(41, 39);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 25;
             pictureBox2.TabStop = false;
@@ -232,9 +227,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(55, 64);
+            label6.Location = new Point(65, 84);
             label6.Name = "label6";
-            label6.Size = new Size(362, 52);
+            label6.Size = new Size(465, 64);
             label6.TabIndex = 27;
             label6.Text = "Management Information System\r\n(Borrowing System)";
             label6.TextAlign = ContentAlignment.TopCenter;
@@ -245,9 +240,9 @@
             accountChecker.BackColor = Color.Transparent;
             accountChecker.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             accountChecker.ForeColor = Color.Crimson;
-            accountChecker.Location = new Point(564, 251);
+            accountChecker.Location = new Point(645, 335);
             accountChecker.Name = "accountChecker";
-            accountChecker.Size = new Size(10, 16);
+            accountChecker.Size = new Size(14, 20);
             accountChecker.TabIndex = 29;
             accountChecker.Text = " ";
             accountChecker.TextAlign = ContentAlignment.TopCenter;
@@ -258,9 +253,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 7.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(104, 306);
+            label3.Location = new Point(123, 405);
             label3.Name = "label3";
-            label3.Size = new Size(307, 39);
+            label3.Size = new Size(367, 51);
             label3.TabIndex = 31;
             label3.Text = "Our MIS Borrowing System makes borrowing items a breeze!\r\nRequest, track, and return with ease—all while keeping\r\neverything organized and hassle-free.";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -270,10 +265,10 @@
             RoleLbl.AutoSize = true;
             RoleLbl.BackColor = Color.Transparent;
             RoleLbl.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            RoleLbl.ForeColor = Color.ForestGreen;
-            RoleLbl.Location = new Point(626, 110);
+            RoleLbl.ForeColor = Color.FromArgb(32, 33, 35);
+            RoleLbl.Location = new Point(741, 144);
             RoleLbl.Name = "RoleLbl";
-            RoleLbl.Size = new Size(114, 18);
+            RoleLbl.Size = new Size(141, 23);
             RoleLbl.TabIndex = 32;
             RoleLbl.Text = "Login as staff";
             RoleLbl.TextAlign = ContentAlignment.TopCenter;
@@ -282,35 +277,62 @@
             // 
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(172, 137);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Location = new Point(195, 188);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(179, 142);
+            pictureBox5.Size = new Size(205, 189);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 33;
             pictureBox5.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(32, 33, 35);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(pictureBox5);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(pictureBox1);
+            panel3.Location = new Point(0, -2);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(604, 595);
+            panel3.TabIndex = 34;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BackColor = Color.Gainsboro;
+            guna2Button1.Cursor = Cursors.Hand;
+            guna2Button1.CustomizableEdges = customizableEdges1;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Gray;
+            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(654, 436);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button1.Size = new Size(319, 36);
+            guna2Button1.TabIndex = 35;
+            guna2Button1.Text = "Back to Role Selection";
+            // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(886, 441);
-            Controls.Add(pictureBox5);
+            ClientSize = new Size(1013, 588);
+            Controls.Add(guna2Button1);
+            Controls.Add(panel3);
             Controls.Add(RoleLbl);
-            Controls.Add(label3);
             Controls.Add(accountChecker);
-            Controls.Add(label6);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Staff Login";
@@ -325,6 +347,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -349,5 +373,7 @@
         private Label label3;
         private Label RoleLbl;
         private PictureBox pictureBox5;
+        private Panel panel3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
