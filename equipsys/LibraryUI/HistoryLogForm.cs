@@ -44,7 +44,7 @@ namespace equipsys
         private void gridbind()
         {
             sql.Open();
-            SqlCommand cmd = new SqlCommand("select * from history", sql);
+            SqlCommand cmd = new SqlCommand("select * from BorrowerHistory", sql);
             SqlDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(reader);

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 
 namespace equipsys
@@ -154,7 +155,9 @@ namespace equipsys
 
         private void AccountsButton_Click_1(object sender, EventArgs e)
         {
-
+            RegistrationForm regform = new RegistrationForm();
+            regform.Show();
+            this.Hide();
         }
 
         private void profileName_Click(object sender, EventArgs e)

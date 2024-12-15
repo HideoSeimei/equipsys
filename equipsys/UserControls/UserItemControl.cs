@@ -13,6 +13,7 @@ namespace equipsys
 {
     public partial class UserItemControl : UserControl
     {
+        public string imagePath { get; set; }
         public UserItemControl()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace equipsys
             {
                 UimageBox.Image = Image.FromFile(imagePath);
                 UimageBox.ImageLocation = imagePath;
+                
             }
 
         }
@@ -52,12 +54,16 @@ namespace equipsys
             this.Hide();
         }
 
-        private void BorrowingButton_Click(object sender, EventArgs e)
+        private void BorrowingButton_Click(object sender, EventArgs e)//BORROW
         {
+
             BorrowingForm borrowingForm = new BorrowingForm();
             borrowingForm.ItemName = UNamelbl.Text;
-            borrowingForm.Show();
-            this.Hide();
+            borrowingForm.Description = UDescriptionlbl.Text;
+            borrowingForm.Stock = UStocklbl.Text;
+            borrowingForm.BorrowingImageDisplay = UimageBox.ImageLocation;
+
+
         }
 
         private void Return_Click(object sender, EventArgs e)// RETURN BUTTON
@@ -66,6 +72,11 @@ namespace equipsys
         }
 
         private void Borrow_Click(object sender, EventArgs e)//BORROW BUTTON
+        {
+
+        }
+
+        private void UserItemControl_Load(object sender, EventArgs e)
         {
 
         }

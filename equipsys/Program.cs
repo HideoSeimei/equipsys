@@ -1,3 +1,5 @@
+using equipsys.LibraryUI;
+
 namespace equipsys
 {
     internal static class Program

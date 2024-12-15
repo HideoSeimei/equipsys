@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace equipsys.LibraryUI
@@ -29,11 +30,35 @@ namespace equipsys.LibraryUI
         {
             sql.Open();
             SqlCommand cmd = sql.CreateCommand();
+            SqlCommand cmd2 = sql.CreateCommand(); 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update history set Status = 'Returned' WHERE Student_ID = '" + ItemNameBox.Text + "' and Item_Name = '" + ItemDescriptionBox.Text + "' and Time_Start = '" + ItemStockBox.Text + "'";
+            cmd2.CommandType = CommandType.Text;
+            cmd.CommandText = "update BorrowerHistory set Status = 'Returned' WHERE Student_ID = '" + ItemNameBox.Text + "' and Transaction_ID = '" + ItemDescriptionBox.Text + "'";
+            cmd2.CommandText = "UPDATE Items set Stock = Stock + (Select Quantity from BorrowerHistory WHERE Transaction_ID = '"+ ItemDescriptionBox.Text +"') WHERE ItemName = (Select Item_Name From BorrowerHistory WHERE Transaction_ID = '"+ItemDescriptionBox.Text+"')";
             cmd.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             sql.Close();
             MessageBox.Show("Status updated successfully");
+        }
+
+        private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemNameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

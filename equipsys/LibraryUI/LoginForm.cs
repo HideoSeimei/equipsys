@@ -50,7 +50,7 @@ namespace equipsys
             cmd2.Parameters.AddWithValue("@password", password);
             AdminMainForm adminForm = new AdminMainForm();
             string result = (string)cmd.ExecuteScalar(); // variable for the role
-            object userid = cmd2.ExecuteScalar();// variable for the userid 
+            //object userid = cmd2.ExecuteScalar();// variable for the userid 
             //string retrievedUsername = (string)cmd3.ExecuteScalar();
             //retrievedUsername = adminForm.AccountName;
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))// CHECKS IF THERES A VALUE INSIDE THE USERNAME OR PASSWORD TEXTBOX
