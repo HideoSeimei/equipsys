@@ -62,6 +62,8 @@ namespace equipsys
             borrowingForm.Description = UDescriptionlbl.Text;
             borrowingForm.Stock = UStocklbl.Text;
             borrowingForm.BorrowingImageDisplay = UimageBox.ImageLocation;
+            borrowingForm.Show();
+           
 
 
         }
