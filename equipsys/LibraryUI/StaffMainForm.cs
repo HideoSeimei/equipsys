@@ -15,13 +15,7 @@ namespace equipsys
         public MAIN()
         {
             InitializeComponent();
-            UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
-            useritems.FormBorderStyle = FormBorderStyle.None;
-            useritems.Size = mainPanel.ClientSize;
-            useritems.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(useritems);
-            useritems.Show();
+            OpenItems();
 
         }
 
@@ -68,27 +62,14 @@ namespace equipsys
         // ============================================================================= NEW BUTTONS BELOW ====================================================
         private void button4_Click(object sender, EventArgs e) // HOME 
         {
-            //For showing useritems
-            UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
-            useritems.FormBorderStyle = FormBorderStyle.None;
-            useritems.Size = mainPanel.ClientSize;
-            useritems.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(useritems);
-            useritems.Show();
+            OpenItems();
+            UserTitlelbl.Text = "Equipment";// to change the label base on what panel are you on
         }
 
         private void button8_Click(object sender, EventArgs e)// HISTORY
         {
-            //for opening the records/history form
-            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
-            record.FormBorderStyle = FormBorderStyle.None;
-            record.Size = mainPanel.ClientSize;
-            record.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(record);
-            record.Show();
-            //
+            OpenRecords();
+            UserTitlelbl.Text = "Records";// to change the label base on what panel are you on
         }
 
         private void button7_Click(object sender, EventArgs e)// ADD ITEM
@@ -108,5 +89,30 @@ namespace equipsys
             login.Show();
             this.Hide();
         }
+        //============================================================================================METHODS=========================================================================
+        public void OpenItems()// for opening items
+        {
+            //For showing useritems
+            UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
+            useritems.FormBorderStyle = FormBorderStyle.None;
+            useritems.Size = mainPanel.ClientSize;
+            useritems.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(useritems);
+            useritems.Show();
+        }
+        public void OpenRecords()// for opening records/history
+        {
+            //for opening the records/history form
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
+            record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(record);
+            record.Show();
+            //
+        }
     }
+
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label2 = new Label();
-            label1 = new Label();
+            UserTitlelbl = new Label();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             UserProfileName = new Label();
             panel = new Panel();
@@ -42,14 +42,7 @@
             button13 = new Button();
             panel11 = new Panel();
             pictureBox5 = new PictureBox();
-            panel6 = new Panel();
-            button7 = new Button();
             profileName = new Label();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
             button4 = new Button();
@@ -73,9 +66,6 @@
             panel.SuspendLayout();
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel6.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -127,17 +117,17 @@
             label2.Text = "Log out";
             label2.Click += label2_Click;
             // 
-            // label1
+            // UserTitlelbl
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(224, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(127, 26);
-            label1.TabIndex = 7;
-            label1.Text = "Equipment";
+            UserTitlelbl.AutoSize = true;
+            UserTitlelbl.BackColor = Color.Transparent;
+            UserTitlelbl.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            UserTitlelbl.ForeColor = Color.FromArgb(32, 33, 35);
+            UserTitlelbl.Location = new Point(224, 28);
+            UserTitlelbl.Name = "UserTitlelbl";
+            UserTitlelbl.Size = new Size(127, 26);
+            UserTitlelbl.TabIndex = 7;
+            UserTitlelbl.Text = "Equipment";
             // 
             // mainPanel
             // 
@@ -145,10 +135,10 @@
             mainPanel.Controls.Add(UserProfileName);
             mainPanel.Controls.Add(pictureBox2);
             mainPanel.Controls.Add(label2);
-            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.CustomizableEdges = customizableEdges3;
             mainPanel.Location = new Point(224, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             mainPanel.Size = new Size(651, 352);
             mainPanel.TabIndex = 21;
             // 
@@ -170,9 +160,7 @@
             panel.BackColor = Color.FromArgb(32, 33, 35);
             panel.Controls.Add(panel10);
             panel.Controls.Add(pictureBox5);
-            panel.Controls.Add(panel6);
             panel.Controls.Add(profileName);
-            panel.Controls.Add(panel7);
             panel.Controls.Add(panel1);
             panel.Controls.Add(panel3);
             panel.Location = new Point(0, 0);
@@ -228,33 +216,6 @@
             pictureBox5.TabIndex = 46;
             pictureBox5.TabStop = false;
             // 
-            // panel6
-            // 
-            panel6.Controls.Add(button7);
-            panel6.Cursor = Cursors.Hand;
-            panel6.Location = new Point(34, 212);
-            panel6.Margin = new Padding(3, 2, 3, 2);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(141, 38);
-            panel6.TabIndex = 47;
-            // 
-            // button7
-            // 
-            button7.BackgroundImageLayout = ImageLayout.None;
-            button7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(-21, -8);
-            button7.Margin = new Padding(3, 2, 3, 2);
-            button7.Name = "button7";
-            button7.Padding = new Padding(22, 0, 0, 0);
-            button7.Size = new Size(186, 56);
-            button7.TabIndex = 45;
-            button7.Text = "     Add Item";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
             // profileName
             // 
             profileName.AutoSize = true;
@@ -266,76 +227,6 @@
             profileName.Size = new Size(44, 14);
             profileName.TabIndex = 32;
             profileName.Text = "Profile";
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(panel8);
-            panel7.Controls.Add(button11);
-            panel7.Controls.Add(button12);
-            panel7.Cursor = Cursors.Hand;
-            panel7.Location = new Point(13, 263);
-            panel7.Margin = new Padding(3, 2, 3, 2);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(141, 38);
-            panel7.TabIndex = 50;
-            // 
-            // panel8
-            // 
-            panel8.Controls.Add(button10);
-            panel8.Location = new Point(7, 6);
-            panel8.Margin = new Padding(3, 2, 3, 2);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(141, 38);
-            panel8.TabIndex = 47;
-            // 
-            // button10
-            // 
-            button10.BackgroundImageLayout = ImageLayout.None;
-            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button10.ForeColor = Color.White;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(-6, -9);
-            button10.Margin = new Padding(3, 2, 3, 2);
-            button10.Name = "button10";
-            button10.Padding = new Padding(22, 0, 0, 0);
-            button10.Size = new Size(186, 56);
-            button10.TabIndex = 45;
-            button10.Text = " Sign in";
-            button10.UseVisualStyleBackColor = false;
-            button10.Click += button10_Click;
-            // 
-            // button11
-            // 
-            button11.BackgroundImageLayout = ImageLayout.None;
-            button11.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button11.ForeColor = Color.White;
-            button11.Image = (Image)resources.GetObject("button11.Image");
-            button11.ImageAlign = ContentAlignment.MiddleLeft;
-            button11.Location = new Point(-23, -9);
-            button11.Margin = new Padding(3, 2, 3, 2);
-            button11.Name = "button11";
-            button11.Padding = new Padding(22, 0, 0, 0);
-            button11.Size = new Size(186, 56);
-            button11.TabIndex = 46;
-            button11.Text = "Home";
-            button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            button12.BackgroundImageLayout = ImageLayout.None;
-            button12.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button12.ForeColor = Color.White;
-            button12.Image = (Image)resources.GetObject("button12.Image");
-            button12.ImageAlign = ContentAlignment.MiddleLeft;
-            button12.Location = new Point(-6, -9);
-            button12.Margin = new Padding(3, 2, 3, 2);
-            button12.Name = "button12";
-            button12.Padding = new Padding(22, 0, 0, 0);
-            button12.Size = new Size(186, 56);
-            button12.TabIndex = 45;
-            button12.Text = "Home";
-            button12.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -576,7 +467,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(panel);
             Controls.Add(mainPanel);
-            Controls.Add(label1);
+            Controls.Add(UserTitlelbl);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MAIN";
@@ -591,9 +482,6 @@
             panel.PerformLayout();
             panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel6.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel8.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -610,7 +498,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label label2;
-        private Label label1;
+        private Label UserTitlelbl;
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
         private Label UserProfileName;
         private Panel panel;
@@ -618,14 +506,7 @@
         private Button button13;
         private Panel panel11;
         private PictureBox pictureBox5;
-        private Panel panel6;
-        private Button button7;
         private Label profileName;
-        private Panel panel7;
-        private Panel panel8;
-        private Button button10;
-        private Button button11;
-        private Button button12;
         private Panel panel1;
         private Panel panel2;
         private Button button4;

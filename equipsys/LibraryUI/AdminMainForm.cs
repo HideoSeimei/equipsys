@@ -168,20 +168,14 @@ namespace equipsys
         {
             //for opening the items form
             OpenEquipment();
+            AdminTitlelbl.Text = "Equipment";// to change the label base on what panel are you on
         }
 
 
-        private void button8_Click(object sender, EventArgs e)// HISTORY
+        private void button8_Click(object sender, EventArgs e)// HISTORY/RECORDS
         {
-            //for opening the records form
-            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
-            record.FormBorderStyle = FormBorderStyle.None;
-            record.Size = mainPanel.ClientSize;
-            record.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(record);
-            record.Show();
-            //
+            OpenRecords();
+            AdminTitlelbl.Text = "Records";// to change the label base on what panel are you on
         }
 
         private void button10_Click(object sender, EventArgs e)// SIGN IN 
@@ -194,7 +188,8 @@ namespace equipsys
 
         private void button7_Click(object sender, EventArgs e)// ADD ITEM
         {
-            OpenAddItem();  
+            OpenAddItem();
+            AdminTitlelbl.Text = "Add Item";// to change the label base on what panel are you on
         }
 
         private void button13_Click(object sender, EventArgs e)// LOGOUT BUTTON
@@ -205,8 +200,8 @@ namespace equipsys
             this.Hide();
             //
         }
-        // method for opening equipment
-        public void OpenEquipment()
+        //=====================================================================================================METHODS============================================================
+        public void OpenEquipment()// for opening the itemsform
         {
             ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
             items.FormBorderStyle = FormBorderStyle.None;
@@ -216,7 +211,7 @@ namespace equipsys
             mainPanel.Controls.Add(items);
             items.Show();
         }
-        public void OpenAddItem()
+        public void OpenAddItem()// for opening add item form
         {
             //for opening the add item form
             AddItemForm Additem = new AddItemForm() { TopLevel = false, TopMost = true };
@@ -226,6 +221,18 @@ namespace equipsys
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(Additem);
             Additem.Show();
+            //
+        }
+        public void OpenRecords()// for opening records/history
+        {
+            //for opening the records form
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
+            record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(record);
+            record.Show();
             //
         }
     }

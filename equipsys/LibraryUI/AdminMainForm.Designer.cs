@@ -30,9 +30,9 @@ namespace equipsys
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            AdminTitlelbl = new Label();
             search = new TextBox();
             pictureBox4 = new PictureBox();
             label2 = new Label();
@@ -89,17 +89,17 @@ namespace equipsys
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // AdminTitlelbl
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(234, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(127, 26);
-            label1.TabIndex = 16;
-            label1.Text = "Equipment";
+            AdminTitlelbl.AutoSize = true;
+            AdminTitlelbl.BackColor = Color.Transparent;
+            AdminTitlelbl.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            AdminTitlelbl.ForeColor = Color.FromArgb(32, 33, 35);
+            AdminTitlelbl.Location = new Point(234, 26);
+            AdminTitlelbl.Name = "AdminTitlelbl";
+            AdminTitlelbl.Size = new Size(127, 26);
+            AdminTitlelbl.TabIndex = 16;
+            AdminTitlelbl.Text = "Equipment";
             // 
             // search
             // 
@@ -187,10 +187,10 @@ namespace equipsys
             mainPanel.Controls.Add(pictureBox3);
             mainPanel.Controls.Add(pictureBox2);
             mainPanel.Controls.Add(AccountsButton);
-            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.CustomizableEdges = customizableEdges3;
             mainPanel.Location = new Point(223, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             mainPanel.Size = new Size(651, 352);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
@@ -599,7 +599,7 @@ namespace equipsys
             Controls.Add(label3);
             Controls.Add(panel);
             Controls.Add(mainPanel);
-            Controls.Add(label1);
+            Controls.Add(AdminTitlelbl);
             Controls.Add(search);
             Controls.Add(pictureBox4);
             ForeColor = Color.DimGray;
@@ -639,7 +639,7 @@ namespace equipsys
         }
 
         #endregion
-        private Label label1;
+        private Label AdminTitlelbl;
         private PictureBox pictureBox4;
         private Label label2;
         private PictureBox pictureBox2;
