@@ -82,6 +82,7 @@
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
+            ReturnButton.Visible = false;
             ReturnButton.Click += ReturnButton_Click;
             // 
             // SaveItemButton
