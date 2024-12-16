@@ -21,44 +21,50 @@ namespace equipsys.LibraryUI
             InitializeComponent();
         }
 
-        private void ReturningForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void SaveItemButton_Click(object sender, EventArgs e)
         {
-            sql.Open();
-            SqlCommand cmd = sql.CreateCommand();
-            SqlCommand cmd2 = sql.CreateCommand(); 
-            cmd.CommandType = CommandType.Text;
-            cmd2.CommandType = CommandType.Text;
-            cmd.CommandText = "update BorrowerHistory set Status = 'Returned' WHERE Student_ID = '" + ItemNameBox.Text + "' and Transaction_ID = '" + ItemDescriptionBox.Text + "'";
-            cmd2.CommandText = "UPDATE Items set Stock = Stock + (Select Quantity from BorrowerHistory WHERE Transaction_ID = '"+ ItemDescriptionBox.Text +"') WHERE ItemName = (Select Item_Name From BorrowerHistory WHERE Transaction_ID = '"+ItemDescriptionBox.Text+"')";
-            cmd.ExecuteNonQuery();
-            cmd2.ExecuteNonQuery();
-            sql.Close();
-            MessageBox.Show("Status updated successfully");
+            if (ValidateForm())
+            {
+                sql.Open();
+                SqlCommand cmd = sql.CreateCommand();
+                SqlCommand cmd2 = sql.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd2.CommandType = CommandType.Text;
+                cmd.CommandText = "update BorrowerHistory set Status = 'Returned' WHERE Student_ID = '" + StudentIDValue.Text + "' and Transaction_ID = '" + TransactionIDValue.Text + "'";
+                cmd2.CommandText = "UPDATE Items set Stock = Stock + (Select Quantity from BorrowerHistory WHERE Transaction_ID = '" + TransactionIDValue.Text + "') WHERE ItemName = (Select Item_Name From BorrowerHistory WHERE Transaction_ID = '" + TransactionIDValue.Text + "')";
+                cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                sql.Close();
+                MessageBox.Show("Status updated successfully");
+            }
         }
 
-        private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)
+        // TODO - Ensure the form validates for existing transactions and does not just blindly sends out return status updates.
+        private bool ValidateForm()
         {
+            bool IsValidStudentID(string id) =>
+                id.Length == 10 &&
+                id.StartsWith("2") &&
+                (id.EndsWith("-N") || id.EndsWith("-S")) &&
+                id.Substring(1, 7).All(char.IsDigit);
 
-        }
+            bool IsValidTransactionID(string id) =>
+                id.Length == 4 &&
+                id.All(char.IsLetterOrDigit);
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+            if (!IsValidStudentID(StudentIDValue.Text))
+            {
+                MessageBox.Show("Invalid Student ID.");
+                return false;
+            }
+                
+            if (!IsValidTransactionID(TransactionIDValue.Text))
+            {
+                MessageBox.Show("Invalid Transaction ID.");
+                return false;
+            }
 
-        }
-
-        private void ItemNameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            return true;
         }
     }
 }

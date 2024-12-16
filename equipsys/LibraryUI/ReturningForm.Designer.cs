@@ -28,78 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SaveItemButton = new Button();
-            ItemDescriptionBox = new TextBox();
-            ItemNameBox = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
+            SaveItemBTN = new Button();
+            TransactionIDValue = new TextBox();
+            StudentIDValue = new TextBox();
+            tidLabel = new Label();
+            sidLabel = new Label();
             label1 = new Label();
             panel1 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // SaveItemButton
+            // SaveItemBTN
             // 
-            SaveItemButton.BackColor = Color.FromArgb(32, 33, 35);
-            SaveItemButton.Cursor = Cursors.Hand;
-            SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(193, 255);
-            SaveItemButton.Name = "SaveItemButton";
-            SaveItemButton.Size = new Size(159, 35);
-            SaveItemButton.TabIndex = 16;
-            SaveItemButton.Text = "Save as Returned";
-            SaveItemButton.UseVisualStyleBackColor = false;
-            SaveItemButton.Click += SaveItemButton_Click;
+            SaveItemBTN.BackColor = Color.FromArgb(32, 33, 35);
+            SaveItemBTN.Cursor = Cursors.Hand;
+            SaveItemBTN.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveItemBTN.ForeColor = Color.White;
+            SaveItemBTN.Location = new Point(169, 191);
+            SaveItemBTN.Margin = new Padding(3, 2, 3, 2);
+            SaveItemBTN.Name = "SaveItemBTN";
+            SaveItemBTN.Size = new Size(139, 26);
+            SaveItemBTN.TabIndex = 16;
+            SaveItemBTN.Text = "Save as Returned";
+            SaveItemBTN.UseVisualStyleBackColor = false;
+            SaveItemBTN.Click += SaveItemButton_Click;
             // 
-            // ItemDescriptionBox
+            // TransactionIDValue
             // 
-            ItemDescriptionBox.Location = new Point(109, 193);
-            ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(293, 27);
-            ItemDescriptionBox.TabIndex = 14;
-            ItemDescriptionBox.TextChanged += ItemDescriptionBox_TextChanged;
+            TransactionIDValue.Location = new Point(95, 145);
+            TransactionIDValue.Margin = new Padding(3, 2, 3, 2);
+            TransactionIDValue.Name = "TransactionIDValue";
+            TransactionIDValue.Size = new Size(257, 23);
+            TransactionIDValue.TabIndex = 14;
             // 
-            // ItemNameBox
+            // StudentIDValue
             // 
-            ItemNameBox.Location = new Point(109, 114);
-            ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(293, 27);
-            ItemNameBox.TabIndex = 13;
-            ItemNameBox.TextChanged += ItemNameBox_TextChanged;
+            StudentIDValue.Location = new Point(95, 86);
+            StudentIDValue.Margin = new Padding(3, 2, 3, 2);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(257, 23);
+            StudentIDValue.TabIndex = 13;
             // 
-            // label4
+            // tidLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(109, 157);
-            label4.Name = "label4";
-            label4.Size = new Size(134, 25);
-            label4.TabIndex = 11;
-            label4.Text = "Transaction ID:";
-            label4.Click += label4_Click;
+            tidLabel.AutoSize = true;
+            tidLabel.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            tidLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            tidLabel.Location = new Point(95, 118);
+            tidLabel.Name = "tidLabel";
+            tidLabel.Size = new Size(110, 20);
+            tidLabel.TabIndex = 11;
+            tidLabel.Text = "Transaction ID:";
             // 
-            // label3
+            // sidLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(109, 80);
-            label3.Name = "label3";
-            label3.Size = new Size(105, 25);
-            label3.TabIndex = 10;
-            label3.Text = "Student ID:";
-            label3.Click += label3_Click;
+            sidLabel.AutoSize = true;
+            sidLabel.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            sidLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            sidLabel.Location = new Point(95, 60);
+            sidLabel.Name = "sidLabel";
+            sidLabel.Size = new Size(85, 20);
+            sidLabel.TabIndex = 10;
+            sidLabel.Text = "Student ID:";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(187, 23);
+            label1.Location = new Point(164, 17);
             label1.Name = "label1";
-            label1.Size = new Size(162, 23);
+            label1.Size = new Size(132, 18);
             label1.TabIndex = 17;
             label1.Text = "Returning Form";
             // 
@@ -107,37 +106,36 @@
             // 
             panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(SaveItemButton);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(ItemDescriptionBox);
-            panel1.Controls.Add(ItemNameBox);
-            panel1.Controls.Add(label4);
-            panel1.Location = new Point(36, 37);
+            panel1.Controls.Add(SaveItemBTN);
+            panel1.Controls.Add(sidLabel);
+            panel1.Controls.Add(TransactionIDValue);
+            panel1.Controls.Add(StudentIDValue);
+            panel1.Controls.Add(tidLabel);
+            panel1.Location = new Point(32, 28);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(546, 324);
+            panel1.Size = new Size(478, 243);
             panel1.TabIndex = 18;
             // 
             // ReturningForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(613, 387);
+            ClientSize = new Size(536, 290);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ReturningForm";
             Text = "ReturnForm";
-            Load += ReturningForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private Button SaveItemButton;
-        public TextBox ItemDescriptionBox;
-        public TextBox ItemNameBox;
-        public Label label4;
-        public Label label3;
+        private Button SaveItemBTN;
+        public TextBox TransactionIDValue;
+        public TextBox StudentIDValue;
+        public Label tidLabel;
+        public Label sidLabel;
         public Label label1;
         private Panel panel1;
     }

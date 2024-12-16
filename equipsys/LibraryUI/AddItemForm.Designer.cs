@@ -75,11 +75,11 @@
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(380, 284);
+            ReturnButton.Location = new Point(363, 284);
             ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
             ReturnButton.Size = new Size(109, 22);
-            ReturnButton.TabIndex = 9;
+            ReturnButton.TabIndex = 4;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
             ReturnButton.Visible = false;
@@ -91,11 +91,11 @@
             SaveItemButton.Cursor = Cursors.Hand;
             SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(500, 284);
+            SaveItemButton.Location = new Point(478, 284);
             SaveItemButton.Margin = new Padding(3, 2, 3, 2);
             SaveItemButton.Name = "SaveItemButton";
             SaveItemButton.Size = new Size(109, 22);
-            SaveItemButton.TabIndex = 8;
+            SaveItemButton.TabIndex = 5;
             SaveItemButton.Text = "Save";
             SaveItemButton.UseVisualStyleBackColor = false;
             SaveItemButton.Click += SaveButton_Click;
@@ -121,41 +121,42 @@
             AddImageButton.Margin = new Padding(3, 2, 3, 2);
             AddImageButton.Name = "AddImageButton";
             AddImageButton.Size = new Size(109, 22);
-            AddImageButton.TabIndex = 6;
+            AddImageButton.TabIndex = 3;
             AddImageButton.Text = "Browse";
             AddImageButton.UseVisualStyleBackColor = true;
             AddImageButton.Click += AddImageButton_Click;
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(285, 174);
+            ItemStockBox.Location = new Point(285, 105);
             ItemStockBox.Margin = new Padding(3, 2, 3, 2);
             ItemStockBox.Name = "ItemStockBox";
             ItemStockBox.Size = new Size(86, 23);
-            ItemStockBox.TabIndex = 5;
+            ItemStockBox.TabIndex = 1;
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 114);
+            ItemDescriptionBox.Location = new Point(284, 155);
             ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(303, 23);
-            ItemDescriptionBox.TabIndex = 4;
+            ItemDescriptionBox.Size = new Size(303, 125);
+            ItemDescriptionBox.TabIndex = 2;
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(285, 64);
+            ItemNameBox.Location = new Point(284, 58);
             ItemNameBox.Margin = new Padding(3, 2, 3, 2);
             ItemNameBox.Name = "ItemNameBox";
             ItemNameBox.Size = new Size(303, 23);
-            ItemNameBox.TabIndex = 3;
+            ItemNameBox.TabIndex = 0;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(285, 146);
+            label5.Location = new Point(284, 83);
             label5.Name = "label5";
             label5.Size = new Size(46, 20);
             label5.TabIndex = 2;
@@ -166,7 +167,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(285, 89);
+            label4.Location = new Point(284, 130);
             label4.Name = "label4";
             label4.Size = new Size(87, 20);
             label4.TabIndex = 1;
@@ -177,7 +178,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(285, 37);
+            label3.Location = new Point(284, 36);
             label3.Name = "label3";
             label3.Size = new Size(39, 20);
             label3.TabIndex = 0;

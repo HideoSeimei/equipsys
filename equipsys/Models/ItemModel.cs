@@ -50,7 +50,7 @@ namespace equipsys.Models
                 // when image is added, find the folder and the image path for the item.
                 else
                 {
-                    string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local
+                    string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -108,7 +108,7 @@ namespace equipsys.Models
                 //MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {description}, Stock: {stock}");
 
                 string finalImagePath = "";
-                string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local 
+                string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\";
                 string imageFileName = Path.GetFileName(newImage);
                 finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -117,11 +117,13 @@ namespace equipsys.Models
                 else
                 {
                     File.Copy(newImage, finalImagePath, true);
-                    MessageBox.Show("Copied Successfully");
+                    // MessageBox.Show("Copied Successfully");
                 }
                 cmd.ExecuteNonQuery();
                 ItemForm itemForm = new ItemForm();
                 itemForm.ReloadFlowLayoutPanel();
+
+                sql.Close();
                 
             }
         }
@@ -136,6 +138,8 @@ namespace equipsys.Models
                 sql.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Removed Item Successfully");
+
+                sql.Close();
             }
         }
     }

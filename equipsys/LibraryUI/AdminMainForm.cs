@@ -107,11 +107,6 @@ namespace equipsys
             this.Hide();
         }
 
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //for opening the records form
@@ -155,11 +150,6 @@ namespace equipsys
         }
 
         private void profileName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
         {
 
         }

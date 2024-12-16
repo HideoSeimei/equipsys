@@ -29,388 +29,420 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
-            label7 = new Label();
-            RegisterButton = new Button();
+            piLabel = new Label();
+            RegisterBTN = new Button();
             ReturnButton = new Button();
-            CourseBox = new TextBox();
-            label5 = new Label();
-            FNameBox = new TextBox();
-            label9 = new Label();
-            label10 = new Label();
-            groupBox1 = new GroupBox();
-            label2 = new Label();
-            YearBox = new ComboBox();
-            StudentIDBox = new TextBox();
-            LNameBox = new TextBox();
-            label3 = new Label();
-            PasswordBox = new TextBox();
-            UsernameBox = new TextBox();
-            label1 = new Label();
-            label8 = new Label();
-            label6 = new Label();
-            groupBox2 = new GroupBox();
-            label4 = new Label();
-            pictureBox1 = new PictureBox();
-            label11 = new Label();
-            button1 = new Button();
-            panel3 = new Panel();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel3.SuspendLayout();
+            cysLabel = new Label();
+            FirstNameValue = new TextBox();
+            fnLabel = new Label();
+            registrationLabel = new Label();
+            PersonalInfoGB = new GroupBox();
+            CourseValue = new ComboBox();
+            SectionValue = new ComboBox();
+            sidLabel = new Label();
+            YearValue = new ComboBox();
+            StudentIDValue = new TextBox();
+            LastNameValue = new TextBox();
+            lnLabel = new Label();
+            PasswordValue = new TextBox();
+            UsernameValue = new TextBox();
+            userLabel = new Label();
+            suiLabel = new Label();
+            passLabel = new Label();
+            SignUpInfoGB = new GroupBox();
+            infoLabel2 = new Label();
+            registrationPB = new PictureBox();
+            infoLabel1 = new Label();
+            BackBTN = new Button();
+            Panel = new Panel();
+            PersonalInfoGB.SuspendLayout();
+            SignUpInfoGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)registrationPB).BeginInit();
+            Panel.SuspendLayout();
             SuspendLayout();
             // 
-            // label7
+            // piLabel
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.FromArgb(32, 33, 35);
-            label7.Location = new Point(22, 23);
-            label7.Name = "label7";
-            label7.Size = new Size(158, 20);
-            label7.TabIndex = 44;
-            label7.Text = "Personal Information";
+            piLabel.AutoSize = true;
+            piLabel.BackColor = Color.Transparent;
+            piLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            piLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            piLabel.Location = new Point(19, 17);
+            piLabel.Name = "piLabel";
+            piLabel.Size = new Size(163, 21);
+            piLabel.TabIndex = 44;
+            piLabel.Text = "Personal Information";
             // 
-            // RegisterButton
+            // RegisterBTN
             // 
-            RegisterButton.BackColor = Color.FromArgb(32, 33, 35);
-            RegisterButton.Cursor = Cursors.Hand;
-            RegisterButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            RegisterButton.ForeColor = Color.White;
-            RegisterButton.Location = new Point(333, 507);
-            RegisterButton.Name = "RegisterButton";
-            RegisterButton.Size = new Size(123, 29);
-            RegisterButton.TabIndex = 42;
-            RegisterButton.Text = "Register";
-            RegisterButton.UseVisualStyleBackColor = false;
-            RegisterButton.Click += RegisterButton_Click;
+            RegisterBTN.BackColor = Color.FromArgb(32, 33, 35);
+            RegisterBTN.Cursor = Cursors.Hand;
+            RegisterBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            RegisterBTN.ForeColor = Color.White;
+            RegisterBTN.Location = new Point(291, 380);
+            RegisterBTN.Margin = new Padding(3, 2, 3, 2);
+            RegisterBTN.Name = "RegisterBTN";
+            RegisterBTN.Size = new Size(100, 24);
+            RegisterBTN.TabIndex = 8;
+            RegisterBTN.Text = "Register";
+            RegisterBTN.UseVisualStyleBackColor = false;
+            RegisterBTN.Click += RegisterBTN_Click;
             // 
             // ReturnButton
             // 
-            ReturnButton.BackColor = Color.Transparent;
-            ReturnButton.Cursor = Cursors.Hand;
-            ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            ReturnButton.ForeColor = Color.ForestGreen;
-            ReturnButton.Location = new Point(130, 375);
-            ReturnButton.Margin = new Padding(3, 2, 3, 2);
+            ReturnButton.Location = new Point(0, 0);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(131, 36);
-            ReturnButton.TabIndex = 43;
-            ReturnButton.Text = "Back";
-            ReturnButton.UseVisualStyleBackColor = false;
-            ReturnButton.Click += ReturnButton_Click;
+            ReturnButton.Size = new Size(75, 23);
+            ReturnButton.TabIndex = 0;
             // 
-            // CourseBox
+            // cysLabel
             // 
-            CourseBox.ForeColor = Color.DimGray;
-            CourseBox.Location = new Point(34, 171);
-            CourseBox.Name = "CourseBox";
-            CourseBox.Size = new Size(215, 27);
-            CourseBox.TabIndex = 40;
+            cysLabel.AutoSize = true;
+            cysLabel.BackColor = Color.Transparent;
+            cysLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cysLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            cysLabel.Location = new Point(30, 109);
+            cysLabel.Name = "cysLabel";
+            cysLabel.Size = new Size(126, 17);
+            cysLabel.TabIndex = 39;
+            cysLabel.Text = "Course/Year/Section";
             // 
-            // label5
+            // FirstNameValue
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(34, 141);
-            label5.Name = "label5";
-            label5.Size = new Size(117, 20);
-            label5.TabIndex = 39;
-            label5.Text = "Course/Program";
+            FirstNameValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FirstNameValue.ForeColor = Color.DimGray;
+            FirstNameValue.Location = new Point(30, 67);
+            FirstNameValue.Margin = new Padding(3, 2, 3, 2);
+            FirstNameValue.Name = "FirstNameValue";
+            FirstNameValue.Size = new Size(189, 23);
+            FirstNameValue.TabIndex = 0;
             // 
-            // FNameBox
+            // fnLabel
             // 
-            FNameBox.ForeColor = Color.DimGray;
-            FNameBox.Location = new Point(34, 89);
-            FNameBox.Name = "FNameBox";
-            FNameBox.Size = new Size(215, 27);
-            FNameBox.TabIndex = 36;
+            fnLabel.AutoSize = true;
+            fnLabel.BackColor = Color.Transparent;
+            fnLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            fnLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            fnLabel.Location = new Point(30, 48);
+            fnLabel.Name = "fnLabel";
+            fnLabel.Size = new Size(71, 17);
+            fnLabel.TabIndex = 35;
+            fnLabel.Text = "First Name";
             // 
-            // label9
+            // registrationLabel
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(32, 33, 35);
-            label9.Location = new Point(34, 57);
-            label9.Name = "label9";
-            label9.Size = new Size(80, 20);
-            label9.TabIndex = 35;
-            label9.Text = "First Name";
+            registrationLabel.AutoSize = true;
+            registrationLabel.BackColor = Color.Transparent;
+            registrationLabel.FlatStyle = FlatStyle.Flat;
+            registrationLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            registrationLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            registrationLabel.Location = new Point(24, 28);
+            registrationLabel.Name = "registrationLabel";
+            registrationLabel.Size = new Size(132, 30);
+            registrationLabel.TabIndex = 34;
+            registrationLabel.Text = "Registration";
             // 
-            // label10
+            // PersonalInfoGB
             // 
-            label10.AutoSize = true;
-            label10.BackColor = Color.Transparent;
-            label10.FlatStyle = FlatStyle.Flat;
-            label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.FromArgb(32, 33, 35);
-            label10.Location = new Point(27, 38);
-            label10.Name = "label10";
-            label10.Size = new Size(145, 31);
-            label10.TabIndex = 34;
-            label10.Text = "Registration";
-            label10.Click += label10_Click;
+            PersonalInfoGB.BackColor = Color.WhiteSmoke;
+            PersonalInfoGB.Controls.Add(CourseValue);
+            PersonalInfoGB.Controls.Add(SectionValue);
+            PersonalInfoGB.Controls.Add(sidLabel);
+            PersonalInfoGB.Controls.Add(YearValue);
+            PersonalInfoGB.Controls.Add(StudentIDValue);
+            PersonalInfoGB.Controls.Add(piLabel);
+            PersonalInfoGB.Controls.Add(LastNameValue);
+            PersonalInfoGB.Controls.Add(cysLabel);
+            PersonalInfoGB.Controls.Add(lnLabel);
+            PersonalInfoGB.Controls.Add(fnLabel);
+            PersonalInfoGB.Controls.Add(FirstNameValue);
+            PersonalInfoGB.ForeColor = SystemColors.ControlText;
+            PersonalInfoGB.Location = new Point(24, 60);
+            PersonalInfoGB.Margin = new Padding(3, 2, 3, 2);
+            PersonalInfoGB.Name = "PersonalInfoGB";
+            PersonalInfoGB.Padding = new Padding(3, 2, 3, 2);
+            PersonalInfoGB.Size = new Size(547, 164);
+            PersonalInfoGB.TabIndex = 46;
+            PersonalInfoGB.TabStop = false;
             // 
-            // groupBox1
+            // CourseValue
             // 
-            groupBox1.BackColor = Color.WhiteSmoke;
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(YearBox);
-            groupBox1.Controls.Add(StudentIDBox);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(LNameBox);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(CourseBox);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(FNameBox);
-            groupBox1.ForeColor = SystemColors.ControlText;
-            groupBox1.Location = new Point(27, 80);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(625, 219);
-            groupBox1.TabIndex = 46;
-            groupBox1.TabStop = false;
+            CourseValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            CourseValue.ForeColor = Color.DimGray;
+            CourseValue.FormattingEnabled = true;
+            CourseValue.Items.AddRange(new object[] { "BSCS", "BSEMC", "BSIS", "BSIT" });
+            CourseValue.Location = new Point(30, 128);
+            CourseValue.Name = "CourseValue";
+            CourseValue.Size = new Size(64, 23);
+            CourseValue.TabIndex = 2;
+            CourseValue.Text = "Course";
+            CourseValue.SelectedIndexChanged += CourseValue_SelectedIndexChanged;
             // 
-            // label2
+            // SectionValue
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(32, 33, 35);
-            label2.Location = new Point(281, 141);
-            label2.Name = "label2";
-            label2.Size = new Size(79, 20);
-            label2.TabIndex = 23;
-            label2.Text = "Student ID";
+            SectionValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SectionValue.ForeColor = Color.DimGray;
+            SectionValue.FormattingEnabled = true;
+            SectionValue.Items.AddRange(new object[] { "A", "B" });
+            SectionValue.Location = new Point(151, 128);
+            SectionValue.Name = "SectionValue";
+            SectionValue.Size = new Size(68, 23);
+            SectionValue.TabIndex = 4;
+            SectionValue.Text = "Section";
+            SectionValue.SelectedIndexChanged += SectionValue_SelectedIndexChanged;
             // 
-            // YearBox
+            // sidLabel
             // 
-            YearBox.AllowDrop = true;
-            YearBox.BackColor = Color.White;
-            YearBox.DropDownHeight = 75;
-            YearBox.DropDownWidth = 75;
-            YearBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            YearBox.ForeColor = Color.FromArgb(32, 33, 35);
-            YearBox.FormattingEnabled = true;
-            YearBox.IntegralHeight = false;
-            YearBox.Items.AddRange(new object[] { "1st Year", "2nd Year", "3rd Year", "4th Year" });
-            YearBox.Location = new Point(504, 89);
-            YearBox.Name = "YearBox";
-            YearBox.Size = new Size(105, 28);
-            YearBox.TabIndex = 18;
-            YearBox.Text = " Year";
-            YearBox.SelectedIndexChanged += YearBox_SelectedIndexChanged;
+            sidLabel.AutoSize = true;
+            sidLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            sidLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            sidLabel.Location = new Point(267, 109);
+            sidLabel.Name = "sidLabel";
+            sidLabel.Size = new Size(68, 17);
+            sidLabel.TabIndex = 23;
+            sidLabel.Text = "Student ID";
             // 
-            // StudentIDBox
+            // YearValue
             // 
-            StudentIDBox.ForeColor = Color.DimGray;
-            StudentIDBox.Location = new Point(281, 171);
-            StudentIDBox.Name = "StudentIDBox";
-            StudentIDBox.Size = new Size(203, 27);
-            StudentIDBox.TabIndex = 22;
+            YearValue.AllowDrop = true;
+            YearValue.BackColor = Color.White;
+            YearValue.DropDownHeight = 75;
+            YearValue.DropDownWidth = 75;
+            YearValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            YearValue.ForeColor = Color.DimGray;
+            YearValue.FormattingEnabled = true;
+            YearValue.IntegralHeight = false;
+            YearValue.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            YearValue.Location = new Point(100, 128);
+            YearValue.Margin = new Padding(3, 2, 3, 2);
+            YearValue.Name = "YearValue";
+            YearValue.Size = new Size(45, 23);
+            YearValue.TabIndex = 3;
+            YearValue.Text = "Year";
+            YearValue.SelectedIndexChanged += YearValue_SelectedIndexChanged;
             // 
-            // LNameBox
+            // StudentIDValue
             // 
-            LNameBox.ForeColor = Color.DimGray;
-            LNameBox.Location = new Point(281, 89);
-            LNameBox.Name = "LNameBox";
-            LNameBox.Size = new Size(203, 27);
-            LNameBox.TabIndex = 21;
+            StudentIDValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            StudentIDValue.ForeColor = Color.DimGray;
+            StudentIDValue.Location = new Point(267, 128);
+            StudentIDValue.Margin = new Padding(3, 2, 3, 2);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(178, 23);
+            StudentIDValue.TabIndex = 5;
             // 
-            // label3
+            // LastNameValue
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(281, 57);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 20);
-            label3.TabIndex = 20;
-            label3.Text = "Last Name";
+            LastNameValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            LastNameValue.ForeColor = Color.DimGray;
+            LastNameValue.Location = new Point(267, 67);
+            LastNameValue.Margin = new Padding(3, 2, 3, 2);
+            LastNameValue.Name = "LastNameValue";
+            LastNameValue.Size = new Size(178, 23);
+            LastNameValue.TabIndex = 1;
             // 
-            // PasswordBox
+            // lnLabel
             // 
-            PasswordBox.ForeColor = Color.DimGray;
-            PasswordBox.Location = new Point(347, 99);
-            PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(228, 27);
-            PasswordBox.TabIndex = 41;
+            lnLabel.AutoSize = true;
+            lnLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lnLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            lnLabel.Location = new Point(267, 48);
+            lnLabel.Name = "lnLabel";
+            lnLabel.Size = new Size(70, 17);
+            lnLabel.TabIndex = 20;
+            lnLabel.Text = "Last Name";
             // 
-            // UsernameBox
+            // PasswordValue
             // 
-            UsernameBox.ForeColor = Color.DimGray;
-            UsernameBox.Location = new Point(38, 99);
-            UsernameBox.Name = "UsernameBox";
-            UsernameBox.Size = new Size(249, 27);
-            UsernameBox.TabIndex = 38;
+            PasswordValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            PasswordValue.ForeColor = Color.DimGray;
+            PasswordValue.Location = new Point(267, 74);
+            PasswordValue.Margin = new Padding(3, 2, 3, 2);
+            PasswordValue.Name = "PasswordValue";
+            PasswordValue.Size = new Size(178, 23);
+            PasswordValue.TabIndex = 7;
+            PasswordValue.UseSystemPasswordChar = true;
             // 
-            // label1
+            // UsernameValue
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(38, 64);
-            label1.Name = "label1";
-            label1.Size = new Size(75, 20);
-            label1.TabIndex = 37;
-            label1.Text = "Username";
+            UsernameValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            UsernameValue.ForeColor = Color.DimGray;
+            UsernameValue.Location = new Point(30, 74);
+            UsernameValue.Margin = new Padding(3, 2, 3, 2);
+            UsernameValue.Name = "UsernameValue";
+            UsernameValue.Size = new Size(189, 23);
+            UsernameValue.TabIndex = 6;
             // 
-            // label8
+            // userLabel
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(32, 33, 35);
-            label8.Location = new Point(22, 23);
-            label8.Name = "label8";
-            label8.Size = new Size(152, 20);
-            label8.TabIndex = 45;
-            label8.Text = "Sign Up Information";
+            userLabel.AutoSize = true;
+            userLabel.BackColor = Color.Transparent;
+            userLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            userLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            userLabel.Location = new Point(30, 55);
+            userLabel.Name = "userLabel";
+            userLabel.Size = new Size(67, 17);
+            userLabel.TabIndex = 37;
+            userLabel.Text = "Username";
             // 
-            // label6
+            // suiLabel
             // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.Transparent;
-            label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(32, 33, 35);
-            label6.Location = new Point(347, 64);
-            label6.Name = "label6";
-            label6.Size = new Size(70, 20);
-            label6.TabIndex = 26;
-            label6.Text = "Password";
+            suiLabel.AutoSize = true;
+            suiLabel.BackColor = Color.Transparent;
+            suiLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            suiLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            suiLabel.Location = new Point(19, 18);
+            suiLabel.Name = "suiLabel";
+            suiLabel.Size = new Size(155, 21);
+            suiLabel.TabIndex = 45;
+            suiLabel.Text = "Sign Up Information";
             // 
-            // groupBox2
+            // passLabel
             // 
-            groupBox2.BackColor = Color.WhiteSmoke;
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(UsernameBox);
-            groupBox2.Controls.Add(PasswordBox);
-            groupBox2.Location = new Point(27, 305);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(625, 169);
-            groupBox2.TabIndex = 47;
-            groupBox2.TabStop = false;
+            passLabel.AutoSize = true;
+            passLabel.BackColor = Color.Transparent;
+            passLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            passLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            passLabel.Location = new Point(267, 55);
+            passLabel.Name = "passLabel";
+            passLabel.Size = new Size(64, 17);
+            passLabel.TabIndex = 26;
+            passLabel.Text = "Password";
             // 
-            // label4
+            // SignUpInfoGB
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(76, 478);
-            label4.Name = "label4";
-            label4.Size = new Size(182, 60);
-            label4.TabIndex = 49;
-            label4.Text = "University of Caloocan City\r\n-Congressional Campus\r\n\r\n@mis.ucc.com";
-            label4.TextAlign = ContentAlignment.TopCenter;
+            SignUpInfoGB.BackColor = Color.WhiteSmoke;
+            SignUpInfoGB.Controls.Add(passLabel);
+            SignUpInfoGB.Controls.Add(suiLabel);
+            SignUpInfoGB.Controls.Add(userLabel);
+            SignUpInfoGB.Controls.Add(UsernameValue);
+            SignUpInfoGB.Controls.Add(PasswordValue);
+            SignUpInfoGB.Location = new Point(24, 229);
+            SignUpInfoGB.Margin = new Padding(3, 2, 3, 2);
+            SignUpInfoGB.Name = "SignUpInfoGB";
+            SignUpInfoGB.Padding = new Padding(3, 2, 3, 2);
+            SignUpInfoGB.Size = new Size(547, 127);
+            SignUpInfoGB.TabIndex = 47;
+            SignUpInfoGB.TabStop = false;
             // 
-            // pictureBox1
+            // infoLabel2
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(81, 82);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(166, 163);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 50;
-            pictureBox1.TabStop = false;
+            infoLabel2.AutoSize = true;
+            infoLabel2.BackColor = Color.Transparent;
+            infoLabel2.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            infoLabel2.ForeColor = Color.White;
+            infoLabel2.Location = new Point(66, 358);
+            infoLabel2.Name = "infoLabel2";
+            infoLabel2.Size = new Size(154, 48);
+            infoLabel2.TabIndex = 49;
+            infoLabel2.Text = "University of Caloocan City\r\n-Congressional Campus\r\n\r\n@mis.ucc.com";
+            infoLabel2.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label11
+            // registrationPB
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.Transparent;
-            label11.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(78, 247);
-            label11.Name = "label11";
-            label11.Size = new Size(174, 30);
-            label11.TabIndex = 51;
-            label11.Text = "Create an account for you\r\nto explore our system!\r\n";
-            label11.TextAlign = ContentAlignment.TopCenter;
+            registrationPB.BackColor = Color.Transparent;
+            registrationPB.Image = (Image)resources.GetObject("registrationPB.Image");
+            registrationPB.Location = new Point(71, 62);
+            registrationPB.Margin = new Padding(3, 2, 3, 2);
+            registrationPB.Name = "registrationPB";
+            registrationPB.Size = new Size(145, 122);
+            registrationPB.SizeMode = PictureBoxSizeMode.StretchImage;
+            registrationPB.TabIndex = 50;
+            registrationPB.TabStop = false;
             // 
-            // button1
+            // infoLabel1
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.DimGray;
-            button1.Location = new Point(196, 506);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 29);
-            button1.TabIndex = 52;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            infoLabel1.AutoSize = true;
+            infoLabel1.BackColor = Color.Transparent;
+            infoLabel1.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            infoLabel1.ForeColor = Color.White;
+            infoLabel1.Location = new Point(68, 185);
+            infoLabel1.Name = "infoLabel1";
+            infoLabel1.Size = new Size(151, 24);
+            infoLabel1.TabIndex = 51;
+            infoLabel1.Text = "Create an account for you\r\nto explore our system!\r\n";
+            infoLabel1.TextAlign = ContentAlignment.TopCenter;
             // 
-            // panel3
+            // BackBTN
             // 
-            panel3.BackColor = Color.FromArgb(32, 33, 35);
-            panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label11);
-            panel3.Location = new Point(683, -2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(331, 597);
-            panel3.TabIndex = 54;
+            BackBTN.BackColor = Color.Transparent;
+            BackBTN.Cursor = Cursors.Hand;
+            BackBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            BackBTN.ForeColor = Color.DimGray;
+            BackBTN.Location = new Point(143, 380);
+            BackBTN.Margin = new Padding(3, 2, 3, 2);
+            BackBTN.Name = "BackBTN";
+            BackBTN.Size = new Size(100, 24);
+            BackBTN.TabIndex = 9;
+            BackBTN.Text = "Back";
+            BackBTN.UseVisualStyleBackColor = false;
+            BackBTN.Click += BackBTN_Click;
+            // 
+            // Panel
+            // 
+            Panel.BackColor = Color.FromArgb(32, 33, 35);
+            Panel.Controls.Add(registrationPB);
+            Panel.Controls.Add(infoLabel2);
+            Panel.Controls.Add(infoLabel1);
+            Panel.Location = new Point(598, -2);
+            Panel.Margin = new Padding(3, 2, 3, 2);
+            Panel.Name = "Panel";
+            Panel.Size = new Size(290, 448);
+            Panel.TabIndex = 54;
             // 
             // RegistrationForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1013, 588);
-            Controls.Add(panel3);
-            Controls.Add(button1);
-            Controls.Add(groupBox2);
-            Controls.Add(RegisterButton);
-            Controls.Add(label10);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(886, 441);
+            Controls.Add(Panel);
+            Controls.Add(BackBTN);
+            Controls.Add(SignUpInfoGB);
+            Controls.Add(RegisterBTN);
+            Controls.Add(registrationLabel);
+            Controls.Add(PersonalInfoGB);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "RegistrationForm";
             Text = "REGISTRATION";
-            Load += RegistrationForm_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            PersonalInfoGB.ResumeLayout(false);
+            PersonalInfoGB.PerformLayout();
+            SignUpInfoGB.ResumeLayout(false);
+            SignUpInfoGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)registrationPB).EndInit();
+            Panel.ResumeLayout(false);
+            Panel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label7;
-        private Button RegisterButton;
+        private Label piLabel;
+        private Button RegisterBTN;
         private Button ReturnButton;
-        private TextBox CourseBox;
-        private Label label5;
-        private TextBox FNameBox;
-        private Label label9;
-        private Label label10;
-        private GroupBox groupBox1;
-        private ComboBox YearBox;
-        private Label label3;
-        private TextBox LNameBox;
-        private TextBox StudentIDBox;
-        private Label label2;
-        private TextBox PasswordBox;
-        private TextBox UsernameBox;
-        private Label label1;
-        private Label label8;
-        private Label label6;
-        private GroupBox groupBox2;
-        private Label label4;
-        private PictureBox pictureBox1;
-        private Label label11;
-        private Button button1;
-        private Panel panel3;
+        private Label cysLabel;
+        private TextBox FirstNameValue;
+        private Label fnLabel;
+        private Label registrationLabel;
+        private GroupBox PersonalInfoGB;
+        private ComboBox YearValue;
+        private Label lnLabel;
+        private TextBox LastNameValue;
+        private TextBox StudentIDValue;
+        private Label sidLabel;
+        private TextBox PasswordValue;
+        private TextBox UsernameValue;
+        private Label userLabel;
+        private Label suiLabel;
+        private Label passLabel;
+        private GroupBox SignUpInfoGB;
+        private Label infoLabel2;
+        private PictureBox registrationPB;
+        private Label infoLabel1;
+        private Button BackBTN;
+        private Panel Panel;
+        private ComboBox SectionValue;
+        private ComboBox CourseValue;
     }
 }

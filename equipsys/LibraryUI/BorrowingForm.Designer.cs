@@ -42,27 +42,26 @@
             BorrowingItemName = new Label();
             BorrowingImage = new PictureBox();
             groupBox1 = new GroupBox();
-            BorrowCount = new TextBox();
-            comboBox7 = new ComboBox();
-            button3 = new Button();
+            EndTimeValue = new TextBox();
+            BorrowStockValue = new TextBox();
+            ReturnBTN = new Button();
             label13 = new Label();
-            button2 = new Button();
-            EndTime = new ComboBox();
-            SectionBox = new ComboBox();
-            yearBox = new ComboBox();
+            BorrowBTN = new Button();
+            SectionValue = new ComboBox();
+            YearValue = new ComboBox();
             label3 = new Label();
             label5 = new Label();
             label12 = new Label();
-            EmailBox = new TextBox();
+            EmailValue = new TextBox();
             label11 = new Label();
-            contactBox = new TextBox();
-            courseBox = new ComboBox();
+            ContactNumberValue = new TextBox();
+            CourseValue = new ComboBox();
             label4 = new Label();
-            studentidReg = new TextBox();
-            lastnameReg = new TextBox();
+            StudentIDValue = new TextBox();
+            LastNameValue = new TextBox();
             label9 = new Label();
             label10 = new Label();
-            firstnameReg = new TextBox();
+            FirstNameValue = new TextBox();
             panel = new Panel();
             panel10 = new Panel();
             button13 = new Button();
@@ -176,7 +175,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(631, 346);
             guna2Panel1.TabIndex = 37;
-            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // BorrowingDescription
             // 
@@ -186,7 +184,7 @@
             BorrowingDescription.MaximumSize = new Size(300, 0);
             BorrowingDescription.MinimumSize = new Size(100, 100);
             BorrowingDescription.Name = "BorrowingDescription";
-            BorrowingDescription.Size = new Size(100, 100);
+            BorrowingDescription.Size = new Size(159, 100);
             BorrowingDescription.TabIndex = 58;
             BorrowingDescription.Text = "DESCRIPTION:";
             // 
@@ -223,33 +221,31 @@
             BorrowingImage.SizeMode = PictureBoxSizeMode.StretchImage;
             BorrowingImage.TabIndex = 50;
             BorrowingImage.TabStop = false;
-            BorrowingImage.Click += BorrowingImage_Click;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.WhiteSmoke;
-            groupBox1.Controls.Add(BorrowCount);
-            groupBox1.Controls.Add(comboBox7);
-            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(EndTimeValue);
+            groupBox1.Controls.Add(BorrowStockValue);
+            groupBox1.Controls.Add(ReturnBTN);
             groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(EndTime);
+            groupBox1.Controls.Add(BorrowBTN);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(SectionBox);
-            groupBox1.Controls.Add(yearBox);
+            groupBox1.Controls.Add(SectionValue);
+            groupBox1.Controls.Add(YearValue);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(EmailBox);
+            groupBox1.Controls.Add(EmailValue);
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(contactBox);
-            groupBox1.Controls.Add(courseBox);
+            groupBox1.Controls.Add(ContactNumberValue);
+            groupBox1.Controls.Add(CourseValue);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(studentidReg);
-            groupBox1.Controls.Add(lastnameReg);
+            groupBox1.Controls.Add(StudentIDValue);
+            groupBox1.Controls.Add(LastNameValue);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(firstnameReg);
+            groupBox1.Controls.Add(FirstNameValue);
             groupBox1.ForeColor = Color.ForestGreen;
             groupBox1.Location = new Point(189, 5);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
@@ -259,96 +255,86 @@
             groupBox1.TabIndex = 49;
             groupBox1.TabStop = false;
             // 
-            // BorrowCount
+            // EndTimeValue
             // 
-            BorrowCount.Location = new Point(20, 266);
-            BorrowCount.Margin = new Padding(3, 2, 3, 2);
-            BorrowCount.Name = "BorrowCount";
-            BorrowCount.Size = new Size(65, 23);
-            BorrowCount.TabIndex = 58;
+            EndTimeValue.Location = new Point(230, 235);
+            EndTimeValue.Margin = new Padding(3, 2, 3, 2);
+            EndTimeValue.Name = "EndTimeValue";
+            EndTimeValue.Size = new Size(65, 23);
+            EndTimeValue.TabIndex = 59;
             // 
-            // comboBox7
+            // BorrowStockValue
             // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox7.Location = new Point(20, 238);
-            comboBox7.Margin = new Padding(3, 2, 3, 2);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(63, 23);
-            comboBox7.TabIndex = 57;
+            BorrowStockValue.Location = new Point(20, 235);
+            BorrowStockValue.Margin = new Padding(3, 2, 3, 2);
+            BorrowStockValue.Name = "BorrowStockValue";
+            BorrowStockValue.Size = new Size(65, 23);
+            BorrowStockValue.TabIndex = 58;
             // 
-            // button3
+            // ReturnBTN
             // 
-            button3.Cursor = Cursors.Hand;
-            button3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.FromArgb(32, 33, 35);
-            button3.Location = new Point(212, 286);
-            button3.Margin = new Padding(3, 2, 3, 2);
-            button3.Name = "button3";
-            button3.Size = new Size(88, 22);
-            button3.TabIndex = 55;
-            button3.Text = "Back";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            ReturnBTN.Cursor = Cursors.Hand;
+            ReturnBTN.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnBTN.ForeColor = Color.FromArgb(32, 33, 35);
+            ReturnBTN.Location = new Point(212, 286);
+            ReturnBTN.Margin = new Padding(3, 2, 3, 2);
+            ReturnBTN.Name = "ReturnBTN";
+            ReturnBTN.Size = new Size(88, 22);
+            ReturnBTN.TabIndex = 55;
+            ReturnBTN.Text = "Back";
+            ReturnBTN.UseVisualStyleBackColor = true;
+            ReturnBTN.Click += ReturnBTN_Click;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.ForeColor = Color.FromArgb(32, 33, 35);
-            label13.Location = new Point(20, 214);
+            label13.Location = new Point(20, 218);
             label13.Name = "label13";
-            label13.Size = new Size(63, 15);
+            label13.Size = new Size(94, 15);
             label13.TabIndex = 56;
-            label13.Text = "To Borrow:";
+            label13.Text = "Stock to Borrow:";
             // 
-            // button2
+            // BorrowBTN
             // 
-            button2.BackColor = Color.FromArgb(32, 33, 35);
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(310, 286);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 22);
-            button2.TabIndex = 54;
-            button2.Text = "Borrow";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            BorrowBTN.BackColor = Color.FromArgb(32, 33, 35);
+            BorrowBTN.Cursor = Cursors.Hand;
+            BorrowBTN.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            BorrowBTN.ForeColor = Color.White;
+            BorrowBTN.Location = new Point(310, 286);
+            BorrowBTN.Margin = new Padding(3, 2, 3, 2);
+            BorrowBTN.Name = "BorrowBTN";
+            BorrowBTN.Size = new Size(94, 22);
+            BorrowBTN.TabIndex = 54;
+            BorrowBTN.Text = "Borrow";
+            BorrowBTN.UseVisualStyleBackColor = false;
+            BorrowBTN.Click += BorrowBTN_Click;
             // 
-            // EndTime
+            // SectionValue
             // 
-            EndTime.ForeColor = Color.ForestGreen;
-            EndTime.FormattingEnabled = true;
-            EndTime.Location = new Point(310, 218);
-            EndTime.Margin = new Padding(3, 2, 3, 2);
-            EndTime.Name = "EndTime";
-            EndTime.Size = new Size(46, 23);
-            EndTime.TabIndex = 56;
+            SectionValue.ForeColor = Color.FromArgb(32, 33, 35);
+            SectionValue.FormattingEnabled = true;
+            SectionValue.Items.AddRange(new object[] { "A", "B" });
+            SectionValue.Location = new Point(162, 124);
+            SectionValue.Margin = new Padding(3, 2, 3, 2);
+            SectionValue.Name = "SectionValue";
+            SectionValue.Size = new Size(56, 23);
+            SectionValue.TabIndex = 55;
+            SectionValue.Text = "Sec";
+            SectionValue.SelectedIndexChanged += SectionValue_SelectedIndexChanged;
             // 
-            // SectionBox
+            // YearValue
             // 
-            SectionBox.ForeColor = Color.FromArgb(32, 33, 35);
-            SectionBox.FormattingEnabled = true;
-            SectionBox.Items.AddRange(new object[] { "A", "B" });
-            SectionBox.Location = new Point(162, 124);
-            SectionBox.Margin = new Padding(3, 2, 3, 2);
-            SectionBox.Name = "SectionBox";
-            SectionBox.Size = new Size(56, 23);
-            SectionBox.TabIndex = 55;
-            SectionBox.Text = "Sec";
-            // 
-            // yearBox
-            // 
-            yearBox.ForeColor = Color.FromArgb(32, 33, 35);
-            yearBox.FormattingEnabled = true;
-            yearBox.Items.AddRange(new object[] { "1st", "2nd", "3rd", "4th" });
-            yearBox.Location = new Point(98, 124);
-            yearBox.Margin = new Padding(3, 2, 3, 2);
-            yearBox.Name = "yearBox";
-            yearBox.Size = new Size(57, 23);
-            yearBox.TabIndex = 54;
-            yearBox.Text = "Yr";
+            YearValue.ForeColor = Color.FromArgb(32, 33, 35);
+            YearValue.FormattingEnabled = true;
+            YearValue.Items.AddRange(new object[] { "1st", "2nd", "3rd", "4th" });
+            YearValue.Location = new Point(98, 124);
+            YearValue.Margin = new Padding(3, 2, 3, 2);
+            YearValue.Name = "YearValue";
+            YearValue.Size = new Size(57, 23);
+            YearValue.TabIndex = 54;
+            YearValue.Text = "Yr";
+            YearValue.SelectedIndexChanged += YearValue_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -366,11 +352,11 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(234, 222);
+            label5.Location = new Point(230, 218);
             label5.Name = "label5";
-            label5.Size = new Size(62, 15);
+            label5.Size = new Size(60, 15);
             label5.TabIndex = 51;
-            label5.Text = "END TIME";
+            label5.Text = "End Time:";
             // 
             // label12
             // 
@@ -383,14 +369,14 @@
             label12.TabIndex = 52;
             label12.Text = "Email";
             // 
-            // EmailBox
+            // EmailValue
             // 
-            EmailBox.ForeColor = Color.DimGray;
-            EmailBox.Location = new Point(230, 179);
-            EmailBox.Margin = new Padding(3, 2, 3, 2);
-            EmailBox.Name = "EmailBox";
-            EmailBox.Size = new Size(175, 23);
-            EmailBox.TabIndex = 51;
+            EmailValue.ForeColor = Color.DimGray;
+            EmailValue.Location = new Point(230, 179);
+            EmailValue.Margin = new Padding(3, 2, 3, 2);
+            EmailValue.Name = "EmailValue";
+            EmailValue.Size = new Size(175, 23);
+            EmailValue.TabIndex = 51;
             // 
             // label11
             // 
@@ -403,26 +389,27 @@
             label11.TabIndex = 50;
             label11.Text = "Contact Number";
             // 
-            // contactBox
+            // ContactNumberValue
             // 
-            contactBox.ForeColor = Color.DimGray;
-            contactBox.Location = new Point(20, 177);
-            contactBox.Margin = new Padding(3, 2, 3, 2);
-            contactBox.Name = "contactBox";
-            contactBox.Size = new Size(189, 23);
-            contactBox.TabIndex = 49;
+            ContactNumberValue.ForeColor = Color.DimGray;
+            ContactNumberValue.Location = new Point(20, 177);
+            ContactNumberValue.Margin = new Padding(3, 2, 3, 2);
+            ContactNumberValue.Name = "ContactNumberValue";
+            ContactNumberValue.Size = new Size(189, 23);
+            ContactNumberValue.TabIndex = 49;
             // 
-            // courseBox
+            // CourseValue
             // 
-            courseBox.ForeColor = Color.FromArgb(32, 33, 35);
-            courseBox.FormattingEnabled = true;
-            courseBox.Items.AddRange(new object[] { "BSCS", "BSIT", "BSIS", "BSEMC" });
-            courseBox.Location = new Point(20, 124);
-            courseBox.Margin = new Padding(3, 2, 3, 2);
-            courseBox.Name = "courseBox";
-            courseBox.Size = new Size(73, 23);
-            courseBox.TabIndex = 39;
-            courseBox.Text = " Course";
+            CourseValue.ForeColor = Color.FromArgb(32, 33, 35);
+            CourseValue.FormattingEnabled = true;
+            CourseValue.Items.AddRange(new object[] { "BSCS", "BSIT", "BSIS", "BSEMC" });
+            CourseValue.Location = new Point(20, 124);
+            CourseValue.Margin = new Padding(3, 2, 3, 2);
+            CourseValue.Name = "CourseValue";
+            CourseValue.Size = new Size(73, 23);
+            CourseValue.TabIndex = 39;
+            CourseValue.Text = " Course";
+            CourseValue.SelectedIndexChanged += CourseValue_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -435,23 +422,23 @@
             label4.TabIndex = 23;
             label4.Text = "Student ID";
             // 
-            // studentidReg
+            // StudentIDValue
             // 
-            studentidReg.ForeColor = Color.DimGray;
-            studentidReg.Location = new Point(230, 124);
-            studentidReg.Margin = new Padding(3, 2, 3, 2);
-            studentidReg.Name = "studentidReg";
-            studentidReg.Size = new Size(175, 23);
-            studentidReg.TabIndex = 22;
+            StudentIDValue.ForeColor = Color.DimGray;
+            StudentIDValue.Location = new Point(230, 124);
+            StudentIDValue.Margin = new Padding(3, 2, 3, 2);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(175, 23);
+            StudentIDValue.TabIndex = 22;
             // 
-            // lastnameReg
+            // LastNameValue
             // 
-            lastnameReg.ForeColor = Color.DimGray;
-            lastnameReg.Location = new Point(230, 66);
-            lastnameReg.Margin = new Padding(3, 2, 3, 2);
-            lastnameReg.Name = "lastnameReg";
-            lastnameReg.Size = new Size(175, 23);
-            lastnameReg.TabIndex = 21;
+            LastNameValue.ForeColor = Color.DimGray;
+            LastNameValue.Location = new Point(230, 66);
+            LastNameValue.Margin = new Padding(3, 2, 3, 2);
+            LastNameValue.Name = "LastNameValue";
+            LastNameValue.Size = new Size(175, 23);
+            LastNameValue.TabIndex = 21;
             // 
             // label9
             // 
@@ -476,14 +463,14 @@
             label10.TabIndex = 35;
             label10.Text = "First Name";
             // 
-            // firstnameReg
+            // FirstNameValue
             // 
-            firstnameReg.ForeColor = Color.DimGray;
-            firstnameReg.Location = new Point(20, 66);
-            firstnameReg.Margin = new Padding(3, 2, 3, 2);
-            firstnameReg.Name = "firstnameReg";
-            firstnameReg.Size = new Size(189, 23);
-            firstnameReg.TabIndex = 36;
+            FirstNameValue.ForeColor = Color.DimGray;
+            FirstNameValue.Location = new Point(20, 66);
+            FirstNameValue.Margin = new Padding(3, 2, 3, 2);
+            FirstNameValue.Name = "FirstNameValue";
+            FirstNameValue.Size = new Size(189, 23);
+            FirstNameValue.TabIndex = 36;
             // 
             // panel
             // 
@@ -757,9 +744,9 @@
             label6.ForeColor = Color.FromArgb(32, 33, 35);
             label6.Location = new Point(690, 33);
             label6.Name = "label6";
-            label6.Size = new Size(140, 18);
+            label6.Size = new Size(127, 18);
             label6.TabIndex = 50;
-            label6.Text = "Welcome Admin!";
+            label6.Text = "Welcome Staff!";
             // 
             // BorrowingForm
             // 
@@ -810,31 +797,29 @@
         private Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private GroupBox groupBox1;
-        private ComboBox courseBox;
+        private ComboBox CourseValue;
         private Label label4;
-        private TextBox studentidReg;
-        private TextBox lastnameReg;
+        private TextBox StudentIDValue;
+        private TextBox LastNameValue;
         private Label label9;
         private Label label10;
         private PictureBox BorrowingImage;
         private Label label5;
-        private TextBox firstnameReg;
-        private Button button3;
-        private Button button2;
-        private ComboBox EndTime;
+        private TextBox FirstNameValue;
+        private Button ReturnBTN;
+        private Button BorrowBTN;
         private Label BorrowingItemName;
         private Label label12;
-        private TextBox EmailBox;
+        private TextBox EmailValue;
         private Label label11;
-        private TextBox contactBox;
-        private ComboBox SectionBox;
-        private ComboBox yearBox;
+        private TextBox ContactNumberValue;
+        private ComboBox SectionValue;
+        private ComboBox YearValue;
         private Label label3;
-        private ComboBox comboBox7;
         private Label label13;
         private Label BorrowingStock;
         private Label BorrowingDescription;
-        private TextBox BorrowCount;
+        private TextBox BorrowStockValue;
         private Panel panel;
         private Panel panel10;
         private Button button13;
@@ -856,5 +841,6 @@
         private Button button15;
         private PictureBox pictureBox3;
         private Label label6;
+        private TextBox EndTimeValue;
     }
 }

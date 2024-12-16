@@ -129,7 +129,6 @@
             NewImagePath.SizeMode = PictureBoxSizeMode.StretchImage;
             NewImagePath.TabIndex = 7;
             NewImagePath.TabStop = false;
-            NewImagePath.Click += NewImagePath_Click;
             // 
             // button1
             // 
@@ -173,7 +172,7 @@
             ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
             ReturnButton.Size = new Size(109, 22);
-            ReturnButton.TabIndex = 9;
+            ReturnButton.TabIndex = 4;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
             ReturnButton.Click += ReturnButton_Click;
@@ -188,7 +187,7 @@
             SaveButton.Margin = new Padding(3, 2, 3, 2);
             SaveButton.Name = "SaveButton";
             SaveButton.Size = new Size(109, 22);
-            SaveButton.TabIndex = 8;
+            SaveButton.TabIndex = 5;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;
             SaveButton.Click += SaveButton_Click;
@@ -202,18 +201,18 @@
             BrowseImageButton.Margin = new Padding(3, 2, 3, 2);
             BrowseImageButton.Name = "BrowseImageButton";
             BrowseImageButton.Size = new Size(109, 22);
-            BrowseImageButton.TabIndex = 6;
+            BrowseImageButton.TabIndex = 3;
             BrowseImageButton.Text = "Browse";
             BrowseImageButton.UseVisualStyleBackColor = true;
             BrowseImageButton.Click += BrowseImageButton_Click;
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(285, 174);
+            ItemStockBox.Location = new Point(285, 105);
             ItemStockBox.Margin = new Padding(3, 2, 3, 2);
             ItemStockBox.Name = "ItemStockBox";
             ItemStockBox.Size = new Size(86, 23);
-            ItemStockBox.TabIndex = 5;
+            ItemStockBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -230,18 +229,19 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 114);
+            ItemDescriptionBox.Location = new Point(284, 153);
             ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(324, 23);
-            ItemDescriptionBox.TabIndex = 4;
+            ItemDescriptionBox.Size = new Size(324, 134);
+            ItemDescriptionBox.TabIndex = 2;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(285, 146);
+            label5.Location = new Point(285, 83);
             label5.Name = "label5";
             label5.Size = new Size(46, 20);
             label5.TabIndex = 2;
@@ -252,7 +252,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(285, 89);
+            label4.Location = new Point(284, 131);
             label4.Name = "label4";
             label4.Size = new Size(87, 20);
             label4.TabIndex = 1;
@@ -263,7 +263,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(285, 37);
+            label3.Location = new Point(285, 36);
             label3.Name = "label3";
             label3.Size = new Size(39, 20);
             label3.TabIndex = 0;
@@ -314,11 +314,11 @@
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(285, 64);
+            ItemNameBox.Location = new Point(285, 58);
             ItemNameBox.Margin = new Padding(3, 2, 3, 2);
             ItemNameBox.Name = "ItemNameBox";
             ItemNameBox.Size = new Size(324, 23);
-            ItemNameBox.TabIndex = 3;
+            ItemNameBox.TabIndex = 0;
             // 
             // guna2Panel1
             // 

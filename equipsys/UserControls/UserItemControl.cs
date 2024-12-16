@@ -63,19 +63,7 @@ namespace equipsys
             borrowingForm.Stock = UStocklbl.Text;
             borrowingForm.BorrowingImageDisplay = UimageBox.ImageLocation;
             borrowingForm.Show();
-           
-
-
-        }
-
-        private void Return_Click(object sender, EventArgs e)// RETURN BUTTON
-        {
-
-        }
-
-        private void Borrow_Click(object sender, EventArgs e)//BORROW BUTTON
-        {
-
+            this.Parent.Hide();
         }
 
         private void UserItemControl_Load(object sender, EventArgs e)

@@ -30,8 +30,8 @@ namespace equipsys
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             AdminTitlelbl = new Label();
             search = new TextBox();
             pictureBox4 = new PictureBox();
@@ -187,13 +187,12 @@ namespace equipsys
             mainPanel.Controls.Add(pictureBox3);
             mainPanel.Controls.Add(pictureBox2);
             mainPanel.Controls.Add(AccountsButton);
-            mainPanel.CustomizableEdges = customizableEdges3;
+            mainPanel.CustomizableEdges = customizableEdges1;
             mainPanel.Location = new Point(223, 72);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             mainPanel.Size = new Size(651, 352);
             mainPanel.TabIndex = 20;
-            mainPanel.Paint += mainPanel_Paint;
             // 
             // AccountsButton
             // 
@@ -575,7 +574,6 @@ namespace equipsys
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 47;
             pictureBox6.TabStop = false;
-            pictureBox6.Click += pictureBox6_Click;
             // 
             // label3
             // 
@@ -588,7 +586,6 @@ namespace equipsys
             label3.Size = new Size(140, 18);
             label3.TabIndex = 46;
             label3.Text = "Welcome Admin!";
-            label3.Click += label3_Click;
             // 
             // AdminMainForm
             // 
@@ -633,10 +630,6 @@ namespace equipsys
             PerformLayout();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
         private Label AdminTitlelbl;
