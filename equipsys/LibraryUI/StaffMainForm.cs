@@ -48,11 +48,6 @@ namespace equipsys
             //
         }
 
-        private void MAIN_Load(object sender, EventArgs e)
-        {
-            UserProfileName.Text = $"Welcome STAFF";
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();

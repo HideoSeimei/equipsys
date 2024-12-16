@@ -293,9 +293,9 @@
             panel3.Controls.Add(label3);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(pictureBox1);
-            panel3.Location = new Point(0, 1);
+            panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(603, 592);
+            panel3.Size = new Size(603, 597);
             panel3.TabIndex = 34;
             // 
             // guna2Button1
