@@ -24,7 +24,7 @@ namespace equipsys
         public void SetItemData(int itemId, string itemName, string description, int stocks, string imagePath)
         {
             // Set the controls with the values from your data
-            ItemIdlbl.Text = itemId.ToString();
+            ItemIdlbl.Text = $"Item ID: {itemId.ToString()}";
             Namelbl.Text = itemName;
             Descriptionlbl.Text = description;
             Stocklbl.Text = $"Stocks: {stocks}";

@@ -48,10 +48,9 @@
             // UimageBox
             // 
             UimageBox.Image = (Image)resources.GetObject("UimageBox.Image");
-            UimageBox.Location = new Point(32, 13);
-            UimageBox.Margin = new Padding(3, 4, 3, 4);
+            UimageBox.Location = new Point(28, 10);
             UimageBox.Name = "UimageBox";
-            UimageBox.Size = new Size(227, 196);
+            UimageBox.Size = new Size(199, 147);
             UimageBox.SizeMode = PictureBoxSizeMode.StretchImage;
             UimageBox.TabIndex = 0;
             UimageBox.TabStop = false;
@@ -62,9 +61,9 @@
             UNamelbl.BackColor = Color.Transparent;
             UNamelbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             UNamelbl.ForeColor = Color.DimGray;
-            UNamelbl.Location = new Point(296, 29);
+            UNamelbl.Location = new Point(259, 22);
             UNamelbl.Name = "UNamelbl";
-            UNamelbl.Size = new Size(62, 25);
+            UNamelbl.Size = new Size(51, 20);
             UNamelbl.TabIndex = 3;
             UNamelbl.Text = "NAME";
             // 
@@ -74,9 +73,9 @@
             UStocklbl.BackColor = Color.Transparent;
             UStocklbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             UStocklbl.ForeColor = Color.DimGray;
-            UStocklbl.Location = new Point(296, 76);
+            UStocklbl.Location = new Point(259, 57);
             UStocklbl.Name = "UStocklbl";
-            UStocklbl.Size = new Size(65, 25);
+            UStocklbl.Size = new Size(53, 20);
             UStocklbl.TabIndex = 4;
             UStocklbl.Text = "STOCK";
             // 
@@ -86,9 +85,9 @@
             UAvailability.BackColor = Color.Transparent;
             UAvailability.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             UAvailability.ForeColor = Color.DimGray;
-            UAvailability.Location = new Point(296, 119);
+            UAvailability.Location = new Point(259, 89);
             UAvailability.Name = "UAvailability";
-            UAvailability.Size = new Size(118, 25);
+            UAvailability.Size = new Size(97, 20);
             UAvailability.TabIndex = 5;
             UAvailability.Text = "AVAILABILITY";
             // 
@@ -98,18 +97,17 @@
             UItemIDlbl.BackColor = Color.Transparent;
             UItemIDlbl.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             UItemIDlbl.ForeColor = Color.DimGray;
-            UItemIDlbl.Location = new Point(296, 190);
+            UItemIDlbl.Location = new Point(259, 142);
             UItemIDlbl.Name = "UItemIDlbl";
-            UItemIDlbl.Size = new Size(23, 19);
+            UItemIDlbl.Size = new Size(18, 13);
             UItemIDlbl.TabIndex = 10;
             UItemIDlbl.Text = "ID";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(32, 13);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(28, 10);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(227, 196);
+            pictureBox1.Size = new Size(199, 147);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -120,9 +118,9 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(296, 29);
+            label3.Location = new Point(259, 22);
             label3.Name = "label3";
-            label3.Size = new Size(62, 25);
+            label3.Size = new Size(51, 20);
             label3.TabIndex = 3;
             label3.Text = "NAME";
             // 
@@ -132,9 +130,9 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(296, 76);
+            label2.Location = new Point(259, 57);
             label2.Name = "label2";
-            label2.Size = new Size(65, 25);
+            label2.Size = new Size(53, 20);
             label2.TabIndex = 4;
             label2.Text = "STOCK";
             // 
@@ -144,9 +142,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(296, 119);
+            label1.Location = new Point(259, 89);
             label1.Name = "label1";
-            label1.Size = new Size(118, 25);
+            label1.Size = new Size(97, 20);
             label1.TabIndex = 5;
             label1.Text = "AVAILABILITY";
             // 
@@ -155,22 +153,24 @@
             UDescriptionlbl.BackColor = Color.Transparent;
             UDescriptionlbl.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             UDescriptionlbl.ForeColor = Color.DimGray;
-            UDescriptionlbl.Location = new Point(480, 29);
-            UDescriptionlbl.MaximumSize = new Size(343, 0);
-            UDescriptionlbl.MinimumSize = new Size(114, 133);
+            UDescriptionlbl.Location = new Point(420, 22);
+            UDescriptionlbl.MaximumSize = new Size(300, 0);
+            UDescriptionlbl.MinimumSize = new Size(100, 100);
             UDescriptionlbl.Name = "UDescriptionlbl";
-            UDescriptionlbl.Size = new Size(220, 133);
+            UDescriptionlbl.Size = new Size(192, 100);
             UDescriptionlbl.TabIndex = 8;
             UDescriptionlbl.Text = "DESCRIPTION";
+            UDescriptionlbl.Click += UDescriptionlbl_Click;
             // 
             // ReturnButton
             // 
             ReturnButton.BackColor = Color.DarkGoldenrod;
             ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.White;
-            ReturnButton.Location = new Point(600, 169);
+            ReturnButton.Location = new Point(525, 127);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(109, 40);
+            ReturnButton.Size = new Size(95, 30);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "RETURN";
             ReturnButton.UseVisualStyleBackColor = false;
@@ -181,9 +181,10 @@
             BorrowingButton.BackColor = Color.SteelBlue;
             BorrowingButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             BorrowingButton.ForeColor = Color.White;
-            BorrowingButton.Location = new Point(468, 169);
+            BorrowingButton.Location = new Point(410, 127);
+            BorrowingButton.Margin = new Padding(3, 2, 3, 2);
             BorrowingButton.Name = "BorrowingButton";
-            BorrowingButton.Size = new Size(115, 40);
+            BorrowingButton.Size = new Size(101, 30);
             BorrowingButton.TabIndex = 10;
             BorrowingButton.Text = "BORROW";
             BorrowingButton.UseVisualStyleBackColor = false;
@@ -191,7 +192,7 @@
             // 
             // UserItemControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             Controls.Add(UItemIDlbl);
@@ -206,9 +207,8 @@
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UserItemControl";
-            Size = new Size(724, 229);
+            Size = new Size(634, 172);
             Load += UserItemControl_Load;
             ((System.ComponentModel.ISupportInitialize)UimageBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

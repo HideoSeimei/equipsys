@@ -21,7 +21,7 @@ namespace equipsys
         public void SetItemData(int itemId, string itemName, string description, int stocks, string imagePath)
         {
             // Set the controls with the values from your data
-            UItemIDlbl.Text = itemId.ToString();
+            UItemIDlbl.Text = $"Item ID: {itemId.ToString()}";
             UNamelbl.Text = itemName;
             UDescriptionlbl.Text = description;
             UStocklbl.Text = $"Stocks: {stocks}";
@@ -42,7 +42,7 @@ namespace equipsys
             {
                 UimageBox.Image = Image.FromFile(imagePath);
                 UimageBox.ImageLocation = imagePath;
-                
+
             }
 
         }
@@ -63,7 +63,7 @@ namespace equipsys
             borrowingForm.Stock = UStocklbl.Text;
             borrowingForm.BorrowingImageDisplay = UimageBox.ImageLocation;
             borrowingForm.Show();
-           
+
 
 
         }
@@ -79,6 +79,11 @@ namespace equipsys
         }
 
         private void UserItemControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UDescriptionlbl_Click(object sender, EventArgs e)
         {
 
         }
