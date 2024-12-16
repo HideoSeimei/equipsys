@@ -29,7 +29,7 @@ namespace equipsys
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // obtains the selected image path for this item
-                pictureBox4.Image = new Bitmap(openFileDialog.FileName);
+                BorrowingImageBox.Image = new Bitmap(openFileDialog.FileName);
                 selectedImagePath = openFileDialog.FileName;
             }
         }
@@ -42,17 +42,19 @@ namespace equipsys
                 ItemModel newItemModel = new ItemModel();
                 newItemModel.AddItem(ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), selectedImagePath);
 
-                // Resets textboxes to null values.
+                // Resets textboxes/image to null values.
                 ItemNameBox.Text = "";
                 ItemDescriptionBox.Text = "";
                 ItemStockBox.Text = "0";
                 selectedImagePath = "";
+                string DefaultimagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Images\default image.png");// here is the path of the default image
+                BorrowingImageBox.Image = Image.FromFile(DefaultimagePath);
 
                 // close form after adding a new item
                 AdminMainForm adminMainForm = new AdminMainForm();
                 adminMainForm.mainPanel.Controls.Clear();// this is not working
                 adminMainForm.OpenEquipment();// this is not working
-                
+
             }
             else
             {
@@ -101,6 +103,11 @@ namespace equipsys
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

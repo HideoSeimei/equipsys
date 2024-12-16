@@ -34,7 +34,7 @@
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ReturnButton = new Button();
             SaveItemButton = new Button();
-            pictureBox4 = new PictureBox();
+            BorrowingImageBox = new PictureBox();
             AddImageButton = new Button();
             ItemStockBox = new TextBox();
             ItemDescriptionBox = new TextBox();
@@ -45,7 +45,7 @@
             label2 = new Label();
             openFileDialog1 = new OpenFileDialog();
             guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BorrowingImageBox).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -53,7 +53,7 @@
             guna2Panel1.BackColor = Color.LightGray;
             guna2Panel1.Controls.Add(ReturnButton);
             guna2Panel1.Controls.Add(SaveItemButton);
-            guna2Panel1.Controls.Add(pictureBox4);
+            guna2Panel1.Controls.Add(BorrowingImageBox);
             guna2Panel1.Controls.Add(AddImageButton);
             guna2Panel1.Controls.Add(ItemStockBox);
             guna2Panel1.Controls.Add(ItemDescriptionBox);
@@ -68,6 +68,7 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(651, 352);
             guna2Panel1.TabIndex = 46;
+            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // ReturnButton
             // 
@@ -98,17 +99,17 @@
             SaveItemButton.UseVisualStyleBackColor = false;
             SaveItemButton.Click += SaveButton_Click;
             // 
-            // pictureBox4
+            // BorrowingImageBox
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(48, 36);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(208, 158);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click_1;
+            BorrowingImageBox.Image = (Image)resources.GetObject("BorrowingImageBox.Image");
+            BorrowingImageBox.Location = new Point(48, 36);
+            BorrowingImageBox.Margin = new Padding(3, 2, 3, 2);
+            BorrowingImageBox.Name = "BorrowingImageBox";
+            BorrowingImageBox.Size = new Size(208, 158);
+            BorrowingImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            BorrowingImageBox.TabIndex = 7;
+            BorrowingImageBox.TabStop = false;
+            BorrowingImageBox.Click += pictureBox4_Click_1;
             // 
             // AddImageButton
             // 
@@ -213,7 +214,7 @@
             Load += AddItemForm_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BorrowingImageBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,6 +233,6 @@
         public TextBox ItemNameBox;
         public Label label5;
         public Label label4;
-        public PictureBox pictureBox4;
+        public PictureBox BorrowingImageBox;
     }
 }
