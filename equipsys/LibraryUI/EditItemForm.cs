@@ -31,6 +31,7 @@ namespace equipsys
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             AdminMainForm adminMainForm = new AdminMainForm();
+            adminMainForm.Hide();
             adminMainForm.Show();
             this.Hide();
 

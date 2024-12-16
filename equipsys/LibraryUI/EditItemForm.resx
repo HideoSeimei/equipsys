@@ -259,6 +259,15 @@
         +sj7AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAANdJREFUSEvt
+        ldENgzAMRDMKozAKo7BJR+kojBLualuilDixq/aLJ51E27OvDgmUmzS11glaoc3RrPYcaPCAeixqz4EG
+        /KeE08wXmtSaB00s5Lsl8UDzcAi8selQEAqBjxuFbPpVH5qlJhRiNWNBNIo/tlzQeBBN4n0PwWc7Py0d
+        t74fRIP4PkLYKEL7LOFHb5IFOk9gOk7y1LJrYMjeE8MPIDBlQox+AIExFEKf2AcDCMyp5dLLMVAQDgmD
+        5hbCnXR+Ar+k1jxo8pf3iZ1sTtTS75byppRSdru5QYexFY8UAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAKHhJREFUeF7t
@@ -437,15 +446,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQum/4hv8PKgmqvwDAY5cAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAANdJREFUSEvt
-        ldENgzAMRDMKozAKo7BJR+kojBLualuilDixq/aLJ51E27OvDgmUmzS11glaoc3RrPYcaPCAeixqz4EG
-        /KeE08wXmtSaB00s5Lsl8UDzcAi8selQEAqBjxuFbPpVH5qlJhRiNWNBNIo/tlzQeBBN4n0PwWc7Py0d
-        t74fRIP4PkLYKEL7LOFHb5IFOk9gOk7y1LJrYMjeE8MPIDBlQox+AIExFEKf2AcDCMyp5dLLMVAQDgmD
-        5hbCnXR+Ar+k1jxo8pf3iZ1sTtTS75byppRSdru5QYexFY8UAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAbJJREFUWEft
@@ -573,4 +573,7 @@
         uJ8CkVS7S8X/jGn6ABujlaD2u4/DAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

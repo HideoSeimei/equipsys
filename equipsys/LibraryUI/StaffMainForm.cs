@@ -65,5 +65,48 @@ namespace equipsys
             login.Show();
             this.Hide();
         }
+        // ============================================================================= NEW BUTTONS BELOW ====================================================
+        private void button4_Click(object sender, EventArgs e) // HOME 
+        {
+            //For showing useritems
+            UserItems useritems = new UserItems() { TopLevel = false, TopMost = true };
+            useritems.FormBorderStyle = FormBorderStyle.None;
+            useritems.Size = mainPanel.ClientSize;
+            useritems.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(useritems);
+            useritems.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)// HISTORY
+        {
+            //for opening the records/history form
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
+            record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(record);
+            record.Show();
+            //
+        }
+
+        private void button7_Click(object sender, EventArgs e)// ADD ITEM
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)// LOGOUT
+        {
+            // for going back to user login form
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Hide();
+        }
     }
 }

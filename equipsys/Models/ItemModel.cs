@@ -49,7 +49,7 @@ namespace equipsys.Models
                 // when image is added, find the folder and the image path for the item.
                 else
                 {
-                    string imageFolder = @"C:\Users\Benedict\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local
+                    string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -107,7 +107,7 @@ namespace equipsys.Models
                 //MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {description}, Stock: {stock}");
 
                 string finalImagePath = "";
-                string imageFolder = @"C:\Users\Benedict\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local 
+                string imageFolder = @"C:\Users\itiw\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local 
                 string imageFileName = Path.GetFileName(newImage);
                 finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -121,7 +121,7 @@ namespace equipsys.Models
                 cmd.ExecuteNonQuery();
                 ItemForm itemForm = new ItemForm();
                 itemForm.ReloadFlowLayoutPanel();
-                itemForm.Show();
+                
             }
         }
 

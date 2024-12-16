@@ -50,8 +50,9 @@ namespace equipsys
 
                 // close form after adding a new item
                 AdminMainForm adminMainForm = new AdminMainForm();
-                adminMainForm.Show();
-                this.Hide();
+                adminMainForm.mainPanel.Controls.Clear();// this is not working
+                adminMainForm.OpenEquipment();// this is not working
+                
             }
             else
             {

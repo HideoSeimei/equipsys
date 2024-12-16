@@ -80,7 +80,7 @@ namespace equipsys
         {
             // Create an instance of the EditItemForm
             EditItemForm editItemForm = new EditItemForm();
-
+         
             // Pass the data from the UserControl to the EditItemForm
             editItemForm.ItemID = int.Parse(ItemIdlbl.Text); 
             editItemForm.ItemName = Namelbl.Text;
@@ -88,8 +88,8 @@ namespace equipsys
             editItemForm.ItemStock = int.Parse(Stocklbl.Text.Replace("Stocks: ", "")); // Parse the stock value
             editItemForm.NewSelectedImage = imageBox.ImageLocation;
             // Show the EditItemForm
-            editItemForm.Show();
             AdminMainForm admin = new AdminMainForm();
+            editItemForm.Show();
             admin.Hide();
         }
 

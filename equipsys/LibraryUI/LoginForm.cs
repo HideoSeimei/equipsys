@@ -76,7 +76,7 @@ namespace equipsys
 
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)// REVEAL/HIDE PASSWORD
         {
             // reveal password toggle
             if (passwordbox.UseSystemPasswordChar == true) // if password is hidden
@@ -108,6 +108,15 @@ namespace equipsys
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)// BACK TO ROLE SELECTION
+        {
+            // For opening the role selection form
+            RoleSelectionForm roleSelection = new RoleSelectionForm();
+            roleSelection.Show();
+            this.Hide();
+                 
         }
     }
 }

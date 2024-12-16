@@ -28,13 +28,7 @@ namespace equipsys
         public AdminMainForm()
         {
             InitializeComponent();//to immediately show the itemform in the panel
-            ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
-            items.FormBorderStyle = FormBorderStyle.None;
-            items.Size = mainPanel.ClientSize;
-            items.Dock = DockStyle.Fill;
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(items);
-            items.Show();
+            OpenEquipment();
             //for timer 
             // Initialize the Timer
             timer = new System.Windows.Forms.Timer();
@@ -168,6 +162,71 @@ namespace equipsys
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 
+        }
+        //                =================================================== THIS ARE ALL THE NEW BUTTONS ===================================================
+        private void button4_Click(object sender, EventArgs e)// HOME
+        {
+            //for opening the items form
+            OpenEquipment();
+        }
+
+
+        private void button8_Click(object sender, EventArgs e)// HISTORY
+        {
+            //for opening the records form
+            HistoryLogForm record = new HistoryLogForm() { TopLevel = false, TopMost = true };
+            record.FormBorderStyle = FormBorderStyle.None;
+            record.Size = mainPanel.ClientSize;
+            record.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(record);
+            record.Show();
+            //
+        }
+
+        private void button10_Click(object sender, EventArgs e)// SIGN IN 
+        {
+            // For opening the registration form
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)// ADD ITEM
+        {
+            OpenAddItem();  
+        }
+
+        private void button13_Click(object sender, EventArgs e)// LOGOUT BUTTON
+        {
+            // for loging out (will send you back to Admin login form)
+            LoginFormAdmin loginAdmin = new LoginFormAdmin();
+            loginAdmin.Show();
+            this.Hide();
+            //
+        }
+        // method for opening equipment
+        public void OpenEquipment()
+        {
+            ItemForm items = new ItemForm() { TopLevel = false, TopMost = true };
+            items.FormBorderStyle = FormBorderStyle.None;
+            items.Size = mainPanel.ClientSize;
+            items.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(items);
+            items.Show();
+        }
+        public void OpenAddItem()
+        {
+            //for opening the add item form
+            AddItemForm Additem = new AddItemForm() { TopLevel = false, TopMost = true };
+            Additem.FormBorderStyle = FormBorderStyle.None;
+            Additem.Size = mainPanel.ClientSize;
+            Additem.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(Additem);
+            Additem.Show();
+            //
         }
     }
 }

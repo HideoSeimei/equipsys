@@ -51,7 +51,7 @@ namespace equipsys
             }
             else if (result == "user")// validation if they enter user account
             {
-                accountChecker.Text = "Enter Admin account"; 
+                accountChecker.Text = "Enter Admin account";
 
             }
             else if (result == "admin")
@@ -64,6 +64,33 @@ namespace equipsys
             {
                 accountChecker.Text = "Invalid account";
             }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)// REVEAL/HIDE PASSWORD
+        {
+            // reveal password toggle
+            if (passwordbox.UseSystemPasswordChar == true) // if password is hidden
+            {
+                passwordbox.UseSystemPasswordChar = false;
+            }
+            else // if password is not hidden
+            {
+                passwordbox.UseSystemPasswordChar = true;
+            }
+            //
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)// Back to Role Selection
+        {
+            // For opening the role selection form
+            RoleSelectionForm roleSelection = new RoleSelectionForm();
+            roleSelection.Show();
+            this.Hide();
+        }
+
+        private void LoginFormAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
