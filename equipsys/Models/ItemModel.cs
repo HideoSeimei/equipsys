@@ -46,7 +46,7 @@ namespace equipsys.Models
                 // when no image is added, default image displays.
                 if (string.IsNullOrEmpty(image))
 
-                    finalImagePath = @".\Images\default_image.png";
+                    finalImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Images\default image.png"); 
                 // when image is added, find the folder and the image path for the item.
                 else
                 {

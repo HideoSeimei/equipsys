@@ -136,8 +136,9 @@ namespace equipsys
 
         private void textBox1_TextChanged(object sender, EventArgs e)// SEARCH BOX
         {
+            
             searchBox = search.Text.Trim();
-            MessageBox.Show(searchBox);
+            
         }
 
         private void AccountsButton_Click_1(object sender, EventArgs e)
