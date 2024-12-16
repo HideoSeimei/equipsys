@@ -44,7 +44,6 @@ namespace equipsys
             ItemDescriptionBox.Text = ItemDescription;
             ItemStockBox.Text = ItemStock.ToString();
             NewImagePath.Image = new Bitmap(NewSelectedImage); // TODO -  handle this error when image is emptyorat default image
-            MessageBox.Show(ItemName);
         }
 
         private void SaveButton_Click(object sender, EventArgs e)// SAVE BUTTON
@@ -55,6 +54,7 @@ namespace equipsys
                 {
                     ItemModel itemmodel = new ItemModel();
                     itemmodel.EditItem(ItemID, ItemNameBox.Text, ItemDescriptionBox.Text, Int32.Parse(ItemStockBox.Text), NewSelectedImage);
+                    MessageBox.Show("Saved Successfully");
                     ItemForm itemform = new ItemForm();
                     ItemLoader itemLoader = new ItemLoader(itemform.flowLayoutPanel1);
                     itemLoader.LoadToPanel();
