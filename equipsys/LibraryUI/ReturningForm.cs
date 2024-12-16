@@ -14,11 +14,13 @@ namespace equipsys.LibraryUI
 {
     public partial class ReturningForm : Form
     {
+        private HistoryLogForm _historyLogForm;
         SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
 
-        public ReturningForm()
+        public ReturningForm(HistoryLogForm historyLogForm)
         {
             InitializeComponent();
+            _historyLogForm = historyLogForm;
         }
 
         private void ReturningForm_Load(object sender, EventArgs e)
@@ -39,6 +41,8 @@ namespace equipsys.LibraryUI
             cmd2.ExecuteNonQuery();
             sql.Close();
             MessageBox.Show("Status updated successfully");
+            _historyLogForm.gridbind();
+            this.Hide();
         }
 
         private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)

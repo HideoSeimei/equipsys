@@ -39,7 +39,6 @@
             label2 = new Label();
             label1 = new Label();
             UDescriptionlbl = new Label();
-            ReturnButton = new Button();
             BorrowingButton = new Button();
             ((System.ComponentModel.ISupportInitialize)UimageBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -164,25 +163,12 @@
             UDescriptionlbl.Text = "DESCRIPTION";
             UDescriptionlbl.Click += UDescriptionlbl_Click;
             // 
-            // ReturnButton
-            // 
-            ReturnButton.BackColor = Color.DarkGoldenrod;
-            ReturnButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ReturnButton.ForeColor = Color.White;
-            ReturnButton.Location = new Point(600, 169);
-            ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(109, 40);
-            ReturnButton.TabIndex = 9;
-            ReturnButton.Text = "RETURN";
-            ReturnButton.UseVisualStyleBackColor = false;
-            ReturnButton.Click += ReturningButton_Click;
-            // 
             // BorrowingButton
             // 
             BorrowingButton.BackColor = Color.Teal;
             BorrowingButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             BorrowingButton.ForeColor = Color.White;
-            BorrowingButton.Location = new Point(469, 169);
+            BorrowingButton.Location = new Point(584, 169);
             BorrowingButton.Name = "BorrowingButton";
             BorrowingButton.Size = new Size(115, 40);
             BorrowingButton.TabIndex = 10;
@@ -201,7 +187,6 @@
             Controls.Add(UNamelbl);
             Controls.Add(UimageBox);
             Controls.Add(BorrowingButton);
-            Controls.Add(ReturnButton);
             Controls.Add(UDescriptionlbl);
             Controls.Add(label1);
             Controls.Add(label2);
@@ -229,7 +214,6 @@
         private Label label2;
         private Label label1;
         private Label UDescriptionlbl;
-        private Button ReturnButton;
         private Button BorrowingButton;
     }
 }

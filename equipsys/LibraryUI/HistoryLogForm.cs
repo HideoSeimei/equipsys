@@ -41,10 +41,10 @@ namespace equipsys
             gridbind();
         }
 
-        private void gridbind()
+        public void gridbind()
         {
             sql.Open();
-            SqlCommand cmd = new SqlCommand("select * from BorrowerHistory", sql);
+            SqlCommand cmd = new SqlCommand("select * from BorrowerHistory ORDER BY Start_Time ASC", sql);
             SqlDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(reader);
@@ -59,7 +59,7 @@ namespace equipsys
 
         private void ReturnButton_Click(object sender, EventArgs e)
         {
-            ReturningForm returnform = new ReturningForm();
+            ReturningForm returnform = new ReturningForm(this);
             returnform.Show();
         }
     }

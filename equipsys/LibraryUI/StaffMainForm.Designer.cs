@@ -34,8 +34,8 @@
             UserTitlelbl = new Label();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             panel = new Panel();
-            button8 = new Button();
             button13 = new Button();
+            button8 = new Button();
             button4 = new Button();
             pictureBox5 = new PictureBox();
             search = new TextBox();
@@ -54,19 +54,20 @@
             UserTitlelbl.BackColor = Color.Transparent;
             UserTitlelbl.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             UserTitlelbl.ForeColor = Color.FromArgb(32, 33, 35);
-            UserTitlelbl.Location = new Point(224, 28);
+            UserTitlelbl.Location = new Point(256, 37);
             UserTitlelbl.Name = "UserTitlelbl";
-            UserTitlelbl.Size = new Size(127, 26);
+            UserTitlelbl.Size = new Size(163, 32);
             UserTitlelbl.TabIndex = 7;
             UserTitlelbl.Text = "Equipment";
             // 
             // mainPanel
             // 
             mainPanel.CustomizableEdges = customizableEdges1;
-            mainPanel.Location = new Point(224, 72);
+            mainPanel.Location = new Point(256, 96);
+            mainPanel.Margin = new Padding(3, 4, 3, 4);
             mainPanel.Name = "mainPanel";
             mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            mainPanel.Size = new Size(651, 352);
+            mainPanel.Size = new Size(744, 469);
             mainPanel.TabIndex = 21;
             // 
             // panel
@@ -77,29 +78,9 @@
             panel.Controls.Add(button4);
             panel.Controls.Add(pictureBox5);
             panel.Location = new Point(0, 0);
-            panel.Margin = new Padding(3, 2, 3, 2);
             panel.Name = "panel";
-            panel.Size = new Size(206, 442);
+            panel.Size = new Size(235, 589);
             panel.TabIndex = 46;
-            // 
-            // button8
-            // 
-            button8.BackgroundImageLayout = ImageLayout.None;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(8, 146);
-            button8.Margin = new Padding(3, 2, 3, 2);
-            button8.Name = "button8";
-            button8.Padding = new Padding(22, 0, 0, 0);
-            button8.Size = new Size(186, 56);
-            button8.TabIndex = 46;
-            button8.Text = " History";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
             // 
             // button13
             // 
@@ -110,15 +91,32 @@
             button13.ForeColor = Color.White;
             button13.Image = (Image)resources.GetObject("button13.Image");
             button13.ImageAlign = ContentAlignment.MiddleLeft;
-            button13.Location = new Point(19, 358);
-            button13.Margin = new Padding(3, 2, 3, 2);
+            button13.Location = new Point(22, 477);
             button13.Name = "button13";
-            button13.Padding = new Padding(22, 0, 0, 0);
-            button13.Size = new Size(166, 56);
+            button13.Padding = new Padding(25, 0, 0, 0);
+            button13.Size = new Size(190, 75);
             button13.TabIndex = 45;
             button13.Text = "   Log out";
             button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
+            // 
+            // button8
+            // 
+            button8.BackgroundImageLayout = ImageLayout.None;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.ImageAlign = ContentAlignment.MiddleLeft;
+            button8.Location = new Point(9, 195);
+            button8.Name = "button8";
+            button8.Padding = new Padding(25, 0, 0, 0);
+            button8.Size = new Size(213, 75);
+            button8.TabIndex = 46;
+            button8.Text = " History";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button4
             // 
@@ -129,11 +127,10 @@
             button4.ForeColor = Color.White;
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(9, 82);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Location = new Point(10, 109);
             button4.Name = "button4";
-            button4.Padding = new Padding(22, 0, 0, 0);
-            button4.Size = new Size(186, 56);
+            button4.Padding = new Padding(25, 0, 0, 0);
+            button4.Size = new Size(213, 75);
             button4.TabIndex = 45;
             button4.Text = "Home";
             button4.UseVisualStyleBackColor = false;
@@ -142,10 +139,9 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(72, 21);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Location = new Point(82, 28);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(54, 43);
+            pictureBox5.Size = new Size(62, 57);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 46;
             pictureBox5.TabStop = false;
@@ -153,21 +149,20 @@
             // search
             // 
             search.ForeColor = Color.DimGray;
-            search.Location = new Point(393, 30);
-            search.Margin = new Padding(3, 2, 3, 2);
+            search.Location = new Point(449, 40);
             search.Name = "search";
-            search.Size = new Size(200, 23);
+            search.Size = new Size(228, 27);
             search.TabIndex = 48;
+            search.TextChanged += search_TextChanged;
             // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(598, 30);
-            pictureBox3.Margin = new Padding(3, 2, 3, 2);
+            pictureBox3.Location = new Point(683, 40);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(25, 22);
+            pictureBox3.Size = new Size(29, 29);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 47;
             pictureBox3.TabStop = false;
@@ -175,10 +170,9 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(830, 31);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
+            pictureBox6.Location = new Point(949, 41);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(24, 20);
+            pictureBox6.Size = new Size(27, 27);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 50;
             pictureBox6.TabStop = false;
@@ -189,17 +183,17 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(693, 33);
+            label3.Location = new Point(792, 44);
             label3.Name = "label3";
-            label3.Size = new Size(127, 18);
+            label3.Size = new Size(158, 23);
             label3.TabIndex = 49;
             label3.Text = "Welcome Staff!";
             // 
             // MAIN
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(886, 441);
+            ClientSize = new Size(1013, 588);
             Controls.Add(pictureBox6);
             Controls.Add(label3);
             Controls.Add(search);
@@ -208,7 +202,6 @@
             Controls.Add(mainPanel);
             Controls.Add(UserTitlelbl);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "MAIN";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MAIN";

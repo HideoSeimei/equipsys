@@ -62,9 +62,9 @@
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(454, 348);
+            ReturnButton.Location = new Point(389, 348);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(125, 29);
+            ReturnButton.Size = new Size(190, 29);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Process Return";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -72,6 +72,8 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.LightGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(14, 16);

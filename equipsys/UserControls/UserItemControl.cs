@@ -47,13 +47,6 @@ namespace equipsys
 
         }
 
-        private void ReturningButton_Click(object sender, EventArgs e)
-        {
-            ReturningForm returningForm = new ReturningForm();
-            returningForm.Show();
-            this.Hide();
-        }
-
         private void BorrowingButton_Click(object sender, EventArgs e)//BORROW
         {
 
