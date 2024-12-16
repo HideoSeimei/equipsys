@@ -41,10 +41,12 @@ namespace equipsys
             label3 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -53,7 +55,7 @@ namespace equipsys
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(32, 33, 35);
-            label2.Location = new Point(803, 324);
+            label2.Location = new Point(796, 324);
             label2.Name = "label2";
             label2.Size = new Size(31, 23);
             label2.TabIndex = 61;
@@ -66,7 +68,7 @@ namespace equipsys
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(704, 354);
+            button2.Location = new Point(707, 357);
             button2.Name = "button2";
             button2.Size = new Size(213, 45);
             button2.TabIndex = 60;
@@ -80,7 +82,7 @@ namespace equipsys
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(719, 233);
+            label4.Location = new Point(722, 236);
             label4.Name = "label4";
             label4.Size = new Size(183, 23);
             label4.TabIndex = 58;
@@ -93,7 +95,7 @@ namespace equipsys
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(642, 85);
+            label1.Location = new Point(645, 88);
             label1.Name = "label1";
             label1.Size = new Size(336, 68);
             label1.TabIndex = 53;
@@ -106,7 +108,7 @@ namespace equipsys
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(704, 270);
+            button1.Location = new Point(707, 273);
             button1.Name = "button1";
             button1.Size = new Size(213, 45);
             button1.TabIndex = 52;
@@ -117,6 +119,7 @@ namespace equipsys
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(32, 33, 35);
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.Controls.Add(label6);
             panel3.Controls.Add(pictureBox5);
             panel3.Controls.Add(label3);
@@ -133,7 +136,7 @@ namespace equipsys
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Transparent;
-            label6.Location = new Point(65, 84);
+            label6.Location = new Point(66, 83);
             label6.Name = "label6";
             label6.Size = new Size(465, 64);
             label6.TabIndex = 27;
@@ -144,7 +147,7 @@ namespace equipsys
             // 
             pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(195, 188);
+            pictureBox5.Location = new Point(196, 187);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(205, 189);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -157,7 +160,7 @@ namespace equipsys
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI Semibold", 7.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(123, 405);
+            label3.Location = new Point(124, 404);
             label3.Name = "label3";
             label3.Size = new Size(367, 51);
             label3.TabIndex = 31;
@@ -168,7 +171,7 @@ namespace equipsys
             // 
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(247, 487);
+            pictureBox2.Location = new Point(248, 486);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(41, 39);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -179,18 +182,31 @@ namespace equipsys
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(308, 487);
+            pictureBox1.Location = new Point(309, 486);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(45, 39);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 24;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.Cursor = Cursors.Hand;
+            pictureBox3.Location = new Point(978, 12);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(22, 23);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 63;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
             // RoleSelectionForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1013, 588);
+            Controls.Add(pictureBox3);
             Controls.Add(panel3);
             Controls.Add(label2);
             Controls.Add(button2);
@@ -206,6 +222,7 @@ namespace equipsys
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -230,5 +247,6 @@ namespace equipsys
         private Label label3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
     }
 }

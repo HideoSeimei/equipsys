@@ -44,13 +44,6 @@ namespace equipsys
             ItemForm itemform = new ItemForm();
             itemform.ReloadFlowLayoutPanel();
         }
-        private void MAIN_ADMIN_Load(object sender, EventArgs e)
-        {
-            //for setting the Profile Name
-
-            profileName.Text = $"Welcome ADMIN";
-        }
-
         private void items_Click(object sender, EventArgs e)// ITEMS BUTTON
         {
             //for opening the items form
