@@ -11,10 +11,11 @@ namespace equipsys.Models
         public string LastName { get; set; }
         public string Course { get; set; }
         public string Year { get; set; }
+        public string Section { get; set; }
         public string StudentID { get; set; }
 
         // CONSTRUCTORS
-        public AccountModel(string username, string password, string firstname, string lastname, string course, string year, string studentid)
+        public AccountModel(string username, string password, string firstname, string lastname, string course, string year, string section, string studentid)
         {
             Username = username;
             Password = password;
@@ -22,6 +23,7 @@ namespace equipsys.Models
             LastName = lastname;
             Course = course;
             Year = year;
+            Section = section;
             StudentID = studentid;
         }
 
@@ -36,12 +38,13 @@ namespace equipsys.Models
         /// <param name="lastname"></param>
         /// <param name="course"></param>
         /// <param name="year"></param>
+        /// 
         /// <param name="studentid"></param>
         /// <returns></returns>
-        public bool AddAccount(string username, string password, string firstname, string lastname, string course, string year, string studentid)
+        public bool AddAccount(string username, string password, string firstname, string lastname, string course, string year, string section, string studentid)
         {
             SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
-            string saveAccountQuery = "INSERT INTO Accounts (username, password, role, firstname, lastname, course, year, studentid) VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @STUDENTID)";
+            string saveAccountQuery = "INSERT INTO Accounts (username, password, role, firstname, lastname, course, year, section, studentid) VALUES(@USERNAME, @PASSWORD, 'user', @FIRSTNAME, @LASTNAME, @COURSE, @YEAR, @SECTION, @STUDENTID)";
             sql.Open();
             SqlCommand cmd = new SqlCommand(saveAccountQuery, sql);
             cmd.Parameters.AddWithValue("@USERNAME", username);
@@ -50,6 +53,7 @@ namespace equipsys.Models
             cmd.Parameters.AddWithValue("@LASTNAME", lastname);
             cmd.Parameters.AddWithValue("@COURSE", course);
             cmd.Parameters.AddWithValue("@YEAR", year);
+            cmd.Parameters.AddWithValue("@SECTION", section);
             cmd.Parameters.AddWithValue("@STUDENTID", studentid);
 
             int rowsAffected = cmd.ExecuteNonQuery();

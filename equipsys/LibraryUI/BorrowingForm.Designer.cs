@@ -40,27 +40,26 @@
             BorrowingItemName = new Label();
             BorrowingImage = new PictureBox();
             groupBox1 = new GroupBox();
-            BorrowCount = new TextBox();
-            comboBox7 = new ComboBox();
+            BorrowStockValue = new TextBox();
             button3 = new Button();
             label13 = new Label();
             button2 = new Button();
             EndTime = new ComboBox();
-            SectionBox = new ComboBox();
-            yearBox = new ComboBox();
+            SectionValue = new ComboBox();
+            YearValue = new ComboBox();
             label3 = new Label();
             label5 = new Label();
             label12 = new Label();
-            EmailBox = new TextBox();
+            EmailValue = new TextBox();
             label11 = new Label();
-            contactBox = new TextBox();
-            courseBox = new ComboBox();
+            ContactNumberValue = new TextBox();
+            CourseValue = new ComboBox();
             label4 = new Label();
-            studentidReg = new TextBox();
-            lastnameReg = new TextBox();
+            StudentIDValue = new TextBox();
+            LastNameValue = new TextBox();
             label9 = new Label();
             label10 = new Label();
-            firstnameReg = new TextBox();
+            FirstNameValue = new TextBox();
             panel = new Panel();
             button13 = new Button();
             button8 = new Button();
@@ -178,28 +177,27 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.WhiteSmoke;
-            groupBox1.Controls.Add(BorrowCount);
-            groupBox1.Controls.Add(comboBox7);
+            groupBox1.Controls.Add(BorrowStockValue);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(EndTime);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(SectionBox);
-            groupBox1.Controls.Add(yearBox);
+            groupBox1.Controls.Add(SectionValue);
+            groupBox1.Controls.Add(YearValue);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(EmailBox);
+            groupBox1.Controls.Add(EmailValue);
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(contactBox);
-            groupBox1.Controls.Add(courseBox);
+            groupBox1.Controls.Add(ContactNumberValue);
+            groupBox1.Controls.Add(CourseValue);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(studentidReg);
-            groupBox1.Controls.Add(lastnameReg);
+            groupBox1.Controls.Add(StudentIDValue);
+            groupBox1.Controls.Add(LastNameValue);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(firstnameReg);
+            groupBox1.Controls.Add(FirstNameValue);
             groupBox1.ForeColor = Color.ForestGreen;
             groupBox1.Location = new Point(216, 7);
             groupBox1.Name = "groupBox1";
@@ -207,21 +205,12 @@
             groupBox1.TabIndex = 49;
             groupBox1.TabStop = false;
             // 
-            // BorrowCount
+            // BorrowStockValue
             // 
-            BorrowCount.Location = new Point(23, 355);
-            BorrowCount.Name = "BorrowCount";
-            BorrowCount.Size = new Size(74, 27);
-            BorrowCount.TabIndex = 58;
-            // 
-            // comboBox7
-            // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            comboBox7.Location = new Point(23, 317);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(71, 28);
-            comboBox7.TabIndex = 57;
+            BorrowStockValue.Location = new Point(23, 308);
+            BorrowStockValue.Name = "BorrowStockValue";
+            BorrowStockValue.Size = new Size(74, 27);
+            BorrowStockValue.TabIndex = 58;
             // 
             // button3
             // 
@@ -269,27 +258,29 @@
             EndTime.Size = new Size(52, 28);
             EndTime.TabIndex = 56;
             // 
-            // SectionBox
+            // SectionValue
             // 
-            SectionBox.ForeColor = Color.FromArgb(32, 33, 35);
-            SectionBox.FormattingEnabled = true;
-            SectionBox.Items.AddRange(new object[] { "A", "B" });
-            SectionBox.Location = new Point(185, 165);
-            SectionBox.Name = "SectionBox";
-            SectionBox.Size = new Size(63, 28);
-            SectionBox.TabIndex = 55;
-            SectionBox.Text = "Sec";
+            SectionValue.ForeColor = Color.FromArgb(32, 33, 35);
+            SectionValue.FormattingEnabled = true;
+            SectionValue.Items.AddRange(new object[] { "A", "B" });
+            SectionValue.Location = new Point(185, 165);
+            SectionValue.Name = "SectionValue";
+            SectionValue.Size = new Size(63, 28);
+            SectionValue.TabIndex = 55;
+            SectionValue.Text = "Sec";
+            SectionValue.SelectedIndexChanged += SectionBox_SelectedIndexChanged;
             // 
-            // yearBox
+            // YearValue
             // 
-            yearBox.ForeColor = Color.FromArgb(32, 33, 35);
-            yearBox.FormattingEnabled = true;
-            yearBox.Items.AddRange(new object[] { "1st", "2nd", "3rd", "4th" });
-            yearBox.Location = new Point(112, 165);
-            yearBox.Name = "yearBox";
-            yearBox.Size = new Size(65, 28);
-            yearBox.TabIndex = 54;
-            yearBox.Text = "Yr";
+            YearValue.ForeColor = Color.FromArgb(32, 33, 35);
+            YearValue.FormattingEnabled = true;
+            YearValue.Items.AddRange(new object[] { "1st", "2nd", "3rd", "4th" });
+            YearValue.Location = new Point(112, 165);
+            YearValue.Name = "YearValue";
+            YearValue.Size = new Size(65, 28);
+            YearValue.TabIndex = 54;
+            YearValue.Text = "Yr";
+            YearValue.SelectedIndexChanged += yearBox_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -324,13 +315,13 @@
             label12.TabIndex = 52;
             label12.Text = "Email";
             // 
-            // EmailBox
+            // EmailValue
             // 
-            EmailBox.ForeColor = Color.DimGray;
-            EmailBox.Location = new Point(263, 239);
-            EmailBox.Name = "EmailBox";
-            EmailBox.Size = new Size(199, 27);
-            EmailBox.TabIndex = 51;
+            EmailValue.ForeColor = Color.DimGray;
+            EmailValue.Location = new Point(263, 239);
+            EmailValue.Name = "EmailValue";
+            EmailValue.Size = new Size(199, 27);
+            EmailValue.TabIndex = 51;
             // 
             // label11
             // 
@@ -343,24 +334,25 @@
             label11.TabIndex = 50;
             label11.Text = "Contact Number";
             // 
-            // contactBox
+            // ContactNumberValue
             // 
-            contactBox.ForeColor = Color.DimGray;
-            contactBox.Location = new Point(23, 236);
-            contactBox.Name = "contactBox";
-            contactBox.Size = new Size(215, 27);
-            contactBox.TabIndex = 49;
+            ContactNumberValue.ForeColor = Color.DimGray;
+            ContactNumberValue.Location = new Point(23, 236);
+            ContactNumberValue.Name = "ContactNumberValue";
+            ContactNumberValue.Size = new Size(215, 27);
+            ContactNumberValue.TabIndex = 49;
             // 
-            // courseBox
+            // CourseValue
             // 
-            courseBox.ForeColor = Color.FromArgb(32, 33, 35);
-            courseBox.FormattingEnabled = true;
-            courseBox.Items.AddRange(new object[] { "BSCS", "BSIT", "BSIS", "BSEMC" });
-            courseBox.Location = new Point(23, 165);
-            courseBox.Name = "courseBox";
-            courseBox.Size = new Size(83, 28);
-            courseBox.TabIndex = 39;
-            courseBox.Text = " Course";
+            CourseValue.ForeColor = Color.FromArgb(32, 33, 35);
+            CourseValue.FormattingEnabled = true;
+            CourseValue.Items.AddRange(new object[] { "BSCS", "BSIT", "BSIS", "BSEMC" });
+            CourseValue.Location = new Point(23, 165);
+            CourseValue.Name = "CourseValue";
+            CourseValue.Size = new Size(83, 28);
+            CourseValue.TabIndex = 39;
+            CourseValue.Text = " Course";
+            CourseValue.SelectedIndexChanged += courseBox_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -373,21 +365,21 @@
             label4.TabIndex = 23;
             label4.Text = "Student ID";
             // 
-            // studentidReg
+            // StudentIDValue
             // 
-            studentidReg.ForeColor = Color.DimGray;
-            studentidReg.Location = new Point(263, 165);
-            studentidReg.Name = "studentidReg";
-            studentidReg.Size = new Size(199, 27);
-            studentidReg.TabIndex = 22;
+            StudentIDValue.ForeColor = Color.DimGray;
+            StudentIDValue.Location = new Point(263, 165);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(199, 27);
+            StudentIDValue.TabIndex = 22;
             // 
-            // lastnameReg
+            // LastNameValue
             // 
-            lastnameReg.ForeColor = Color.DimGray;
-            lastnameReg.Location = new Point(263, 88);
-            lastnameReg.Name = "lastnameReg";
-            lastnameReg.Size = new Size(199, 27);
-            lastnameReg.TabIndex = 21;
+            LastNameValue.ForeColor = Color.DimGray;
+            LastNameValue.Location = new Point(263, 88);
+            LastNameValue.Name = "LastNameValue";
+            LastNameValue.Size = new Size(199, 27);
+            LastNameValue.TabIndex = 21;
             // 
             // label9
             // 
@@ -412,13 +404,13 @@
             label10.TabIndex = 35;
             label10.Text = "First Name";
             // 
-            // firstnameReg
+            // FirstNameValue
             // 
-            firstnameReg.ForeColor = Color.DimGray;
-            firstnameReg.Location = new Point(23, 88);
-            firstnameReg.Name = "firstnameReg";
-            firstnameReg.Size = new Size(215, 27);
-            firstnameReg.TabIndex = 36;
+            FirstNameValue.ForeColor = Color.DimGray;
+            FirstNameValue.Location = new Point(23, 88);
+            FirstNameValue.Name = "FirstNameValue";
+            FirstNameValue.Size = new Size(215, 27);
+            FirstNameValue.TabIndex = 36;
             // 
             // panel
             // 
@@ -435,6 +427,7 @@
             // button13
             // 
             button13.BackgroundImageLayout = ImageLayout.None;
+            button13.Cursor = Cursors.Hand;
             button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -452,6 +445,7 @@
             // button8
             // 
             button8.BackgroundImageLayout = ImageLayout.None;
+            button8.Cursor = Cursors.Hand;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -469,6 +463,7 @@
             // button4
             // 
             button4.BackgroundImageLayout = ImageLayout.None;
+            button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -482,6 +477,7 @@
             button4.TabIndex = 45;
             button4.Text = "Home";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // pictureBox6
             // 
@@ -550,31 +546,30 @@
         private Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private GroupBox groupBox1;
-        private ComboBox courseBox;
+        private ComboBox CourseValue;
         private Label label4;
-        private TextBox studentidReg;
-        private TextBox lastnameReg;
+        private TextBox StudentIDValue;
+        private TextBox LastNameValue;
         private Label label9;
         private Label label10;
         private PictureBox BorrowingImage;
         private Label label5;
-        private TextBox firstnameReg;
+        private TextBox FirstNameValue;
         private Button button3;
         private Button button2;
         private ComboBox EndTime;
         private Label BorrowingItemName;
         private Label label12;
-        private TextBox EmailBox;
+        private TextBox EmailValue;
         private Label label11;
-        private TextBox contactBox;
-        private ComboBox SectionBox;
-        private ComboBox yearBox;
+        private TextBox ContactNumberValue;
+        private ComboBox SectionValue;
+        private ComboBox YearValue;
         private Label label3;
-        private ComboBox comboBox7;
         private Label label13;
         private Label BorrowingStock;
         private Label BorrowingDescription;
-        private TextBox BorrowCount;
+        private TextBox BorrowStockValue;
         private Panel panel;
         private Button button13;
         private PictureBox pictureBox6;

@@ -71,24 +71,29 @@ namespace equipsys
 
         private bool ValidateItem()
         {
-            // Validates ItemName
-            if (ItemNameBox.Text.Length == 0)
-                return false;
+            bool IsValidItemName(string name) =>
+                !string.IsNullOrWhiteSpace(name);
 
-            int stockNumber = 0;
-            bool stockNumberValidNumber = int.TryParse(ItemStockBox.Text, out stockNumber);
-            // Validates ItemStock is int
-            if (stockNumberValidNumber == false)
-                return false;
-            // Validates Itemstock is not <= 0
-            if (stockNumber < 1)
-                return false;
+            bool IsValidItemStock(string stock) =>
+                stock.Length != 0 &&
+                stock.All(char.IsDigit) &&
+                int.Parse(stock) > 0;
 
-            // Replaces null description with a placeholder value
+            if (!IsValidItemName(ItemNameBox.Text))
+            {
+                MessageBox.Show("Item name can not be null");
+                return false;
+            }
+
+            if (!IsValidItemStock(ItemStockBox.Text))
+            {
+                MessageBox.Show("Invalid stock number");
+                return false;
+            }
+
             if (ItemDescriptionBox.Text.Length == 0)
-                ItemDescriptionBox.Text = "No Description Provided";
+                ItemDescriptionBox.Text = "No Description Provided.";
 
-            // returns true if passed all validation
             return true;
         }
 

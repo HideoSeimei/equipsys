@@ -38,13 +38,10 @@
             button8 = new Button();
             button4 = new Button();
             pictureBox5 = new PictureBox();
-            search = new TextBox();
-            pictureBox3 = new PictureBox();
             pictureBox6 = new PictureBox();
             label3 = new Label();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
@@ -85,6 +82,7 @@
             // button13
             // 
             button13.BackgroundImageLayout = ImageLayout.None;
+            button13.Cursor = Cursors.Hand;
             button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -103,6 +101,7 @@
             // button8
             // 
             button8.BackgroundImageLayout = ImageLayout.None;
+            button8.Cursor = Cursors.Hand;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -121,6 +120,7 @@
             // button4
             // 
             button4.BackgroundImageLayout = ImageLayout.None;
+            button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -145,27 +145,6 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 46;
             pictureBox5.TabStop = false;
-            // 
-            // search
-            // 
-            search.ForeColor = Color.DimGray;
-            search.Location = new Point(449, 40);
-            search.Name = "search";
-            search.Size = new Size(228, 27);
-            search.TabIndex = 48;
-            search.TextChanged += search_TextChanged;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Cursor = Cursors.Hand;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(683, 40);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(29, 29);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 47;
-            pictureBox3.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -196,8 +175,6 @@
             ClientSize = new Size(1013, 588);
             Controls.Add(pictureBox6);
             Controls.Add(label3);
-            Controls.Add(search);
-            Controls.Add(pictureBox3);
             Controls.Add(panel);
             Controls.Add(mainPanel);
             Controls.Add(UserTitlelbl);
@@ -207,7 +184,6 @@
             Text = "MAIN";
             panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -221,8 +197,6 @@
         private PictureBox pictureBox5;
         private Button button4;
         private Button button8;
-        public TextBox search;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox6;
         private Label label3;
     }

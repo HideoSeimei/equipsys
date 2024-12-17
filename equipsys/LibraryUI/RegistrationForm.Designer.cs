@@ -32,23 +32,25 @@
             label7 = new Label();
             RegisterButton = new Button();
             ReturnButton = new Button();
-            CourseBox = new TextBox();
-            label5 = new Label();
-            FNameBox = new TextBox();
+            FirstNameValue = new TextBox();
             label9 = new Label();
             label10 = new Label();
             groupBox1 = new GroupBox();
+            SectionValue = new ComboBox();
+            YearValue = new ComboBox();
+            CourseValue = new ComboBox();
+            cysLabel = new Label();
             label2 = new Label();
-            YearBox = new ComboBox();
-            StudentIDBox = new TextBox();
-            LNameBox = new TextBox();
+            StudentIDValue = new TextBox();
+            LastNameValue = new TextBox();
             label3 = new Label();
-            PasswordBox = new TextBox();
-            UsernameBox = new TextBox();
+            PasswordValue = new TextBox();
+            UsernameValue = new TextBox();
             label1 = new Label();
             label8 = new Label();
             label6 = new Label();
             groupBox2 = new GroupBox();
+            pictureBox6 = new PictureBox();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             label11 = new Label();
@@ -56,6 +58,7 @@
             panel3 = new Panel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -81,7 +84,7 @@
             RegisterButton.Location = new Point(333, 507);
             RegisterButton.Name = "RegisterButton";
             RegisterButton.Size = new Size(123, 29);
-            RegisterButton.TabIndex = 42;
+            RegisterButton.TabIndex = 9;
             RegisterButton.Text = "Register";
             RegisterButton.UseVisualStyleBackColor = false;
             RegisterButton.Click += RegisterButton_Click;
@@ -101,33 +104,13 @@
             ReturnButton.UseVisualStyleBackColor = false;
             ReturnButton.Click += ReturnButton_Click;
             // 
-            // CourseBox
+            // FirstNameValue
             // 
-            CourseBox.ForeColor = Color.DimGray;
-            CourseBox.Location = new Point(34, 171);
-            CourseBox.Name = "CourseBox";
-            CourseBox.Size = new Size(215, 27);
-            CourseBox.TabIndex = 40;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(34, 141);
-            label5.Name = "label5";
-            label5.Size = new Size(117, 20);
-            label5.TabIndex = 39;
-            label5.Text = "Course/Program";
-            // 
-            // FNameBox
-            // 
-            FNameBox.ForeColor = Color.DimGray;
-            FNameBox.Location = new Point(34, 89);
-            FNameBox.Name = "FNameBox";
-            FNameBox.Size = new Size(215, 27);
-            FNameBox.TabIndex = 36;
+            FirstNameValue.ForeColor = Color.DimGray;
+            FirstNameValue.Location = new Point(34, 89);
+            FirstNameValue.Name = "FirstNameValue";
+            FirstNameValue.Size = new Size(215, 27);
+            FirstNameValue.TabIndex = 0;
             // 
             // label9
             // 
@@ -158,22 +141,65 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.WhiteSmoke;
+            groupBox1.Controls.Add(SectionValue);
+            groupBox1.Controls.Add(YearValue);
+            groupBox1.Controls.Add(CourseValue);
+            groupBox1.Controls.Add(cysLabel);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(YearBox);
-            groupBox1.Controls.Add(StudentIDBox);
+            groupBox1.Controls.Add(StudentIDValue);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(LNameBox);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(CourseBox);
+            groupBox1.Controls.Add(LastNameValue);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(FNameBox);
+            groupBox1.Controls.Add(FirstNameValue);
             groupBox1.ForeColor = SystemColors.ControlText;
             groupBox1.Location = new Point(27, 80);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(625, 219);
             groupBox1.TabIndex = 46;
             groupBox1.TabStop = false;
+            // 
+            // SectionValue
+            // 
+            SectionValue.FormattingEnabled = true;
+            SectionValue.Items.AddRange(new object[] { "A", "B" });
+            SectionValue.Location = new Point(180, 170);
+            SectionValue.Name = "SectionValue";
+            SectionValue.Size = new Size(69, 28);
+            SectionValue.TabIndex = 5;
+            SectionValue.Text = "Sec";
+            SectionValue.SelectedIndexChanged += SectionValue_SelectedIndexChanged;
+            // 
+            // YearValue
+            // 
+            YearValue.FormattingEnabled = true;
+            YearValue.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            YearValue.Location = new Point(119, 171);
+            YearValue.Name = "YearValue";
+            YearValue.Size = new Size(55, 28);
+            YearValue.TabIndex = 4;
+            YearValue.Text = "Yr";
+            YearValue.SelectedIndexChanged += YearValue_SelectedIndexChanged;
+            // 
+            // CourseValue
+            // 
+            CourseValue.FormattingEnabled = true;
+            CourseValue.Items.AddRange(new object[] { "BSCS", "BSEMC", "BSIS", "BSIT" });
+            CourseValue.Location = new Point(33, 171);
+            CourseValue.Name = "CourseValue";
+            CourseValue.Size = new Size(80, 28);
+            CourseValue.TabIndex = 3;
+            CourseValue.Text = "Course";
+            CourseValue.SelectedIndexChanged += CourseValue_SelectedIndexChanged;
+            // 
+            // cysLabel
+            // 
+            cysLabel.AutoSize = true;
+            cysLabel.Location = new Point(31, 148);
+            cysLabel.Name = "cysLabel";
+            cysLabel.Size = new Size(143, 20);
+            cysLabel.TabIndex = 45;
+            cysLabel.Text = "Course/Year/Section";
             // 
             // label2
             // 
@@ -186,39 +212,21 @@
             label2.TabIndex = 23;
             label2.Text = "Student ID";
             // 
-            // YearBox
+            // StudentIDValue
             // 
-            YearBox.AllowDrop = true;
-            YearBox.BackColor = Color.White;
-            YearBox.DropDownHeight = 75;
-            YearBox.DropDownWidth = 75;
-            YearBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            YearBox.ForeColor = Color.FromArgb(32, 33, 35);
-            YearBox.FormattingEnabled = true;
-            YearBox.IntegralHeight = false;
-            YearBox.Items.AddRange(new object[] { "1st Year", "2nd Year", "3rd Year", "4th Year" });
-            YearBox.Location = new Point(504, 89);
-            YearBox.Name = "YearBox";
-            YearBox.Size = new Size(105, 28);
-            YearBox.TabIndex = 18;
-            YearBox.Text = " Year";
-            YearBox.SelectedIndexChanged += YearBox_SelectedIndexChanged;
+            StudentIDValue.ForeColor = Color.DimGray;
+            StudentIDValue.Location = new Point(281, 171);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(203, 27);
+            StudentIDValue.TabIndex = 6;
             // 
-            // StudentIDBox
+            // LastNameValue
             // 
-            StudentIDBox.ForeColor = Color.DimGray;
-            StudentIDBox.Location = new Point(281, 171);
-            StudentIDBox.Name = "StudentIDBox";
-            StudentIDBox.Size = new Size(203, 27);
-            StudentIDBox.TabIndex = 22;
-            // 
-            // LNameBox
-            // 
-            LNameBox.ForeColor = Color.DimGray;
-            LNameBox.Location = new Point(281, 89);
-            LNameBox.Name = "LNameBox";
-            LNameBox.Size = new Size(203, 27);
-            LNameBox.TabIndex = 21;
+            LastNameValue.ForeColor = Color.DimGray;
+            LastNameValue.Location = new Point(281, 89);
+            LastNameValue.Name = "LastNameValue";
+            LastNameValue.Size = new Size(203, 27);
+            LastNameValue.TabIndex = 1;
             // 
             // label3
             // 
@@ -231,21 +239,22 @@
             label3.TabIndex = 20;
             label3.Text = "Last Name";
             // 
-            // PasswordBox
+            // PasswordValue
             // 
-            PasswordBox.ForeColor = Color.DimGray;
-            PasswordBox.Location = new Point(347, 99);
-            PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(228, 27);
-            PasswordBox.TabIndex = 41;
+            PasswordValue.ForeColor = Color.DimGray;
+            PasswordValue.Location = new Point(347, 99);
+            PasswordValue.Name = "PasswordValue";
+            PasswordValue.Size = new Size(228, 27);
+            PasswordValue.TabIndex = 8;
+            PasswordValue.UseSystemPasswordChar = true;
             // 
-            // UsernameBox
+            // UsernameValue
             // 
-            UsernameBox.ForeColor = Color.DimGray;
-            UsernameBox.Location = new Point(38, 99);
-            UsernameBox.Name = "UsernameBox";
-            UsernameBox.Size = new Size(249, 27);
-            UsernameBox.TabIndex = 38;
+            UsernameValue.ForeColor = Color.DimGray;
+            UsernameValue.Location = new Point(38, 99);
+            UsernameValue.Name = "UsernameValue";
+            UsernameValue.Size = new Size(249, 27);
+            UsernameValue.TabIndex = 7;
             // 
             // label1
             // 
@@ -286,16 +295,29 @@
             // groupBox2
             // 
             groupBox2.BackColor = Color.WhiteSmoke;
+            groupBox2.Controls.Add(pictureBox6);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(UsernameBox);
-            groupBox2.Controls.Add(PasswordBox);
+            groupBox2.Controls.Add(UsernameValue);
+            groupBox2.Controls.Add(PasswordValue);
             groupBox2.Location = new Point(27, 305);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(625, 169);
             groupBox2.TabIndex = 47;
             groupBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Cursor = Cursors.Hand;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(581, 99);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(25, 21);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 46;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
             // 
             // label4
             // 
@@ -343,7 +365,7 @@
             button1.Location = new Point(196, 506);
             button1.Name = "button1";
             button1.Size = new Size(120, 29);
-            button1.TabIndex = 52;
+            button1.TabIndex = 10;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -379,6 +401,7 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -390,19 +413,16 @@
         private Label label7;
         private Button RegisterButton;
         private Button ReturnButton;
-        private TextBox CourseBox;
-        private Label label5;
-        private TextBox FNameBox;
+        private TextBox FirstNameValue;
         private Label label9;
         private Label label10;
         private GroupBox groupBox1;
-        private ComboBox YearBox;
         private Label label3;
-        private TextBox LNameBox;
-        private TextBox StudentIDBox;
+        private TextBox LastNameValue;
+        private TextBox StudentIDValue;
         private Label label2;
-        private TextBox PasswordBox;
-        private TextBox UsernameBox;
+        private TextBox PasswordValue;
+        private TextBox UsernameValue;
         private Label label1;
         private Label label8;
         private Label label6;
@@ -412,5 +432,10 @@
         private Label label11;
         private Button button1;
         private Panel panel3;
+        private Label cysLabel;
+        private ComboBox SectionValue;
+        private ComboBox YearValue;
+        private ComboBox CourseValue;
+        private PictureBox pictureBox6;
     }
 }

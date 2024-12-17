@@ -295,7 +295,7 @@
             panel3.Controls.Add(pictureBox1);
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(603, 597);
+            panel3.Size = new Size(603, 652);
             panel3.TabIndex = 34;
             // 
             // guna2Button1
