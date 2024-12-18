@@ -55,12 +55,12 @@
             ItemNameBox = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel = new Panel();
-            button13 = new Button();
-            pictureBox6 = new PictureBox();
-            button7 = new Button();
             button10 = new Button();
-            button4 = new Button();
+            button13 = new Button();
             button8 = new Button();
+            button7 = new Button();
+            pictureBox6 = new PictureBox();
+            button4 = new Button();
             pictureBox7 = new PictureBox();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).BeginInit();
@@ -138,11 +138,11 @@
             // ReturnButton
             // 
             ReturnButton.Cursor = Cursors.Hand;
-            ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(434, 388);
+            ReturnButton.Location = new Point(420, 388);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(125, 29);
+            ReturnButton.Size = new Size(139, 29);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -152,11 +152,11 @@
             // 
             SaveButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveButton.Cursor = Cursors.Hand;
-            SaveButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(571, 388);
+            SaveButton.Location = new Point(565, 388);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(125, 29);
+            SaveButton.Size = new Size(131, 29);
             SaveButton.TabIndex = 8;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;
@@ -320,6 +320,23 @@
             panel.Size = new Size(235, 589);
             panel.TabIndex = 54;
             // 
+            // button10
+            // 
+            button10.BackgroundImageLayout = ImageLayout.None;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = Color.White;
+            button10.Image = (Image)resources.GetObject("button10.Image");
+            button10.ImageAlign = ContentAlignment.MiddleLeft;
+            button10.Location = new Point(12, 353);
+            button10.Name = "button10";
+            button10.Padding = new Padding(25, 0, 0, 0);
+            button10.Size = new Size(213, 75);
+            button10.TabIndex = 45;
+            button10.Text = " Sign in";
+            button10.UseVisualStyleBackColor = false;
+            // 
             // button13
             // 
             button13.BackgroundImageLayout = ImageLayout.None;
@@ -337,15 +354,22 @@
             button13.Text = "   Log out";
             button13.UseVisualStyleBackColor = false;
             // 
-            // pictureBox6
+            // button8
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(85, 41);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(62, 57);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 46;
-            pictureBox6.TabStop = false;
+            button8.BackgroundImageLayout = ImageLayout.None;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Image = (Image)resources.GetObject("button8.Image");
+            button8.ImageAlign = ContentAlignment.MiddleLeft;
+            button8.Location = new Point(11, 194);
+            button8.Name = "button8";
+            button8.Padding = new Padding(25, 0, 0, 0);
+            button8.Size = new Size(213, 75);
+            button8.TabIndex = 46;
+            button8.Text = " History";
+            button8.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -365,22 +389,15 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // button10
+            // pictureBox6
             // 
-            button10.BackgroundImageLayout = ImageLayout.None;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button10.ForeColor = Color.White;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(12, 353);
-            button10.Name = "button10";
-            button10.Padding = new Padding(25, 0, 0, 0);
-            button10.Size = new Size(213, 75);
-            button10.TabIndex = 45;
-            button10.Text = " Sign in";
-            button10.UseVisualStyleBackColor = false;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(85, 41);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(62, 57);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 46;
+            pictureBox6.TabStop = false;
             // 
             // button4
             // 
@@ -399,23 +416,6 @@
             button4.Text = "Home";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
-            // 
-            // button8
-            // 
-            button8.BackgroundImageLayout = ImageLayout.None;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(11, 194);
-            button8.Name = "button8";
-            button8.Padding = new Padding(25, 0, 0, 0);
-            button8.Size = new Size(213, 75);
-            button8.TabIndex = 46;
-            button8.Text = " History";
-            button8.UseVisualStyleBackColor = false;
             // 
             // pictureBox7
             // 

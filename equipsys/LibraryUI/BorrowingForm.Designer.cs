@@ -226,11 +226,11 @@
             // button3
             // 
             button3.Cursor = Cursors.Hand;
-            button3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.FromArgb(32, 33, 35);
-            button3.Location = new Point(242, 402);
+            button3.Location = new Point(215, 402);
             button3.Name = "button3";
-            button3.Size = new Size(101, 29);
+            button3.Size = new Size(128, 29);
             button3.TabIndex = 55;
             button3.Text = "Back";
             button3.UseVisualStyleBackColor = true;
@@ -250,11 +250,11 @@
             // 
             button2.BackColor = Color.FromArgb(32, 33, 35);
             button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(354, 402);
+            button2.Location = new Point(349, 402);
             button2.Name = "button2";
-            button2.Size = new Size(107, 29);
+            button2.Size = new Size(113, 29);
             button2.TabIndex = 54;
             button2.Text = "Borrow";
             button2.UseVisualStyleBackColor = false;

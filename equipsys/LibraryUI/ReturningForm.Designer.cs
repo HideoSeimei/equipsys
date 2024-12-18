@@ -42,11 +42,11 @@
             // 
             SaveItemButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveItemButton.Cursor = Cursors.Hand;
-            SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveItemButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(193, 255);
+            SaveItemButton.Location = new Point(177, 255);
             SaveItemButton.Name = "SaveItemButton";
-            SaveItemButton.Size = new Size(159, 35);
+            SaveItemButton.Size = new Size(207, 35);
             SaveItemButton.TabIndex = 16;
             SaveItemButton.Text = "Save as Returned";
             SaveItemButton.UseVisualStyleBackColor = false;
@@ -95,11 +95,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Rounded MT Bold", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(187, 23);
+            label1.Location = new Point(177, 22);
             label1.Name = "label1";
-            label1.Size = new Size(162, 23);
+            label1.Size = new Size(187, 27);
             label1.TabIndex = 17;
             label1.Text = "Returning Form";
             // 
