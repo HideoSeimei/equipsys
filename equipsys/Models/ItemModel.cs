@@ -15,7 +15,8 @@ namespace equipsys.Models
         public string ItemDescription { get; set; }
         public int ItemStock { get; set; }
         public string ImagePath { get; set; }
-        
+        public DateTime? DeletedAt { get; set; }
+
         // CONSTRUCTORS
         public ItemModel()
         {
@@ -136,6 +137,27 @@ namespace equipsys.Models
                 sql.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Removed Item Successfully");
+            }
+        }
+
+        public void AddToArchive(string ItemName,string Description,int Stock,string ImagePath)
+        {
+            using (var sql = new SqlConnection(GlobalConfig.ConnectionString))
+            {
+                if (string.IsNullOrEmpty(ImagePath))
+                {
+                    ImagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Images\default image.png");
+                }
+                string insertQuery = "Insert into Archive(ItemName,Description,Stock,ImagePath) values (@ItemName,@Description,@Stock,@ImagePath);";
+                SqlCommand cmd = new SqlCommand(insertQuery, sql);
+                cmd.Parameters.AddWithValue("@ItemName", ItemName);
+                cmd.Parameters.AddWithValue("@Description", Description);
+                cmd.Parameters.AddWithValue("@Stock", Stock);
+                cmd.Parameters.AddWithValue("@ImagePath", ImagePath);
+                sql.Open();
+                cmd.ExecuteNonQuery();
+                sql.Close();
+                MessageBox.Show("Added to Archive");
             }
         }
     }

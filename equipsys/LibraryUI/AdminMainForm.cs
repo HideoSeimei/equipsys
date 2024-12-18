@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using equipsys.LibraryUI;
+using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
@@ -187,6 +188,11 @@ namespace equipsys
             this.Hide();
             //
         }
+        private void button1_Click(object sender, EventArgs e)//ARCHIVE BUTTON
+        {
+            OpenArchive();
+            AdminTitlelbl.Text = "Archive";
+        }
         //=====================================================================================================METHODS============================================================
         public void OpenEquipment()// for opening the itemsform
         {
@@ -222,5 +228,18 @@ namespace equipsys
             record.Show();
             //
         }
+        public void OpenArchive()// for opening Archive
+        {
+            //
+            ArchiveForm archive = new ArchiveForm() { TopLevel = false, TopMost = true };
+            archive.FormBorderStyle = FormBorderStyle.None;
+            archive.Size = mainPanel.ClientSize;
+            archive.Dock = DockStyle.Fill;
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(archive);
+            archive.Show();
+            //
+        }
+        
     }
 }
