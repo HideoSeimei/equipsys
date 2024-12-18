@@ -33,10 +33,12 @@ namespace equipsys
             if (stocks > 0)
             {
                 Availability.BackColor = Color.LightGreen;
+                Availability.Text = "Available";
             }
             else
             {
                 Availability.BackColor = Color.Pink;
+                Availability.Text = "Unavailable";
             }
 
 
