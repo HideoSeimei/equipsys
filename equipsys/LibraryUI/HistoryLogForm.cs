@@ -16,6 +16,8 @@ namespace equipsys
     {
         SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
 
+        DataTable dataTable = new DataTable();
+
         public HistoryLogForm()
         {
             InitializeComponent();
@@ -44,13 +46,14 @@ namespace equipsys
         public void gridbind()
         {
             sql.Open();
-            SqlCommand cmd = new SqlCommand("select * from BorrowerHistory ORDER BY Start_Time ASC", sql);
-            SqlDataReader reader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(reader);
-            dataGridView1.DataSource = dt;
+            SqlCommand cmd = new SqlCommand("SELECT * FROM BorrowerHistory ORDER BY Start_Time", sql);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dataTable);
             sql.Close();
+
+            dataGridView1.DataSource = dataTable;
         }
+
 
         private void SaveItemButton_Click(object sender, EventArgs e)
         {
@@ -61,6 +64,20 @@ namespace equipsys
         {
             ReturningForm returnform = new ReturningForm(this);
             returnform.Show();
+        }
+
+        private void SearchBarValue_TextChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.DataSource is DataTable dataTable)
+            {
+                string filterText = SearchBarValue.Text.Trim();
+
+                string filterExpression = string.IsNullOrEmpty(filterText)
+                    ? ""
+                    : $"FirstName LIKE '%{filterText}%' OR LastName LIKE '%{filterText}%' OR Course LIKE '%{filterText}%' OR Year LIKE '%{filterText}%' OR Section LIKE '%{filterText}%' OR Student_ID LIKE '%{filterText}%' OR Contact_Number LIKE '%{filterText}%' OR Email LIKE '%{filterText}%' OR Item_Name LIKE '%{filterText}%' OR Start_Time LIKE '%{filterText}%' OR End_Time LIKE '%{filterText}%' OR Transaction_ID LIKE '%{filterText}%' OR Status LIKE '%{filterText}%'";
+
+                (dataTable.DefaultView).RowFilter = filterExpression;
+            }
         }
     }
 }
