@@ -169,11 +169,11 @@
             // 
             button1.BackColor = Color.FromArgb(32, 33, 35);
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(650, 379);
+            button1.Location = new Point(640, 379);
             button1.Name = "button1";
-            button1.Size = new Size(323, 45);
+            button1.Size = new Size(333, 45);
             button1.TabIndex = 34;
             button1.Text = "Log in";
             button1.UseVisualStyleBackColor = false;
@@ -306,12 +306,12 @@
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button1.FillColor = Color.Gray;
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(650, 435);
+            guna2Button1.Location = new Point(640, 435);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(319, 36);
+            guna2Button1.Size = new Size(333, 36);
             guna2Button1.TabIndex = 48;
             guna2Button1.Text = "Back to Role Selection";
             guna2Button1.Click += guna2Button1_Click;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
@@ -35,6 +36,8 @@
             ReturnButton = new Button();
             dataGridView1 = new DataGridView();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            textBox1 = new TextBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -47,7 +50,7 @@
             // 
             SaveItemButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveItemButton.Cursor = Cursors.Hand;
-            SaveItemButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveItemButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
             SaveItemButton.Location = new Point(585, 348);
             SaveItemButton.Name = "SaveItemButton";
@@ -60,11 +63,11 @@
             // ReturnButton
             // 
             ReturnButton.Cursor = Cursors.Hand;
-            ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(389, 348);
+            ReturnButton.Location = new Point(377, 348);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(190, 29);
+            ReturnButton.Size = new Size(202, 29);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Process Return";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -88,6 +91,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.Controls.Add(textBox1);
             guna2Panel1.Controls.Add(dataGridView1);
             guna2Panel1.Controls.Add(ReturnButton);
             guna2Panel1.Controls.Add(SaveItemButton);
@@ -99,6 +103,20 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(735, 392);
             guna2Panel1.TabIndex = 53;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(155, 25);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(424, 27);
+            textBox1.TabIndex = 11;
+            textBox1.Text = "  Search";
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // HistoryLogForm
             // 
@@ -113,6 +131,7 @@
             Load += HistoryLogForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -122,5 +141,7 @@
         private Button ReturnButton;
         private DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private TextBox textBox1;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }

@@ -138,11 +138,11 @@
             // ReturnButton
             // 
             ReturnButton.Cursor = Cursors.Hand;
-            ReturnButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(434, 388);
+            ReturnButton.Location = new Point(420, 388);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(125, 29);
+            ReturnButton.Size = new Size(139, 29);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -152,11 +152,11 @@
             // 
             SaveButton.BackColor = Color.FromArgb(32, 33, 35);
             SaveButton.Cursor = Cursors.Hand;
-            SaveButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(571, 388);
+            SaveButton.Location = new Point(565, 388);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(125, 29);
+            SaveButton.Size = new Size(131, 29);
             SaveButton.TabIndex = 8;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;

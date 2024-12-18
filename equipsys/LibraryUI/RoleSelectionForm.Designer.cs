@@ -66,11 +66,11 @@ namespace equipsys
             // 
             button2.BackColor = Color.FromArgb(32, 33, 35);
             button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(707, 357);
             button2.Name = "button2";
-            button2.Size = new Size(213, 45);
+            button2.Size = new Size(224, 45);
             button2.TabIndex = 60;
             button2.Text = "Admin";
             button2.UseVisualStyleBackColor = false;
@@ -106,11 +106,11 @@ namespace equipsys
             // 
             button1.BackColor = Color.FromArgb(32, 33, 35);
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
             button1.Location = new Point(707, 273);
             button1.Name = "button1";
-            button1.Size = new Size(213, 45);
+            button1.Size = new Size(224, 45);
             button1.TabIndex = 52;
             button1.Text = "MIS Staff";
             button1.UseVisualStyleBackColor = false;
