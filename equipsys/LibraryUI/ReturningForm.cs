@@ -30,21 +30,52 @@ namespace equipsys.LibraryUI
 
         private void SaveItemButton_Click(object sender, EventArgs e)
         {
-            sql.Open();
-            SqlCommand cmd = sql.CreateCommand();
-            SqlCommand cmd2 = sql.CreateCommand(); 
-            cmd.CommandType = CommandType.Text;
-            cmd2.CommandType = CommandType.Text;
-            cmd.CommandText = "update BorrowerHistory set Status = 'Returned' WHERE Student_ID = '" + ItemNameBox.Text + "' and Transaction_ID = '" + ItemDescriptionBox.Text + "'";
-            cmd2.CommandText = "UPDATE Items set Stock = Stock + (Select Quantity from BorrowerHistory WHERE Transaction_ID = '"+ ItemDescriptionBox.Text +"') WHERE ItemName = (Select Item_Name From BorrowerHistory WHERE Transaction_ID = '"+ItemDescriptionBox.Text+"')";
-            cmd.ExecuteNonQuery();
-            cmd2.ExecuteNonQuery();
-            sql.Close();
-            MessageBox.Show("Status updated successfully");
-            _historyLogForm.gridbind();
-            this.Hide();
+            if (ValidateForm())
+            {
+                sql.Open();
+                SqlCommand cmd = sql.CreateCommand();
+                SqlCommand cmd2 = sql.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd2.CommandType = CommandType.Text;
+                cmd.CommandText = "update BorrowerHistory set Status = 'Returned' WHERE Student_ID = '" + StudentIDValue.Text + "' and Transaction_ID = '" + TransactionIDValue.Text + "'";
+                cmd2.CommandText = "UPDATE Items set Stock = Stock + (Select Quantity from BorrowerHistory WHERE Transaction_ID = '" + TransactionIDValue.Text + "') WHERE ItemName = (Select Item_Name From BorrowerHistory WHERE Transaction_ID = '" + TransactionIDValue.Text + "')";
+                cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                sql.Close();
+                MessageBox.Show("Status updated successfully");
+                _historyLogForm.gridbind();
+                this.Hide();
+            }
+            
         }
 
+
+        private bool ValidateForm()
+        {
+            bool IsValidStudentID(string id) =>
+                id.Length == 10 &&
+                id.StartsWith("2") &&
+                (id.EndsWith("-N") || id.EndsWith("-S")) &&
+                id.Substring(1, 7).All(char.IsDigit);
+
+            bool IsValidTransactionID(string id) =>
+                id.Length == 4 &&
+                id.All(char.IsLetterOrDigit);
+
+            if (!IsValidStudentID(StudentIDValue.Text))
+            {
+                MessageBox.Show("Invalid Student ID.");
+                return false;
+            }
+
+            if (!IsValidTransactionID(TransactionIDValue.Text))
+            {
+                MessageBox.Show("Invalid Transaction ID.");
+                return false;
+            }
+
+            return true;
+        }
         private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)
         {
 

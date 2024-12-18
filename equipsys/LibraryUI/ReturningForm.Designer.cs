@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             SaveItemButton = new Button();
-            ItemDescriptionBox = new TextBox();
+            TransactionIDValue = new TextBox();
+            StudentIDValue = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
@@ -52,13 +53,21 @@
             SaveItemButton.UseVisualStyleBackColor = false;
             SaveItemButton.Click += SaveItemButton_Click;
             // 
-            // ItemDescriptionBox
+            // TransactionIDValue
             // 
-            ItemDescriptionBox.Location = new Point(109, 193);
-            ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(293, 27);
-            ItemDescriptionBox.TabIndex = 14;
-            ItemDescriptionBox.TextChanged += ItemDescriptionBox_TextChanged;
+            TransactionIDValue.Location = new Point(109, 193);
+            TransactionIDValue.Name = "TransactionIDValue";
+            TransactionIDValue.Size = new Size(293, 27);
+            TransactionIDValue.TabIndex = 14;
+            TransactionIDValue.TextChanged += ItemDescriptionBox_TextChanged;
+            // 
+            // StudentIDValue
+            // 
+            StudentIDValue.Location = new Point(109, 114);
+            StudentIDValue.Name = "StudentIDValue";
+            StudentIDValue.Size = new Size(293, 27);
+            StudentIDValue.TabIndex = 13;
+            StudentIDValue.TextChanged += ItemNameBox_TextChanged;
             // 
             // label4
             // 
@@ -102,7 +111,9 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SaveItemButton);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(ItemDescriptionBox);
+            panel1.Controls.Add(TransactionIDValue);
+            panel1.Controls.Add(StudentIDValue);
+
             panel1.Controls.Add(label4);
             panel1.Location = new Point(36, 37);
             panel1.Name = "panel1";
@@ -134,7 +145,9 @@
 
         #endregion
         private Button SaveItemButton;
-        public TextBox ItemDescriptionBox;
+
+        public TextBox TransactionIDValue;
+        public TextBox StudentIDValue;
         public Label label4;
         public Label label3;
         public Label label1;

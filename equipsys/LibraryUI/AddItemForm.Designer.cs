@@ -132,9 +132,10 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(326, 152);
+            ItemDescriptionBox.Location = new Point(326, 192);
+            ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(346, 27);
+            ItemDescriptionBox.Size = new Size(346, 181);
             ItemDescriptionBox.TabIndex = 4;
             // 
             // ItemNameBox

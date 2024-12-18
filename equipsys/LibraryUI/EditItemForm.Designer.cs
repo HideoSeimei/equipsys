@@ -177,7 +177,7 @@
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(326, 232);
+            ItemStockBox.Location = new Point(326, 134);
             ItemStockBox.Name = "ItemStockBox";
             ItemStockBox.Size = new Size(98, 27);
             ItemStockBox.TabIndex = 5;
@@ -197,9 +197,10 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(326, 152);
+            ItemDescriptionBox.Location = new Point(326, 192);
+            ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(370, 27);
+            ItemDescriptionBox.Size = new Size(370, 190);
             ItemDescriptionBox.TabIndex = 4;
             // 
             // label5
@@ -207,7 +208,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(326, 195);
+            label5.Location = new Point(326, 106);
             label5.Name = "label5";
             label5.Size = new Size(56, 25);
             label5.TabIndex = 2;
@@ -218,7 +219,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(326, 119);
+            label4.Location = new Point(326, 164);
             label4.Name = "label4";
             label4.Size = new Size(108, 25);
             label4.TabIndex = 1;
@@ -229,7 +230,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(326, 49);
+            label3.Location = new Point(326, 48);
             label3.Name = "label3";
             label3.Size = new Size(50, 25);
             label3.TabIndex = 0;
@@ -280,7 +281,7 @@
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(326, 85);
+            ItemNameBox.Location = new Point(326, 76);
             ItemNameBox.Name = "ItemNameBox";
             ItemNameBox.Size = new Size(370, 27);
             ItemNameBox.TabIndex = 3;
@@ -323,6 +324,7 @@
             // button10
             // 
             button10.BackgroundImageLayout = ImageLayout.None;
+            button10.Cursor = Cursors.Hand;
             button10.FlatAppearance.BorderSize = 0;
             button10.FlatStyle = FlatStyle.Flat;
             button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -340,6 +342,7 @@
             // button13
             // 
             button13.BackgroundImageLayout = ImageLayout.None;
+            button13.Cursor = Cursors.Hand;
             button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -357,6 +360,7 @@
             // button8
             // 
             button8.BackgroundImageLayout = ImageLayout.None;
+            button8.Cursor = Cursors.Hand;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -374,6 +378,7 @@
             // button7
             // 
             button7.BackgroundImageLayout = ImageLayout.None;
+            button7.Cursor = Cursors.Hand;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -402,6 +407,7 @@
             // button4
             // 
             button4.BackgroundImageLayout = ImageLayout.None;
+            button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);

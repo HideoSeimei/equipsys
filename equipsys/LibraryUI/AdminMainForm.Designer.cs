@@ -29,23 +29,20 @@ namespace equipsys
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             AdminTitlelbl = new Label();
-            search = new TextBox();
-            pictureBox4 = new PictureBox();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             panel = new Panel();
             button13 = new Button();
+            button10 = new Button();
             pictureBox5 = new PictureBox();
             button7 = new Button();
-            button10 = new Button();
             button4 = new Button();
             button8 = new Button();
             pictureBox6 = new PictureBox();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -63,34 +60,13 @@ namespace equipsys
             AdminTitlelbl.TabIndex = 16;
             AdminTitlelbl.Text = "Equipment";
             // 
-            // search
-            // 
-            search.ForeColor = Color.DimGray;
-            search.Location = new Point(463, 40);
-            search.Name = "search";
-            search.Size = new Size(228, 27);
-            search.TabIndex = 15;
-            search.TextChanged += textBox1_TextChanged;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Cursor = Cursors.Hand;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(697, 40);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(29, 29);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 14;
-            pictureBox4.TabStop = false;
-            // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges17;
+            mainPanel.CustomizableEdges = customizableEdges1;
             mainPanel.Location = new Point(255, 96);
             mainPanel.Margin = new Padding(3, 4, 3, 4);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             mainPanel.Size = new Size(744, 469);
             mainPanel.TabIndex = 20;
             mainPanel.Paint += mainPanel_Paint;
@@ -112,6 +88,7 @@ namespace equipsys
             // button13
             // 
             button13.BackgroundImageLayout = ImageLayout.None;
+            button13.Cursor = Cursors.Hand;
             button13.FlatAppearance.BorderSize = 0;
             button13.FlatStyle = FlatStyle.Flat;
             button13.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
@@ -127,6 +104,25 @@ namespace equipsys
             button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
             // 
+            // button10
+            // 
+            button10.BackgroundImageLayout = ImageLayout.None;
+            button10.Cursor = Cursors.Hand;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button10.ForeColor = Color.White;
+            button10.Image = (Image)resources.GetObject("button10.Image");
+            button10.ImageAlign = ContentAlignment.MiddleLeft;
+            button10.Location = new Point(12, 353);
+            button10.Name = "button10";
+            button10.Padding = new Padding(25, 0, 0, 0);
+            button10.Size = new Size(213, 75);
+            button10.TabIndex = 45;
+            button10.Text = "Add Staff";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            // 
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
@@ -140,6 +136,7 @@ namespace equipsys
             // button7
             // 
             button7.BackgroundImageLayout = ImageLayout.None;
+            button7.Cursor = Cursors.Hand;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -155,27 +152,10 @@ namespace equipsys
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
-            // button10
-            // 
-            button10.BackgroundImageLayout = ImageLayout.None;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button10.ForeColor = Color.White;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(12, 353);
-            button10.Name = "button10";
-            button10.Padding = new Padding(25, 0, 0, 0);
-            button10.Size = new Size(213, 75);
-            button10.TabIndex = 45;
-            button10.Text = " Sign in";
-            button10.UseVisualStyleBackColor = false;
-            button10.Click += button10_Click;
-            // 
             // button4
             // 
             button4.BackgroundImageLayout = ImageLayout.None;
+            button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -194,6 +174,7 @@ namespace equipsys
             // button8
             // 
             button8.BackgroundImageLayout = ImageLayout.None;
+            button8.Cursor = Cursors.Hand;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
             button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -243,14 +224,11 @@ namespace equipsys
             Controls.Add(panel);
             Controls.Add(mainPanel);
             Controls.Add(AdminTitlelbl);
-            Controls.Add(search);
-            Controls.Add(pictureBox4);
             ForeColor = Color.DimGray;
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminMainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MAIN_ADMIN";
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -265,8 +243,6 @@ namespace equipsys
 
         #endregion
         private Label AdminTitlelbl;
-        private PictureBox pictureBox4;
-        public TextBox search;
         public Guna.UI2.WinForms.Guna2Panel mainPanel;
         private Panel panel;
         private Button button13;

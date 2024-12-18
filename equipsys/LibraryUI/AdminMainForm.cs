@@ -134,13 +134,6 @@ namespace equipsys
             this.Hide();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)// SEARCH BOX
-        {
-            
-            searchBox = search.Text.Trim();
-            
-        }
-
         private void AccountsButton_Click_1(object sender, EventArgs e)
         {
             RegistrationForm regform = new RegistrationForm();

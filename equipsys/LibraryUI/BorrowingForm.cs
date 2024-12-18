@@ -54,22 +54,26 @@ namespace equipsys
 
         private void button2_Click(object sender, EventArgs e)
         {
-            sql.Open();
-            SqlCommand cmd = sql.CreateCommand();
-            SqlCommand cmd2 = sql.CreateCommand();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd2.CommandType = System.Data.CommandType.Text;
-            //change table name
-            cmd.CommandText = "insert into BorrowerHistory values ('" + firstnameReg.Text + "', '" + lastnameReg.Text + "', '" + courseBox.Text + "', '" + yearBox.Text + "','" + SectionBox.Text + "','" + studentidReg.Text + "','" + contactBox.Text + "', '" + EmailBox.Text + "', '" + BorrowingItemName.Text + "', '" + Int32.Parse(comboBox7.Text) + "', '" + TimeNow + "', '" + EndTime.Text + "','" + randomID + "', 'Ongoing')";
-            cmd2.CommandText = "UPDATE Items set Stock = (Stock - " + Int32.Parse(comboBox7.Text) + ") WHERE ItemName = '" + BorrowingItemName.Text + "'";
-            cmd.ExecuteNonQuery();
-            cmd2.ExecuteNonQuery();
-            sql.Close();
-            MessageBox.Show("Record Inserted Successfully \n Your Transaction ID is: " + randomID);
+            if (ValidateForm())
+            {
+                sql.Open();
+                SqlCommand cmd = sql.CreateCommand();
+                SqlCommand cmd2 = sql.CreateCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd2.CommandType = System.Data.CommandType.Text;
+                //change table name
+                cmd.CommandText = "insert into BorrowerHistory values ('" + FirstNameValue.Text + "', '" + LastNameValue.Text + "', '" + CourseValue.Text + "', '" + YearValue.Text + "','" + SectionValue.Text + "','" + StudentIDValue.Text + "','" + ContactNumberValue.Text + "', '" + EmailValue.Text + "', '" + BorrowingItemName.Text + "', '" + Int32.Parse(BorrowStockValue.Text) + "', '" + TimeNow + "', '" + EndTime.Text + "','" + randomID + "', 'Ongoing')";
+                cmd2.CommandText = "UPDATE Items set Stock = (Stock - " + Int32.Parse(BorrowStockValue.Text) + ") WHERE ItemName = '" + BorrowingItemName.Text + "'";
+                cmd.ExecuteNonQuery();
+                cmd2.ExecuteNonQuery();
+                sql.Close();
+                MessageBox.Show("Record Inserted Successfully \n Your Transaction ID is: " + randomID);
 
-            MAIN mainForm = new MAIN();
-            mainForm.Show();
-            this.Close();
+                MAIN mainForm = new MAIN();
+                mainForm.Show();
+                this.Close();
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -95,43 +99,43 @@ namespace equipsys
 
         private void courseBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (courseBox.SelectedIndex == 0)
-                courseBox.Text = "BSCS";
-            if (courseBox.SelectedIndex == 1)
-                courseBox.Text = "BSEMC";
-            if (courseBox.SelectedIndex == 2)
-                courseBox.Text = "BSIS";
-            if (courseBox.SelectedIndex == 3)
-                courseBox.Text = "BSIT";
+            if (CourseValue.SelectedIndex == 0)
+                CourseValue.Text = "BSCS";
+            if (CourseValue.SelectedIndex == 1)
+                CourseValue.Text = "BSEMC";
+            if (CourseValue.SelectedIndex == 2)
+                CourseValue.Text = "BSIS";
+            if (CourseValue.SelectedIndex == 3)
+                CourseValue.Text = "BSIT";
 
         }
 
         private void yearBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (yearBox.SelectedIndex == 0)
-                yearBox.Text = "1";
-            if (yearBox.SelectedIndex == 1)
-                yearBox.Text = "2";
-            if (yearBox.SelectedIndex == 2)
-                yearBox.Text = "3";
-            if (yearBox.SelectedIndex == 3)
-                yearBox.Text = "4";
+            if (YearValue.SelectedIndex == 0)
+                YearValue.Text = "1";
+            if (YearValue.SelectedIndex == 1)
+                YearValue.Text = "2";
+            if (YearValue.SelectedIndex == 2)
+                YearValue.Text = "3";
+            if (YearValue.SelectedIndex == 3)
+                YearValue.Text = "4";
 
         }
 
         private void SectionBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            if (SectionBox.SelectedIndex == 0)
-                SectionBox.Text = "A";
-            if (SectionBox.SelectedIndex == 1)
-                SectionBox.Text = "B";
+            if (SectionValue.SelectedIndex == 0)
+                SectionValue.Text = "A";
+            if (SectionValue.SelectedIndex == 1)
+                SectionValue.Text = "B";
         }
 
         private void studentidReg_TextChanged(object sender, EventArgs e)
         {
-            studentidReg.Text.ToUpper();
-            studentidReg.Text.Trim();
+            StudentIDValue.Text.ToUpper();
+            StudentIDValue.Text.Trim();
         }
 
         /// <summary>
@@ -160,32 +164,59 @@ namespace equipsys
 
             bool isValidCount(string number) =>
                 number.Length != 0 &&
-                number.All(char.IsDigit);
+                number.All(char.IsDigit) &&
+                int.Parse(number) <= int.Parse(Stock.Substring(8)) &&
+                int.Parse(number) > 0;
 
             // Validation Process
 
-            if (!IsValidName(firstnameReg.Text) || !IsValidName(lastnameReg.Text))
+            if (!IsValidName(FirstNameValue.Text) || !IsValidName(LastNameValue.Text))
+            {
+                MessageBox.Show("Invalid first or last name");
                 return false;
+            }
+            if (CourseValue.SelectedIndex < 0 || YearValue.SelectedIndex < 0 || SectionValue.SelectedIndex < 0)
+            {
+                MessageBox.Show("Invalid course/year/section");
+                return false;
+            }
+            if (!IsValidStudentID(StudentIDValue.Text))
+            {
+                MessageBox.Show("Invalid student id.");
+                return false;
+            }
 
-            if (courseBox.SelectedIndex < 0 || yearBox.SelectedIndex < 0 || SectionBox.SelectedIndex < 0)
+            if (!IsValidContactNumber(ContactNumberValue.Text))
+            {
+                MessageBox.Show("Invalid contact number");
                 return false;
+            }
 
-            if (!IsValidStudentID(studentidReg.Text))
+            if (!IsValidEmail(EmailValue.Text))
+            {
+                MessageBox.Show("Invalid email");
                 return false;
+            }
 
-            if (!IsValidContactNumber(contactBox.Text))
+            if (!isValidCount(BorrowStockValue.Text))
+            {
+                MessageBox.Show("Invalid Stock.");
                 return false;
-
-            if (!IsValidEmail(EmailBox.Text))
-                return false;
-
-            if (!isValidCount(BorrowCount.Text))
-                return false;
+            }
 
             return true;
         }
-
         private void BorrowingImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
