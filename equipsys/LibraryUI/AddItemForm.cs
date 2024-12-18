@@ -116,5 +116,10 @@ namespace equipsys
         {
 
         }
+
+        private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

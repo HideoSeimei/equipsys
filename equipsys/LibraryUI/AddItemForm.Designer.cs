@@ -32,6 +32,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemForm));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            ItemStockBox = new TextBox();
             ReturnButton = new Button();
             SaveItemButton = new Button();
             BorrowingImageBox = new PictureBox();
@@ -50,6 +51,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.LightGray;
+            guna2Panel1.Controls.Add(ItemStockBox);
             guna2Panel1.Controls.Add(ReturnButton);
             guna2Panel1.Controls.Add(SaveItemButton);
             guna2Panel1.Controls.Add(BorrowingImageBox);
@@ -67,6 +69,14 @@
             guna2Panel1.Size = new Size(651, 352);
             guna2Panel1.TabIndex = 46;
             guna2Panel1.Paint += guna2Panel1_Paint;
+            // 
+            // ItemStockBox
+            // 
+            ItemStockBox.Location = new Point(285, 111);
+            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
+            ItemStockBox.Name = "ItemStockBox";
+            ItemStockBox.Size = new Size(72, 23);
+            ItemStockBox.TabIndex = 10;
             // 
             // ReturnButton
             // 
@@ -126,11 +136,11 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 144);
+            ItemDescriptionBox.Location = new Point(285, 160);
             ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
             ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(303, 137);
+            ItemDescriptionBox.Size = new Size(303, 107);
             ItemDescriptionBox.TabIndex = 4;
             // 
             // ItemNameBox
@@ -146,7 +156,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(285, 146);
+            label5.Location = new Point(285, 89);
             label5.Name = "label5";
             label5.Size = new Size(46, 20);
             label5.TabIndex = 2;
@@ -157,7 +167,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(285, 89);
+            label4.Location = new Point(285, 138);
             label4.Name = "label4";
             label4.Size = new Size(87, 20);
             label4.TabIndex = 1;
@@ -225,5 +235,6 @@
         public Label label5;
         public Label label4;
         public PictureBox BorrowingImageBox;
+        public TextBox ItemStockBox;
     }
 }
