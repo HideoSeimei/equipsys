@@ -79,11 +79,11 @@
             // 
             RegisterButton.BackColor = Color.FromArgb(32, 33, 35);
             RegisterButton.Cursor = Cursors.Hand;
-            RegisterButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            RegisterButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             RegisterButton.ForeColor = Color.White;
             RegisterButton.Location = new Point(333, 507);
             RegisterButton.Name = "RegisterButton";
-            RegisterButton.Size = new Size(123, 29);
+            RegisterButton.Size = new Size(123, 37);
             RegisterButton.TabIndex = 9;
             RegisterButton.Text = "Register";
             RegisterButton.UseVisualStyleBackColor = false;
@@ -129,11 +129,11 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.FlatStyle = FlatStyle.Flat;
-            label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.FromArgb(32, 33, 35);
             label10.Location = new Point(27, 38);
             label10.Name = "label10";
-            label10.Size = new Size(145, 31);
+            label10.Size = new Size(157, 35);
             label10.TabIndex = 34;
             label10.Text = "Registration";
             label10.Click += label10_Click;
@@ -360,11 +360,11 @@
             // 
             button1.BackColor = Color.Transparent;
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.DimGray;
             button1.Location = new Point(196, 506);
             button1.Name = "button1";
-            button1.Size = new Size(120, 29);
+            button1.Size = new Size(120, 38);
             button1.TabIndex = 10;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
