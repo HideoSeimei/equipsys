@@ -141,7 +141,7 @@ namespace equipsys.Models
                 cmd.Parameters.AddWithValue("@Id", id);
                 sql.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Removed Item Successfully");
+                MessageBox.Show("Item archived");
             }
         }
 

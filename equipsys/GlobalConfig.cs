@@ -11,11 +11,13 @@ namespace equipsys
     {
         // TODO - Change these strings to your local device/database 
         /// <summary>
-        /// ConnectionString used by all SqlConnections, change string value to your device locale.
+        /// ConnectionString used by all SqlConnections, change string value to your local device.
         /// </summary>
-
-        public static string ConnectionString = "Data Source=DESKTOP-QE9SO2J;Initial Catalog=EquipmentBorrowingSystem;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";  
-        public static string UserReposString = "itiw";
+        public static string ConnectionString = "Data Source=ARKDRAEDON;Initial Catalog=EquipmentBorrowing;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";  
+        /// <summary>
+        /// UserReposString used by all Pathfinding, change string value to your local device.
+        /// </summary>
+        public static string UserReposString = "arkme";
 
     }
 }
