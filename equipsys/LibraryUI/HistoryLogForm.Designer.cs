@@ -36,7 +36,6 @@
             ReturnButton = new Button();
             dataGridView1 = new DataGridView();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            textBox1 = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             guna2Panel1.SuspendLayout();
@@ -52,9 +51,10 @@
             SaveItemButton.Cursor = Cursors.Hand;
             SaveItemButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(585, 348);
+            SaveItemButton.Location = new Point(512, 261);
+            SaveItemButton.Margin = new Padding(3, 2, 3, 2);
             SaveItemButton.Name = "SaveItemButton";
-            SaveItemButton.Size = new Size(125, 29);
+            SaveItemButton.Size = new Size(109, 22);
             SaveItemButton.TabIndex = 8;
             SaveItemButton.Text = "Reload";
             SaveItemButton.UseVisualStyleBackColor = false;
@@ -65,9 +65,10 @@
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(377, 348);
+            ReturnButton.Location = new Point(330, 261);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(202, 29);
+            ReturnButton.Size = new Size(177, 22);
             ReturnButton.TabIndex = 9;
             ReturnButton.Text = "Process Return";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -79,38 +80,27 @@
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.LightGray;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(14, 16);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(707, 325);
+            dataGridView1.Size = new Size(619, 244);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // guna2Panel1
             // 
-            guna2Panel1.Controls.Add(textBox1);
             guna2Panel1.Controls.Add(dataGridView1);
             guna2Panel1.Controls.Add(ReturnButton);
             guna2Panel1.Controls.Add(SaveItemButton);
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(735, 392);
+            guna2Panel1.Size = new Size(643, 294);
             guna2Panel1.TabIndex = 53;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(155, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(424, 27);
-            textBox1.TabIndex = 11;
-            textBox1.Text = "  Search";
             // 
             // contextMenuStrip1
             // 
@@ -120,18 +110,16 @@
             // 
             // HistoryLogForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(735, 392);
+            ClientSize = new Size(643, 294);
             Controls.Add(guna2Panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "HistoryLogForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HISTORY";
             Load += HistoryLogForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             guna2Panel1.ResumeLayout(false);
-            guna2Panel1.PerformLayout();
             ResumeLayout(false);
         }
 
