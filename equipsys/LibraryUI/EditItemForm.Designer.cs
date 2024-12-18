@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditItemForm));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             openFileDialog1 = new OpenFileDialog();
             button3 = new Button();
             button2 = new Button();
@@ -55,12 +55,12 @@
             ItemNameBox = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel = new Panel();
-            button10 = new Button();
+            AddStaffBTN = new Button();
             button13 = new Button();
-            button8 = new Button();
-            button7 = new Button();
+            HistoryBTN = new Button();
+            AddItemBTN = new Button();
             pictureBox6 = new PictureBox();
-            button4 = new Button();
+            HomeBTN = new Button();
             pictureBox7 = new PictureBox();
             label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).BeginInit();
@@ -94,13 +94,13 @@
             // NewImagePath
             // 
             NewImagePath.Image = (Image)resources.GetObject("NewImagePath.Image");
-            NewImagePath.Location = new Point(55, 48);
+            NewImagePath.Location = new Point(48, 36);
+            NewImagePath.Margin = new Padding(3, 2, 3, 2);
             NewImagePath.Name = "NewImagePath";
-            NewImagePath.Size = new Size(238, 211);
+            NewImagePath.Size = new Size(208, 158);
             NewImagePath.SizeMode = PictureBoxSizeMode.StretchImage;
             NewImagePath.TabIndex = 7;
             NewImagePath.TabStop = false;
-            NewImagePath.Click += NewImagePath_Click;
             // 
             // button1
             // 
@@ -113,14 +113,14 @@
             // 
             StockBox.Location = new Point(0, 0);
             StockBox.Name = "StockBox";
-            StockBox.Size = new Size(100, 27);
+            StockBox.Size = new Size(100, 23);
             StockBox.TabIndex = 0;
             // 
             // DescriptionBox
             // 
             DescriptionBox.Location = new Point(0, 0);
             DescriptionBox.Name = "DescriptionBox";
-            DescriptionBox.Size = new Size(100, 27);
+            DescriptionBox.Size = new Size(100, 23);
             DescriptionBox.TabIndex = 0;
             // 
             // pictureBox2
@@ -140,10 +140,11 @@
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(420, 388);
+            ReturnButton.Location = new Point(368, 294);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(139, 29);
-            ReturnButton.TabIndex = 9;
+            ReturnButton.Size = new Size(122, 22);
+            ReturnButton.TabIndex = 4;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
             ReturnButton.Click += ReturnButton_Click;
@@ -154,10 +155,11 @@
             SaveButton.Cursor = Cursors.Hand;
             SaveButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(565, 388);
+            SaveButton.Location = new Point(496, 294);
+            SaveButton.Margin = new Padding(3, 2, 3, 2);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(131, 29);
-            SaveButton.TabIndex = 8;
+            SaveButton.Size = new Size(115, 22);
+            SaveButton.TabIndex = 5;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;
             SaveButton.Click += SaveButton_Click;
@@ -167,20 +169,22 @@
             BrowseImageButton.Cursor = Cursors.Hand;
             BrowseImageButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             BrowseImageButton.ForeColor = Color.FromArgb(32, 33, 35);
-            BrowseImageButton.Location = new Point(109, 281);
+            BrowseImageButton.Location = new Point(95, 211);
+            BrowseImageButton.Margin = new Padding(3, 2, 3, 2);
             BrowseImageButton.Name = "BrowseImageButton";
-            BrowseImageButton.Size = new Size(125, 29);
-            BrowseImageButton.TabIndex = 6;
+            BrowseImageButton.Size = new Size(109, 22);
+            BrowseImageButton.TabIndex = 3;
             BrowseImageButton.Text = "Browse";
             BrowseImageButton.UseVisualStyleBackColor = true;
             BrowseImageButton.Click += BrowseImageButton_Click;
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(326, 134);
+            ItemStockBox.Location = new Point(285, 100);
+            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
             ItemStockBox.Name = "ItemStockBox";
-            ItemStockBox.Size = new Size(98, 27);
-            ItemStockBox.TabIndex = 5;
+            ItemStockBox.Size = new Size(86, 23);
+            ItemStockBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -197,20 +201,21 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(326, 192);
+            ItemDescriptionBox.Location = new Point(285, 144);
+            ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
             ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(370, 190);
-            ItemDescriptionBox.TabIndex = 4;
+            ItemDescriptionBox.Size = new Size(324, 144);
+            ItemDescriptionBox.TabIndex = 2;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(326, 106);
+            label5.Location = new Point(285, 80);
             label5.Name = "label5";
-            label5.Size = new Size(56, 25);
+            label5.Size = new Size(46, 20);
             label5.TabIndex = 2;
             label5.Text = "Stock";
             // 
@@ -219,9 +224,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(326, 164);
+            label4.Location = new Point(285, 123);
             label4.Name = "label4";
-            label4.Size = new Size(108, 25);
+            label4.Size = new Size(87, 20);
             label4.TabIndex = 1;
             label4.Text = "Description";
             // 
@@ -230,9 +235,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(326, 48);
+            label3.Location = new Point(285, 36);
             label3.Name = "label3";
-            label3.Size = new Size(50, 25);
+            label3.Size = new Size(39, 20);
             label3.TabIndex = 0;
             label3.Text = "Item";
             // 
@@ -242,9 +247,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(264, 37);
+            label1.Location = new Point(231, 28);
             label1.Name = "label1";
-            label1.Size = new Size(137, 32);
+            label1.Size = new Size(108, 26);
             label1.TabIndex = 52;
             label1.Text = "Edit Item";
             // 
@@ -252,7 +257,7 @@
             // 
             ItemBox.Location = new Point(0, 0);
             ItemBox.Name = "ItemBox";
-            ItemBox.Size = new Size(100, 27);
+            ItemBox.Size = new Size(100, 23);
             ItemBox.TabIndex = 0;
             // 
             // pictureBox1
@@ -281,10 +286,11 @@
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(326, 76);
+            ItemNameBox.Location = new Point(285, 57);
+            ItemNameBox.Margin = new Padding(3, 2, 3, 2);
             ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(370, 27);
-            ItemNameBox.TabIndex = 3;
+            ItemNameBox.Size = new Size(324, 23);
+            ItemNameBox.TabIndex = 0;
             // 
             // guna2Panel1
             // 
@@ -299,45 +305,46 @@
             guna2Panel1.Controls.Add(label5);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
-            guna2Panel1.Location = new Point(264, 107);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
+            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.Location = new Point(231, 80);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(717, 445);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.Size = new Size(627, 334);
             guna2Panel1.TabIndex = 53;
             // 
             // panel
             // 
             panel.BackColor = Color.FromArgb(32, 33, 35);
-            panel.Controls.Add(button10);
+            panel.Controls.Add(AddStaffBTN);
             panel.Controls.Add(button13);
-            panel.Controls.Add(button8);
-            panel.Controls.Add(button7);
+            panel.Controls.Add(HistoryBTN);
+            panel.Controls.Add(AddItemBTN);
             panel.Controls.Add(pictureBox6);
-            panel.Controls.Add(button4);
+            panel.Controls.Add(HomeBTN);
             panel.Location = new Point(0, -1);
+            panel.Margin = new Padding(3, 2, 3, 2);
             panel.Name = "panel";
-            panel.Size = new Size(235, 589);
+            panel.Size = new Size(206, 442);
             panel.TabIndex = 54;
             // 
-            // button10
+            // AddStaffBTN
             // 
-            button10.BackgroundImageLayout = ImageLayout.None;
-            button10.Cursor = Cursors.Hand;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button10.ForeColor = Color.White;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.ImageAlign = ContentAlignment.MiddleLeft;
-            button10.Location = new Point(12, 353);
-            button10.Name = "button10";
-            button10.Padding = new Padding(25, 0, 0, 0);
-            button10.Size = new Size(213, 75);
-            button10.TabIndex = 45;
-            button10.Text = " Sign in";
-            button10.UseVisualStyleBackColor = false;
+            AddStaffBTN.BackgroundImageLayout = ImageLayout.None;
+            AddStaffBTN.Cursor = Cursors.Hand;
+            AddStaffBTN.FlatAppearance.BorderSize = 0;
+            AddStaffBTN.FlatStyle = FlatStyle.Flat;
+            AddStaffBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddStaffBTN.ForeColor = Color.White;
+            AddStaffBTN.Image = (Image)resources.GetObject("AddStaffBTN.Image");
+            AddStaffBTN.ImageAlign = ContentAlignment.MiddleLeft;
+            AddStaffBTN.Location = new Point(10, 265);
+            AddStaffBTN.Margin = new Padding(3, 2, 3, 2);
+            AddStaffBTN.Name = "AddStaffBTN";
+            AddStaffBTN.Padding = new Padding(22, 0, 0, 0);
+            AddStaffBTN.Size = new Size(186, 56);
+            AddStaffBTN.TabIndex = 9;
+            AddStaffBTN.Text = "Add Staff";
+            AddStaffBTN.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
@@ -349,86 +356,90 @@
             button13.ForeColor = Color.White;
             button13.Image = (Image)resources.GetObject("button13.Image");
             button13.ImageAlign = ContentAlignment.MiddleLeft;
-            button13.Location = new Point(22, 478);
+            button13.Location = new Point(19, 358);
+            button13.Margin = new Padding(3, 2, 3, 2);
             button13.Name = "button13";
-            button13.Padding = new Padding(25, 0, 0, 0);
-            button13.Size = new Size(190, 75);
-            button13.TabIndex = 45;
+            button13.Padding = new Padding(22, 0, 0, 0);
+            button13.Size = new Size(166, 56);
+            button13.TabIndex = 10;
             button13.Text = "   Log out";
             button13.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // HistoryBTN
             // 
-            button8.BackgroundImageLayout = ImageLayout.None;
-            button8.Cursor = Cursors.Hand;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button8.ForeColor = Color.White;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(11, 194);
-            button8.Name = "button8";
-            button8.Padding = new Padding(25, 0, 0, 0);
-            button8.Size = new Size(213, 75);
-            button8.TabIndex = 46;
-            button8.Text = " History";
-            button8.UseVisualStyleBackColor = false;
+            HistoryBTN.BackgroundImageLayout = ImageLayout.None;
+            HistoryBTN.Cursor = Cursors.Hand;
+            HistoryBTN.FlatAppearance.BorderSize = 0;
+            HistoryBTN.FlatStyle = FlatStyle.Flat;
+            HistoryBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            HistoryBTN.ForeColor = Color.White;
+            HistoryBTN.Image = (Image)resources.GetObject("HistoryBTN.Image");
+            HistoryBTN.ImageAlign = ContentAlignment.MiddleLeft;
+            HistoryBTN.Location = new Point(10, 146);
+            HistoryBTN.Margin = new Padding(3, 2, 3, 2);
+            HistoryBTN.Name = "HistoryBTN";
+            HistoryBTN.Padding = new Padding(22, 0, 0, 0);
+            HistoryBTN.Size = new Size(186, 56);
+            HistoryBTN.TabIndex = 7;
+            HistoryBTN.Text = "History";
+            HistoryBTN.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // AddItemBTN
             // 
-            button7.BackgroundImageLayout = ImageLayout.None;
-            button7.Cursor = Cursors.Hand;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.ForeColor = Color.White;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(11, 272);
-            button7.Name = "button7";
-            button7.Padding = new Padding(25, 0, 0, 0);
-            button7.Size = new Size(213, 75);
-            button7.TabIndex = 45;
-            button7.Text = "     Add Item";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
+            AddItemBTN.BackgroundImageLayout = ImageLayout.None;
+            AddItemBTN.Cursor = Cursors.Hand;
+            AddItemBTN.FlatAppearance.BorderSize = 0;
+            AddItemBTN.FlatStyle = FlatStyle.Flat;
+            AddItemBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            AddItemBTN.ForeColor = Color.White;
+            AddItemBTN.Image = (Image)resources.GetObject("AddItemBTN.Image");
+            AddItemBTN.ImageAlign = ContentAlignment.MiddleLeft;
+            AddItemBTN.Location = new Point(10, 204);
+            AddItemBTN.Margin = new Padding(3, 2, 3, 2);
+            AddItemBTN.Name = "AddItemBTN";
+            AddItemBTN.Padding = new Padding(22, 0, 0, 0);
+            AddItemBTN.Size = new Size(186, 56);
+            AddItemBTN.TabIndex = 8;
+            AddItemBTN.Text = "Add Item";
+            AddItemBTN.UseVisualStyleBackColor = false;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(85, 41);
+            pictureBox6.Location = new Point(74, 31);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(62, 57);
+            pictureBox6.Size = new Size(54, 43);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 46;
             pictureBox6.TabStop = false;
             // 
-            // button4
+            // HomeBTN
             // 
-            button4.BackgroundImageLayout = ImageLayout.None;
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(9, 110);
-            button4.Name = "button4";
-            button4.Padding = new Padding(25, 0, 0, 0);
-            button4.Size = new Size(213, 75);
-            button4.TabIndex = 45;
-            button4.Text = "Home";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
+            HomeBTN.BackgroundImageLayout = ImageLayout.None;
+            HomeBTN.Cursor = Cursors.Hand;
+            HomeBTN.FlatAppearance.BorderSize = 0;
+            HomeBTN.FlatStyle = FlatStyle.Flat;
+            HomeBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            HomeBTN.ForeColor = Color.White;
+            HomeBTN.Image = (Image)resources.GetObject("HomeBTN.Image");
+            HomeBTN.ImageAlign = ContentAlignment.MiddleLeft;
+            HomeBTN.Location = new Point(8, 82);
+            HomeBTN.Margin = new Padding(3, 2, 3, 2);
+            HomeBTN.Name = "HomeBTN";
+            HomeBTN.Padding = new Padding(22, 0, 0, 0);
+            HomeBTN.Size = new Size(186, 56);
+            HomeBTN.TabIndex = 6;
+            HomeBTN.Text = "Home";
+            HomeBTN.UseVisualStyleBackColor = false;
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(949, 43);
+            pictureBox7.Location = new Point(830, 32);
+            pictureBox7.Margin = new Padding(3, 2, 3, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(29, 25);
+            pictureBox7.Size = new Size(25, 19);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 56;
             pictureBox7.TabStop = false;
@@ -439,23 +450,24 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(32, 33, 35);
-            label6.Location = new Point(775, 44);
+            label6.Location = new Point(678, 33);
             label6.Name = "label6";
-            label6.Size = new Size(174, 23);
+            label6.Size = new Size(140, 18);
             label6.TabIndex = 55;
             label6.Text = "Welcome Admin!";
             // 
             // EditItemForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1013, 588);
+            ClientSize = new Size(886, 441);
             Controls.Add(pictureBox7);
             Controls.Add(label6);
             Controls.Add(panel);
             Controls.Add(label1);
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "EditItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EDIT_ITEMS";
@@ -503,10 +515,10 @@
         private Panel panel;
         private Button button13;
         private PictureBox pictureBox6;
-        private Button button7;
-        private Button button10;
-        private Button button4;
-        private Button button8;
+        private Button AddItemBTN;
+        private Button AddStaffBTN;
+        private Button HomeBTN;
+        private Button HistoryBTN;
         private PictureBox pictureBox7;
         private Label label6;
     }

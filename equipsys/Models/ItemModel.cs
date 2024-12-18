@@ -50,7 +50,7 @@ namespace equipsys.Models
                 // when image is added, find the folder and the image path for the item.
                 else
                 {
-                    string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local
+                    string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\";
                     string imageFileName = Path.GetFileName(image);
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -96,6 +96,7 @@ namespace equipsys.Models
         {
             using (SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString))
             {
+                sql.Open();
                 string editQuery = "UPDATE Items SET ItemName = @ITEMNAME, Description = @DESCRIPTION, Stock = @STOCK, ImagePath = @IMAGEPATH WHERE item_id = @ID";
                 SqlCommand cmd = new SqlCommand(editQuery, sql);
                 cmd.Parameters.AddWithValue("@ID", id);
@@ -103,12 +104,10 @@ namespace equipsys.Models
                 cmd.Parameters.AddWithValue("@DESCRIPTION", description);
                 cmd.Parameters.AddWithValue("@STOCK", stock);
                 cmd.Parameters.AddWithValue("@IMAGEPATH", newImage);
-                sql.Open();
-
-                //MessageBox.Show($"ID: {id}, ItemName: {ItemName}, Description: {description}, Stock: {stock}");
+                
 
                 string finalImagePath = "";
-                string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\"; // TODO - fix this so its local 
+                string imageFolder = @"C:\Users\"+(GlobalConfig.UserReposString)+@"\source\repos\equipsys\equipsys\Images\";
                 string imageFileName = Path.GetFileName(newImage);
                 finalImagePath = Path.Combine(imageFolder, imageFileName);
 
@@ -116,13 +115,19 @@ namespace equipsys.Models
                     finalImagePath = Path.Combine(imageFolder, imageFileName);
                 else
                 {
-                    File.Copy(newImage, finalImagePath, true);
-                    MessageBox.Show("Copied Successfully");
+                    try
+                    {
+                        File.Copy(newImage, finalImagePath, true);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Something went wrong trying to copy image to system");
+                    }
                 }
                 cmd.ExecuteNonQuery();
                 ItemForm itemForm = new ItemForm();
                 itemForm.ReloadFlowLayoutPanel();
-                
+                sql.Close();
             }
         }
 

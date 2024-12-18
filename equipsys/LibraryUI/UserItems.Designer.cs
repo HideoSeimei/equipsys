@@ -36,17 +36,18 @@
             UserItemsPanel.AutoScroll = true;
             UserItemsPanel.Dock = DockStyle.Fill;
             UserItemsPanel.Location = new Point(0, 0);
+            UserItemsPanel.Margin = new Padding(3, 2, 3, 2);
             UserItemsPanel.Name = "UserItemsPanel";
-            UserItemsPanel.Size = new Size(800, 450);
+            UserItemsPanel.Size = new Size(700, 338);
             UserItemsPanel.TabIndex = 0;
-            UserItemsPanel.Paint += flowLayoutPanel1_Paint;
             // 
             // UserItems
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(UserItemsPanel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UserItems";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UserItems";

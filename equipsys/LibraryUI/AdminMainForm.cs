@@ -141,11 +141,6 @@ namespace equipsys
             this.Hide();
         }
 
-        private void profileName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox6_Click(object sender, EventArgs e)
         {
 

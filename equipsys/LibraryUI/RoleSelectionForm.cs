@@ -18,23 +18,21 @@ namespace equipsys
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)//STAFF
-        {
-
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)//ADMIN
+        private void AdminBTN_Click(object sender, EventArgs e)
         {
             LoginFormAdmin loginFormAdmin = new LoginFormAdmin();
             loginFormAdmin.Show();
             this.Hide();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void StaffBTN_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void ExitBTN_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

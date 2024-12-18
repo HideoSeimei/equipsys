@@ -39,9 +39,9 @@
             ItemStockBox = new TextBox();
             ItemDescriptionBox = new TextBox();
             ItemNameBox = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
+            StockLabel = new Label();
+            DescriptionLabel = new Label();
+            ItemNameLabel = new Label();
             label2 = new Label();
             openFileDialog1 = new OpenFileDialog();
             guna2Panel1.SuspendLayout();
@@ -58,28 +58,27 @@
             guna2Panel1.Controls.Add(ItemStockBox);
             guna2Panel1.Controls.Add(ItemDescriptionBox);
             guna2Panel1.Controls.Add(ItemNameBox);
-            guna2Panel1.Controls.Add(label5);
-            guna2Panel1.Controls.Add(label4);
-            guna2Panel1.Controls.Add(label3);
+            guna2Panel1.Controls.Add(StockLabel);
+            guna2Panel1.Controls.Add(DescriptionLabel);
+            guna2Panel1.Controls.Add(ItemNameLabel);
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(744, 469);
+            guna2Panel1.Size = new Size(651, 352);
             guna2Panel1.TabIndex = 46;
-            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // ReturnButton
             // 
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(424, 379);
+            ReturnButton.Location = new Point(394, 319);
+            ReturnButton.Margin = new Padding(3, 2, 3, 2);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(135, 29);
-            ReturnButton.TabIndex = 9;
+            ReturnButton.Size = new Size(118, 22);
+            ReturnButton.TabIndex = 4;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
             ReturnButton.Visible = false;
@@ -91,10 +90,11 @@
             SaveItemButton.Cursor = Cursors.Hand;
             SaveItemButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveItemButton.ForeColor = Color.White;
-            SaveItemButton.Location = new Point(565, 379);
+            SaveItemButton.Location = new Point(518, 319);
+            SaveItemButton.Margin = new Padding(3, 2, 3, 2);
             SaveItemButton.Name = "SaveItemButton";
-            SaveItemButton.Size = new Size(138, 29);
-            SaveItemButton.TabIndex = 8;
+            SaveItemButton.Size = new Size(121, 22);
+            SaveItemButton.TabIndex = 5;
             SaveItemButton.Text = "Save";
             SaveItemButton.UseVisualStyleBackColor = false;
             SaveItemButton.Click += SaveButton_Click;
@@ -102,81 +102,85 @@
             // BorrowingImageBox
             // 
             BorrowingImageBox.Image = (Image)resources.GetObject("BorrowingImageBox.Image");
-            BorrowingImageBox.Location = new Point(55, 48);
+            BorrowingImageBox.Location = new Point(48, 36);
+            BorrowingImageBox.Margin = new Padding(3, 2, 3, 2);
             BorrowingImageBox.Name = "BorrowingImageBox";
-            BorrowingImageBox.Size = new Size(238, 211);
+            BorrowingImageBox.Size = new Size(208, 158);
             BorrowingImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
             BorrowingImageBox.TabIndex = 7;
             BorrowingImageBox.TabStop = false;
-            BorrowingImageBox.Click += pictureBox4_Click_1;
             // 
             // AddImageButton
             // 
             AddImageButton.Cursor = Cursors.Hand;
             AddImageButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             AddImageButton.ForeColor = Color.FromArgb(32, 33, 35);
-            AddImageButton.Location = new Point(109, 281);
+            AddImageButton.Location = new Point(95, 211);
+            AddImageButton.Margin = new Padding(3, 2, 3, 2);
             AddImageButton.Name = "AddImageButton";
-            AddImageButton.Size = new Size(125, 29);
-            AddImageButton.TabIndex = 6;
+            AddImageButton.Size = new Size(109, 22);
+            AddImageButton.TabIndex = 3;
             AddImageButton.Text = "Browse";
             AddImageButton.UseVisualStyleBackColor = true;
             AddImageButton.Click += AddImageButton_Click;
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(326, 232);
+            ItemStockBox.Location = new Point(285, 105);
+            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
             ItemStockBox.Name = "ItemStockBox";
-            ItemStockBox.Size = new Size(98, 27);
-            ItemStockBox.TabIndex = 5;
+            ItemStockBox.Size = new Size(86, 23);
+            ItemStockBox.TabIndex = 1;
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(326, 192);
+            ItemDescriptionBox.Location = new Point(285, 152);
+            ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
             ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(346, 181);
-            ItemDescriptionBox.TabIndex = 4;
+            ItemDescriptionBox.Size = new Size(303, 137);
+            ItemDescriptionBox.TabIndex = 2;
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(326, 85);
+            ItemNameBox.Location = new Point(285, 58);
+            ItemNameBox.Margin = new Padding(3, 2, 3, 2);
             ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(346, 27);
-            ItemNameBox.TabIndex = 3;
+            ItemNameBox.Size = new Size(303, 23);
+            ItemNameBox.TabIndex = 0;
             // 
-            // label5
+            // StockLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(326, 195);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 25);
-            label5.TabIndex = 2;
-            label5.Text = "Stock";
+            StockLabel.AutoSize = true;
+            StockLabel.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            StockLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            StockLabel.Location = new Point(285, 83);
+            StockLabel.Name = "StockLabel";
+            StockLabel.Size = new Size(46, 20);
+            StockLabel.TabIndex = 2;
+            StockLabel.Text = "Stock";
             // 
-            // label4
+            // DescriptionLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(326, 119);
-            label4.Name = "label4";
-            label4.Size = new Size(108, 25);
-            label4.TabIndex = 1;
-            label4.Text = "Description";
+            DescriptionLabel.AutoSize = true;
+            DescriptionLabel.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            DescriptionLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            DescriptionLabel.Location = new Point(285, 130);
+            DescriptionLabel.Name = "DescriptionLabel";
+            DescriptionLabel.Size = new Size(87, 20);
+            DescriptionLabel.TabIndex = 1;
+            DescriptionLabel.Text = "Description";
             // 
-            // label3
+            // ItemNameLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(326, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 25);
-            label3.TabIndex = 0;
-            label3.Text = "Item";
+            ItemNameLabel.AutoSize = true;
+            ItemNameLabel.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            ItemNameLabel.ForeColor = Color.FromArgb(32, 33, 35);
+            ItemNameLabel.Location = new Point(285, 36);
+            ItemNameLabel.Name = "ItemNameLabel";
+            ItemNameLabel.Size = new Size(84, 20);
+            ItemNameLabel.TabIndex = 0;
+            ItemNameLabel.Text = "Item Name";
             // 
             // label2
             // 
@@ -185,9 +189,9 @@
             label2.Cursor = Cursors.Hand;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(37, 467);
+            label2.Location = new Point(32, 350);
             label2.Name = "label2";
-            label2.Size = new Size(62, 17);
+            label2.Size = new Size(50, 14);
             label2.TabIndex = 44;
             label2.Text = "Log out";
             // 
@@ -197,16 +201,16 @@
             // 
             // AddItemForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(744, 469);
+            ClientSize = new Size(651, 352);
             Controls.Add(guna2Panel1);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AddItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ADD_ITEMS";
-            Load += AddItemForm_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BorrowingImageBox).EndInit();
@@ -222,12 +226,12 @@
         private Button ReturnButton;
         private Button SaveItemButton;
         private OpenFileDialog openFileDialog1;
-        public Label label3;
+        public Label ItemNameLabel;
         public TextBox ItemStockBox;
         public TextBox ItemDescriptionBox;
         public TextBox ItemNameBox;
-        public Label label5;
-        public Label label4;
+        public Label StockLabel;
+        public Label DescriptionLabel;
         public PictureBox BorrowingImageBox;
     }
 }

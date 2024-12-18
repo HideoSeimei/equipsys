@@ -69,9 +69,9 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(32, 33, 35);
-            label7.Location = new Point(22, 23);
+            label7.Location = new Point(19, 17);
             label7.Name = "label7";
-            label7.Size = new Size(158, 20);
+            label7.Size = new Size(124, 15);
             label7.TabIndex = 44;
             label7.Text = "Personal Information";
             // 
@@ -81,9 +81,10 @@
             RegisterButton.Cursor = Cursors.Hand;
             RegisterButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             RegisterButton.ForeColor = Color.White;
-            RegisterButton.Location = new Point(333, 507);
+            RegisterButton.Location = new Point(291, 380);
+            RegisterButton.Margin = new Padding(3, 2, 3, 2);
             RegisterButton.Name = "RegisterButton";
-            RegisterButton.Size = new Size(123, 37);
+            RegisterButton.Size = new Size(108, 28);
             RegisterButton.TabIndex = 9;
             RegisterButton.Text = "Register";
             RegisterButton.UseVisualStyleBackColor = false;
@@ -107,9 +108,10 @@
             // FirstNameValue
             // 
             FirstNameValue.ForeColor = Color.DimGray;
-            FirstNameValue.Location = new Point(34, 89);
+            FirstNameValue.Location = new Point(30, 67);
+            FirstNameValue.Margin = new Padding(3, 2, 3, 2);
             FirstNameValue.Name = "FirstNameValue";
-            FirstNameValue.Size = new Size(215, 27);
+            FirstNameValue.Size = new Size(189, 23);
             FirstNameValue.TabIndex = 0;
             // 
             // label9
@@ -118,9 +120,9 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(32, 33, 35);
-            label9.Location = new Point(34, 57);
+            label9.Location = new Point(30, 43);
             label9.Name = "label9";
-            label9.Size = new Size(80, 20);
+            label9.Size = new Size(64, 15);
             label9.TabIndex = 35;
             label9.Text = "First Name";
             // 
@@ -131,12 +133,11 @@
             label10.FlatStyle = FlatStyle.Flat;
             label10.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             label10.ForeColor = Color.FromArgb(32, 33, 35);
-            label10.Location = new Point(27, 38);
+            label10.Location = new Point(24, 28);
             label10.Name = "label10";
-            label10.Size = new Size(157, 35);
+            label10.Size = new Size(128, 28);
             label10.TabIndex = 34;
             label10.Text = "Registration";
-            label10.Click += label10_Click;
             // 
             // groupBox1
             // 
@@ -153,9 +154,11 @@
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(FirstNameValue);
             groupBox1.ForeColor = SystemColors.ControlText;
-            groupBox1.Location = new Point(27, 80);
+            groupBox1.Location = new Point(24, 60);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(625, 219);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(547, 164);
             groupBox1.TabIndex = 46;
             groupBox1.TabStop = false;
             // 
@@ -163,9 +166,10 @@
             // 
             SectionValue.FormattingEnabled = true;
             SectionValue.Items.AddRange(new object[] { "A", "B" });
-            SectionValue.Location = new Point(180, 170);
+            SectionValue.Location = new Point(158, 128);
+            SectionValue.Margin = new Padding(3, 2, 3, 2);
             SectionValue.Name = "SectionValue";
-            SectionValue.Size = new Size(69, 28);
+            SectionValue.Size = new Size(61, 23);
             SectionValue.TabIndex = 5;
             SectionValue.Text = "Sec";
             SectionValue.SelectedIndexChanged += SectionValue_SelectedIndexChanged;
@@ -174,9 +178,10 @@
             // 
             YearValue.FormattingEnabled = true;
             YearValue.Items.AddRange(new object[] { "1", "2", "3", "4" });
-            YearValue.Location = new Point(119, 171);
+            YearValue.Location = new Point(104, 128);
+            YearValue.Margin = new Padding(3, 2, 3, 2);
             YearValue.Name = "YearValue";
-            YearValue.Size = new Size(55, 28);
+            YearValue.Size = new Size(49, 23);
             YearValue.TabIndex = 4;
             YearValue.Text = "Yr";
             YearValue.SelectedIndexChanged += YearValue_SelectedIndexChanged;
@@ -185,9 +190,10 @@
             // 
             CourseValue.FormattingEnabled = true;
             CourseValue.Items.AddRange(new object[] { "BSCS", "BSEMC", "BSIS", "BSIT" });
-            CourseValue.Location = new Point(33, 171);
+            CourseValue.Location = new Point(29, 128);
+            CourseValue.Margin = new Padding(3, 2, 3, 2);
             CourseValue.Name = "CourseValue";
-            CourseValue.Size = new Size(80, 28);
+            CourseValue.Size = new Size(70, 23);
             CourseValue.TabIndex = 3;
             CourseValue.Text = "Course";
             CourseValue.SelectedIndexChanged += CourseValue_SelectedIndexChanged;
@@ -195,9 +201,9 @@
             // cysLabel
             // 
             cysLabel.AutoSize = true;
-            cysLabel.Location = new Point(31, 148);
+            cysLabel.Location = new Point(27, 111);
             cysLabel.Name = "cysLabel";
-            cysLabel.Size = new Size(143, 20);
+            cysLabel.Size = new Size(115, 15);
             cysLabel.TabIndex = 45;
             cysLabel.Text = "Course/Year/Section";
             // 
@@ -206,26 +212,28 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(32, 33, 35);
-            label2.Location = new Point(281, 141);
+            label2.Location = new Point(246, 106);
             label2.Name = "label2";
-            label2.Size = new Size(79, 20);
+            label2.Size = new Size(62, 15);
             label2.TabIndex = 23;
             label2.Text = "Student ID";
             // 
             // StudentIDValue
             // 
             StudentIDValue.ForeColor = Color.DimGray;
-            StudentIDValue.Location = new Point(281, 171);
+            StudentIDValue.Location = new Point(246, 128);
+            StudentIDValue.Margin = new Padding(3, 2, 3, 2);
             StudentIDValue.Name = "StudentIDValue";
-            StudentIDValue.Size = new Size(203, 27);
+            StudentIDValue.Size = new Size(178, 23);
             StudentIDValue.TabIndex = 6;
             // 
             // LastNameValue
             // 
             LastNameValue.ForeColor = Color.DimGray;
-            LastNameValue.Location = new Point(281, 89);
+            LastNameValue.Location = new Point(246, 67);
+            LastNameValue.Margin = new Padding(3, 2, 3, 2);
             LastNameValue.Name = "LastNameValue";
-            LastNameValue.Size = new Size(203, 27);
+            LastNameValue.Size = new Size(178, 23);
             LastNameValue.TabIndex = 1;
             // 
             // label3
@@ -233,27 +241,29 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(281, 57);
+            label3.Location = new Point(246, 43);
             label3.Name = "label3";
-            label3.Size = new Size(79, 20);
+            label3.Size = new Size(63, 15);
             label3.TabIndex = 20;
             label3.Text = "Last Name";
             // 
             // PasswordValue
             // 
             PasswordValue.ForeColor = Color.DimGray;
-            PasswordValue.Location = new Point(347, 99);
+            PasswordValue.Location = new Point(304, 74);
+            PasswordValue.Margin = new Padding(3, 2, 3, 2);
             PasswordValue.Name = "PasswordValue";
-            PasswordValue.Size = new Size(228, 27);
+            PasswordValue.Size = new Size(200, 23);
             PasswordValue.TabIndex = 8;
             PasswordValue.UseSystemPasswordChar = true;
             // 
             // UsernameValue
             // 
             UsernameValue.ForeColor = Color.DimGray;
-            UsernameValue.Location = new Point(38, 99);
+            UsernameValue.Location = new Point(33, 74);
+            UsernameValue.Margin = new Padding(3, 2, 3, 2);
             UsernameValue.Name = "UsernameValue";
-            UsernameValue.Size = new Size(249, 27);
+            UsernameValue.Size = new Size(218, 23);
             UsernameValue.TabIndex = 7;
             // 
             // label1
@@ -262,9 +272,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(38, 64);
+            label1.Location = new Point(33, 48);
             label1.Name = "label1";
-            label1.Size = new Size(75, 20);
+            label1.Size = new Size(60, 15);
             label1.TabIndex = 37;
             label1.Text = "Username";
             // 
@@ -274,9 +284,9 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.FromArgb(32, 33, 35);
-            label8.Location = new Point(22, 23);
+            label8.Location = new Point(19, 17);
             label8.Name = "label8";
-            label8.Size = new Size(152, 20);
+            label8.Size = new Size(120, 15);
             label8.TabIndex = 45;
             label8.Text = "Sign Up Information";
             // 
@@ -286,9 +296,9 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(32, 33, 35);
-            label6.Location = new Point(347, 64);
+            label6.Location = new Point(304, 48);
             label6.Name = "label6";
-            label6.Size = new Size(70, 20);
+            label6.Size = new Size(57, 15);
             label6.TabIndex = 26;
             label6.Text = "Password";
             // 
@@ -301,9 +311,11 @@
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(UsernameValue);
             groupBox2.Controls.Add(PasswordValue);
-            groupBox2.Location = new Point(27, 305);
+            groupBox2.Location = new Point(24, 229);
+            groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(625, 169);
+            groupBox2.Padding = new Padding(3, 2, 3, 2);
+            groupBox2.Size = new Size(547, 127);
             groupBox2.TabIndex = 47;
             groupBox2.TabStop = false;
             // 
@@ -311,9 +323,10 @@
             // 
             pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(581, 99);
+            pictureBox6.Location = new Point(508, 74);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(25, 21);
+            pictureBox6.Size = new Size(22, 16);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 46;
             pictureBox6.TabStop = false;
@@ -325,9 +338,9 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(76, 478);
+            label4.Location = new Point(66, 358);
             label4.Name = "label4";
-            label4.Size = new Size(182, 60);
+            label4.Size = new Size(154, 48);
             label4.TabIndex = 49;
             label4.Text = "University of Caloocan City\r\n-Congressional Campus\r\n\r\n@mis.ucc.com";
             label4.TextAlign = ContentAlignment.TopCenter;
@@ -336,9 +349,10 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(81, 82);
+            pictureBox1.Location = new Point(71, 62);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(166, 163);
+            pictureBox1.Size = new Size(145, 122);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 50;
             pictureBox1.TabStop = false;
@@ -349,9 +363,9 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Arial Rounded MT Bold", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(78, 247);
+            label11.Location = new Point(68, 185);
             label11.Name = "label11";
-            label11.Size = new Size(174, 30);
+            label11.Size = new Size(151, 24);
             label11.TabIndex = 51;
             label11.Text = "Create an account for you\r\nto explore our system!\r\n";
             label11.TextAlign = ContentAlignment.TopCenter;
@@ -362,9 +376,10 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.DimGray;
-            button1.Location = new Point(196, 506);
+            button1.Location = new Point(172, 380);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(120, 38);
+            button1.Size = new Size(105, 28);
             button1.TabIndex = 10;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = false;
@@ -376,17 +391,18 @@
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label11);
-            panel3.Location = new Point(683, -2);
+            panel3.Location = new Point(598, -2);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(331, 597);
+            panel3.Size = new Size(290, 448);
             panel3.TabIndex = 54;
             // 
             // RegistrationForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1013, 588);
+            ClientSize = new Size(886, 441);
             Controls.Add(panel3);
             Controls.Add(button1);
             Controls.Add(groupBox2);
@@ -394,9 +410,9 @@
             Controls.Add(label10);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "RegistrationForm";
             Text = "REGISTRATION";
-            Load += RegistrationForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

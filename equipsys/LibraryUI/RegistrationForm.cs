@@ -51,8 +51,6 @@ namespace equipsys
                 adminMain.Show();
                 this.Hide();
             }
-            else
-                MessageBox.Show("Invalid Entries Detected, Try again.");
         }
 
         private bool ValidateAccount()
@@ -98,6 +96,12 @@ namespace equipsys
                 return false;
             }
 
+            if (IsDuplicateUsername(UsernameValue.Text))
+            {
+                MessageBox.Show("Username already exists");
+                return false;
+            }
+
             if (!IsValidPassword(PasswordValue.Text))
             {
                 MessageBox.Show("Invalid Password");
@@ -105,6 +109,25 @@ namespace equipsys
             }
 
             return true;
+        }
+
+        private bool IsDuplicateUsername(string name)
+        {
+            using SqlConnection sql = new(GlobalConfig.ConnectionString);
+            sql.Open();
+            string retrieveUsernameQuery = "SELECT Count(*) from Accounts WHERE Username = @USERNAME";
+            SqlCommand cmd = new(retrieveUsernameQuery, sql);
+            cmd.Parameters.AddWithValue("@USERNAME", name);
+            if ((int)cmd.ExecuteScalar() > 0)
+            {
+                sql.Close();
+                return true;
+            }
+            else
+            {
+                sql.Close();
+                return false;
+            }
         }
 
         private void CourseValue_SelectedIndexChanged(object sender, EventArgs e)
@@ -144,16 +167,6 @@ namespace equipsys
             AdminMainForm adminForm = new AdminMainForm();
             adminForm.Show();
             this.Hide();
-        }
-
-        private void RegistrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)

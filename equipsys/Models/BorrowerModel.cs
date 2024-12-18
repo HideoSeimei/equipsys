@@ -16,9 +16,9 @@ namespace equipsys.Models
         public string Year { get; set; }
         public string ContactNumber { get; set; }
         public string Email { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
-        public string StocksBorrowed { get; set; }
-        public List<ItemModel> ItemsBorrowed { get; set; } = new List<ItemModel>();
+
+        public static List<BorrowerModel> RecurringBorrowers = new List<BorrowerModel>();
+
+
     }   
 }

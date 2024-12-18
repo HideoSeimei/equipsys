@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using equipsys.Models;
 using equipsys.Data_Access;
+using System.Linq.Expressions;
 
 namespace equipsys
 {
@@ -28,6 +29,22 @@ namespace equipsys
 
         }
 
+        private void EditItemForm_Load(object sender, EventArgs e)
+        {
+            ItemModel itemmodel = new ItemModel();
+            ItemNameBox.Text = ItemName;
+            ItemDescriptionBox.Text = ItemDescription;
+            ItemStockBox.Text = ItemStock.ToString();
+            try
+            {
+                NewImagePath.Image = new Bitmap(NewSelectedImage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void ReturnButton_Click(object sender, EventArgs e)
         {
             AdminMainForm adminMainForm = new AdminMainForm();
@@ -37,16 +54,7 @@ namespace equipsys
 
         }
 
-        private void EditItemForm_Load(object sender, EventArgs e)
-        {
-            ItemModel itemmodel = new ItemModel();
-            ItemNameBox.Text = ItemName;
-            ItemDescriptionBox.Text = ItemDescription;
-            ItemStockBox.Text = ItemStock.ToString();
-            NewImagePath.Image = new Bitmap(NewSelectedImage); // TODO -  handle this error when image is emptyorat default image
-        }
-
-        private void SaveButton_Click(object sender, EventArgs e)// SAVE BUTTON
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             if (ValidateItem())
             {
@@ -78,13 +86,19 @@ namespace equipsys
 
             if (!IsValidItemName(ItemNameBox.Text))
             {
-                MessageBox.Show("Item name can not be null");
+                MessageBox.Show("Name can not be empty");
+                return false;
+            }
+            
+            if (IsDuplicateItem(ItemNameBox.Text))
+            {
+                MessageBox.Show("Invalid item name");
                 return false;
             }
 
             if (!IsValidItemStock(ItemStockBox.Text))
             {
-                MessageBox.Show("Invalid stock number");
+                MessageBox.Show("Stock is not a valid number");
                 return false;
             }
 
@@ -94,7 +108,26 @@ namespace equipsys
             return true;
         }
 
-        private void BrowseImageButton_Click(object sender, EventArgs e)// BROWSE BUTTON
+        private bool IsDuplicateItem(string name)
+        {
+            using SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
+            sql.Open();
+            string retrieveUsernameQuery = "SELECT Count(*) FROM Items WHERE ItemName = @ITEMNAME";
+            SqlCommand cmd = new SqlCommand(retrieveUsernameQuery, sql);
+            cmd.Parameters.AddWithValue("@ITEMNAME", name);
+            if ((int)cmd.ExecuteScalar() > 0)
+            {
+                sql.Close();
+                return true;
+            }
+            else
+            {
+                sql.Close();
+                return false;
+            }
+        }
+
+        private void BrowseImageButton_Click(object sender, EventArgs e)
         {
             // Opens File Explorer for image selection
             NewSelectedImage = "";
@@ -102,25 +135,16 @@ namespace equipsys
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // obtains the selected image path for this item
-                NewImagePath.Image = new Bitmap(openFileDialog.FileName);
-                NewSelectedImage = openFileDialog.FileName;
+                try
+                {
+                    NewImagePath.Image = new Bitmap(openFileDialog.FileName);
+                    NewSelectedImage = openFileDialog.FileName;
+                }
+                catch
+                {
+                    MessageBox.Show("The image you are trying to upload can not be processed");
+                }
             }
-        }
-
-        private void NewImagePath_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using equipsys.Models;
+using System.Windows.Forms.VisualStyles;
 
 namespace equipsys
 {
@@ -28,9 +29,15 @@ namespace equipsys
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                // obtains the selected image path for this item
-                BorrowingImageBox.Image = new Bitmap(openFileDialog.FileName);
-                selectedImagePath = openFileDialog.FileName;
+                try
+                {
+                    BorrowingImageBox.Image = new Bitmap(openFileDialog.FileName);
+                    selectedImagePath = openFileDialog.FileName;
+                }
+                catch
+                {
+                    MessageBox.Show("The image you are trying to upload can not be processed");
+                }
             }
         }
 
@@ -50,15 +57,13 @@ namespace equipsys
                 string DefaultimagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Images\default image.png");// here is the path of the default image
                 BorrowingImageBox.Image = Image.FromFile(DefaultimagePath);
 
-                // close form after adding a new item
                 AdminMainForm adminMainForm = new AdminMainForm();
-                adminMainForm.mainPanel.Controls.Clear();// this is not working
-                adminMainForm.OpenEquipment();// this is not working
-
+                adminMainForm.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show($"Item Name is null or invalid stock value. Try again.");
+                MessageBox.Show($"There are invalid entries detected in the form");
             }
         }
 
@@ -81,13 +86,19 @@ namespace equipsys
 
             if (!IsValidItemName(ItemNameBox.Text))
             {
-                MessageBox.Show("Item name can not be null");
+                MessageBox.Show("Name can not be empty");
+                return false;
+            }
+
+            if (IsDuplicateItem(ItemNameBox.Text))
+            {
+                MessageBox.Show("Item already exists");
                 return false;
             }
 
             if (!IsValidItemStock(ItemStockBox.Text))
             {
-                MessageBox.Show("Invalid stock number");
+                MessageBox.Show("Stock is not a valid number");
                 return false;
             }
 
@@ -97,24 +108,23 @@ namespace equipsys
             return true;
         }
 
-        private void AddItemForm_Load(object sender, EventArgs e)
+        private bool IsDuplicateItem(string name)
         {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            using SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
+            sql.Open();
+            string retrieveItemQuery = "SELECT Count(*) FROM Items WHERE ItemName = @ITEMNAME";
+            SqlCommand cmd = new SqlCommand(retrieveItemQuery, sql);
+            cmd.Parameters.AddWithValue("@ITEMNAME", name);
+            if ((int)cmd.ExecuteScalar() > 0)
+            {
+                sql.Close();
+                return true;
+            }
+            else
+            {
+                sql.Close();
+                return false;
+            }
         }
     }
 }

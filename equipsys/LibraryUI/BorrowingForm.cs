@@ -38,8 +38,14 @@ namespace equipsys
             BorrowingItemName.Text = ItemName;
             BorrowingDescription.Text = Description;
             BorrowingStock.Text = Stock;
-            BorrowingImage.Image = new Bitmap(BorrowingImageDisplay);
-
+            try
+            {
+                BorrowingImage.Image = new Bitmap(BorrowingImageDisplay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void yearReg_SelectedIndexChanged(object sender, EventArgs e)

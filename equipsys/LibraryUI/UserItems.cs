@@ -22,10 +22,5 @@ namespace equipsys
             ItemLoader itemloader = new ItemLoader(UserItemsPanel);
             itemloader.ULoadItemsToFlowLayoutPanel();
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
