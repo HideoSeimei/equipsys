@@ -30,11 +30,11 @@
         {
             SaveItemButton = new Button();
             ItemDescriptionBox = new TextBox();
-            ItemNameBox = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
             panel1 = new Panel();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,14 +59,6 @@
             ItemDescriptionBox.Size = new Size(293, 27);
             ItemDescriptionBox.TabIndex = 14;
             ItemDescriptionBox.TextChanged += ItemDescriptionBox_TextChanged;
-            // 
-            // ItemNameBox
-            // 
-            ItemNameBox.Location = new Point(109, 114);
-            ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(293, 27);
-            ItemNameBox.TabIndex = 13;
-            ItemNameBox.TextChanged += ItemNameBox_TextChanged;
             // 
             // label4
             // 
@@ -106,16 +98,24 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SaveItemButton);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(ItemDescriptionBox);
-            panel1.Controls.Add(ItemNameBox);
             panel1.Controls.Add(label4);
             panel1.Location = new Point(36, 37);
             panel1.Name = "panel1";
             panel1.Size = new Size(546, 324);
             panel1.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(109, 117);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(293, 28);
+            comboBox1.TabIndex = 18;
             // 
             // ReturningForm
             // 
@@ -135,10 +135,10 @@
         #endregion
         private Button SaveItemButton;
         public TextBox ItemDescriptionBox;
-        public TextBox ItemNameBox;
         public Label label4;
         public Label label3;
         public Label label1;
         private Panel panel1;
+        private ComboBox comboBox1;
     }
 }
