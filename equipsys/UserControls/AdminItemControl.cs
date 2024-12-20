@@ -103,10 +103,18 @@ namespace equipsys
         private void button2_Click(object sender, EventArgs e)// DELETE BUTTON
         {
             ItemModel itemmodel = new ItemModel();
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this item\n( If yes,It will be sent to Archive )",
+                                          "Confirmation",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);// delete confirmation
+            if (result == DialogResult.Yes) //  If the user clicked YES
+            {
+                itemmodel.DeleteItem(Int32.Parse(ItemIdlbl.Text));
+                itemmodel.AddToArchive(Namelbl.Text, Descriptionlbl.Text, Stocks, imageBox.ImageLocation);
+                this.Hide();// this is used to hide the deleted usercontrol(adminitemcontrol)
+            }
+           
             
-            itemmodel.DeleteItem(Int32.Parse(ItemIdlbl.Text));
-            itemmodel.AddToArchive(Namelbl.Text, Descriptionlbl.Text, Stocks,imageBox.ImageLocation);
-            this.Hide();// this is used to hide the deleted usercontrol(adminitemcontrol)
         }
 
         private void Descriptionlbl_Click(object sender, EventArgs e)

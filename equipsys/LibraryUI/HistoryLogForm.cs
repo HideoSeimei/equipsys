@@ -62,5 +62,10 @@ namespace equipsys
             ReturningForm returnform = new ReturningForm(this);
             returnform.Show();
         }
+
+        private void SearchBarValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

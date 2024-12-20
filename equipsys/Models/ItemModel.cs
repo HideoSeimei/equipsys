@@ -162,7 +162,7 @@ namespace equipsys.Models
                 sql.Open();
                 cmd.ExecuteNonQuery();
                 sql.Close();
-                MessageBox.Show("Added to Archive");
+                
             }
         }
     }

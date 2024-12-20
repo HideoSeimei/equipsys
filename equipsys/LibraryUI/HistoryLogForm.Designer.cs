@@ -112,6 +112,7 @@
             SearchBarValue.Size = new Size(191, 23);
             SearchBarValue.TabIndex = 11;
             SearchBarValue.Text = "  Search";
+            SearchBarValue.TextChanged += SearchBarValue_TextChanged;
             // 
             // contextMenuStrip1
             // 
