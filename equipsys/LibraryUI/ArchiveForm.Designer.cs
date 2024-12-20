@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ArchiveDataGridView = new DataGridView();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             ((System.ComponentModel.ISupportInitialize)ArchiveDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -45,6 +47,12 @@
             ArchiveDataGridView.Size = new Size(684, 299);
             ArchiveDataGridView.TabIndex = 0;
             ArchiveDataGridView.CellContentClick += dataGridView1_CellContentClick;
+            ArchiveDataGridView.CellMouseDown += ArchiveDataGridView_CellMouseDown;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
             // 
             // ArchiveForm
             // 
@@ -62,5 +70,6 @@
         #endregion
 
         public DataGridView ArchiveDataGridView;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
