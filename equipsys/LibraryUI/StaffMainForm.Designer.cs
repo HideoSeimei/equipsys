@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
             UserTitlelbl = new Label();
             mainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -40,9 +40,11 @@
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             label3 = new Label();
+            ExitBTN = new PictureBox();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).BeginInit();
             SuspendLayout();
             // 
             // UserTitlelbl
@@ -59,11 +61,11 @@
             // 
             // mainPanel
             // 
-            mainPanel.CustomizableEdges = customizableEdges1;
+            mainPanel.CustomizableEdges = customizableEdges3;
             mainPanel.Location = new Point(256, 96);
             mainPanel.Margin = new Padding(3, 4, 3, 4);
             mainPanel.Name = "mainPanel";
-            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            mainPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             mainPanel.Size = new Size(744, 469);
             mainPanel.TabIndex = 21;
             // 
@@ -168,11 +170,24 @@
             label3.TabIndex = 49;
             label3.Text = "Welcome Staff!";
             // 
+            // ExitBTN
+            // 
+            ExitBTN.BackgroundImage = (Image)resources.GetObject("ExitBTN.BackgroundImage");
+            ExitBTN.Cursor = Cursors.Hand;
+            ExitBTN.Location = new Point(978, 8);
+            ExitBTN.Name = "ExitBTN";
+            ExitBTN.Size = new Size(22, 23);
+            ExitBTN.SizeMode = PictureBoxSizeMode.StretchImage;
+            ExitBTN.TabIndex = 64;
+            ExitBTN.TabStop = false;
+            ExitBTN.Click += ExitBTN_Click;
+            // 
             // MAIN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1013, 588);
+            Controls.Add(ExitBTN);
             Controls.Add(pictureBox6);
             Controls.Add(label3);
             Controls.Add(panel);
@@ -185,6 +200,7 @@
             panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +215,6 @@
         private Button button8;
         private PictureBox pictureBox6;
         private Label label3;
+        private PictureBox ExitBTN;
     }
 }

@@ -90,6 +90,7 @@
             UAvailability.Size = new Size(118, 25);
             UAvailability.TabIndex = 5;
             UAvailability.Text = "AVAILABILITY";
+            UAvailability.Click += UAvailability_Click;
             // 
             // UItemIDlbl
             // 

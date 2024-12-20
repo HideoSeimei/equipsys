@@ -87,14 +87,15 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(735, 392);
             guna2Panel1.TabIndex = 53;
+            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // SearchBarValue
             // 
             SearchBarValue.Location = new Point(14, 12);
             SearchBarValue.Name = "SearchBarValue";
+            SearchBarValue.PlaceholderText = "Search";
             SearchBarValue.Size = new Size(218, 27);
             SearchBarValue.TabIndex = 11;
-            SearchBarValue.Text = "Search";
             SearchBarValue.TextChanged += SearchBarValue_TextChanged;
             // 
             // contextMenuStrip1

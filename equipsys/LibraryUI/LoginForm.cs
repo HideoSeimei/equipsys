@@ -116,7 +116,12 @@ namespace equipsys
             RoleSelectionForm roleSelection = new RoleSelectionForm();
             roleSelection.Show();
             this.Hide();
-                 
+
+        }
+
+        private void ExitBTN_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -89,7 +89,7 @@ namespace equipsys
                 MessageBox.Show("Name can not be empty");
                 return false;
             }
-            
+
             if (IsDuplicateItem(ItemNameBox.Text))
             {
                 MessageBox.Show("Invalid item name");
@@ -145,6 +145,16 @@ namespace equipsys
                     MessageBox.Show("The image you are trying to upload can not be processed");
                 }
             }
+        }
+
+        private void HomeBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitBTN_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

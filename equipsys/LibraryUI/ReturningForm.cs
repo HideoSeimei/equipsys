@@ -42,9 +42,10 @@ namespace equipsys.LibraryUI
                 cmd.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
                 sql.Close();
-                MessageBox.Show("Status updated successfully");
+                MessageBox.Show("Status updated successfully"); 
                 _historyLogForm.gridbind();
                 this.Hide();
+                
             }
             
         }
@@ -62,7 +63,7 @@ namespace equipsys.LibraryUI
                 id.Length == 4 &&
                 id.All(char.IsLetterOrDigit);
 
-            if (!IsValidStudentID(StudentIDValue.Text))
+            if (!IsValidStudentID(StudentIDValues.Text))
             {
                 MessageBox.Show("Invalid Student ID.");
                 return false;

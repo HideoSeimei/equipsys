@@ -164,6 +164,7 @@ namespace equipsys.LibraryUI
                 var deleteCommand = new SqlCommand("DELETE FROM Archive WHERE archive_id = @ItemID", connection);
                 deleteCommand.Parameters.AddWithValue("@ItemID", itemId);
                 deleteCommand.ExecuteNonQuery();
+                MessageBox.Show("Item Restored");
                 //
             }
         }

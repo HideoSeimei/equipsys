@@ -55,14 +55,10 @@
             ItemNameBox = new TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             panel = new Panel();
-            AddStaffBTN = new Button();
-            button13 = new Button();
-            HistoryBTN = new Button();
-            AddItemBTN = new Button();
             pictureBox6 = new PictureBox();
-            HomeBTN = new Button();
             pictureBox7 = new PictureBox();
             label6 = new Label();
+            ExitBTN = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)NewImagePath).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -71,6 +67,7 @@
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).BeginInit();
             SuspendLayout();
             // 
             // openFileDialog1
@@ -94,10 +91,9 @@
             // NewImagePath
             // 
             NewImagePath.Image = (Image)resources.GetObject("NewImagePath.Image");
-            NewImagePath.Location = new Point(48, 36);
-            NewImagePath.Margin = new Padding(3, 2, 3, 2);
+            NewImagePath.Location = new Point(55, 48);
             NewImagePath.Name = "NewImagePath";
-            NewImagePath.Size = new Size(208, 158);
+            NewImagePath.Size = new Size(238, 211);
             NewImagePath.SizeMode = PictureBoxSizeMode.StretchImage;
             NewImagePath.TabIndex = 7;
             NewImagePath.TabStop = false;
@@ -113,14 +109,14 @@
             // 
             StockBox.Location = new Point(0, 0);
             StockBox.Name = "StockBox";
-            StockBox.Size = new Size(100, 23);
+            StockBox.Size = new Size(100, 27);
             StockBox.TabIndex = 0;
             // 
             // DescriptionBox
             // 
             DescriptionBox.Location = new Point(0, 0);
             DescriptionBox.Name = "DescriptionBox";
-            DescriptionBox.Size = new Size(100, 23);
+            DescriptionBox.Size = new Size(100, 27);
             DescriptionBox.TabIndex = 0;
             // 
             // pictureBox2
@@ -140,10 +136,9 @@
             ReturnButton.Cursor = Cursors.Hand;
             ReturnButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ReturnButton.ForeColor = Color.FromArgb(32, 33, 35);
-            ReturnButton.Location = new Point(368, 294);
-            ReturnButton.Margin = new Padding(3, 2, 3, 2);
+            ReturnButton.Location = new Point(421, 392);
             ReturnButton.Name = "ReturnButton";
-            ReturnButton.Size = new Size(122, 22);
+            ReturnButton.Size = new Size(139, 29);
             ReturnButton.TabIndex = 4;
             ReturnButton.Text = "Back";
             ReturnButton.UseVisualStyleBackColor = true;
@@ -155,10 +150,9 @@
             SaveButton.Cursor = Cursors.Hand;
             SaveButton.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveButton.ForeColor = Color.White;
-            SaveButton.Location = new Point(496, 294);
-            SaveButton.Margin = new Padding(3, 2, 3, 2);
+            SaveButton.Location = new Point(567, 392);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(115, 22);
+            SaveButton.Size = new Size(131, 29);
             SaveButton.TabIndex = 5;
             SaveButton.Text = "Save";
             SaveButton.UseVisualStyleBackColor = false;
@@ -169,10 +163,9 @@
             BrowseImageButton.Cursor = Cursors.Hand;
             BrowseImageButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             BrowseImageButton.ForeColor = Color.FromArgb(32, 33, 35);
-            BrowseImageButton.Location = new Point(95, 211);
-            BrowseImageButton.Margin = new Padding(3, 2, 3, 2);
+            BrowseImageButton.Location = new Point(109, 281);
             BrowseImageButton.Name = "BrowseImageButton";
-            BrowseImageButton.Size = new Size(109, 22);
+            BrowseImageButton.Size = new Size(125, 29);
             BrowseImageButton.TabIndex = 3;
             BrowseImageButton.Text = "Browse";
             BrowseImageButton.UseVisualStyleBackColor = true;
@@ -180,10 +173,9 @@
             // 
             // ItemStockBox
             // 
-            ItemStockBox.Location = new Point(285, 100);
-            ItemStockBox.Margin = new Padding(3, 2, 3, 2);
+            ItemStockBox.Location = new Point(326, 133);
             ItemStockBox.Name = "ItemStockBox";
-            ItemStockBox.Size = new Size(86, 23);
+            ItemStockBox.Size = new Size(98, 27);
             ItemStockBox.TabIndex = 1;
             // 
             // label2
@@ -201,11 +193,10 @@
             // 
             // ItemDescriptionBox
             // 
-            ItemDescriptionBox.Location = new Point(285, 144);
-            ItemDescriptionBox.Margin = new Padding(3, 2, 3, 2);
+            ItemDescriptionBox.Location = new Point(326, 192);
             ItemDescriptionBox.Multiline = true;
             ItemDescriptionBox.Name = "ItemDescriptionBox";
-            ItemDescriptionBox.Size = new Size(324, 144);
+            ItemDescriptionBox.Size = new Size(370, 191);
             ItemDescriptionBox.TabIndex = 2;
             // 
             // label5
@@ -213,9 +204,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
-            label5.Location = new Point(285, 80);
+            label5.Location = new Point(326, 107);
             label5.Name = "label5";
-            label5.Size = new Size(46, 20);
+            label5.Size = new Size(56, 25);
             label5.TabIndex = 2;
             label5.Text = "Stock";
             // 
@@ -224,9 +215,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(32, 33, 35);
-            label4.Location = new Point(285, 123);
+            label4.Location = new Point(326, 164);
             label4.Name = "label4";
-            label4.Size = new Size(87, 20);
+            label4.Size = new Size(108, 25);
             label4.TabIndex = 1;
             label4.Text = "Description";
             // 
@@ -235,9 +226,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(32, 33, 35);
-            label3.Location = new Point(285, 36);
+            label3.Location = new Point(326, 48);
             label3.Name = "label3";
-            label3.Size = new Size(39, 20);
+            label3.Size = new Size(50, 25);
             label3.TabIndex = 0;
             label3.Text = "Item";
             // 
@@ -247,9 +238,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(32, 33, 35);
-            label1.Location = new Point(231, 28);
+            label1.Location = new Point(264, 37);
             label1.Name = "label1";
-            label1.Size = new Size(108, 26);
+            label1.Size = new Size(137, 32);
             label1.TabIndex = 52;
             label1.Text = "Edit Item";
             // 
@@ -257,7 +248,7 @@
             // 
             ItemBox.Location = new Point(0, 0);
             ItemBox.Name = "ItemBox";
-            ItemBox.Size = new Size(100, 23);
+            ItemBox.Size = new Size(100, 27);
             ItemBox.TabIndex = 0;
             // 
             // pictureBox1
@@ -286,10 +277,9 @@
             // 
             // ItemNameBox
             // 
-            ItemNameBox.Location = new Point(285, 57);
-            ItemNameBox.Margin = new Padding(3, 2, 3, 2);
+            ItemNameBox.Location = new Point(326, 76);
             ItemNameBox.Name = "ItemNameBox";
-            ItemNameBox.Size = new Size(324, 23);
+            ItemNameBox.Size = new Size(370, 27);
             ItemNameBox.TabIndex = 0;
             // 
             // guna2Panel1
@@ -306,140 +296,38 @@
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.Controls.Add(label3);
             guna2Panel1.CustomizableEdges = customizableEdges3;
-            guna2Panel1.Location = new Point(231, 80);
+            guna2Panel1.Location = new Point(264, 107);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(627, 334);
+            guna2Panel1.Size = new Size(717, 445);
             guna2Panel1.TabIndex = 53;
             // 
             // panel
             // 
             panel.BackColor = Color.FromArgb(32, 33, 35);
-            panel.Controls.Add(AddStaffBTN);
-            panel.Controls.Add(button13);
-            panel.Controls.Add(HistoryBTN);
-            panel.Controls.Add(AddItemBTN);
             panel.Controls.Add(pictureBox6);
-            panel.Controls.Add(HomeBTN);
             panel.Location = new Point(0, -1);
-            panel.Margin = new Padding(3, 2, 3, 2);
             panel.Name = "panel";
-            panel.Size = new Size(206, 442);
+            panel.Size = new Size(235, 589);
             panel.TabIndex = 54;
-            // 
-            // AddStaffBTN
-            // 
-            AddStaffBTN.BackgroundImageLayout = ImageLayout.None;
-            AddStaffBTN.Cursor = Cursors.Hand;
-            AddStaffBTN.FlatAppearance.BorderSize = 0;
-            AddStaffBTN.FlatStyle = FlatStyle.Flat;
-            AddStaffBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AddStaffBTN.ForeColor = Color.White;
-            AddStaffBTN.Image = (Image)resources.GetObject("AddStaffBTN.Image");
-            AddStaffBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            AddStaffBTN.Location = new Point(10, 265);
-            AddStaffBTN.Margin = new Padding(3, 2, 3, 2);
-            AddStaffBTN.Name = "AddStaffBTN";
-            AddStaffBTN.Padding = new Padding(22, 0, 0, 0);
-            AddStaffBTN.Size = new Size(186, 56);
-            AddStaffBTN.TabIndex = 9;
-            AddStaffBTN.Text = "Add Staff";
-            AddStaffBTN.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            button13.BackgroundImageLayout = ImageLayout.None;
-            button13.Cursor = Cursors.Hand;
-            button13.FlatAppearance.BorderSize = 0;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button13.ForeColor = Color.White;
-            button13.Image = (Image)resources.GetObject("button13.Image");
-            button13.ImageAlign = ContentAlignment.MiddleLeft;
-            button13.Location = new Point(19, 358);
-            button13.Margin = new Padding(3, 2, 3, 2);
-            button13.Name = "button13";
-            button13.Padding = new Padding(22, 0, 0, 0);
-            button13.Size = new Size(166, 56);
-            button13.TabIndex = 10;
-            button13.Text = "   Log out";
-            button13.UseVisualStyleBackColor = false;
-            // 
-            // HistoryBTN
-            // 
-            HistoryBTN.BackgroundImageLayout = ImageLayout.None;
-            HistoryBTN.Cursor = Cursors.Hand;
-            HistoryBTN.FlatAppearance.BorderSize = 0;
-            HistoryBTN.FlatStyle = FlatStyle.Flat;
-            HistoryBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            HistoryBTN.ForeColor = Color.White;
-            HistoryBTN.Image = (Image)resources.GetObject("HistoryBTN.Image");
-            HistoryBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            HistoryBTN.Location = new Point(10, 146);
-            HistoryBTN.Margin = new Padding(3, 2, 3, 2);
-            HistoryBTN.Name = "HistoryBTN";
-            HistoryBTN.Padding = new Padding(22, 0, 0, 0);
-            HistoryBTN.Size = new Size(186, 56);
-            HistoryBTN.TabIndex = 7;
-            HistoryBTN.Text = "History";
-            HistoryBTN.UseVisualStyleBackColor = false;
-            // 
-            // AddItemBTN
-            // 
-            AddItemBTN.BackgroundImageLayout = ImageLayout.None;
-            AddItemBTN.Cursor = Cursors.Hand;
-            AddItemBTN.FlatAppearance.BorderSize = 0;
-            AddItemBTN.FlatStyle = FlatStyle.Flat;
-            AddItemBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AddItemBTN.ForeColor = Color.White;
-            AddItemBTN.Image = (Image)resources.GetObject("AddItemBTN.Image");
-            AddItemBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            AddItemBTN.Location = new Point(10, 204);
-            AddItemBTN.Margin = new Padding(3, 2, 3, 2);
-            AddItemBTN.Name = "AddItemBTN";
-            AddItemBTN.Padding = new Padding(22, 0, 0, 0);
-            AddItemBTN.Size = new Size(186, 56);
-            AddItemBTN.TabIndex = 8;
-            AddItemBTN.Text = "Add Item";
-            AddItemBTN.UseVisualStyleBackColor = false;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(74, 31);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
+            pictureBox6.Location = new Point(85, 36);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(54, 43);
+            pictureBox6.Size = new Size(62, 57);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 46;
             pictureBox6.TabStop = false;
             // 
-            // HomeBTN
-            // 
-            HomeBTN.BackgroundImageLayout = ImageLayout.None;
-            HomeBTN.Cursor = Cursors.Hand;
-            HomeBTN.FlatAppearance.BorderSize = 0;
-            HomeBTN.FlatStyle = FlatStyle.Flat;
-            HomeBTN.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            HomeBTN.ForeColor = Color.White;
-            HomeBTN.Image = (Image)resources.GetObject("HomeBTN.Image");
-            HomeBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            HomeBTN.Location = new Point(8, 82);
-            HomeBTN.Margin = new Padding(3, 2, 3, 2);
-            HomeBTN.Name = "HomeBTN";
-            HomeBTN.Padding = new Padding(22, 0, 0, 0);
-            HomeBTN.Size = new Size(186, 56);
-            HomeBTN.TabIndex = 6;
-            HomeBTN.Text = "Home";
-            HomeBTN.UseVisualStyleBackColor = false;
-            // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(830, 32);
-            pictureBox7.Margin = new Padding(3, 2, 3, 2);
+            pictureBox7.Location = new Point(949, 43);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(25, 19);
+            pictureBox7.Size = new Size(29, 25);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 56;
             pictureBox7.TabStop = false;
@@ -450,24 +338,36 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(32, 33, 35);
-            label6.Location = new Point(678, 33);
+            label6.Location = new Point(775, 44);
             label6.Name = "label6";
-            label6.Size = new Size(140, 18);
+            label6.Size = new Size(174, 23);
             label6.TabIndex = 55;
             label6.Text = "Welcome Admin!";
             // 
+            // ExitBTN
+            // 
+            ExitBTN.BackgroundImage = (Image)resources.GetObject("ExitBTN.BackgroundImage");
+            ExitBTN.Cursor = Cursors.Hand;
+            ExitBTN.Location = new Point(979, 7);
+            ExitBTN.Name = "ExitBTN";
+            ExitBTN.Size = new Size(22, 23);
+            ExitBTN.SizeMode = PictureBoxSizeMode.StretchImage;
+            ExitBTN.TabIndex = 64;
+            ExitBTN.TabStop = false;
+            ExitBTN.Click += ExitBTN_Click;
+            // 
             // EditItemForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(886, 441);
+            ClientSize = new Size(1013, 588);
+            Controls.Add(ExitBTN);
             Controls.Add(pictureBox7);
             Controls.Add(label6);
             Controls.Add(panel);
             Controls.Add(label1);
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "EditItemForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EDIT_ITEMS";
@@ -481,6 +381,7 @@
             panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -513,13 +414,9 @@
         public TextBox DescriptionBox;
         public TextBox ItemBox;
         private Panel panel;
-        private Button button13;
         private PictureBox pictureBox6;
-        private Button AddItemBTN;
-        private Button AddStaffBTN;
-        private Button HomeBTN;
-        private Button HistoryBTN;
         private PictureBox pictureBox7;
         private Label label6;
+        private PictureBox ExitBTN;
     }
 }

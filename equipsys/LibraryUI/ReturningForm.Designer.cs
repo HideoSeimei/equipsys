@@ -35,7 +35,7 @@
             label3 = new Label();
             label1 = new Label();
             panel1 = new Panel();
-            comboBox1 = new ComboBox();
+            StudentIDValues = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -107,26 +107,25 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(StudentIDValues);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SaveItemButton);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(TransactionIDValue);
             panel1.Controls.Add(StudentIDValue);
-
             panel1.Controls.Add(label4);
             panel1.Location = new Point(36, 37);
             panel1.Name = "panel1";
             panel1.Size = new Size(546, 324);
             panel1.TabIndex = 18;
             // 
-            // comboBox1
+            // StudentIDValues
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(109, 117);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(293, 28);
-            comboBox1.TabIndex = 18;
+            StudentIDValues.FormattingEnabled = true;
+            StudentIDValues.Location = new Point(109, 117);
+            StudentIDValues.Name = "StudentIDValues";
+            StudentIDValues.Size = new Size(293, 28);
+            StudentIDValues.TabIndex = 18;
             // 
             // ReturningForm
             // 
@@ -152,6 +151,6 @@
         public Label label3;
         public Label label1;
         private Panel panel1;
-        private ComboBox comboBox1;
+        private ComboBox StudentIDValues;
     }
 }

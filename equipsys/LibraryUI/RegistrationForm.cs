@@ -67,7 +67,6 @@ namespace equipsys
             bool IsValidUsername(string username) =>
                 (username.Length >= 3 && username.Length <= 30) &&
                 username.All(char.IsLetterOrDigit);
-            // add a way to detect for dupe entries.
 
             bool IsValidPassword(string password) =>
                 password.Length >= 6;
@@ -108,6 +107,12 @@ namespace equipsys
                 return false;
             }
 
+            if (ConfirmPasswordValue.Text != PasswordValue.Text)
+            {
+                MessageBox.Show("Passwords do not match");
+                return false;
+            }
+
             return true;
         }
 
@@ -118,6 +123,25 @@ namespace equipsys
             string retrieveUsernameQuery = "SELECT Count(*) from Accounts WHERE Username = @USERNAME";
             SqlCommand cmd = new(retrieveUsernameQuery, sql);
             cmd.Parameters.AddWithValue("@USERNAME", name);
+            if ((int)cmd.ExecuteScalar() > 0)
+            {
+                sql.Close();
+                return true;
+            }
+            else
+            {
+                sql.Close();
+                return false;
+            }
+        }
+
+        private bool IsDuplicateStudentID(string id)
+        {
+            using SqlConnection sql = new(GlobalConfig.ConnectionString);
+            sql.Open();
+            string retrieveStudentIDQuery = "SELECT Count(*) from Accounts WHERE StudentID = @STUDENTID";
+            SqlCommand cmd = new(retrieveStudentIDQuery, sql);
+            cmd.Parameters.AddWithValue("@STUDENTID", id);
             if ((int)cmd.ExecuteScalar() > 0)
             {
                 sql.Close();
@@ -172,14 +196,21 @@ namespace equipsys
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             // reveal password toggle
-            if (PasswordValue.UseSystemPasswordChar == true) // if password is hidden
+            if (PasswordValue.UseSystemPasswordChar == true || ConfirmPasswordValue.UseSystemPasswordChar == true) // if password is hidden
             {
                 PasswordValue.UseSystemPasswordChar = false;
+                ConfirmPasswordValue.UseSystemPasswordChar = false;
             }
             else // if password is not hidden
             {
                 PasswordValue.UseSystemPasswordChar = true;
+                ConfirmPasswordValue.UseSystemPasswordChar = true;
             }
+        }
+
+        private void ExitBTN_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

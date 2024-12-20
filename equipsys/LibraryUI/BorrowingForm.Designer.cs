@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowingForm));
             label1 = new Label();
             label2 = new Label();
@@ -67,12 +67,14 @@
             pictureBox6 = new PictureBox();
             pictureBox3 = new PictureBox();
             label6 = new Label();
+            ExitBTN = new PictureBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BorrowingImage).BeginInit();
             groupBox1.SuspendLayout();
             panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -119,11 +121,11 @@
             guna2Panel1.Controls.Add(BorrowingItemName);
             guna2Panel1.Controls.Add(BorrowingImage);
             guna2Panel1.Controls.Add(groupBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges1;
+            guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Location = new Point(262, 89);
             guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(721, 473);
             guna2Panel1.TabIndex = 37;
             guna2Panel1.Paint += guna2Panel1_Paint;
@@ -255,7 +257,7 @@
             EndTime.FormattingEnabled = true;
             EndTime.Location = new Point(354, 291);
             EndTime.Name = "EndTime";
-            EndTime.Size = new Size(52, 28);
+            EndTime.Size = new Size(83, 28);
             EndTime.TabIndex = 56;
             // 
             // SectionValue
@@ -296,11 +298,11 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(32, 33, 35);
             label5.Location = new Point(267, 296);
             label5.Name = "label5";
-            label5.Size = new Size(78, 20);
+            label5.Size = new Size(76, 20);
             label5.TabIndex = 51;
             label5.Text = "END TIME";
             // 
@@ -511,11 +513,24 @@
             label6.TabIndex = 50;
             label6.Text = "Welcome Admin!";
             // 
+            // ExitBTN
+            // 
+            ExitBTN.BackgroundImage = (Image)resources.GetObject("ExitBTN.BackgroundImage");
+            ExitBTN.Cursor = Cursors.Hand;
+            ExitBTN.Location = new Point(980, 6);
+            ExitBTN.Name = "ExitBTN";
+            ExitBTN.Size = new Size(22, 23);
+            ExitBTN.SizeMode = PictureBoxSizeMode.StretchImage;
+            ExitBTN.TabIndex = 64;
+            ExitBTN.TabStop = false;
+            ExitBTN.Click += ExitBTN_Click;
+            // 
             // BorrowingForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1013, 588);
+            Controls.Add(ExitBTN);
             Controls.Add(pictureBox3);
             Controls.Add(label6);
             Controls.Add(panel);
@@ -535,6 +550,7 @@
             panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ExitBTN).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -577,5 +593,6 @@
         private Button button8;
         private PictureBox pictureBox3;
         private Label label6;
+        private PictureBox ExitBTN;
     }
 }

@@ -30,10 +30,12 @@ namespace equipsys
             if (stocks > 0)
             {
                 UAvailability.BackColor = Color.LightGreen;
+                UAvailability.Text = "Available";
             }
             else
             {
                 UAvailability.BackColor = Color.Pink;
+                UAvailability.Text = "Unavailable";
             }
 
 
@@ -77,6 +79,11 @@ namespace equipsys
         }
 
         private void UDescriptionlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UAvailability_Click(object sender, EventArgs e)
         {
 
         }

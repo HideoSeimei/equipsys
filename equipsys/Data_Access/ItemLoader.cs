@@ -141,6 +141,7 @@ namespace equipsys.Data_Access
                 {
                     while (reader.Read())
                     {
+                        // TODO - fix this error
                         items.Add(new ItemModel
                         {
                             ID = reader.GetInt32(0),
