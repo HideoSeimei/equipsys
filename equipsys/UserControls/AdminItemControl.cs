@@ -20,6 +20,7 @@ namespace equipsys
 
         }
         public int ID;
+        public int Stocks { get; set; }
         
         public void SetItemData(int itemId, string itemName, string description, int stocks, string imagePath)
         {
@@ -28,6 +29,7 @@ namespace equipsys
             Namelbl.Text = itemName;
             Descriptionlbl.Text = description;
             Stocklbl.Text = $"Stocks: {stocks}";
+            Stocks = stocks;
             int ID = itemId;//variable for getting the ID
             int stock = stocks;//for stocks
             if (stocks > 0)
@@ -103,6 +105,7 @@ namespace equipsys
             ItemModel itemmodel = new ItemModel();
             
             itemmodel.DeleteItem(Int32.Parse(ItemIdlbl.Text));
+            itemmodel.AddToArchive(Namelbl.Text, Descriptionlbl.Text, Stocks,imageBox.ImageLocation);
             this.Hide();// this is used to hide the deleted usercontrol(adminitemcontrol)
         }
 

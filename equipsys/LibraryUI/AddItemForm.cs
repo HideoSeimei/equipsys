@@ -61,10 +61,6 @@ namespace equipsys
                 adminMainForm.Show();
                 this.Hide();
             }
-            else
-            {
-                MessageBox.Show($"There are invalid entries detected in the form");
-            }
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
@@ -125,6 +121,11 @@ namespace equipsys
                 sql.Close();
                 return false;
             }
+        }
+
+        private void ItemDescriptionBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

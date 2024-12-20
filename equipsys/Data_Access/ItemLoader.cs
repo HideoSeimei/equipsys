@@ -5,23 +5,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using equipsys.Models;
+using System.Runtime.CompilerServices;
+using System.Data;
+using System.Data; // Required for DataTable
+using System.Windows.Forms;
+using equipsys.LibraryUI; // Required for DataGridView
 
 namespace equipsys.Data_Access
 {
     public class ItemLoader
     {
         private readonly FlowLayoutPanel _flowLayoutPanel;
-
+        private readonly DataGridView _dataGridView;
+        //=========== FLOWLAYOUTPANEL
         public ItemLoader(FlowLayoutPanel flowLayoutPanel)
         {
             _flowLayoutPanel = flowLayoutPanel;
+        }
+        //=========== DATAGRIDVIEW
+        public ItemLoader(DataGridView dataGridView)
+        {
+            _dataGridView = dataGridView;
         }
 
         public ItemLoader()
         {
 
         }
-
+        //============================================================ ITEMS ======================================================================
         public List<ItemModel> RetrieveItems()
         {
             var items = new List<ItemModel>();
@@ -50,6 +61,7 @@ namespace equipsys.Data_Access
             }
             return items;
         }
+        
 
         public void LoadToPanel()
         {
@@ -113,6 +125,62 @@ namespace equipsys.Data_Access
                 // Add the new UserControl to the FlowLayoutPanel
                 _flowLayoutPanel.Controls.Add(UserItemControl);
             }
+        }
+        // ============================================================== ARCHIVE ===================================================================
+        public List<ItemModel> RetrieveArchive()
+        {
+            var items = new List<ItemModel>();
+
+            using (var sql = new SqlConnection(GlobalConfig.ConnectionString))
+            {
+                sql.Open();
+                string selectQuery = "SELECT Archive_id, ItemName, Description, Stock,deleted_at FROM Archive";
+                SqlCommand cmd = new SqlCommand(selectQuery, sql);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        items.Add(new ItemModel
+                        {
+                            ID = reader.GetInt32(0),
+                            ItemName = reader.GetString(1),
+                            ItemDescription = reader.GetString(2),
+                            ItemStock = reader.GetInt32(3),
+                            DeletedAt = reader.GetDateTime(4)
+
+                        });
+                    }
+                }
+
+            }
+            return items;
+        }
+        public void LoadItemsToDataGridView()
+        {
+            // Create a new DataTable to hold the data
+            DataTable dataTable = new DataTable();
+
+            // Retrieve the items from the database
+            List<ItemModel> items = RetrieveArchive();
+
+            // Set up the columns in the DataTable
+            dataTable.Columns.Add("Item ID");
+            dataTable.Columns.Add("Item Name");
+            dataTable.Columns.Add("Description");
+            dataTable.Columns.Add("Stock");
+            dataTable.Columns.Add("Deleted at");
+            
+
+
+            // Add the rows to the DataTable
+            foreach (var item in items)
+            {
+                dataTable.Rows.Add(item.ID, item.ItemName, item.ItemDescription, item.ItemStock,item.DeletedAt);
+            }
+
+            // Bind the DataTable to the DataGridView
+            _dataGridView.DataSource = dataTable;
         }
     }
 }

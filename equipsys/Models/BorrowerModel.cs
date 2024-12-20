@@ -17,8 +17,5 @@ namespace equipsys.Models
         public string ContactNumber { get; set; }
         public string Email { get; set; }
 
-        public static List<BorrowerModel> RecurringBorrowers = new List<BorrowerModel>();
-
-
     }   
 }
