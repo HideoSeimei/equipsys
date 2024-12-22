@@ -82,7 +82,9 @@ namespace equipsys
             bool IsValidItemStock(string stock) =>
                 stock.Length != 0 &&
                 stock.All(char.IsDigit) &&
-                int.Parse(stock) > 0;
+                (int.Parse(stock) > 0 ||
+                int.Parse(stock) == 0);
+
 
             if (!IsValidItemName(ItemNameBox.Text))
             {
@@ -90,7 +92,7 @@ namespace equipsys
                 return false;
             }
 
-            if (IsDuplicateItem(ItemNameBox.Text))
+            if (!IsDuplicateItem(ItemNameBox.Text))
             {
                 MessageBox.Show("Invalid item name");
                 return false;
@@ -110,21 +112,29 @@ namespace equipsys
 
         private bool IsDuplicateItem(string name)
         {
-            using SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
-            sql.Open();
-            string retrieveUsernameQuery = "SELECT Count(*) FROM Items WHERE ItemName = @ITEMNAME";
-            SqlCommand cmd = new SqlCommand(retrieveUsernameQuery, sql);
-            cmd.Parameters.AddWithValue("@ITEMNAME", name);
-            if ((int)cmd.ExecuteScalar() > 0)
+            if (ItemName == ItemNameBox.Text)
             {
-                sql.Close();
                 return true;
             }
             else
             {
-                sql.Close();
-                return false;
+                using SqlConnection sql = new SqlConnection(GlobalConfig.ConnectionString);
+                sql.Open();
+                string retrieveUsernameQuery = "SELECT Count(*) FROM Items WHERE ItemName = @ITEMNAME";
+                SqlCommand cmd = new SqlCommand(retrieveUsernameQuery, sql);
+                cmd.Parameters.AddWithValue("@ITEMNAME", name);
+                if ((int)cmd.ExecuteScalar() > 0)
+                {
+                    sql.Close();
+                    return false;
+                }
+                else
+                {
+                    sql.Close();
+                    return true;
+                }
             }
+            
         }
 
         private void BrowseImageButton_Click(object sender, EventArgs e)
